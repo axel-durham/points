@@ -6,10 +6,13 @@
   var CABIN_LABELS = { Y: "Economy", W: "Premium Economy", J: "Business", F: "First" };
   var DEFAULT_CABINS = ["J", "F"];
   var DEFAULT_MIN_SEATS = 2; // travelling as a pair
+  var DEFAULT_DEST_SORT = "miles";
   var STALE_MS = 36 * 60 * 60 * 1000;
   var MILES_STEP = 5000;
-  var RENDER_CAP = 500; // keep the DOM light with a few thousand rows
+  var RENDER_CAP = 500; // keep the detail table light
   var FAV_KEY = "honeymoon-favs";
+  var HIDDEN_KEY = "honeymoon-hidden";
+  var UNDO_MS = 10000;
 
   var deals = [];
   var baselines = {};
@@ -17,7 +20,10 @@
   var allMonths = [];
   var milesCeil = 200000;
   var newestFirstSeen = null;
-  var favorites = loadFavorites();
+  var destInfo = {}; // IATA -> { city, region }
+  var favorites = loadList(FAV_KEY);
+  var hidden = loadList(HIDDEN_KEY);
+  var undoTimer = null;
 
   // Filter/UI state
   var state = {
@@ -30,17 +36,19 @@
     minSeats: DEFAULT_MIN_SEATS,
     favOnly: false,
     tab: "all",
-    sort: null,         // null = tab default
+    dest: null,         // IATA code -> detail view; null -> grid view
+    destSort: DEFAULT_DEST_SORT,
+    sort: null,         // detail table sort; null = miles ascending default
     dir: "asc"
   };
 
   var $ = function (id) { return document.getElementById(id); };
 
-  // ---------- Favorites (localStorage) ----------
+  // ---------- Persistence (localStorage lists) ----------
 
-  function loadFavorites() {
+  function loadList(key) {
     try {
-      var raw = localStorage.getItem(FAV_KEY);
+      var raw = localStorage.getItem(key);
       var arr = raw ? JSON.parse(raw) : [];
       return Array.isArray(arr) ? arr : [];
     } catch (e) {
@@ -48,10 +56,10 @@
     }
   }
 
-  function saveFavorites() {
+  function saveList(key, arr) {
     try {
-      localStorage.setItem(FAV_KEY, JSON.stringify(favorites));
-    } catch (e) { /* private mode etc. — favorites just won't persist */ }
+      localStorage.setItem(key, JSON.stringify(arr));
+    } catch (e) { /* private mode etc. — just won't persist */ }
   }
 
   function isFav(id) { return favorites.indexOf(id) >= 0; }
@@ -60,7 +68,30 @@
     var i = favorites.indexOf(id);
     if (i >= 0) favorites.splice(i, 1);
     else favorites.push(id);
-    saveFavorites();
+    saveList(FAV_KEY, favorites);
+  }
+
+  function isHidden(code) { return hidden.indexOf(code) >= 0; }
+
+  function hideDest(code) {
+    if (!isHidden(code)) {
+      hidden.push(code);
+      saveList(HIDDEN_KEY, hidden);
+    }
+    showUndo(code);
+    render();
+  }
+
+  function unhideDest(code) {
+    var i = hidden.indexOf(code);
+    if (i >= 0) {
+      hidden.splice(i, 1);
+      saveList(HIDDEN_KEY, hidden);
+    }
+  }
+
+  function destName(code) {
+    return (destInfo[code] && destInfo[code].city) || code;
   }
 
   // ---------- Data loading ----------
@@ -106,6 +137,7 @@
     bindEvents();
     $("filters").hidden = false;
     $("tabs").hidden = false;
+    $("tabs-note").hidden = false;
     render();
   }
 
@@ -119,6 +151,11 @@
       if (d.miles > maxMiles) maxMiles = d.miles;
       if (d.firstSeen && (!newestFirstSeen || d.firstSeen > newestFirstSeen)) {
         newestFirstSeen = d.firstSeen;
+      }
+      if (d.to && !destInfo[d.to]) {
+        destInfo[d.to] = { city: d.city || null, region: d.region || null };
+      } else if (d.to && !destInfo[d.to].city && d.city) {
+        destInfo[d.to].city = d.city;
       }
     });
     allRegions = Object.keys(regionSet).sort();
@@ -287,6 +324,65 @@
       onFilterChange();
     });
 
+    $("dest-sort").addEventListener("change", function (e) {
+      state.destSort = e.target.value;
+      onFilterChange();
+    });
+
+    // Grid interactions: open a card, or hide a destination
+    $("dest-grid").addEventListener("click", function (e) {
+      var hideBtn = e.target.closest("button[data-hide]");
+      if (hideBtn) {
+        e.stopPropagation();
+        hideDest(hideBtn.getAttribute("data-hide"));
+        return;
+      }
+      var card = e.target.closest(".dest-card");
+      if (card) openDest(card.getAttribute("data-dest"));
+    });
+    $("dest-grid").addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      var card = e.target.closest(".dest-card");
+      if (card && e.target === card) {
+        e.preventDefault();
+        openDest(card.getAttribute("data-dest"));
+      }
+    });
+
+    $("back-btn").addEventListener("click", function () {
+      state.dest = null;
+      writeStateToURL(true);
+      render();
+    });
+
+    $("undo-btn").addEventListener("click", function () {
+      var code = this.getAttribute("data-undo");
+      if (code) unhideDest(code);
+      dismissUndo();
+      render();
+    });
+
+    $("hidden-chip").addEventListener("click", function () {
+      var panel = $("hidden-panel");
+      panel.hidden = !panel.hidden;
+      this.setAttribute("aria-expanded", panel.hidden ? "false" : "true");
+      if (!panel.hidden) renderHiddenPanel();
+    });
+
+    $("hidden-panel").addEventListener("click", function (e) {
+      var restore = e.target.closest("button[data-restore]");
+      if (restore) {
+        unhideDest(restore.getAttribute("data-restore"));
+        render();
+        return;
+      }
+      if (e.target.closest("#restore-all")) {
+        hidden = [];
+        saveList(HIDDEN_KEY, hidden);
+        render();
+      }
+    });
+
     document.querySelector("#deals-table thead").addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-sort]");
       if (!btn) return;
@@ -310,6 +406,45 @@
         paintFavButton(btn);
       }
     });
+
+    $("detail-view").addEventListener("click", function (e) {
+      var unhide = e.target.closest("button[data-unhide]");
+      if (unhide) {
+        unhideDest(unhide.getAttribute("data-unhide"));
+        render();
+      }
+    });
+
+    window.addEventListener("popstate", function () {
+      resetStateToDefaults();
+      readStateFromURL();
+      applyStateToControls();
+      render();
+    });
+  }
+
+  function resetStateToDefaults() {
+    state.q = "";
+    state.cabins = DEFAULT_CABINS.slice();
+    state.regions = allRegions.slice();
+    state.month = "";
+    state.maxMiles = null;
+    state.nonstop = false;
+    state.favOnly = false;
+    state.minSeats = DEFAULT_MIN_SEATS;
+    state.tab = "all";
+    state.dest = null;
+    state.destSort = DEFAULT_DEST_SORT;
+    state.sort = null;
+    state.dir = "asc";
+  }
+
+  function openDest(code) {
+    if (!code || !destInfo[code]) return;
+    state.dest = code;
+    writeStateToURL(true);
+    render();
+    window.scrollTo(0, 0);
   }
 
   function checkedValues(name) {
@@ -322,7 +457,7 @@
   }
 
   function onFilterChange() {
-    writeStateToURL();
+    writeStateToURL(false);
     render();
   }
 
@@ -341,6 +476,7 @@
     $("nonstop").checked = state.nonstop;
     $("fav-only").checked = state.favOnly;
     $("min-seats").value = state.minSeats;
+    $("dest-sort").value = state.destSort;
   }
 
   function setChecked(name, values) {
@@ -350,9 +486,28 @@
     }
   }
 
-  // ---------- URL state ----------
+  // ---------- Undo bar ----------
 
-  function writeStateToURL() {
+  function showUndo(code) {
+    var bar = $("undo-bar");
+    $("undo-text").textContent = destName(code) + " hidden.";
+    $("undo-btn").setAttribute("data-undo", code);
+    bar.hidden = false;
+    if (undoTimer) clearTimeout(undoTimer);
+    undoTimer = setTimeout(dismissUndo, UNDO_MS);
+  }
+
+  function dismissUndo() {
+    $("undo-bar").hidden = true;
+    $("undo-btn").removeAttribute("data-undo");
+    if (undoTimer) { clearTimeout(undoTimer); undoTimer = null; }
+  }
+
+  // ---------- URL state ----------
+  // The hidden-destinations list is deliberately NOT in the URL:
+  // it is a durable personal preference, not shareable view state.
+
+  function writeStateToURL(push) {
     var p = new URLSearchParams();
     if (state.q) p.set("q", state.q);
     if (!sameSet(state.cabins, DEFAULT_CABINS)) p.set("cabins", state.cabins.join(",") || "none");
@@ -363,9 +518,13 @@
     if (state.favOnly) p.set("fav", "1");
     if (state.minSeats !== DEFAULT_MIN_SEATS) p.set("seats", String(state.minSeats));
     if (state.tab !== "all") p.set("tab", state.tab);
+    if (state.dest) p.set("dest", state.dest);
+    if (state.destSort !== DEFAULT_DEST_SORT) p.set("dsort", state.destSort);
     if (state.sort) { p.set("sort", state.sort); p.set("dir", state.dir); }
     var qs = p.toString();
-    history.replaceState(null, "", qs ? "?" + qs : location.pathname);
+    var url = qs ? "?" + qs : location.pathname;
+    if (push) history.pushState(null, "", url);
+    else history.replaceState(null, "", url);
   }
 
   function readStateFromURL() {
@@ -396,6 +555,10 @@
     }
     var tab = p.get("tab");
     if (tab === "below" || tab === "new") state.tab = tab;
+    var dest = p.get("dest");
+    if (dest && destInfo[dest]) state.dest = dest;
+    var dsort = p.get("dsort");
+    if (dsort === "saving" || dsort === "dates" || dsort === "city") state.destSort = dsort;
     var sort = p.get("sort");
     if (sort && document.querySelector('button[data-sort="' + sort + '"]')) {
       state.sort = sort;
@@ -408,7 +571,7 @@
     return a.slice().sort().join(",") === b.slice().sort().join(",");
   }
 
-  // ---------- Filtering / sorting ----------
+  // ---------- Filtering / grouping / sorting ----------
 
   function baselineFor(d) {
     var b = baselines[d.region];
@@ -453,11 +616,76 @@
     return filtered;
   }
 
+  function buildGroups(rows) {
+    var map = {};
+    rows.forEach(function (d) {
+      if (!d.to || isHidden(d.to)) return;
+      var g = map[d.to];
+      if (!g) {
+        g = map[d.to] = {
+          to: d.to,
+          city: d.city || null,
+          region: d.region || null,
+          rows: [],
+          perCabin: {},        // cabin -> row with min miles
+          minMiles: Infinity,
+          bestDelta: null,     // most negative delta seen (biggest saving)
+          dates: {},
+          anyDirect: false,
+          airlines: {},
+          favCount: 0
+        };
+      }
+      g.rows.push(d);
+      if (!g.city && d.city) g.city = d.city;
+      var pc = g.perCabin[d.cabin];
+      if (!pc || d.miles < pc.miles) g.perCabin[d.cabin] = d;
+      if (d.miles < g.minMiles) g.minMiles = d.miles;
+      var delta = deltaFor(d);
+      if (delta !== null && (g.bestDelta === null || delta < g.bestDelta)) g.bestDelta = delta;
+      if (d.date) g.dates[d.date] = true;
+      if (d.direct) g.anyDirect = true;
+      (d.airlines || []).forEach(function (a) { g.airlines[a] = true; });
+      if (isFav(d.id)) g.favCount++;
+    });
+    return Object.keys(map).map(function (k) {
+      var g = map[k];
+      g.dateList = Object.keys(g.dates).sort();
+      // Headline price: best Business if any, otherwise the overall cheapest row.
+      g.emph = g.perCabin.J || null;
+      if (!g.emph) {
+        CABINS.forEach(function (c) {
+          if (g.perCabin[c] && (!g.emph || g.perCabin[c].miles < g.emph.miles)) g.emph = g.perCabin[c];
+        });
+      }
+      return g;
+    });
+  }
+
+  function sortGroups(groups) {
+    var s = state.destSort;
+    return groups.slice().sort(function (a, b) {
+      if (s === "saving") {
+        var da = a.bestDelta === null ? Infinity : a.bestDelta;
+        var db = b.bestDelta === null ? Infinity : b.bestDelta;
+        if (da !== db) return da - db;
+      } else if (s === "dates") {
+        if (a.dateList.length !== b.dateList.length) return b.dateList.length - a.dateList.length;
+      } else if (s === "city") {
+        var ca = (a.city || a.to).toLowerCase();
+        var cb = (b.city || b.to).toLowerCase();
+        if (ca !== cb) return ca < cb ? -1 : 1;
+      } else {
+        if (a.minMiles !== b.minMiles) return a.minMiles - b.minMiles;
+      }
+      return a.to < b.to ? -1 : a.to > b.to ? 1 : 0;
+    });
+  }
+
   function sortRows(rows) {
     var key = state.sort;
     var dir = state.dir === "desc" ? -1 : 1;
     if (!key) {
-      // Tab defaults
       if (state.tab === "below") {
         return rows.slice().sort(function (a, b) { return deltaFor(a) - deltaFor(b); });
       }
@@ -466,7 +694,6 @@
     var val = function (d) {
       switch (key) {
         case "date": return d.date || "";
-        case "route": return d.to || "";
         case "cabin": return CABINS.indexOf(d.cabin);
         case "miles": return d.miles;
         case "delta":
@@ -486,7 +713,7 @@
     });
   }
 
-  // ---------- Rendering ----------
+  // ---------- Formatting ----------
 
   function fmtMiles(n) {
     return n.toLocaleString("en-US");
@@ -499,6 +726,13 @@
     return d.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric", year: "numeric" });
   }
 
+  function fmtShortDate(iso) {
+    var parts = String(iso).split("-");
+    if (parts.length !== 3) return iso;
+    var d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+    return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  }
+
   function unitedURL(d) {
     var p = new URLSearchParams({
       f: d.from, t: d.to, d: d.date, tt: "1", at: "1", sc: "7", px: "1", taxng: "1"
@@ -506,26 +740,279 @@
     return "https://www.united.com/en/us/fsr/choose-flights?" + p.toString();
   }
 
+  function deltaSpan(delta) {
+    var span = document.createElement("span");
+    if (delta === null) return span;
+    span.textContent = (delta > 0 ? "+" : delta < 0 ? "−" : "") + fmtMiles(Math.abs(delta));
+    span.className = delta < 0 ? "delta-good" : delta > 0 ? "delta-bad" : "delta-zero";
+    return span;
+  }
+
+  // ---------- Rendering ----------
+
   function render() {
     var filtered = deals.filter(matchesFilters);
-    var counts = {
-      all: filtered.length,
-      below: tabRows("below", filtered).length,
-      "new": tabRows("new", filtered).length
-    };
+    if (state.dest) renderDetail(filtered);
+    else renderGrid(filtered);
+    renderHiddenChip();
+    var panel = $("hidden-panel");
+    if (!panel.hidden) renderHiddenPanel();
+  }
+
+  function setTabCounts(counts, noteText) {
     $("count-all").textContent = counts.all;
     $("count-below").textContent = counts.below;
     $("count-new").textContent = counts["new"];
-
+    $("tabs-note").textContent = noteText;
     var tabButtons = document.querySelectorAll("#tabs button[data-tab]");
     for (var i = 0; i < tabButtons.length; i++) {
       tabButtons[i].setAttribute("aria-selected",
         tabButtons[i].getAttribute("data-tab") === state.tab ? "true" : "false");
     }
+  }
 
-    var rows = sortRows(tabRows(state.tab, filtered));
+  function visibleDestCount(rows) {
+    var seen = {};
+    var n = 0;
+    rows.forEach(function (d) {
+      if (d.to && !seen[d.to] && !isHidden(d.to)) { seen[d.to] = true; n++; }
+    });
+    return n;
+  }
 
-    // Sort indicators
+  // ----- View 1: destination grid -----
+
+  function renderGrid(filtered) {
+    $("grid-view").hidden = false;
+    $("detail-view").hidden = true;
+
+    setTabCounts({
+      all: visibleDestCount(tabRows("all", filtered)),
+      below: visibleDestCount(tabRows("below", filtered)),
+      "new": visibleDestCount(tabRows("new", filtered))
+    }, "Counts are destinations. Pick a place to see its dates.");
+
+    var groups = sortGroups(buildGroups(tabRows(state.tab, filtered)));
+    var grid = $("dest-grid");
+    grid.textContent = "";
+    var empty = $("empty");
+
+    if (groups.length === 0) {
+      empty.hidden = false;
+      if (deals.length === 0) {
+        empty.textContent = "No deals in the current data set.";
+      } else if (state.favOnly && favorites.length === 0) {
+        empty.textContent = "No shortlisted dates yet — open a destination and tap the heart on a date to save it.";
+      } else if (hidden.length > 0 && state.tab === "all") {
+        empty.textContent = "No destinations match the current filters. (" + hidden.length +
+          " hidden — restore them from the Hidden list above.)";
+      } else {
+        empty.textContent = "No destinations match the current filters. Try widening cabins, regions, or the miles cap.";
+      }
+      return;
+    }
+    empty.hidden = true;
+
+    var frag = document.createDocumentFragment();
+    groups.forEach(function (g) { frag.appendChild(renderCard(g)); });
+    grid.appendChild(frag);
+  }
+
+  function renderCard(g) {
+    var name = g.city || g.to;
+    var card = document.createElement("article");
+    card.className = "dest-card";
+    card.setAttribute("data-dest", g.to);
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", "View dates for " + name);
+
+    var hide = document.createElement("button");
+    hide.type = "button";
+    hide.className = "hide-btn";
+    hide.setAttribute("data-hide", g.to);
+    hide.setAttribute("aria-label", "Hide " + name);
+    hide.title = "Hide " + name;
+    hide.textContent = "×";
+    card.appendChild(hide);
+
+    var top = document.createElement("div");
+    top.className = "card-top";
+    var h3 = document.createElement("h3");
+    h3.textContent = name;
+    top.appendChild(h3);
+    var code = document.createElement("p");
+    code.className = "dest-code";
+    code.textContent = g.to + (g.region ? " · " + g.region : "");
+    top.appendChild(code);
+    card.appendChild(top);
+
+    // Headline price (best Business when present)
+    var price = document.createElement("div");
+    price.className = "card-price";
+    var cab = document.createElement("span");
+    cab.className = "price-cabin";
+    cab.textContent = "Best " + (CABIN_LABELS[g.emph.cabin] || g.emph.cabin);
+    price.appendChild(cab);
+    var amount = document.createElement("strong");
+    amount.className = "price-miles";
+    amount.textContent = fmtMiles(g.emph.miles);
+    price.appendChild(amount);
+    var unit = document.createElement("span");
+    unit.className = "price-unit";
+    unit.textContent = "miles";
+    price.appendChild(unit);
+    var delta = deltaFor(g.emph);
+    if (delta !== null) {
+      var ds = deltaSpan(delta);
+      ds.classList.add("price-delta");
+      price.appendChild(ds);
+    }
+    card.appendChild(price);
+
+    // Other cabins present
+    var others = CABINS.filter(function (c) {
+      return g.perCabin[c] && c !== g.emph.cabin;
+    });
+    if (others.length) {
+      var mini = document.createElement("ul");
+      mini.className = "cabin-mini";
+      others.forEach(function (c) {
+        var li = document.createElement("li");
+        li.textContent = CABIN_LABELS[c] + " " + fmtMiles(g.perCabin[c].miles);
+        mini.appendChild(li);
+      });
+      card.appendChild(mini);
+    }
+
+    // Meta: dates, range, non-stop, airlines, hearts
+    var meta = document.createElement("p");
+    meta.className = "card-meta";
+    var nDates = g.dateList.length;
+    var bits = [nDates + (nDates === 1 ? " date" : " dates")];
+    if (nDates === 1) {
+      bits.push(fmtShortDate(g.dateList[0]));
+    } else if (nDates > 1) {
+      bits.push(fmtShortDate(g.dateList[0]) + " – " + fmtShortDate(g.dateList[nDates - 1]));
+    }
+    if (g.anyDirect) bits.push("Non-stop ✓");
+    var airlines = Object.keys(g.airlines).sort();
+    if (airlines.length) {
+      bits.push(airlines.length > 4 ?
+        airlines.slice(0, 4).join(", ") + " +" + (airlines.length - 4) :
+        airlines.join(", "));
+    }
+    meta.textContent = bits.join(" · ");
+    if (g.favCount > 0) {
+      var fav = document.createElement("span");
+      fav.className = "card-favs";
+      fav.textContent = " ♥ " + g.favCount;
+      fav.title = g.favCount + " shortlisted " + (g.favCount === 1 ? "date" : "dates");
+      meta.appendChild(fav);
+    }
+    card.appendChild(meta);
+
+    return card;
+  }
+
+  // ----- Hidden destinations chip + panel -----
+
+  function renderHiddenChip() {
+    var chip = $("hidden-chip");
+    if (hidden.length === 0) {
+      chip.hidden = true;
+      $("hidden-panel").hidden = true;
+      chip.setAttribute("aria-expanded", "false");
+      return;
+    }
+    chip.hidden = false;
+    chip.textContent = "Hidden (" + hidden.length + ")";
+  }
+
+  function renderHiddenPanel() {
+    var panel = $("hidden-panel");
+    panel.textContent = "";
+    if (hidden.length === 0) { panel.hidden = true; return; }
+
+    var list = document.createElement("ul");
+    list.className = "hidden-list";
+    hidden.slice().sort(function (a, b) {
+      return destName(a).toLowerCase() < destName(b).toLowerCase() ? -1 : 1;
+    }).forEach(function (code) {
+      var li = document.createElement("li");
+      var label = document.createElement("span");
+      label.textContent = destName(code) + " (" + code + ")";
+      li.appendChild(label);
+      var favN = favCountForDest(code);
+      if (favN > 0) {
+        var note = document.createElement("span");
+        note.className = "hidden-fav-note";
+        note.textContent = "♥ " + favN + " shortlisted " + (favN === 1 ? "date" : "dates");
+        li.appendChild(note);
+      }
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "restore-btn";
+      btn.setAttribute("data-restore", code);
+      btn.textContent = "Restore";
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+    panel.appendChild(list);
+
+    var all = document.createElement("button");
+    all.type = "button";
+    all.id = "restore-all";
+    all.className = "restore-btn restore-all";
+    all.textContent = "Restore all";
+    panel.appendChild(all);
+  }
+
+  function favCountForDest(code) {
+    var n = 0;
+    deals.forEach(function (d) {
+      if (d.to === code && isFav(d.id)) n++;
+    });
+    return n;
+  }
+
+  // ----- View 2: destination detail -----
+
+  function renderDetail(filtered) {
+    $("grid-view").hidden = true;
+    $("detail-view").hidden = false;
+
+    var code = state.dest;
+    var info = destInfo[code] || {};
+    var name = info.city || code;
+    var destRows = filtered.filter(function (d) { return d.to === code; });
+
+    setTabCounts({
+      all: tabRows("all", destRows).length,
+      below: tabRows("below", destRows).length,
+      "new": tabRows("new", destRows).length
+    }, "Counts are dates for " + name + " (" + code + "). Filters above still apply.");
+
+    $("dest-title").textContent = name;
+    var sub = $("dest-sub");
+    sub.textContent = "";
+    sub.appendChild(document.createTextNode(
+      code + (info.region ? " · " + info.region : "") + " · from SFO"));
+    if (isHidden(code)) {
+      var note = document.createElement("span");
+      note.className = "hidden-note";
+      note.textContent = " Hidden from your grid. ";
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "restore-btn";
+      btn.setAttribute("data-unhide", code);
+      btn.textContent = "Unhide";
+      note.appendChild(btn);
+      sub.appendChild(note);
+    }
+
+    var rows = sortRows(tabRows(state.tab, destRows));
+
     var headBtns = document.querySelectorAll("#deals-table thead button[data-sort]");
     for (var h = 0; h < headBtns.length; h++) {
       var k = headBtns[h].getAttribute("data-sort");
@@ -542,17 +1029,8 @@
     if (rows.length === 0) {
       table.hidden = true;
       empty.hidden = false;
-      if (deals.length === 0) {
-        empty.textContent = "No deals in the current data set.";
-      } else if (state.favOnly && favorites.length === 0) {
-        empty.textContent = "No shortlisted deals yet — tap the heart on a row to save it for later.";
-      } else if (state.tab === "below") {
-        empty.textContent = "No deals below baseline match the current filters. Try widening cabins, regions, or the miles cap.";
-      } else if (state.tab === "new") {
-        empty.textContent = "No newly found deals match the current filters. Try widening cabins, regions, or the miles cap.";
-      } else {
-        empty.textContent = "No deals match the current filters. Try widening cabins, regions, or the miles cap.";
-      }
+      empty.textContent = "No dates for " + name +
+        " match the current filters and tab. Adjust the filters or go back to all destinations.";
       return;
     }
 
@@ -561,14 +1039,12 @@
 
     var shown = rows.length > RENDER_CAP ? rows.slice(0, RENDER_CAP) : rows;
     var frag = document.createDocumentFragment();
-    shown.forEach(function (d) {
-      frag.appendChild(renderRow(d));
-    });
+    shown.forEach(function (d) { frag.appendChild(renderRow(d)); });
     body.appendChild(frag);
 
     if (rows.length > RENDER_CAP) {
       truncated.textContent = "Showing the first " + RENDER_CAP + " of " +
-        rows.length + " matching deals — narrow the filters to see the rest.";
+        rows.length + " matching dates — narrow the filters to see the rest.";
       truncated.hidden = false;
     }
   }
@@ -582,7 +1058,7 @@
 
   function paintFavButton(btn) {
     var fav = isFav(btn.getAttribute("data-fav"));
-    btn.textContent = fav ? "♥" : "♡"; // ♥ / ♡
+    btn.textContent = fav ? "♥" : "♡";
     btn.classList.toggle("is-fav", fav);
     btn.setAttribute("aria-pressed", fav ? "true" : "false");
     btn.title = fav ? "Remove from shortlist" : "Add to shortlist";
@@ -603,25 +1079,15 @@
     tr.appendChild(cFav);
 
     var cDate = td("Date");
-    cDate.textContent = fmtDate(d.date);
-    tr.appendChild(cDate);
-
-    var cRoute = td("Route");
     var a = document.createElement("a");
     a.href = unitedURL(d);
     a.target = "_blank";
     a.rel = "noopener";
     a.className = "route-link";
-    a.textContent = d.from + " → " + d.to;
+    a.textContent = fmtDate(d.date);
     a.title = "Open this award search on united.com (new tab)";
-    cRoute.appendChild(a);
-    if (d.city) {
-      var city = document.createElement("span");
-      city.className = "city";
-      city.textContent = d.city;
-      cRoute.appendChild(city);
-    }
-    tr.appendChild(cRoute);
+    cDate.appendChild(a);
+    tr.appendChild(cDate);
 
     var cCabin = td("Cabin");
     cCabin.textContent = CABIN_LABELS[d.cabin] || d.cabin;
@@ -634,11 +1100,9 @@
     var cDelta = td("Δ vs baseline", "num");
     var delta = deltaFor(d);
     if (delta === null) {
-      cDelta.textContent = "";
       cDelta.classList.add("delta-none");
     } else {
-      cDelta.textContent = (delta > 0 ? "+" : delta < 0 ? "−" : "") + fmtMiles(Math.abs(delta));
-      cDelta.classList.add(delta < 0 ? "delta-good" : delta > 0 ? "delta-bad" : "delta-zero");
+      cDelta.appendChild(deltaSpan(delta));
     }
     tr.appendChild(cDelta);
 

@@ -65,29 +65,63 @@
     <button role="tab" data-tab="below" aria-selected="false">Below baseline <span class="count" id="count-below">0</span></button>
     <button role="tab" data-tab="new" aria-selected="false">New <span class="count" id="count-new">0</span></button>
   </div>
+  <p class="tabs-note" id="tabs-note" hidden></p>
 
   <div id="error" class="error" hidden></div>
 
-  <div class="table-wrap">
-    <table id="deals-table" hidden>
-      <thead>
-        <tr>
-          <th class="fav-col"><span class="visually-hidden">Shortlist</span></th>
-          <th><button data-sort="date">Date</button></th>
-          <th><button data-sort="route">Route</button></th>
-          <th><button data-sort="cabin">Cabin</button></th>
-          <th class="num"><button data-sort="miles">Miles</button></th>
-          <th class="num"><button data-sort="delta">&Delta; vs baseline</button></th>
-          <th><button data-sort="direct">Non-stop</button></th>
-          <th class="num"><button data-sort="seats">Seats</button></th>
-          <th><button data-sort="airlines">Airlines</button></th>
-        </tr>
-      </thead>
-      <tbody id="deals-body"></tbody>
-    </table>
-    <p id="truncated" class="truncated" hidden></p>
-    <p id="empty" class="empty" hidden></p>
+  <div id="undo-bar" class="undo-bar" hidden>
+    <span id="undo-text"></span>
+    <button type="button" id="undo-btn">Undo</button>
   </div>
+
+  <!-- View 1: destination grid -->
+  <section id="grid-view" hidden>
+    <div class="grid-toolbar">
+      <div class="grid-sort">
+        <label for="dest-sort">Sort destinations</label>
+        <select id="dest-sort">
+          <option value="miles">Cheapest first</option>
+          <option value="saving">Biggest saving vs baseline</option>
+          <option value="dates">Most dates available</option>
+          <option value="city">City A&ndash;Z</option>
+        </select>
+      </div>
+      <button type="button" id="hidden-chip" class="hidden-chip" aria-expanded="false" hidden></button>
+    </div>
+    <div id="hidden-panel" class="hidden-panel" hidden></div>
+    <div class="dest-grid" id="dest-grid"></div>
+  </section>
+
+  <!-- View 2: destination detail -->
+  <section id="detail-view" hidden>
+    <div class="dest-header">
+      <button type="button" id="back-btn" class="back-btn">&larr; All destinations</button>
+      <div class="dest-heading">
+        <h2 id="dest-title"></h2>
+        <p id="dest-sub" class="dest-sub"></p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table id="deals-table" hidden>
+        <thead>
+          <tr>
+            <th class="fav-col"><span class="visually-hidden">Shortlist</span></th>
+            <th><button data-sort="date">Date</button></th>
+            <th><button data-sort="cabin">Cabin</button></th>
+            <th class="num"><button data-sort="miles">Miles</button></th>
+            <th class="num"><button data-sort="delta">&Delta; vs baseline</button></th>
+            <th><button data-sort="direct">Non-stop</button></th>
+            <th class="num"><button data-sort="seats">Seats</button></th>
+            <th><button data-sort="airlines">Airlines</button></th>
+          </tr>
+        </thead>
+        <tbody id="deals-body"></tbody>
+      </table>
+      <p id="truncated" class="truncated" hidden></p>
+    </div>
+  </section>
+
+  <p id="empty" class="empty" hidden></p>
 </main>
 
 <footer class="site-footer">

@@ -28,8 +28,26 @@
     <p class="source">Sources: <a href="https://thepointsguy.com/news/united-pulls-partner-award-chart">TPG: United pulls partner award chart</a> &middot; <a href="https://awardwallet.com/airlines/united-mileageplus/partner-award-chart/">AwardWallet unofficial MileagePlus chart</a> &middot; <a href="https://www.thepointsanalyst.com/search-for-star-alliance-award-availability/">The Points Analyst: Star Alliance award availability</a></p>
   </section>
 
+  <section id="expanded-availability">
+    <h2>2. Cardmember and elite &ldquo;expanded availability&rdquo; &mdash; and why this site can't see it</h2>
+    <p>Holders of eligible United co-brand cards (including the Club Infinite card) get more than the standard saver space. United's own benefit copy frames it as a discount: eligible primary cardmembers book award flights <em>&ldquo;on United or United Express only&rdquo;</em> for &ldquo;at least 10% fewer miles than the base price paid by members without an eligible card,&rdquo; rising to &ldquo;at least 15% fewer miles&rdquo; for cardmembers who also hold Premier status. These are tiers of one mechanism, not independently stacking pools &mdash; the 15% figure already reflects the combined card-plus-elite tier.</p>
+    <p>Mechanically, it is delivered as <em>extra saver-level inventory</em> in separate booking classes &mdash; XN (economy) and IN (business / domestic first) &mdash; layered on top of the standard X/I buckets, not as a price cut on the same seat. Sources describe the tiers slightly differently: TPG's current guide assigns XN to cardholders and Premier Silver/Gold, and IN to Premier Platinum, 1K and Global Services, while other coverage describes cardholders unlocking both XN and IN. If IN access matters to you, test it logged in rather than trusting either description.</p>
+    <p>Two hard limits:</p>
+    <ul>
+      <li><strong>United and United Express flights only.</strong> Partner-operated space (ANA, Lufthansa, Swiss&hellip;) is explicitly excluded &mdash; per TPG, &ldquo;you can't unlock additional award availability when booking through a partner,&rdquo; and holding the card unlocks nothing extra on partner metal either.</li>
+      <li><strong>Visible only when logged in.</strong> XN/IN inventory and the &ldquo;Special member pricing&rdquo; it produces appear only when you search united.com signed in to an eligible MileagePlus account. Logged-out searches &mdash; and the third-party feeds this site is built on &mdash; see only standard X/I saver space.</li>
+    </ul>
+    <p><strong>How to read this site's numbers, then:</strong> for United-operated flights the mileage shown here is a <em>ceiling</em> &mdash; logged in with the Club Infinite card you may be offered 10&ndash;15% less, or see saver space where this site shows none. For partner-operated flights the numbers should match what you see, and partner metal is where most of the good long-haul premium space lives anyway: as of 2026-08-05, every one of the 143 First-class rows in this site's dataset is Air India-operated, and no United-operated row exceeds 140,000 miles.</p>
+    <p>Two related items, flagged rather than asserted:</p>
+    <ul>
+      <li>The Club card family also earns a 10,000-mile award flight discount for every $20,000 of calendar-year spend (max two, at $40,000). United's terms require the award ticket to &ldquo;have at least one segment booked on United or United Express&rdquo;; whether the discount can apply to otherwise partner-operated awards beyond that is <em>unconfirmed</em> &mdash; we found no clear statement either way.</li>
+      <li>seats.aero has a &ldquo;Cardholder Pricing&rdquo; preference (Account &rarr; Preferences &rarr; United MileagePlus) that reportedly surfaces cardholder-discounted results. How it sources that data is unverified; worth enabling if you hold the card, but double-check anything it shows against a logged-in united.com search.</li>
+    </ul>
+    <p class="source">Sources: <a href="https://cardmembers.united.com/Club">United: Club card benefits</a> (10%/15% and spend-discount language) &middot; <a href="https://thepointsguy.com/airline/award-availability-united-credit-cards/">TPG: expanded award availability</a> &middot; <a href="https://awardwallet.com/credit-cards/united-mileageplus/united-credit-card-award-space/">AwardWallet: United credit card award space</a></p>
+  </section>
+
   <section id="booking-classes">
-    <h2>2. Award booking classes</h2>
+    <h2>3. Award booking classes</h2>
     <p>Award seats live in single-letter inventory buckets (booking classes, or RBDs), separate from the revenue fare classes sold for cash on the same aircraft. Codes ending in <strong>N</strong> are extra saver space visible only to United elites (Platinum/1K) and United co-brand cardholders.</p>
 
     <h3>United-operated flights</h3>
@@ -61,7 +79,7 @@
   </section>
 
   <section id="cabins">
-    <h2>3. Cabin codes as this site uses them</h2>
+    <h2>4. Cabin codes as this site uses them</h2>
     <p>This site follows seats.aero's convention: one letter per <em>cabin</em>, regardless of which booking class the award actually files into.</p>
     <table>
       <thead>
@@ -79,7 +97,7 @@
   </section>
 
   <section id="three-things">
-    <h2>4. Fare basis vs. booking class vs. cabin</h2>
+    <h2>5. Fare basis vs. booking class vs. cabin</h2>
     <p>Three different things that all get called &ldquo;fare class&rdquo; in casual conversation:</p>
     <table>
       <thead>
@@ -95,7 +113,7 @@
   </section>
 
   <section id="caveats">
-    <h2>5. Practical caveats</h2>
+    <h2>6. Practical caveats</h2>
     <ul>
       <li><strong>Space is volatile.</strong> Saver awards appear and vanish within hours &mdash; airlines open and pull buckets continuously, and popular space gets booked fast. Treat any search result as a snapshot, not a promise.</li>
       <li><strong>seats.aero is a cache, not live inventory.</strong> It shows results from periodic background scrapes; the snapshot can be minutes to hours old, and a fresh check may disagree with it. seats.aero's own docs explain that flights can &ldquo;disappear&rdquo; simply because a refresh replaced stale cached data.</li>

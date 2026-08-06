@@ -1,0 +1,56 @@
+name: Refresh award availability
+
+on:
+  schedule:
+    # Daily refresh shortly after the seats.aero API quota resets at 00:00 UTC.
+    - cron: "20 0 * * *"
+    # Weekly destination discovery (Mondays). Distinguished from the daily run
+    # via github.event.schedule below.
+    - cron: "50 0 * * 1"
+  workflow_dispatch:
+    inputs:
+      discover:
+        description: "Also regenerate config/destinations.json (--discover)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # ~54+ extra quota calls; runs only on the weekly cron or when requested
+      # manually — never as part of the daily path.
+      - name: Discover destinations (weekly)
+        if: github.event.schedule == '50 0 * * 1' || inputs.discover == true
+        env:
+          SEATS_AERO_API_KEY: ${{ secrets.SEATS_AERO_API_KEY }}
+        run: node scripts/refresh.mjs --discover
+
+      # The script exits non-zero on any non-2xx API response, so a lapsed
+      # seats.aero subscription fails this job loudly instead of leaving the
+      # site silently stale.
+      - name: Fetch availability
+        env:
+          SEATS_AERO_API_KEY: ${{ secrets.SEATS_AERO_API_KEY }}
+        run: node scripts/refresh.mjs
+
+      - name: Commit updated data
+        run: |
+          if [ -n "$(git status --porcelain data/ config/destinations.json)" ]; then
+            git config user.name "points-refresh-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data/ config/destinations.json
+            git commit -m "data: refresh award availability ($(date -u +%Y-%m-%d))"
+            git push
+          else
+            echo "No data changes; nothing to commit."
+          fi

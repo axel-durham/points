@@ -1,0 +1,181 @@
+/* guide.css — page-specific styles for guide.html.
+   Site-wide styles come from style.css; this file adds prose measure,
+   table styling, and source-citation formatting in the site's warm
+   honeymoon palette (blush/rose/gold light, plum/navy dark).
+   Uses style.css variables when present, with warm fallbacks. */
+
+.guide {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem;
+  line-height: 1.55;
+}
+
+.guide-header nav {
+  margin-bottom: 1.25rem;
+}
+
+.guide-header nav a,
+.guide-footer a {
+  color: var(--accent, #b3486a);
+  font-weight: 600;
+  text-decoration: none;
+}
+.guide-header nav a:hover,
+.guide-footer a:hover {
+  text-decoration: underline;
+}
+
+.guide h1 {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.guide h2 {
+  font-size: 1.22rem;
+  margin: 2.4rem 0 0.6rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--guide-rule);
+}
+
+.guide h3 {
+  font-size: 1rem;
+  margin: 1.4rem 0 0.4rem;
+}
+
+.guide p,
+.guide ul {
+  margin: 0.6rem 0;
+}
+
+.guide li {
+  margin: 0.35rem 0;
+}
+
+.guide a {
+  color: var(--accent, #b3486a);
+}
+
+.verified {
+  font-size: 0.85rem;
+  color: var(--fg-muted, #8a6a72);
+}
+
+/* Tables — soft rounded cards */
+.guide table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0.9rem 0;
+  font-size: 0.92rem;
+  border: 1px solid var(--guide-table-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.guide th,
+.guide td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem 0.65rem;
+  border-bottom: 1px solid var(--guide-table-border);
+}
+
+.guide th + th,
+.guide td + td {
+  border-left: 1px solid var(--guide-table-border);
+}
+
+.guide tbody tr:last-child th,
+.guide tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.guide thead th {
+  background: var(--guide-th-bg);
+  font-weight: 600;
+}
+
+.guide tbody tr:nth-child(even) {
+  background: var(--guide-row-alt);
+}
+
+/* Source citations */
+.source {
+  font-size: 0.82rem;
+  color: var(--fg-muted, #8a6a72);
+  background: var(--guide-source-bg);
+  border-left: 3px solid var(--guide-gold);
+  border-radius: 0 10px 10px 0;
+  padding: 0.45rem 0.7rem;
+}
+
+.guide code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--guide-code-bg);
+  padding: 0.05em 0.3em;
+  border-radius: 5px;
+}
+
+/* Anchor targets shouldn't hide under any fixed site header */
+.guide section {
+  scroll-margin-top: 4rem;
+}
+
+.guide-footer {
+  margin-top: 2.5rem;
+}
+
+/* Warm palette: blush/rose/gold in light mode… */
+:root {
+  --guide-rule: #f0d3da;
+  --guide-table-border: #ecd2d9;
+  --guide-th-bg: #faeef1;
+  --guide-row-alt: #fdf6f7;
+  --guide-source-bg: #fbf3ea;
+  --guide-gold: #d5a95a;
+  --guide-code-bg: #f7e9ed;
+}
+
+/* …deep plum/navy in dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --guide-rule: #4a3344;
+    --guide-table-border: #453144;
+    --guide-th-bg: #332338;
+    --guide-row-alt: #2a1e30;
+    --guide-source-bg: #2b2233;
+    --guide-gold: #b08d4f;
+    --guide-code-bg: #3a2a3e;
+  }
+  /* Fallback page colors only if style.css is absent */
+  body:not([class]) {
+    background-color: #201826;
+    color: #ece4e8;
+  }
+  .guide a,
+  .guide-header nav a,
+  .guide-footer a {
+    color: var(--accent, #e8a0b4);
+  }
+}
+
+/* Small screens: keep real tables (with headers) and let them scroll
+   sideways. Also undoes style.css's stacked-card table pattern, which is
+   meant for the deals table and would strip this page's column headers. */
+@media (max-width: 700px) {
+  .guide table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .guide thead { display: table-header-group; }
+  .guide tbody { display: table-row-group; }
+  .guide tr { display: table-row; }
+  .guide th,
+  .guide td { display: table-cell; }
+  .guide tbody td::before { content: none; }
+}

@@ -1,0 +1,331 @@
+{
+  "_comment": "International destinations served from SFO with United award inventory, discovered from the seats.aero bulk endpoint. The daily refresh does one /search per entry. Regenerate with: node scripts/refresh.mjs --discover",
+  "_discoveredAt": "2026-08-05",
+  "origin": "SFO",
+  "destinations": [
+    {
+      "code": "ADL",
+      "city": "Adelaide",
+      "region": "Oceania",
+      "distance": 8083
+    },
+    {
+      "code": "AKL",
+      "city": "Auckland",
+      "region": "Oceania",
+      "distance": 6537
+    },
+    {
+      "code": "AMS",
+      "city": "Amsterdam",
+      "region": "Europe",
+      "distance": 5465
+    },
+    {
+      "code": "ARN",
+      "city": "Stockholm",
+      "region": "Europe",
+      "distance": 5350
+    },
+    {
+      "code": "ATH",
+      "city": "Athens",
+      "region": "Europe",
+      "distance": 6800
+    },
+    {
+      "code": "BCN",
+      "city": "Barcelona",
+      "region": "Europe",
+      "distance": 5962
+    },
+    {
+      "code": "BER",
+      "city": "Berlin",
+      "region": "Europe",
+      "distance": 5683
+    },
+    {
+      "code": "BKK",
+      "city": "Bangkok",
+      "region": "Asia",
+      "distance": 7931
+    },
+    {
+      "code": "BLR",
+      "city": "Bengaluru",
+      "region": "Asia",
+      "distance": 8701
+    },
+    {
+      "code": "BNE",
+      "city": "Brisbane",
+      "region": "Oceania",
+      "distance": 7077
+    },
+    {
+      "code": "BOD",
+      "city": "Bordeaux",
+      "region": "Europe",
+      "distance": 5686
+    },
+    {
+      "code": "BOM",
+      "city": "Mumbai",
+      "region": "Asia",
+      "distance": 8404
+    },
+    {
+      "code": "BZE",
+      "city": "Belize City",
+      "region": "South America",
+      "distance": 2486
+    },
+    {
+      "code": "CCU",
+      "city": "Kolkata",
+      "region": "Asia",
+      "distance": 7824
+    },
+    {
+      "code": "CDG",
+      "city": "Paris",
+      "region": "Europe",
+      "distance": 5575
+    },
+    {
+      "code": "CHC",
+      "city": "Christchurch",
+      "region": "Oceania",
+      "distance": 6934
+    },
+    {
+      "code": "CPH",
+      "city": "Copenhagen",
+      "region": "Europe",
+      "distance": 5478
+    },
+    {
+      "code": "CTS",
+      "city": "Sapporo",
+      "region": "Asia",
+      "distance": 4788
+    },
+    {
+      "code": "CTU",
+      "city": "Chengdu",
+      "region": "Asia",
+      "distance": 6863
+    },
+    {
+      "code": "DEL",
+      "city": "Delhi",
+      "region": "Asia",
+      "distance": 7701
+    },
+    {
+      "code": "DPS",
+      "city": "Denpasar (Bali)",
+      "region": "Asia",
+      "distance": 8360
+    },
+    {
+      "code": "DUB",
+      "city": "Dublin",
+      "region": "Europe",
+      "distance": 5090
+    },
+    {
+      "code": "FCO",
+      "city": "Rome",
+      "region": "Europe",
+      "distance": 6256
+    },
+    {
+      "code": "FLR",
+      "city": "Florence",
+      "region": "Europe",
+      "distance": 6112
+    },
+    {
+      "code": "FRA",
+      "city": "Frankfurt",
+      "region": "Europe",
+      "distance": 5691
+    },
+    {
+      "code": "GIG",
+      "city": "Rio de Janeiro",
+      "region": "South America",
+      "distance": 6617
+    },
+    {
+      "code": "HKG",
+      "city": "Hong Kong",
+      "region": "Asia",
+      "distance": 6922
+    },
+    {
+      "code": "HND",
+      "city": "Tokyo (Haneda)",
+      "region": "Asia",
+      "distance": 5154
+    },
+    {
+      "code": "ICN",
+      "city": "Seoul",
+      "region": "Asia",
+      "distance": 5651
+    },
+    {
+      "code": "IST",
+      "city": "Istanbul",
+      "region": "Europe",
+      "distance": 6716
+    },
+    {
+      "code": "KIX",
+      "city": "Osaka",
+      "region": "Asia",
+      "distance": 5407
+    },
+    {
+      "code": "KUL",
+      "city": "Kuala Lumpur",
+      "region": "Asia",
+      "distance": 8481
+    },
+    {
+      "code": "LHR",
+      "city": "London",
+      "region": "Europe",
+      "distance": 5359
+    },
+    {
+      "code": "LIM",
+      "city": "Lima",
+      "region": "South America",
+      "distance": 4515
+    },
+    {
+      "code": "LIR",
+      "city": "Liberia, Costa Rica",
+      "region": "South America",
+      "distance": 2950
+    },
+    {
+      "code": "LIS",
+      "city": "Lisbon",
+      "region": "Europe",
+      "distance": 5673
+    },
+    {
+      "code": "MEL",
+      "city": "Melbourne",
+      "region": "Oceania",
+      "distance": 7871
+    },
+    {
+      "code": "MNL",
+      "city": "Manila",
+      "region": "Asia",
+      "distance": 6984
+    },
+    {
+      "code": "MUC",
+      "city": "Munich",
+      "region": "Europe",
+      "distance": 5870
+    },
+    {
+      "code": "NAP",
+      "city": "Naples",
+      "region": "Europe",
+      "distance": 6368
+    },
+    {
+      "code": "NCE",
+      "city": "Nice",
+      "region": "Europe",
+      "distance": 6002
+    },
+    {
+      "code": "NRT",
+      "city": "Tokyo (Narita)",
+      "region": "Asia",
+      "distance": 5118
+    },
+    {
+      "code": "OSL",
+      "city": "Oslo",
+      "region": "Europe",
+      "distance": 5188
+    },
+    {
+      "code": "PEK",
+      "city": "Beijing",
+      "region": "Asia",
+      "distance": 5905
+    },
+    {
+      "code": "PPT",
+      "city": "Papeete",
+      "region": "Oceania",
+      "distance": 4207
+    },
+    {
+      "code": "PVG",
+      "city": "Shanghai",
+      "region": "Asia",
+      "distance": 6144
+    },
+    {
+      "code": "SIN",
+      "city": "Singapore",
+      "region": "Asia",
+      "distance": 8448
+    },
+    {
+      "code": "SYD",
+      "city": "Sydney",
+      "region": "Oceania",
+      "distance": 7433
+    },
+    {
+      "code": "TER",
+      "city": "Terceira, Azores",
+      "region": "Europe",
+      "distance": 4912
+    },
+    {
+      "code": "TLV",
+      "city": "Tel Aviv",
+      "region": "Asia",
+      "distance": 7415
+    },
+    {
+      "code": "TPE",
+      "city": "Taipei",
+      "region": "Asia",
+      "distance": 6463
+    },
+    {
+      "code": "VIE",
+      "city": "Vienna",
+      "region": "Europe",
+      "distance": 6004
+    },
+    {
+      "code": "WAW",
+      "city": "Warsaw",
+      "region": "Europe",
+      "distance": 5859
+    },
+    {
+      "code": "ZRH",
+      "city": "Zurich",
+      "region": "Europe",
+      "distance": 5832
+    }
+  ]
+}

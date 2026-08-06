@@ -1,0 +1,12 @@
+{
+  "_comment": "Typical United MileagePlus saver/partner award levels, one-way from SFO, per destination region and cabin. Hand-maintained: edit these numbers freely, the UI reads them at render time and no re-fetch is needed. Used only to compute the 'below baseline' view and the delta column.",
+  "_lastReviewed": "2026-08-05",
+  "baselines": {
+    "Europe":       { "Y": 33000,  "W": 60000,  "J": 88000,  "F": 130000 },
+    "Asia":         { "Y": 40000,  "W": 70000,  "J": 88000,  "F": 140000 },
+    "Oceania":      { "Y": 45000,  "W": 80000,  "J": 95000,  "F": 160000 },
+    "South America":{ "Y": 30000,  "W": 55000,  "J": 70000,  "F": 120000 },
+    "Africa":       { "Y": 45000,  "W": 75000,  "J": 100000, "F": 160000 },
+    "Middle East":  { "Y": 42500,  "W": 72500,  "J": 95000,  "F": 150000 }
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Axel &amp; Nhi — Honeymoon Award Finder</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-row">
+    <div class="title-block">
+      <h1><span class="title-names">Axel <span class="heart-mark" aria-hidden="true">&#9829;</span> Nhi</span> <span class="title-sub">Honeymoon Award Finder</span></h1>
+      <p class="tagline"><span aria-hidden="true">&#9992;&#65038;</span> Saver award space from SFO, for two.</p>
+    </div>
+    <nav>
+      <a href="./guide.html">Guide</a>
+    </nav>
+  </div>
+  <p class="refreshed" id="refreshed" hidden></p>
+</header>
+
+<div id="banners"></div>
+
+<main>
+  <section class="filters" id="filters" hidden>
+    <div class="filter-group filter-search">
+      <label for="search">Search</label>
+      <input type="search" id="search" placeholder="Airport, city, or airline code" autocomplete="off">
+    </div>
+
+    <fieldset class="filter-group" id="cabin-group">
+      <legend>Cabin <a class="help-link" href="./guide.html#cabins" title="What do these cabin codes mean?">?</a></legend>
+      <div class="toggle-row" id="cabin-toggles"></div>
+    </fieldset>
+
+    <fieldset class="filter-group" id="region-group">
+      <legend>Region</legend>
+      <div class="toggle-row" id="region-toggles"></div>
+    </fieldset>
+
+    <div class="filter-group">
+      <label for="month">Month</label>
+      <select id="month"></select>
+    </div>
+
+    <div class="filter-group">
+      <label for="max-miles">Max miles: <output id="max-miles-out"></output></label>
+      <input type="range" id="max-miles">
+    </div>
+
+    <div class="filter-group filter-inline">
+      <label class="check-label"><input type="checkbox" id="nonstop"> Non-stop only</label>
+      <label class="check-label fav-label"><input type="checkbox" id="fav-only"> <span class="heart-inline" aria-hidden="true">&#9829;</span> Shortlist only</label>
+      <label for="min-seats" class="seats-label">Seats for
+        <input type="number" id="min-seats" min="1" max="9" value="2" inputmode="numeric">
+        <span class="seats-hint">(2 = both of us)</span>
+      </label>
+      <button type="button" id="reset" class="reset-btn">Reset filters</button>
+    </div>
+  </section>
+
+  <div class="tabs" id="tabs" role="tablist" hidden>
+    <button role="tab" data-tab="all" aria-selected="true">All <span class="count" id="count-all">0</span></button>
+    <button role="tab" data-tab="below" aria-selected="false">Below baseline <span class="count" id="count-below">0</span></button>
+    <button role="tab" data-tab="new" aria-selected="false">New <span class="count" id="count-new">0</span></button>
+  </div>
+
+  <div id="error" class="error" hidden></div>
+
+  <div class="table-wrap">
+    <table id="deals-table" hidden>
+      <thead>
+        <tr>
+          <th class="fav-col"><span class="visually-hidden">Shortlist</span></th>
+          <th><button data-sort="date">Date</button></th>
+          <th><button data-sort="route">Route</button></th>
+          <th><button data-sort="cabin">Cabin</button></th>
+          <th class="num"><button data-sort="miles">Miles</button></th>
+          <th class="num"><button data-sort="delta">&Delta; vs baseline</button></th>
+          <th><button data-sort="direct">Non-stop</button></th>
+          <th class="num"><button data-sort="seats">Seats</button></th>
+          <th><button data-sort="airlines">Airlines</button></th>
+        </tr>
+      </thead>
+      <tbody id="deals-body"></tbody>
+    </table>
+    <p id="truncated" class="truncated" hidden></p>
+    <p id="empty" class="empty" hidden></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>Data from seats.aero. Personal, non-commercial use. <span class="heart-inline" aria-hidden="true">&#9829;</span></p>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

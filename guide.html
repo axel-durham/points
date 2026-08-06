@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>United Award Fares &amp; Booking Codes</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./guide.css">
+</head>
+<body>
+<div class="guide">
+  <header class="guide-header">
+    <nav><a href="./index.html">&larr; Back to search</a></nav>
+    <h1>United award fares and booking codes</h1>
+    <p class="verified">Last verified: 2026-08-05. Airline inventory rules change without notice; treat anything older than a few months with suspicion.</p>
+  </header>
+
+  <section id="saver-vs-dynamic">
+    <h2>1. Saver vs. dynamic award pricing</h2>
+    <p>United no longer publishes award charts. On <strong>Nov. 15, 2019</strong> it moved awards on its own flights to dynamic pricing, and on <strong>April 28, 2020</strong> it deleted the Star Alliance partner award chart from its site &mdash; that second change came with no advance notice. Since then there is no official price list for anything; sites like AwardWallet maintain <em>unofficial</em> charts reconstructed from real bookings.</p>
+    <p>Two kinds of award still exist in practice:</p>
+    <ul>
+      <li><strong>Saver awards</strong> &mdash; capacity-controlled seats filed in dedicated award inventory buckets (the letter codes below). Prices are relatively low and comparatively stable. This is the space worth hunting.</li>
+      <li><strong>Everyday (dynamic) awards</strong> &mdash; on United-operated flights, any sellable seat can be bought with miles at a dynamically computed price, sometimes absurdly high. These exist even when saver space doesn't.</li>
+    </ul>
+    <p><strong>A concrete example of the split</strong> (observed in the seats.aero Partner API response, 2026-08-05): for SFO&rarr;NRT on 2026-08-06, a single United availability record reported <code>JAvailable:&nbsp;false</code> with <code>JMileageCost:&nbsp;"0"</code> alongside <code>JAvailableRaw:&nbsp;true</code> with <code>JMileageCostRaw:&nbsp;360000</code>. The non-Raw fields track saver space; the Raw fields include dynamically priced seats. So that day there was no saver business seat, but you could have a business seat for 360,000 miles at dynamic pricing. "A seat is available" means nothing until you say at what price &mdash; which is why this site shows saver space only and deliberately discards the Raw figures.</p>
+    <p><strong>Why partners price differently:</strong> Star Alliance partner programs can generally only see and book <em>saver-level</em> space on each other's flights. A United flight priced dynamically above saver level is bookable with United miles but invisible to Aeroplan, LifeMiles, etc. &mdash; and the reverse is true when you point United miles at a Lufthansa or ANA flight. Partner awards booked through United therefore behave close to a fixed (if unpublished) price table, while United-metal awards float.</p>
+    <p class="source">Sources: <a href="https://thepointsguy.com/news/united-pulls-partner-award-chart">TPG: United pulls partner award chart</a> &middot; <a href="https://awardwallet.com/airlines/united-mileageplus/partner-award-chart/">AwardWallet unofficial MileagePlus chart</a> &middot; <a href="https://www.thepointsanalyst.com/search-for-star-alliance-award-availability/">The Points Analyst: Star Alliance award availability</a></p>
+  </section>
+
+  <section id="booking-classes">
+    <h2>2. Award booking classes</h2>
+    <p>Award seats live in single-letter inventory buckets (booking classes, or RBDs), separate from the revenue fare classes sold for cash on the same aircraft. Codes ending in <strong>N</strong> are extra saver space visible only to United elites (Platinum/1K) and United co-brand cardholders.</p>
+
+    <h3>United-operated flights</h3>
+    <table>
+      <thead>
+        <tr><th>Cabin</th><th>Saver (everyone, incl. partners)</th><th>Saver (elite / cardholder only)</th><th>Everyday (dynamic)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Economy</td><td>X</td><td>XN</td><td>YN</td></tr>
+        <tr><td>Premium Plus</td><td colspan="3">ON &mdash; United files all Premium Plus awards in one code, priced dynamically; there is no separate saver bucket</td></tr>
+        <tr><td>Business (Polaris) / domestic First</td><td>I</td><td>IN</td><td>JN</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Partner-operated Star Alliance flights</h3>
+    <table>
+      <thead>
+        <tr><th>Cabin</th><th>Award booking class</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Economy</td><td>X</td></tr>
+        <tr><td>Business</td><td>I</td></tr>
+        <tr><td>First</td><td>O</td></tr>
+      </tbody>
+    </table>
+    <p>These are the alliance-standard saver codes. O applies only to partners that still sell international First (ANA, Lufthansa, etc.); United retired its own international First in 2018.</p>
+    <p>For contrast, United's <em>revenue</em> fare classes on the same plane: Economy Y, B, M, E, U, H, Q, V, W, S, T, L, K, G, N (Basic Economy); Premium Plus O, A, R; Business/First J, C, D, Z, P. Note the overlap: revenue &ldquo;O&rdquo; is a paid Premium Plus fare on United but a First-class award on partners &mdash; the same letter means different things in different contexts, which is exactly why context matters.</p>
+    <p class="source">Sources: <a href="https://thepointsguy.com/airline/united-fare-classes/">TPG: United fare classes</a> (updated Feb 2025) &middot; <a href="https://thepointsguy.com/loyalty-programs/united-expert-mode/">TPG: United expert mode</a> &middot; <a href="https://www.thepointsanalyst.com/search-for-star-alliance-award-availability/">The Points Analyst</a></p>
+  </section>
+
+  <section id="cabins">
+    <h2>3. Cabin codes as this site uses them</h2>
+    <p>This site follows seats.aero's convention: one letter per <em>cabin</em>, regardless of which booking class the award actually files into.</p>
+    <table>
+      <thead>
+        <tr><th>Code</th><th>Cabin</th><th>United marketing name</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Y</td><td>Economy</td><td>Economy (incl. Basic Economy, Economy Plus)</td></tr>
+        <tr><td>W</td><td>Premium economy</td><td>Premium Plus</td></tr>
+        <tr><td>J</td><td>Business</td><td>Polaris (international); United First (domestic two-cabin flights often maps here or to F depending on the tool)</td></tr>
+        <tr><td>F</td><td>First</td><td>Global First &mdash; but note United stopped selling international First on June 20, 2018, so F results on United metal today are domestic First or nothing; meaningful F space is mostly partner First (ANA, Lufthansa&hellip;)</td></tr>
+      </tbody>
+    </table>
+    <p>Don't confuse these with booking classes: a &ldquo;J&rdquo; result in this site's cabin column may be filed in award class I, IN, or JN on the actual reservation.</p>
+    <p class="source">Sources: <a href="https://developers.seats.aero/">seats.aero developer docs</a> (cabin parameter Y/W/J/F) &middot; <a href="https://onemileatatime.com/united-phasing-out-international-first-class/">One Mile at a Time: United phasing out international First</a></p>
+  </section>
+
+  <section id="three-things">
+    <h2>4. Fare basis vs. booking class vs. cabin</h2>
+    <p>Three different things that all get called &ldquo;fare class&rdquo; in casual conversation:</p>
+    <table>
+      <thead>
+        <tr><th>Term</th><th>What it is</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Cabin</td><td>The physical section of the plane</td><td>Polaris business</td></tr>
+        <tr><td>Booking class (RBD)</td><td>Single letter; the inventory bucket your seat was sold or awarded from</td><td>I</td></tr>
+        <tr><td>Fare basis</td><td>A longer alphanumeric string on the ticket encoding the fare's rules; its first letter is usually the booking class</td><td>e.g. <code>IJBP0AWD</code> (illustrative)</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Worked example:</strong> you book a saver business award on a United-operated flight to Frankfurt using partner miles. The <em>cabin</em> is business (Polaris; this site's J). The <em>booking class</em> is I &mdash; the saver business award bucket. The ticket carries a <em>fare basis</em> string beginning with I that encodes the award fare's rules. Three labels, one seat.</p>
+  </section>
+
+  <section id="caveats">
+    <h2>5. Practical caveats</h2>
+    <ul>
+      <li><strong>Space is volatile.</strong> Saver awards appear and vanish within hours &mdash; airlines open and pull buckets continuously, and popular space gets booked fast. Treat any search result as a snapshot, not a promise.</li>
+      <li><strong>seats.aero is a cache, not live inventory.</strong> It shows results from periodic background scrapes; the snapshot can be minutes to hours old, and a fresh check may disagree with it. seats.aero's own docs explain that flights can &ldquo;disappear&rdquo; simply because a refresh replaced stale cached data.</li>
+      <li><strong>Phantom space exists.</strong> Occasionally a partner's systems show award inventory that fails at ticketing (the booking errors out or the seat never confirms). If a too-good award won't ticket, it may never have been real.</li>
+      <li><strong>Visible &ne; bookable with United miles.</strong> Partner space surfaced by third-party tools was found through <em>some</em> program's search &mdash; not necessarily United's. Programs differ in which partners, routes, and cabins they can ticket, and married-segment and program-specific filters mean United.com may refuse space that Aeroplan happily books (and vice versa). Always confirm on united.com before counting on it.</li>
+    </ul>
+    <p class="source">Sources: <a href="https://docs.seats.aero/article/69-why-did-flights-disappear-after-i-refreshed">seats.aero: Why did flights disappear after I refreshed?</a> &middot; <a href="https://www.thepointsanalyst.com/search-for-star-alliance-award-availability/">The Points Analyst</a></p>
+  </section>
+
+  <footer class="guide-footer">
+    <p><a href="./index.html">&larr; Back to search</a></p>
+  </footer>
+</div>
+</body>
+</html>

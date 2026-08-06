@@ -469,6 +469,25 @@ input[type="range"] {
 .restore-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
 .restore-all { margin-top: 0.25rem; }
 
+.cabin-section { margin-top: 1.4rem; }
+.cabin-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+.cabin-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
 .dest-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

@@ -1,12 +1,14 @@
 {
-  "_comment": "Typical United MileagePlus saver/partner award levels, one-way from SFO, per destination region and cabin. Hand-maintained: edit these numbers freely, the UI reads them at render time and no re-fetch is needed. Used only to compute the 'below baseline' view and the delta column.",
-  "_lastReviewed": "2026-08-05",
+  "_comment": "Typical published United award level per destination region and cabin, one-way from SFO. DERIVED FROM OBSERVED DATA, not hand-guessed: each value is the modal (most frequently occurring) price in data/deals.json for that region+cabin. A row priced below its baseline is genuinely unusual and worth surfacing.",
+  "_method": "mode of observed miles per region+cabin",
+  "_derivedFrom": "data/deals.json, 10090 rows, 2026-08-06",
+  "_caveat": "United partner award pricing is close to FIXED in premium cabins: Asia First is 220000 in 100% of observed rows, Europe Business 88000 in 80%, Asia Premium Economy 65000 in 92%. Those cabins will therefore essentially never fall below baseline. Economy is the only cabin with real price variation (Europe 56% at mode, Asia 31%). This is a property of the award chart, not a bug. For premium cabins the scarce resource is AVAILABILITY, not price.",
+  "_note": "Oceania has no Business or First availability at all in the observed window, so no baseline exists for those cabins.",
+  "_regenerate": "Recompute the modes from data/deals.json after a refresh if the award chart changes.",
   "baselines": {
-    "Europe":       { "Y": 33000,  "W": 60000,  "J": 88000,  "F": 130000 },
-    "Asia":         { "Y": 40000,  "W": 70000,  "J": 88000,  "F": 140000 },
-    "Oceania":      { "Y": 45000,  "W": 80000,  "J": 95000,  "F": 160000 },
-    "South America":{ "Y": 30000,  "W": 55000,  "J": 70000,  "F": 120000 },
-    "Africa":       { "Y": 45000,  "W": 75000,  "J": 100000, "F": 160000 },
-    "Middle East":  { "Y": 42500,  "W": 72500,  "J": 95000,  "F": 150000 }
+    "Europe":        { "Y": 44000, "W": 50000, "J": 88000 },
+    "Asia":          { "Y": 55000, "W": 65000, "J": 88000, "F": 220000 },
+    "Oceania":       { "Y": 55000, "W": 70000 },
+    "South America": { "Y": 20000, "J": 60500 }
   }
 }

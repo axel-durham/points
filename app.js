@@ -6,7 +6,10 @@
   var CABIN_LABELS = { Y: "Economy", W: "Premium Economy", J: "Business", F: "First" };
   var DEFAULT_CABINS = ["J", "F"];
   var DEFAULT_MIN_SEATS = 2; // travelling as a pair
-  var DEFAULT_DEST_SORT = "miles";
+  var DEFAULT_DEST_SORT = "avail";
+  // Headline-cabin precedence: the most premium cabin that is both selected
+  // in the filters and actually available for the destination.
+  var CABIN_PRECEDENCE = ["F", "J", "W", "Y"];
   var STALE_MS = 36 * 60 * 60 * 1000;
   var MILES_STEP = 5000;
   var RENDER_CAP = 500; // keep the detail table light
@@ -558,7 +561,7 @@
     var dest = p.get("dest");
     if (dest && destInfo[dest]) state.dest = dest;
     var dsort = p.get("dsort");
-    if (dsort === "saving" || dsort === "dates" || dsort === "city") state.destSort = dsort;
+    if (["avail", "miles", "saving", "dates", "city"].indexOf(dsort) >= 0) state.destSort = dsort;
     var sort = p.get("sort");
     if (sort && document.querySelector('button[data-sort="' + sort + '"]')) {
       state.sort = sort;
@@ -629,7 +632,6 @@
           rows: [],
           perCabin: {},        // cabin -> row with min miles
           minMiles: Infinity,
-          bestDelta: null,     // most negative delta seen (biggest saving)
           dates: {},
           anyDirect: false,
           airlines: {},
@@ -641,8 +643,6 @@
       var pc = g.perCabin[d.cabin];
       if (!pc || d.miles < pc.miles) g.perCabin[d.cabin] = d;
       if (d.miles < g.minMiles) g.minMiles = d.miles;
-      var delta = deltaFor(d);
-      if (delta !== null && (g.bestDelta === null || delta < g.bestDelta)) g.bestDelta = delta;
       if (d.date) g.dates[d.date] = true;
       if (d.direct) g.anyDirect = true;
       (d.airlines || []).forEach(function (a) { g.airlines[a] = true; });
@@ -651,13 +651,28 @@
     return Object.keys(map).map(function (k) {
       var g = map[k];
       g.dateList = Object.keys(g.dates).sort();
-      // Headline price: best Business if any, otherwise the overall cheapest row.
-      g.emph = g.perCabin.J || null;
-      if (!g.emph) {
-        CABINS.forEach(function (c) {
-          if (g.perCabin[c] && (!g.emph || g.perCabin[c].miles < g.emph.miles)) g.emph = g.perCabin[c];
-        });
+      var monthSeen = {};
+      g.dateList.forEach(function (d) { monthSeen[d.slice(0, 7)] = true; });
+      g.monthCount = Object.keys(monthSeen).length;
+      // Headline cabin: the most premium cabin present among the matching rows
+      // (rows already passed the cabin filter). Cards are only ever compared
+      // against cards with the SAME headline cabin — never Y miles vs J miles.
+      g.emph = null;
+      for (var i = 0; i < CABIN_PRECEDENCE.length; i++) {
+        if (g.perCabin[CABIN_PRECEDENCE[i]]) { g.emph = g.perCabin[CABIN_PRECEDENCE[i]]; break; }
       }
+      // Delta used for display AND for the "biggest saving" sort — always the
+      // headline cabin's best row, so ranking matches what the card shows.
+      g.emphDelta = deltaFor(g.emph);
+      // Availability score (default ranking). Partner award prices are close to
+      // fixed in premium cabins, so price cannot discriminate; what matters is
+      // how bookable a destination genuinely is. Composite, higher = better:
+      //   +20 per distinct month with space  (breadth beats a cluster: space in
+      //        5 months easily outranks 20 dates crammed into one week)
+      //   +15 if any non-stop option exists  (worth more than a few extra dates)
+      //   +1  per distinct date              (volume as the fine-grained tiebreak)
+      // Distinct dates already respect the min-seats filter upstream.
+      g.availScore = 20 * g.monthCount + (g.anyDirect ? 15 : 0) + g.dateList.length;
       return g;
     });
   }
@@ -665,9 +680,12 @@
   function sortGroups(groups) {
     var s = state.destSort;
     return groups.slice().sort(function (a, b) {
-      if (s === "saving") {
-        var da = a.bestDelta === null ? Infinity : a.bestDelta;
-        var db = b.bestDelta === null ? Infinity : b.bestDelta;
+      if (s === "avail") {
+        if (a.availScore !== b.availScore) return b.availScore - a.availScore;
+        if (a.dateList.length !== b.dateList.length) return b.dateList.length - a.dateList.length;
+      } else if (s === "saving") {
+        var da = a.emphDelta === null ? Infinity : a.emphDelta;
+        var db = b.emphDelta === null ? Infinity : b.emphDelta;
         if (da !== db) return da - db;
       } else if (s === "dates") {
         if (a.dateList.length !== b.dateList.length) return b.dateList.length - a.dateList.length;
@@ -676,7 +694,9 @@
         var cb = (b.city || b.to).toLowerCase();
         if (ca !== cb) return ca < cb ? -1 : 1;
       } else {
-        if (a.minMiles !== b.minMiles) return a.minMiles - b.minMiles;
+        // "miles": cheapest first, compared on the headline cabin's price only
+        // (sections are already single-cabin, so this stays like-for-like).
+        if (a.emph.miles !== b.emph.miles) return a.emph.miles - b.emph.miles;
       }
       return a.to < b.to ? -1 : a.to > b.to ? 1 : 0;
     });
@@ -803,6 +823,8 @@
         empty.textContent = "No deals in the current data set.";
       } else if (state.favOnly && favorites.length === 0) {
         empty.textContent = "No shortlisted dates yet — open a destination and tap the heart on a date to save it.";
+      } else if (state.tab === "below") {
+        empty.textContent = belowEmptyMessage();
       } else if (hidden.length > 0 && state.tab === "all") {
         empty.textContent = "No destinations match the current filters. (" + hidden.length +
           " hidden — restore them from the Hidden list above.)";
@@ -813,9 +835,52 @@
     }
     empty.hidden = true;
 
+    // Group cards by headline cabin so prices are only ever compared
+    // like-for-like: First cards together, then Business, and so on.
+    var buckets = {};
+    groups.forEach(function (g) {
+      var c = g.emph.cabin;
+      (buckets[c] = buckets[c] || []).push(g);
+    });
     var frag = document.createDocumentFragment();
-    groups.forEach(function (g) { frag.appendChild(renderCard(g)); });
+    CABIN_PRECEDENCE.forEach(function (c) {
+      if (!buckets[c]) return;
+      var section = document.createElement("section");
+      section.className = "cabin-section";
+      var h = document.createElement("h2");
+      h.className = "cabin-heading";
+      h.textContent = cabinHeading(c) +
+        " · " + buckets[c].length + (buckets[c].length === 1 ? " destination" : " destinations");
+      section.appendChild(h);
+      var wrap = document.createElement("div");
+      wrap.className = "dest-grid";
+      buckets[c].forEach(function (g) { wrap.appendChild(renderCard(g)); });
+      section.appendChild(wrap);
+      frag.appendChild(section);
+    });
     grid.appendChild(frag);
+  }
+
+  function belowEmptyMessage() {
+    // Premium-cabin award prices are essentially fixed (see config/baselines.json
+    // _caveat), so an empty below-baseline view for J/F/W is expected, not broken.
+    if (state.cabins.length > 0 && state.cabins.indexOf("Y") < 0) {
+      var names = state.cabins.slice().sort(function (a, b) {
+        return CABINS.indexOf(a) - CABINS.indexOf(b);
+      }).map(function (c) { return CABIN_LABELS[c]; }).join(" and ");
+      return "Nothing below baseline — " + names +
+        " award prices are essentially fixed, so bargains only really appear in Economy. " +
+        "Add Economy to the cabin filter to hunt for them.";
+    }
+    return "Nothing below baseline matches the current filters. " +
+      "Economy is where prices actually vary — try widening regions or the miles cap.";
+  }
+
+  function cabinHeading(c) {
+    if (c === "F") return "First class";
+    if (c === "J") return "Business class";
+    if (c === "W") return "Premium Economy";
+    return "Economy";
   }
 
   function renderCard(g) {
@@ -889,7 +954,8 @@
     var meta = document.createElement("p");
     meta.className = "card-meta";
     var nDates = g.dateList.length;
-    var bits = [nDates + (nDates === 1 ? " date" : " dates")];
+    var bits = [nDates + (nDates === 1 ? " date" : " dates") +
+      (nDates > 1 ? " across " + g.monthCount + (g.monthCount === 1 ? " month" : " months") : "")];
     if (nDates === 1) {
       bits.push(fmtShortDate(g.dateList[0]));
     } else if (nDates > 1) {
@@ -1029,7 +1095,9 @@
     if (rows.length === 0) {
       table.hidden = true;
       empty.hidden = false;
-      empty.textContent = "No dates for " + name +
+      empty.textContent = state.tab === "below" ?
+        belowEmptyMessage() :
+        "No dates for " + name +
         " match the current filters and tab. Adjust the filters or go back to all destinations.";
       return;
     }

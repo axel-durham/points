@@ -2,11 +2,15 @@ name: Refresh award availability
 
 on:
   schedule:
-    # Daily refresh shortly after the seats.aero API quota resets at 00:00 UTC.
-    - cron: "20 0 * * *"
+    # Daily refresh, after the seats.aero API quota resets at 00:00 UTC.
+    # Deliberately at an odd minute well away from the top of the hour:
+    # GitHub queues scheduled workflows at low priority and drops or delays
+    # them under load, and :00/:15/:30 near midnight UTC are the most
+    # congested slots on the platform. The 2026-08-07 00:20 run never fired.
+    - cron: "37 1 * * *"
     # Weekly destination discovery (Mondays). Distinguished from the daily run
     # via github.event.schedule below.
-    - cron: "50 0 * * 1"
+    - cron: "43 2 * * 1"
   workflow_dispatch:
     inputs:
       discover:
@@ -30,7 +34,9 @@ jobs:
       # ~54+ extra quota calls; runs only on the weekly cron or when requested
       # manually — never as part of the daily path.
       - name: Discover destinations (weekly)
-        if: github.event.schedule == '50 0 * * 1' || inputs.discover == true
+        # NOTE: this string must match the weekly cron above EXACTLY. If the
+        # schedule changes and this does not, discovery silently stops running.
+        if: github.event.schedule == '43 2 * * 1' || inputs.discover == true
         env:
           SEATS_AERO_API_KEY: ${{ secrets.SEATS_AERO_API_KEY }}
         run: node scripts/refresh.mjs --discover

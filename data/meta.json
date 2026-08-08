@@ -1,11 +1,11 @@
 {
-  "refreshedAt": "2026-08-07T04:14:28.106Z",
-  "rowCount": 10020,
-  "addedSinceLastRun": 13,
-  "removedSinceLastRun": 37,
-  "rateLimitRemaining": 892,
+  "refreshedAt": "2026-08-08T03:12:50.407Z",
+  "rowCount": 10067,
+  "addedSinceLastRun": 209,
+  "removedSinceLastRun": 162,
+  "rateLimitRemaining": 946,
   "origin": "SFO",
   "source": "united",
-  "windowStart": "2026-08-07",
-  "windowEnd": "2027-02-03"
+  "windowStart": "2026-08-08",
+  "windowEnd": "2027-02-04"
 }

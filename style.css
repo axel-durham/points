@@ -284,6 +284,14 @@ input[type="range"] {
 }
 #max-miles-out { font-weight: 700; color: var(--fg); text-transform: none; letter-spacing: 0; }
 
+.nights-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.nights-row input[type="number"] { width: 3.4rem; }
+.nights-dash { color: var(--fg-muted); }
+
 .filter-inline {
   display: flex;
   align-items: center;
@@ -319,6 +327,22 @@ input[type="range"] {
   border-top: 1px dashed var(--border);
   font-size: 0.8rem;
   color: var(--fg-muted);
+}
+
+/* Unknown seat count marker — noticeable (amber) but not shouting */
+
+.unk-badge {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  color: var(--warn-fg);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  cursor: help;
 }
 
 /* Cardmember discount marker */
@@ -516,6 +540,11 @@ input[type="range"] {
 .restore-all { margin-top: 0.25rem; }
 
 .cabin-section { margin-top: 1.4rem; }
+.section-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  color: var(--fg-muted);
+}
 .cabin-heading {
   display: flex;
   align-items: center;
@@ -691,9 +720,46 @@ input[type="range"] {
 }
 .back-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
 
+/* Trips / Outbound / Return view switcher */
+
+.view-switch {
+  display: inline-flex;
+  margin: 0.9rem 0 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.view-switch button {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: var(--fg-muted);
+  padding: 0.4rem 0.95rem;
+  cursor: pointer;
+}
+.view-switch button + button { border-left: 1px solid var(--border); }
+.view-switch button:hover { color: var(--fg); background: var(--accent-soft); }
+.view-switch button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
 /* Table */
 
 .table-wrap { margin-top: 0.75rem; }
+
+thead th.plain-th {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fg-muted);
+  padding: 0.5rem 0.6rem;
+}
 
 table {
   width: 100%;
@@ -845,9 +911,12 @@ tbody tr:hover { background: var(--row-hover); }
   td.fav-col::before { content: none; }
   .fav-btn { font-size: 1.25rem; }
 
-  tbody td[data-label="Date"] {
+  tbody td[data-label="Date"],
+  tbody td[data-label="Depart"] {
     padding-right: 2.2rem; /* keep clear of the heart */
   }
+
+  .miles-sub { flex-wrap: wrap; justify-content: flex-end; min-width: 0; }
 
   .filters { gap: 0.75rem 1.25rem; }
   input[type="range"] { width: 100%; }

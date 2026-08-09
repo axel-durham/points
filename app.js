@@ -2,13 +2,19 @@
 (function () {
   "use strict";
 
+  var ORIGIN = "SFO";
   var CABINS = ["Y", "W", "J", "F"];
   var CABIN_LABELS = { Y: "Economy", W: "Premium Economy", J: "Business", F: "First" };
   var DEFAULT_CABINS = ["J", "F"];
   var DEFAULT_MIN_SEATS = 2; // travelling as a pair
   var DEFAULT_DEST_SORT = "avail";
+  // Trip length window for pairing outbound + return dates into roundtrips.
+  var DEFAULT_MIN_NIGHTS = 7;
+  var DEFAULT_MAX_NIGHTS = 14;
+  var NIGHTS_FLOOR = 1;
+  var NIGHTS_CEIL = 30;
   // Headline-cabin precedence: the most premium cabin that is both selected
-  // in the filters and actually available for the destination.
+  // in the filters and actually pairable (or, failing that, available).
   var CABIN_PRECEDENCE = ["F", "J", "W", "Y"];
 
   // Chase United Club Infinite + MileagePlus Premier status gives a flat 15%
@@ -31,20 +37,40 @@
   function effMiles(d) {
     return isDiscounted(d) ? Math.round(d.miles * (1 - CARDMEMBER_DISCOUNT)) : d.miles;
   }
+
+  // A seat count of 0 (legacy data) or null (current refresh script) means the
+  // source did NOT report a count — not "no seats": the API marks such rows
+  // available, and the same flight/date/price flips between 0 and a real count
+  // across refreshes. Treat both as "unknown" for the whole life of the app:
+  // never excluded by the min-seats filter, flagged in the UI instead of shown
+  // as a number, and worth less than a confirmed count when ranking.
+  function seatsKnown(d) {
+    return typeof d.seats === "number" && d.seats >= 1;
+  }
+
+  // Rows exist in BOTH directions since the refresh script started fetching
+  // returns: outbound = SFO→X, return = X→SFO. Everything groups by the
+  // "place" — the non-SFO end — so one destination card covers both legs.
+  function isOutbound(d) { return d.from === ORIGIN; }
+  function placeOf(d) { return isOutbound(d) ? d.to : d.from; }
+
   var STALE_MS = 36 * 60 * 60 * 1000;
   var MILES_STEP = 5000;
-  var RENDER_CAP = 500; // keep the detail table light
+  var RENDER_CAP = 500; // keep the detail tables light
   var FAV_KEY = "honeymoon-favs";
   var HIDDEN_KEY = "honeymoon-hidden";
   var UNDO_MS = 10000;
+  var PAIR_PREFIX = "P:"; // favorites entries for whole trips: "P:<outId>|<retId>"
 
   var deals = [];
+  var dealsById = {};
   var baselines = {};
   var allRegions = [];
   var allMonths = [];
   var milesCeil = 200000;
   var newestFirstSeen = null;
-  var destInfo = {}; // IATA -> { city, region }
+  var destInfo = {}; // IATA (place) -> { city, region }
+  var hasReturnData = false;
   var favorites = loadList(FAV_KEY);
   var hidden = loadList(HIDDEN_KEY);
   var undoTimer = null;
@@ -54,16 +80,21 @@
     q: "",
     cabins: DEFAULT_CABINS.slice(),
     regions: [],        // populated with all regions after load
-    month: "",          // "" = all, else "YYYY-MM"
-    maxMiles: null,     // null = no cap (slider at max)
+    month: "",          // "" = all, else "YYYY-MM" (departure month)
+    maxMiles: null,     // null = no cap (slider at max); applies per leg
     nonstop: false,
     minSeats: DEFAULT_MIN_SEATS,
+    minNights: DEFAULT_MIN_NIGHTS,
+    maxNights: DEFAULT_MAX_NIGHTS,
     favOnly: false,
     tab: "all",
     dest: null,         // IATA code -> detail view; null -> grid view
     destSort: DEFAULT_DEST_SORT,
-    sort: null,         // detail table sort; null = miles ascending default
-    dir: "asc"
+    view: "trips",      // detail view mode: trips | out | ret
+    sort: null,         // leg table sort; null = miles ascending default
+    dir: "asc",
+    tsort: null,        // trips table sort; null = total ascending default
+    tdir: "asc"
   };
 
   var $ = function (id) { return document.getElementById(id); };
@@ -93,6 +124,20 @@
     if (i >= 0) favorites.splice(i, 1);
     else favorites.push(id);
     saveList(FAV_KEY, favorites);
+  }
+
+  function pairId(pair) { return PAIR_PREFIX + pair.out.id + "|" + pair.ret.id; }
+
+  // Legs referenced by any shortlisted trip: with "Shortlist only" on, those
+  // legs must keep passing the filter or their trip could not be rebuilt.
+  function favPairLegIds() {
+    var set = {};
+    favorites.forEach(function (f) {
+      if (f.indexOf(PAIR_PREFIX) !== 0) return;
+      var legs = f.slice(PAIR_PREFIX.length).split("|");
+      if (legs.length === 2) { set[legs[0]] = true; set[legs[1]] = true; }
+    });
+    return set;
   }
 
   function isHidden(code) { return hidden.indexOf(code) >= 0; }
@@ -153,8 +198,8 @@
   // ---------- Init ----------
 
   function init(meta) {
-    renderMeta(meta);
     deriveFacets();
+    renderMeta(meta);
     buildFilterControls();
     readStateFromURL();
     applyStateToControls();
@@ -170,16 +215,20 @@
     var monthSet = {};
     var maxMiles = 0;
     deals.forEach(function (d) {
+      dealsById[d.id] = d;
+      if (!isOutbound(d)) hasReturnData = true;
       if (d.region) regionSet[d.region] = true;
-      if (d.date) monthSet[String(d.date).slice(0, 7)] = true;
+      // Month filter means DEPARTURE month, so facet from outbound dates only.
+      if (d.date && isOutbound(d)) monthSet[String(d.date).slice(0, 7)] = true;
       if (d.miles > maxMiles) maxMiles = d.miles;
       if (d.firstSeen && (!newestFirstSeen || d.firstSeen > newestFirstSeen)) {
         newestFirstSeen = d.firstSeen;
       }
-      if (d.to && !destInfo[d.to]) {
-        destInfo[d.to] = { city: d.city || null, region: d.region || null };
-      } else if (d.to && !destInfo[d.to].city && d.city) {
-        destInfo[d.to].city = d.city;
+      var place = placeOf(d);
+      if (place && !destInfo[place]) {
+        destInfo[place] = { city: d.city || null, region: d.region || null };
+      } else if (place && !destInfo[place].city && d.city) {
+        destInfo[place].city = d.city;
       }
     });
     allRegions = Object.keys(regionSet).sort();
@@ -206,6 +255,11 @@
     }
     if (meta.isFixture === true) {
       banners.appendChild(banner("notice", "Showing sample data — this is a fixture, not live award availability."));
+    }
+    if (!hasReturnData) {
+      banners.appendChild(banner("warn",
+        "This data set has no return-direction (→ SFO) rows yet, so roundtrips can't be paired. " +
+        "Run the refresh script to fetch both directions; until then only outbound dates are shown."));
     }
   }
 
@@ -280,6 +334,12 @@
     return d.toLocaleDateString(undefined, { month: "long", year: "numeric" });
   }
 
+  function clampNights(v, fallback) {
+    var n = parseInt(v, 10);
+    if (isNaN(n)) return fallback;
+    return Math.min(NIGHTS_CEIL, Math.max(NIGHTS_FLOOR, n));
+  }
+
   function bindEvents() {
     $("search").addEventListener("input", function (e) {
       state.q = e.target.value.trim();
@@ -324,6 +384,24 @@
       onFilterChange();
     });
 
+    $("min-nights").addEventListener("input", function (e) {
+      state.minNights = clampNights(e.target.value, DEFAULT_MIN_NIGHTS);
+      if (state.maxNights < state.minNights) {
+        state.maxNights = state.minNights;
+        $("max-nights").value = state.maxNights;
+      }
+      onFilterChange();
+    });
+
+    $("max-nights").addEventListener("input", function (e) {
+      state.maxNights = clampNights(e.target.value, DEFAULT_MAX_NIGHTS);
+      if (state.minNights > state.maxNights) {
+        state.minNights = state.maxNights;
+        $("min-nights").value = state.minNights;
+      }
+      onFilterChange();
+    });
+
     $("reset").addEventListener("click", function () {
       state.q = "";
       state.cabins = DEFAULT_CABINS.slice();
@@ -333,8 +411,12 @@
       state.nonstop = false;
       state.favOnly = false;
       state.minSeats = DEFAULT_MIN_SEATS;
+      state.minNights = DEFAULT_MIN_NIGHTS;
+      state.maxNights = DEFAULT_MAX_NIGHTS;
       state.sort = null;
       state.dir = "asc";
+      state.tsort = null;
+      state.tdir = "asc";
       applyStateToControls();
       onFilterChange();
     });
@@ -345,6 +427,8 @@
       state.tab = btn.getAttribute("data-tab");
       state.sort = null; // back to the tab's default ordering
       state.dir = "asc";
+      state.tsort = null;
+      state.tdir = "asc";
       onFilterChange();
     });
 
@@ -377,6 +461,13 @@
       state.dest = null;
       writeStateToURL(true);
       render();
+    });
+
+    $("view-switch").addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-view]");
+      if (!btn) return;
+      state.view = btn.getAttribute("data-view");
+      onFilterChange();
     });
 
     $("undo-btn").addEventListener("click", function () {
@@ -420,12 +511,36 @@
       onFilterChange();
     });
 
+    document.querySelector("#trips-table thead").addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-tsort]");
+      if (!btn) return;
+      var key = btn.getAttribute("data-tsort");
+      if (state.tsort === key) {
+        state.tdir = state.tdir === "asc" ? "desc" : "asc";
+      } else {
+        state.tsort = key;
+        state.tdir = "asc";
+      }
+      onFilterChange();
+    });
+
     $("deals-body").addEventListener("click", function (e) {
       var btn = e.target.closest("button[data-fav]");
       if (!btn) return;
       toggleFav(btn.getAttribute("data-fav"));
       if (state.favOnly) {
         render(); // row may drop out of the shortlist view
+      } else {
+        paintFavButton(btn);
+      }
+    });
+
+    $("trips-body").addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-fav]");
+      if (!btn) return;
+      toggleFav(btn.getAttribute("data-fav"));
+      if (state.favOnly) {
+        render();
       } else {
         paintFavButton(btn);
       }
@@ -456,16 +571,22 @@
     state.nonstop = false;
     state.favOnly = false;
     state.minSeats = DEFAULT_MIN_SEATS;
+    state.minNights = DEFAULT_MIN_NIGHTS;
+    state.maxNights = DEFAULT_MAX_NIGHTS;
     state.tab = "all";
     state.dest = null;
     state.destSort = DEFAULT_DEST_SORT;
+    state.view = "trips";
     state.sort = null;
     state.dir = "asc";
+    state.tsort = null;
+    state.tdir = "asc";
   }
 
   function openDest(code) {
     if (!code || !destInfo[code]) return;
     state.dest = code;
+    state.view = "trips";
     writeStateToURL(true);
     render();
     window.scrollTo(0, 0);
@@ -500,6 +621,8 @@
     $("nonstop").checked = state.nonstop;
     $("fav-only").checked = state.favOnly;
     $("min-seats").value = state.minSeats;
+    $("min-nights").value = state.minNights;
+    $("max-nights").value = state.maxNights;
     $("dest-sort").value = state.destSort;
   }
 
@@ -541,10 +664,15 @@
     if (state.nonstop) p.set("nonstop", "1");
     if (state.favOnly) p.set("fav", "1");
     if (state.minSeats !== DEFAULT_MIN_SEATS) p.set("seats", String(state.minSeats));
+    if (state.minNights !== DEFAULT_MIN_NIGHTS || state.maxNights !== DEFAULT_MAX_NIGHTS) {
+      p.set("nights", state.minNights + "-" + state.maxNights);
+    }
     if (state.tab !== "all") p.set("tab", state.tab);
     if (state.dest) p.set("dest", state.dest);
+    if (state.dest && state.view !== "trips") p.set("view", state.view);
     if (state.destSort !== DEFAULT_DEST_SORT) p.set("dsort", state.destSort);
     if (state.sort) { p.set("sort", state.sort); p.set("dir", state.dir); }
+    if (state.tsort) { p.set("tsort", state.tsort); p.set("tdir", state.tdir); }
     var qs = p.toString();
     var url = qs ? "?" + qs : location.pathname;
     if (push) history.pushState(null, "", url);
@@ -577,16 +705,30 @@
       var s = parseInt(p.get("seats"), 10);
       if (!isNaN(s) && s >= 1) state.minSeats = s;
     }
+    if (p.has("nights")) {
+      var parts = String(p.get("nights")).split("-");
+      var lo = clampNights(parts[0], DEFAULT_MIN_NIGHTS);
+      var hi = clampNights(parts[1], DEFAULT_MAX_NIGHTS);
+      state.minNights = Math.min(lo, hi);
+      state.maxNights = Math.max(lo, hi);
+    }
     var tab = p.get("tab");
     if (tab === "below" || tab === "new") state.tab = tab;
     var dest = p.get("dest");
     if (dest && destInfo[dest]) state.dest = dest;
+    var view = p.get("view");
+    if (view === "out" || view === "ret") state.view = view;
     var dsort = p.get("dsort");
     if (["avail", "miles", "saving", "dates", "city"].indexOf(dsort) >= 0) state.destSort = dsort;
     var sort = p.get("sort");
     if (sort && document.querySelector('button[data-sort="' + sort + '"]')) {
       state.sort = sort;
       state.dir = p.get("dir") === "desc" ? "desc" : "asc";
+    }
+    var tsort = p.get("tsort");
+    if (tsort && document.querySelector('button[data-tsort="' + tsort + '"]')) {
+      state.tsort = tsort;
+      state.tdir = p.get("tdir") === "desc" ? "desc" : "asc";
     }
   }
 
@@ -595,7 +737,7 @@
     return a.slice().sort().join(",") === b.slice().sort().join(",");
   }
 
-  // ---------- Filtering / grouping / sorting ----------
+  // ---------- Filtering ----------
 
   function baselineFor(d) {
     var b = baselines[d.region];
@@ -612,115 +754,267 @@
     return b === null ? null : effMiles(d) - b;
   }
 
-  function matchesFilters(d) {
+  function rowIsNew(d) {
+    return Boolean(newestFirstSeen && d.firstSeen === newestFirstSeen);
+  }
+
+  function matchesFilters(d, favLegs) {
     if (state.cabins.indexOf(d.cabin) < 0) return false;
     if (state.regions.indexOf(d.region) < 0) return false;
-    if (state.month && String(d.date).slice(0, 7) !== state.month) return false;
+    // Month means DEPARTURE month. Return legs always pass, or a September
+    // month filter would delete every October return and kill late-month trips.
+    if (state.month && isOutbound(d) && String(d.date).slice(0, 7) !== state.month) return false;
     if (state.maxMiles !== null && effMiles(d) > state.maxMiles) return false;
     if (state.nonstop && !d.direct) return false;
-    if (state.favOnly && !isFav(d.id)) return false;
-    if ((d.seats || 0) < state.minSeats) return false;
+    if (state.favOnly && !isFav(d.id) && !favLegs[d.id]) return false;
+    // Unknown seat counts are always shown — only a KNOWN count below the
+    // threshold excludes a row.
+    if (seatsKnown(d) && d.seats < state.minSeats) return false;
     if (state.q) {
       var q = state.q.toUpperCase();
-      var hay = [d.to || "", d.city || ""].concat(d.airlines || []).join(" ").toUpperCase();
+      var hay = [placeOf(d) || "", d.city || ""].concat(d.airlines || []).join(" ").toUpperCase();
       if (hay.indexOf(q) < 0) return false;
     }
     return true;
   }
 
-  function tabRows(tab, filtered) {
-    if (tab === "below") {
-      return filtered.filter(function (d) {
-        var delta = deltaFor(d);
-        return delta !== null && delta < 0;
-      });
+  // ---------- Grouping and roundtrip pairing ----------
+
+  function addDaysIso(iso, n) {
+    var p = String(iso).split("-");
+    var d = new Date(Date.UTC(Number(p[0]), Number(p[1]) - 1, Number(p[2]) + n));
+    return d.toISOString().slice(0, 10);
+  }
+
+  function newDirAgg() {
+    return {
+      rows: [],
+      perDateBest: {},   // cabin -> { isoDate -> cheapest row (eff miles) }
+      perCabinMin: {},   // cabin -> cheapest row overall
+      dates: {},
+      knownDates: {},    // dates with at least one CONFIRMED seat count
+      anyDirect: false,
+      airlines: {}
+    };
+  }
+
+  function addToDirAgg(agg, d) {
+    agg.rows.push(d);
+    var byDate = agg.perDateBest[d.cabin] || (agg.perDateBest[d.cabin] = {});
+    var cur = byDate[d.date];
+    if (!cur || effMiles(d) < effMiles(cur)) byDate[d.date] = d;
+    var min = agg.perCabinMin[d.cabin];
+    if (!min || effMiles(d) < effMiles(min)) agg.perCabinMin[d.cabin] = d;
+    if (d.date) {
+      agg.dates[d.date] = true;
+      if (seatsKnown(d)) agg.knownDates[d.date] = true;
     }
-    if (tab === "new") {
-      return filtered.filter(function (d) {
-        return newestFirstSeen && d.firstSeen === newestFirstSeen;
+    if (d.direct) agg.anyDirect = true;
+    (d.airlines || []).forEach(function (a) { agg.airlines[a] = true; });
+  }
+
+  /**
+   * Pair outbound + return dates of the SAME cabin into roundtrips within the
+   * trip-length window. One pair per (outbound date, return date), built from
+   * the cheapest row of each side. total = per-person effective miles.
+   */
+  function buildPairs(g) {
+    var pairs = [];
+    CABINS.forEach(function (cabin) {
+      var outDates = g.out.perDateBest[cabin];
+      var retDates = g.ret.perDateBest[cabin];
+      if (!outDates || !retDates) return;
+      Object.keys(outDates).forEach(function (dep) {
+        for (var n = state.minNights; n <= state.maxNights; n++) {
+          var back = addDaysIso(dep, n);
+          var retRow = retDates[back];
+          if (!retRow) continue;
+          var out = outDates[dep];
+          var total = effMiles(out) + effMiles(retRow);
+          var b = baselineFor(out); // same region+cabin both legs
+          pairs.push({
+            out: out,
+            ret: retRow,
+            cabin: cabin,
+            nights: n,
+            total: total,
+            baseTotal: out.miles + retRow.miles,
+            delta: b === null ? null : total - 2 * b,
+            anyDiscount: isDiscounted(out) || isDiscounted(retRow)
+          });
+        }
       });
-    }
-    return filtered;
+    });
+    pairs.sort(function (a, b) { return a.total - b.total; });
+    return pairs;
+  }
+
+  function pairIsNew(p) { return rowIsNew(p.out) || rowIsNew(p.ret); }
+
+  function pairSeats(p) {
+    var known = [];
+    if (seatsKnown(p.out)) known.push(p.out.seats);
+    if (seatsKnown(p.ret)) known.push(p.ret.seats);
+    return {
+      min: known.length ? Math.min.apply(null, known) : null,
+      allKnown: known.length === 2
+    };
   }
 
   function buildGroups(rows) {
     var map = {};
     rows.forEach(function (d) {
-      if (!d.to || isHidden(d.to)) return;
-      var g = map[d.to];
+      var place = placeOf(d);
+      if (!place || isHidden(place)) return;
+      var g = map[place];
       if (!g) {
-        g = map[d.to] = {
-          to: d.to,
+        g = map[place] = {
+          to: place,
           city: d.city || null,
           region: d.region || null,
-          rows: [],
-          perCabin: {},        // cabin -> row with min miles
-          minMiles: Infinity,
-          dates: {},
-          anyDirect: false,
-          airlines: {},
+          out: newDirAgg(),
+          ret: newDirAgg(),
           favCount: 0
         };
       }
-      g.rows.push(d);
       if (!g.city && d.city) g.city = d.city;
-      var pc = g.perCabin[d.cabin];
-      if (!pc || effMiles(d) < effMiles(pc)) g.perCabin[d.cabin] = d;
-      if (effMiles(d) < g.minMiles) g.minMiles = effMiles(d);
-      if (d.date) g.dates[d.date] = true;
-      if (d.direct) g.anyDirect = true;
-      (d.airlines || []).forEach(function (a) { g.airlines[a] = true; });
+      addToDirAgg(isOutbound(d) ? g.out : g.ret, d);
       if (isFav(d.id)) g.favCount++;
     });
+
     return Object.keys(map).map(function (k) {
       var g = map[k];
-      g.dateList = Object.keys(g.dates).sort();
-      var monthSeen = {};
-      g.dateList.forEach(function (d) { monthSeen[d.slice(0, 7)] = true; });
-      g.monthCount = Object.keys(monthSeen).length;
-      // Headline cabin: the most premium cabin present among the matching rows
-      // (rows already passed the cabin filter). Cards are only ever compared
-      // against cards with the SAME headline cabin — never Y miles vs J miles.
-      g.emph = null;
+      g.out.dateList = Object.keys(g.out.dates).sort();
+      g.ret.dateList = Object.keys(g.ret.dates).sort();
+
+      g.pairs = buildPairs(g);
+      favorites.forEach(function (f) {
+        if (f.indexOf(PAIR_PREFIX) === 0 && f.indexOf("|") > 0) {
+          var outId = f.slice(PAIR_PREFIX.length).split("|")[0];
+          var row = dealsById[outId];
+          if (row && placeOf(row) === g.to) g.favCount++;
+        }
+      });
+
+      // Headline: the most premium cabin with at least one bookable roundtrip;
+      // its cheapest pair. Falls back to one-way (most premium cabin present)
+      // when nothing pairs — those groups render in a separate section so
+      // roundtrip and one-way prices are never compared side by side.
+      g.emphPair = null;
+      g.emphRow = null;
       for (var i = 0; i < CABIN_PRECEDENCE.length; i++) {
-        if (g.perCabin[CABIN_PRECEDENCE[i]]) { g.emph = g.perCabin[CABIN_PRECEDENCE[i]]; break; }
+        var c = CABIN_PRECEDENCE[i];
+        if (g.emphPair === null) {
+          for (var j = 0; j < g.pairs.length; j++) {
+            if (g.pairs[j].cabin === c) { g.emphPair = g.pairs[j]; break; }
+          }
+        }
+        if (!g.emphRow && (g.out.perCabinMin[c] || g.ret.perCabinMin[c])) {
+          var o = g.out.perCabinMin[c], r = g.ret.perCabinMin[c];
+          g.emphRow = !o ? r : !r ? o : (effMiles(o) <= effMiles(r) ? o : r);
+        }
       }
-      // Delta used for display AND for the "biggest saving" sort — always the
-      // headline cabin's best row, so ranking matches what the card shows.
-      g.emphDelta = deltaFor(g.emph);
-      // Availability score (default ranking). Partner award prices are close to
-      // fixed in premium cabins, so price cannot discriminate; what matters is
-      // how bookable a destination genuinely is. Composite, higher = better:
-      //   +20 per distinct month with space  (breadth beats a cluster: space in
-      //        5 months easily outranks 20 dates crammed into one week)
-      //   +15 if any non-stop option exists  (worth more than a few extra dates)
-      //   +1  per distinct date              (volume as the fine-grained tiebreak)
-      // Distinct dates already respect the min-seats filter upstream.
-      g.availScore = 20 * g.monthCount + (g.anyDirect ? 15 : 0) + g.dateList.length;
+
+      // Trip-date coverage: distinct departure dates with a valid return.
+      var tripDates = {};
+      var tripMonths = {};
+      var tripKnown = 0;
+      var tripUnknown = 0;
+      g.pairs.forEach(function (p) {
+        var dep = p.out.date;
+        if (!tripDates[dep]) {
+          tripDates[dep] = true;
+          tripMonths[dep.slice(0, 7)] = true;
+          if (pairSeats(p).allKnown) tripKnown++; else tripUnknown++;
+        }
+      });
+      g.tripDateCount = Object.keys(tripDates).length;
+      g.tripDateList = Object.keys(tripDates).sort();
+      g.tripMonthCount = Object.keys(tripMonths).length;
+
+      // Availability score (default ranking). Partner award prices are close
+      // to fixed in premium cabins, so price cannot discriminate; what matters
+      // is how BOOKABLE a honeymoon actually is — meaning both directions.
+      // Composite, higher = better:
+      //   +20  per distinct month containing a pairable departure
+      //   +15  if a non-stop option exists in BOTH directions
+      //   +1   per pairable departure date with confirmed seats both ways
+      //   +0.4 per pairable departure date with any unreported seat count
+      // Destinations with no valid pair sink to a token score so one-way-only
+      // space never outranks a genuinely bookable roundtrip.
+      if (g.pairs.length > 0) {
+        g.availScore = 20 * g.tripMonthCount +
+          (g.out.anyDirect && g.ret.anyDirect ? 15 : 0) +
+          tripKnown + 0.4 * tripUnknown;
+      } else {
+        g.availScore = 0.01 * (g.out.dateList.length + g.ret.dateList.length);
+      }
       return g;
     });
   }
+
+  function groupInTab(g, tab) {
+    if (tab === "below") {
+      if (g.pairs.length > 0) {
+        return g.pairs.some(function (p) { return p.delta !== null && p.delta < 0; });
+      }
+      return g.out.rows.concat(g.ret.rows).some(function (d) {
+        var delta = deltaFor(d);
+        return delta !== null && delta < 0;
+      });
+    }
+    if (tab === "new") {
+      if (g.pairs.length > 0) return g.pairs.some(pairIsNew);
+      return g.out.rows.concat(g.ret.rows).some(rowIsNew);
+    }
+    return true;
+  }
+
+  function pairsForTab(pairs, tab) {
+    if (tab === "below") {
+      return pairs.filter(function (p) { return p.delta !== null && p.delta < 0; });
+    }
+    if (tab === "new") return pairs.filter(pairIsNew);
+    return pairs;
+  }
+
+  function rowsForTab(rows, tab) {
+    if (tab === "below") {
+      return rows.filter(function (d) {
+        var delta = deltaFor(d);
+        return delta !== null && delta < 0;
+      });
+    }
+    if (tab === "new") return rows.filter(rowIsNew);
+    return rows;
+  }
+
+  // ---------- Sorting ----------
 
   function sortGroups(groups) {
     var s = state.destSort;
     return groups.slice().sort(function (a, b) {
       if (s === "avail") {
         if (a.availScore !== b.availScore) return b.availScore - a.availScore;
-        if (a.dateList.length !== b.dateList.length) return b.dateList.length - a.dateList.length;
+        if (a.tripDateCount !== b.tripDateCount) return b.tripDateCount - a.tripDateCount;
       } else if (s === "saving") {
-        var da = a.emphDelta === null ? Infinity : a.emphDelta;
-        var db = b.emphDelta === null ? Infinity : b.emphDelta;
+        var da = a.emphPair ? (a.emphPair.delta === null ? Infinity : a.emphPair.delta) : Infinity;
+        var db = b.emphPair ? (b.emphPair.delta === null ? Infinity : b.emphPair.delta) : Infinity;
         if (da !== db) return da - db;
       } else if (s === "dates") {
-        if (a.dateList.length !== b.dateList.length) return b.dateList.length - a.dateList.length;
+        if (a.tripDateCount !== b.tripDateCount) return b.tripDateCount - a.tripDateCount;
+        var oa = a.out.dateList.length, ob = b.out.dateList.length;
+        if (oa !== ob) return ob - oa;
       } else if (s === "city") {
         var ca = (a.city || a.to).toLowerCase();
         var cb = (b.city || b.to).toLowerCase();
         if (ca !== cb) return ca < cb ? -1 : 1;
       } else {
-        // "miles": cheapest first, compared on the headline cabin's EFFECTIVE
-        // price only (sections are already single-cabin, so like-for-like).
-        var ma = effMiles(a.emph), mb = effMiles(b.emph);
+        // "miles": cheapest roundtrip first (per-person effective total on the
+        // headline cabin). Sections are single-cabin, so like-for-like; no-pair
+        // groups fall back to one-way price within their own section.
+        var ma = a.emphPair ? a.emphPair.total : (a.emphRow ? effMiles(a.emphRow) : Infinity);
+        var mb = b.emphPair ? b.emphPair.total : (b.emphRow ? effMiles(b.emphRow) : Infinity);
         if (ma !== mb) return ma - mb;
       }
       return a.to < b.to ? -1 : a.to > b.to ? 1 : 0;
@@ -745,12 +1039,38 @@
           var dl = deltaFor(d);
           return dl === null ? Infinity : dl;
         case "direct": return d.direct ? 0 : 1;
-        case "seats": return d.seats || 0;
+        case "seats": return seatsKnown(d) ? d.seats : -1; // unknown sorts below known counts
         case "airlines": return (d.airlines || []).join(",");
         default: return 0;
       }
     };
     return rows.slice().sort(function (a, b) {
+      var va = val(a), vb = val(b);
+      if (va < vb) return -1 * dir;
+      if (va > vb) return 1 * dir;
+      return 0;
+    });
+  }
+
+  function sortPairs(pairs) {
+    var key = state.tsort;
+    var dir = state.tdir === "desc" ? -1 : 1;
+    if (!key) return pairs; // already total-ascending from buildPairs
+    var val = function (p) {
+      switch (key) {
+        case "depart": return p.out.date;
+        case "return": return p.ret.date;
+        case "nights": return p.nights;
+        case "cabin": return CABINS.indexOf(p.cabin);
+        case "total": return p.total;
+        case "delta": return p.delta === null ? Infinity : p.delta;
+        case "seats":
+          var s = pairSeats(p);
+          return s.min === null ? -1 : s.min;
+        default: return 0;
+      }
+    };
+    return pairs.slice().sort(function (a, b) {
       var va = val(a), vb = val(b);
       if (va < vb) return -1 * dir;
       if (va > vb) return 1 * dir;
@@ -789,7 +1109,7 @@
     var b = document.createElement("span");
     b.className = "disc-badge";
     b.textContent = "−15% card";
-    b.title = "MileagePlus cardmember + Premier discount — United-operated flights only";
+    b.title = "MileagePlus cardmember + Premier discount — applies to the United-operated leg(s) only";
     return b;
   }
 
@@ -808,10 +1128,22 @@
     return span;
   }
 
+  function legLink(d, label) {
+    var a = document.createElement("a");
+    a.href = unitedURL(d);
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.className = "route-link";
+    a.textContent = label;
+    a.title = "Open " + d.from + " → " + d.to + " on united.com (new tab)";
+    return a;
+  }
+
   // ---------- Rendering ----------
 
   function render() {
-    var filtered = deals.filter(matchesFilters);
+    var favLegs = favPairLegIds();
+    var filtered = deals.filter(function (d) { return matchesFilters(d, favLegs); });
     if (state.dest) renderDetail(filtered);
     else renderGrid(filtered);
     renderHiddenChip();
@@ -831,74 +1163,95 @@
     }
   }
 
-  function visibleDestCount(rows) {
-    var seen = {};
-    var n = 0;
-    rows.forEach(function (d) {
-      if (d.to && !seen[d.to] && !isHidden(d.to)) { seen[d.to] = true; n++; }
-    });
-    return n;
-  }
-
   // ----- View 1: destination grid -----
 
   function renderGrid(filtered) {
     $("grid-view").hidden = false;
     $("detail-view").hidden = true;
 
-    setTabCounts({
-      all: visibleDestCount(tabRows("all", filtered)),
-      below: visibleDestCount(tabRows("below", filtered)),
-      "new": visibleDestCount(tabRows("new", filtered))
-    }, "Counts are destinations. Pick a place to see its dates.");
+    var groups = buildGroups(filtered);
 
-    var groups = sortGroups(buildGroups(tabRows(state.tab, filtered)));
+    setTabCounts({
+      all: groups.length,
+      below: groups.filter(function (g) { return groupInTab(g, "below"); }).length,
+      "new": groups.filter(function (g) { return groupInTab(g, "new"); }).length
+    }, "Counts are destinations. Roundtrip prices are per person, " +
+       state.minNights + "–" + state.maxNights + " nights.");
+
+    var inTab = sortGroups(groups.filter(function (g) { return groupInTab(g, state.tab); }));
     var grid = $("dest-grid");
     grid.textContent = "";
     var empty = $("empty");
 
-    if (groups.length === 0) {
+    if (inTab.length === 0) {
       empty.hidden = false;
       if (deals.length === 0) {
         empty.textContent = "No deals in the current data set.";
       } else if (state.favOnly && favorites.length === 0) {
-        empty.textContent = "No shortlisted dates yet — open a destination and tap the heart on a date to save it.";
+        empty.textContent = "No shortlisted trips yet — open a destination and tap the heart on a trip or date to save it.";
       } else if (state.tab === "below") {
         empty.textContent = belowEmptyMessage();
       } else if (hidden.length > 0 && state.tab === "all") {
         empty.textContent = "No destinations match the current filters. (" + hidden.length +
           " hidden — restore them from the Hidden list above.)";
       } else {
-        empty.textContent = "No destinations match the current filters. Try widening cabins, regions, or the miles cap.";
+        empty.textContent = "No destinations match the current filters. Try widening cabins, regions, trip length, or the miles cap.";
       }
       return;
     }
     empty.hidden = true;
 
     // Group cards by headline cabin so prices are only ever compared
-    // like-for-like: First cards together, then Business, and so on.
+    // like-for-like: First roundtrips together, then Business, and so on.
+    // Destinations where no roundtrip pairs land in a final one-way section —
+    // their prices are one-way and must not sit next to roundtrip cards.
     var buckets = {};
-    groups.forEach(function (g) {
-      var c = g.emph.cabin;
-      (buckets[c] = buckets[c] || []).push(g);
+    var noPair = [];
+    inTab.forEach(function (g) {
+      if (g.emphPair) {
+        var c = g.emphPair.cabin;
+        (buckets[c] = buckets[c] || []).push(g);
+      } else if (g.emphRow) {
+        noPair.push(g);
+      }
     });
     var frag = document.createDocumentFragment();
     CABIN_PRECEDENCE.forEach(function (c) {
       if (!buckets[c]) return;
-      var section = document.createElement("section");
-      section.className = "cabin-section";
-      var h = document.createElement("h2");
-      h.className = "cabin-heading";
-      h.textContent = cabinHeading(c) +
-        " · " + buckets[c].length + (buckets[c].length === 1 ? " destination" : " destinations");
-      section.appendChild(h);
-      var wrap = document.createElement("div");
-      wrap.className = "dest-grid";
-      buckets[c].forEach(function (g) { wrap.appendChild(renderCard(g)); });
-      section.appendChild(wrap);
-      frag.appendChild(section);
+      frag.appendChild(gridSection(
+        cabinHeading(c) + " roundtrips · " + buckets[c].length +
+          (buckets[c].length === 1 ? " destination" : " destinations"),
+        null, buckets[c]));
     });
+    if (noPair.length) {
+      frag.appendChild(gridSection(
+        "One-way space only · " + noPair.length +
+          (noPair.length === 1 ? " destination" : " destinations"),
+        "No outbound + return combination lines up within " + state.minNights + "–" +
+          state.maxNights + " nights for these. Prices below are ONE-WAY — try widening the trip length.",
+        noPair));
+    }
     grid.appendChild(frag);
+  }
+
+  function gridSection(headingText, noteText, groups) {
+    var section = document.createElement("section");
+    section.className = "cabin-section";
+    var h = document.createElement("h2");
+    h.className = "cabin-heading";
+    h.textContent = headingText;
+    section.appendChild(h);
+    if (noteText) {
+      var note = document.createElement("p");
+      note.className = "section-note";
+      note.textContent = noteText;
+      section.appendChild(note);
+    }
+    var wrap = document.createElement("div");
+    wrap.className = "dest-grid";
+    groups.forEach(function (g) { wrap.appendChild(renderCard(g)); });
+    section.appendChild(wrap);
+    return section;
   }
 
   function belowEmptyMessage() {
@@ -930,7 +1283,7 @@
     card.setAttribute("data-dest", g.to);
     card.setAttribute("tabindex", "0");
     card.setAttribute("role", "button");
-    card.setAttribute("aria-label", "View dates for " + name);
+    card.setAttribute("aria-label", "View trips to " + name);
 
     var hide = document.createElement("button");
     hide.type = "button";
@@ -952,83 +1305,129 @@
     top.appendChild(code);
     card.appendChild(top);
 
-    // Headline price (best Business when present)
     var price = document.createElement("div");
     price.className = "card-price";
     var cab = document.createElement("span");
     cab.className = "price-cabin";
-    cab.textContent = "Best " + (CABIN_LABELS[g.emph.cabin] || g.emph.cabin);
-    price.appendChild(cab);
     var amount = document.createElement("strong");
     amount.className = "price-miles";
-    amount.textContent = fmtMiles(effMiles(g.emph));
-    price.appendChild(amount);
     var unit = document.createElement("span");
     unit.className = "price-unit";
-    unit.textContent = "miles";
-    price.appendChild(unit);
-    var delta = deltaFor(g.emph);
-    if (delta !== null) {
-      var ds = deltaSpan(delta);
-      ds.classList.add("price-delta");
-      price.appendChild(ds);
-    }
-    if (isDiscounted(g.emph)) {
-      var discLine = document.createElement("span");
-      discLine.className = "price-disc-line";
-      discLine.appendChild(basePriceSpan(g.emph.miles));
-      discLine.appendChild(discBadge());
-      price.appendChild(discLine);
+
+    if (g.emphPair) {
+      var p = g.emphPair;
+      cab.textContent = "Best " + (CABIN_LABELS[p.cabin] || p.cabin) + " roundtrip";
+      amount.textContent = fmtMiles(p.total);
+      unit.textContent = "miles · per person";
+      price.appendChild(cab);
+      price.appendChild(amount);
+      price.appendChild(unit);
+      // Zero delta = exactly at baseline — normal for premium cabins, not
+      // worth a "0" on every card.
+      if (p.delta !== null && p.delta !== 0) {
+        var ds = deltaSpan(p.delta);
+        ds.classList.add("price-delta");
+        ds.title = "vs " + fmtMiles(p.total - p.delta) + " baseline roundtrip";
+        price.appendChild(ds);
+      }
+      if (p.anyDiscount) {
+        var discLine = document.createElement("span");
+        discLine.className = "price-disc-line";
+        discLine.appendChild(basePriceSpan(p.baseTotal));
+        discLine.appendChild(discBadge());
+        price.appendChild(discLine);
+      }
+    } else if (g.emphRow) {
+      var r = g.emphRow;
+      cab.textContent = "Best " + (CABIN_LABELS[r.cabin] || r.cabin) + " · " +
+        (isOutbound(r) ? "outbound only" : "return only");
+      amount.textContent = fmtMiles(effMiles(r));
+      unit.textContent = "miles · one-way";
+      price.appendChild(cab);
+      price.appendChild(amount);
+      price.appendChild(unit);
+      if (isDiscounted(r)) {
+        var dl = document.createElement("span");
+        dl.className = "price-disc-line";
+        dl.appendChild(basePriceSpan(r.miles));
+        dl.appendChild(discBadge());
+        price.appendChild(dl);
+      }
     }
     card.appendChild(price);
 
-    // Other cabins present
-    var others = CABINS.filter(function (c) {
-      return g.perCabin[c] && c !== g.emph.cabin;
-    });
-    if (others.length) {
-      var mini = document.createElement("ul");
-      mini.className = "cabin-mini";
-      others.forEach(function (c) {
-        var li = document.createElement("li");
-        var row = g.perCabin[c];
-        li.textContent = CABIN_LABELS[c] + " " + fmtMiles(effMiles(row));
-        if (isDiscounted(row)) {
-          li.appendChild(document.createTextNode(" "));
-          var was = document.createElement("span");
-          was.className = "price-base";
-          was.textContent = "(normally " + fmtMiles(row.miles) + ")";
-          li.appendChild(was);
-        }
-        mini.appendChild(li);
+    // Other cabins with roundtrip pairs (cheapest pair per cabin)
+    if (g.emphPair) {
+      var cheapestByCabin = {};
+      g.pairs.forEach(function (pr) {
+        if (!cheapestByCabin[pr.cabin]) cheapestByCabin[pr.cabin] = pr; // pairs are total-sorted
       });
-      card.appendChild(mini);
+      var others = CABINS.filter(function (c) {
+        return cheapestByCabin[c] && c !== g.emphPair.cabin;
+      });
+      if (others.length) {
+        var mini = document.createElement("ul");
+        mini.className = "cabin-mini";
+        others.forEach(function (c) {
+          var li = document.createElement("li");
+          li.textContent = CABIN_LABELS[c] + " " + fmtMiles(cheapestByCabin[c].total) + " RT";
+          mini.appendChild(li);
+        });
+        card.appendChild(mini);
+      }
     }
 
-    // Meta: dates, range, non-stop, airlines, hearts
+    // Meta: trip dates, range, non-stop, airlines, warnings, hearts
     var meta = document.createElement("p");
     meta.className = "card-meta";
-    var nDates = g.dateList.length;
-    var bits = [nDates + (nDates === 1 ? " date" : " dates") +
-      (nDates > 1 ? " across " + g.monthCount + (g.monthCount === 1 ? " month" : " months") : "")];
-    if (nDates === 1) {
-      bits.push(fmtShortDate(g.dateList[0]));
-    } else if (nDates > 1) {
-      bits.push(fmtShortDate(g.dateList[0]) + " – " + fmtShortDate(g.dateList[nDates - 1]));
+    var bits = [];
+    if (g.emphPair) {
+      var n = g.tripDateCount;
+      bits.push(n + (n === 1 ? " trip date" : " trip dates") +
+        (n > 1 ? " across " + g.tripMonthCount + (g.tripMonthCount === 1 ? " month" : " months") : ""));
+      if (n === 1) {
+        bits.push("departing " + fmtShortDate(g.tripDateList[0]));
+      } else if (n > 1) {
+        bits.push(fmtShortDate(g.tripDateList[0]) + " – " + fmtShortDate(g.tripDateList[n - 1]));
+      }
+      if (g.out.anyDirect && g.ret.anyDirect) bits.push("Non-stop both ways ✓");
+      else if (g.out.anyDirect || g.ret.anyDirect) bits.push("Non-stop one way");
+    } else {
+      bits.push(g.out.dateList.length + " outbound / " + g.ret.dateList.length + " return dates");
     }
-    if (g.anyDirect) bits.push("Non-stop ✓");
-    var airlines = Object.keys(g.airlines).sort();
-    if (airlines.length) {
-      bits.push(airlines.length > 4 ?
-        airlines.slice(0, 4).join(", ") + " +" + (airlines.length - 4) :
-        airlines.join(", "));
+    var airlines = {};
+    Object.keys(g.out.airlines).forEach(function (a) { airlines[a] = true; });
+    Object.keys(g.ret.airlines).forEach(function (a) { airlines[a] = true; });
+    var airlineList = Object.keys(airlines).sort();
+    if (airlineList.length) {
+      bits.push(airlineList.length > 4 ?
+        airlineList.slice(0, 4).join(", ") + " +" + (airlineList.length - 4) :
+        airlineList.join(", "));
     }
     meta.textContent = bits.join(" · ");
+
+    if (!g.emphPair) {
+      meta.appendChild(document.createTextNode(" · "));
+      var warn = document.createElement("span");
+      warn.className = "unk-badge";
+      if (g.ret.rows.length === 0) {
+        warn.textContent = "no return space";
+        warn.title = "No saver space back to SFO was found for the selected cabins. You'd need another airline or program for the way home.";
+      } else if (g.out.rows.length === 0) {
+        warn.textContent = "no outbound space";
+        warn.title = "No saver space from SFO was found for the selected cabins — only the way home.";
+      } else {
+        warn.textContent = "dates don't pair";
+        warn.title = "Outbound and return dates never line up within " + state.minNights + "–" +
+          state.maxNights + " nights. Try widening the trip length.";
+      }
+      meta.appendChild(warn);
+    }
     if (g.favCount > 0) {
       var fav = document.createElement("span");
       fav.className = "card-favs";
       fav.textContent = " ♥ " + g.favCount;
-      fav.title = g.favCount + " shortlisted " + (g.favCount === 1 ? "date" : "dates");
+      fav.title = g.favCount + " shortlisted";
       meta.appendChild(fav);
     }
     card.appendChild(meta);
@@ -1068,7 +1467,7 @@
       if (favN > 0) {
         var note = document.createElement("span");
         note.className = "hidden-fav-note";
-        note.textContent = "♥ " + favN + " shortlisted " + (favN === 1 ? "date" : "dates");
+        note.textContent = "♥ " + favN + " shortlisted";
         li.appendChild(note);
       }
       var btn = document.createElement("button");
@@ -1091,8 +1490,10 @@
 
   function favCountForDest(code) {
     var n = 0;
-    deals.forEach(function (d) {
-      if (d.to === code && isFav(d.id)) n++;
+    favorites.forEach(function (f) {
+      var id = f.indexOf(PAIR_PREFIX) === 0 ? f.slice(PAIR_PREFIX.length).split("|")[0] : f;
+      var row = dealsById[id];
+      if (row && placeOf(row) === code) n++;
     });
     return n;
   }
@@ -1106,19 +1507,15 @@
     var code = state.dest;
     var info = destInfo[code] || {};
     var name = info.city || code;
-    var destRows = filtered.filter(function (d) { return d.to === code; });
-
-    setTabCounts({
-      all: tabRows("all", destRows).length,
-      below: tabRows("below", destRows).length,
-      "new": tabRows("new", destRows).length
-    }, "Counts are dates for " + name + " (" + code + "). Filters above still apply.");
+    var destRows = filtered.filter(function (d) { return placeOf(d) === code; });
+    var groups = buildGroupsUnhidden(destRows);
+    var g = groups.length ? groups[0] : null;
 
     $("dest-title").textContent = name;
     var sub = $("dest-sub");
     sub.textContent = "";
     sub.appendChild(document.createTextNode(
-      code + (info.region ? " · " + info.region : "") + " · from SFO"));
+      "SFO ⇄ " + code + (info.region ? " · " + info.region : "")));
     if (isHidden(code)) {
       var note = document.createElement("span");
       note.className = "hidden-note";
@@ -1132,17 +1529,68 @@
       sub.appendChild(note);
     }
 
-    var rows = sortRows(tabRows(state.tab, destRows));
+    var pairs = g ? g.pairs : [];
+    var outRows = g ? g.out.rows : [];
+    var retRows = g ? g.ret.rows : [];
 
-    var headBtns = document.querySelectorAll("#deals-table thead button[data-sort]");
-    for (var h = 0; h < headBtns.length; h++) {
-      var k = headBtns[h].getAttribute("data-sort");
-      headBtns[h].className = state.sort === k ? "sorted-" + state.dir : "";
+    // With no pairable trips, "Trips" would be a dead default — land on dates.
+    if (state.view === "trips" && pairs.length === 0 && (outRows.length || retRows.length)) {
+      state.view = outRows.length ? "out" : "ret";
     }
 
-    var body = $("deals-body");
+    var counts = state.view === "trips" ? {
+      all: pairs.length,
+      below: pairsForTab(pairs, "below").length,
+      "new": pairsForTab(pairs, "new").length
+    } : {
+      all: rowsForTab(state.view === "out" ? outRows : retRows, "all").length,
+      below: rowsForTab(state.view === "out" ? outRows : retRows, "below").length,
+      "new": rowsForTab(state.view === "out" ? outRows : retRows, "new").length
+    };
+    setTabCounts(counts,
+      state.view === "trips" ?
+        "Counts are roundtrips for " + name + " (" + state.minNights + "–" + state.maxNights +
+          " nights, per-person prices). Filters above still apply." :
+        "Counts are one-way dates for " + name + ". Filters above still apply.");
+
+    // View switcher
+    var switchBtns = document.querySelectorAll("#view-switch button[data-view]");
+    for (var i = 0; i < switchBtns.length; i++) {
+      var v = switchBtns[i].getAttribute("data-view");
+      switchBtns[i].setAttribute("aria-pressed", v === state.view ? "true" : "false");
+      var label = v === "trips" ? "Trips" : v === "out" ? "Outbound dates" : "Return dates";
+      var count = v === "trips" ? pairs.length : v === "out" ? outRows.length : retRows.length;
+      switchBtns[i].textContent = label + " (" + count + ")";
+    }
+
+    if (state.view === "trips") renderTrips(pairs, name);
+    else renderLegs(state.view === "out" ? outRows : retRows, name);
+  }
+
+  // buildGroups skips hidden destinations (right for the grid); the detail view
+  // must still work for a hidden destination reached by URL.
+  function buildGroupsUnhidden(rows) {
+    var wasHidden = hidden;
+    hidden = [];
+    var groups;
+    try {
+      groups = buildGroups(rows);
+    } finally {
+      hidden = wasHidden;
+    }
+    return groups;
+  }
+
+  function renderTrips(pairs, name) {
+    $("legs-wrap").hidden = true;
+    $("trips-wrap").hidden = false;
+
+    var rows = sortPairs(pairsForTab(pairs, state.tab));
+    paintSortHeaders("#trips-table thead button[data-tsort]", "data-tsort", state.tsort, state.tdir);
+
+    var body = $("trips-body");
     body.textContent = "";
-    var table = $("deals-table");
+    var table = $("trips-table");
     var empty = $("empty");
     var truncated = $("truncated");
     truncated.hidden = true;
@@ -1150,10 +1598,9 @@
     if (rows.length === 0) {
       table.hidden = true;
       empty.hidden = false;
-      empty.textContent = state.tab === "below" ?
-        belowEmptyMessage() :
-        "No dates for " + name +
-        " match the current filters and tab. Adjust the filters or go back to all destinations.";
+      empty.textContent = state.tab === "below" ? belowEmptyMessage() :
+        "No " + state.minNights + "–" + state.maxNights + "-night roundtrips for " + name +
+        " match the current filters and tab. Widen the trip length, or check the one-way date views.";
       return;
     }
 
@@ -1162,13 +1609,59 @@
 
     var shown = rows.length > RENDER_CAP ? rows.slice(0, RENDER_CAP) : rows;
     var frag = document.createDocumentFragment();
-    shown.forEach(function (d) { frag.appendChild(renderRow(d)); });
+    shown.forEach(function (p) { frag.appendChild(renderTripRow(p)); });
     body.appendChild(frag);
 
     if (rows.length > RENDER_CAP) {
       truncated.textContent = "Showing the first " + RENDER_CAP + " of " +
-        rows.length + " matching dates — narrow the filters to see the rest.";
+        rows.length + " matching trips — narrow the filters to see the rest.";
       truncated.hidden = false;
+    }
+  }
+
+  function renderLegs(rows, name) {
+    $("trips-wrap").hidden = true;
+    $("legs-wrap").hidden = false;
+
+    var sorted = sortRows(rowsForTab(rows, state.tab));
+    paintSortHeaders("#deals-table thead button[data-sort]", "data-sort", state.sort, state.dir);
+
+    var body = $("deals-body");
+    body.textContent = "";
+    var table = $("deals-table");
+    var empty = $("empty");
+    var truncated = $("truncated");
+    truncated.hidden = true;
+
+    if (sorted.length === 0) {
+      table.hidden = true;
+      empty.hidden = false;
+      empty.textContent = state.tab === "below" ? belowEmptyMessage() :
+        "No " + (state.view === "out" ? "outbound" : "return") + " dates for " + name +
+        " match the current filters and tab.";
+      return;
+    }
+
+    empty.hidden = true;
+    table.hidden = false;
+
+    var shown = sorted.length > RENDER_CAP ? sorted.slice(0, RENDER_CAP) : sorted;
+    var frag = document.createDocumentFragment();
+    shown.forEach(function (d) { frag.appendChild(renderRow(d)); });
+    body.appendChild(frag);
+
+    if (sorted.length > RENDER_CAP) {
+      truncated.textContent = "Showing the first " + RENDER_CAP + " of " +
+        sorted.length + " matching dates — narrow the filters to see the rest.";
+      truncated.hidden = false;
+    }
+  }
+
+  function paintSortHeaders(selector, attr, activeKey, dir) {
+    var btns = document.querySelectorAll(selector);
+    for (var i = 0; i < btns.length; i++) {
+      var k = btns[i].getAttribute(attr);
+      btns[i].className = activeKey === k ? "sorted-" + dir : "";
     }
   }
 
@@ -1187,29 +1680,97 @@
     btn.title = fav ? "Remove from shortlist" : "Add to shortlist";
   }
 
-  function renderRow(d) {
-    var tr = document.createElement("tr");
-
+  function favCell(id, ariaLabel) {
     var cFav = document.createElement("td");
     cFav.className = "fav-col";
     var favBtn = document.createElement("button");
     favBtn.type = "button";
     favBtn.className = "fav-btn";
-    favBtn.setAttribute("data-fav", d.id);
-    favBtn.setAttribute("aria-label", "Shortlist " + d.from + " to " + d.to + " on " + d.date);
+    favBtn.setAttribute("data-fav", id);
+    favBtn.setAttribute("aria-label", ariaLabel);
     paintFavButton(favBtn);
     cFav.appendChild(favBtn);
-    tr.appendChild(cFav);
+    return cFav;
+  }
+
+  function renderTripRow(p) {
+    var tr = document.createElement("tr");
+
+    tr.appendChild(favCell(pairId(p),
+      "Shortlist trip departing " + p.out.date + ", returning " + p.ret.date));
+
+    var cDep = td("Depart");
+    cDep.appendChild(legLink(p.out, fmtDate(p.out.date)));
+    tr.appendChild(cDep);
+
+    var cRet = td("Return");
+    cRet.appendChild(legLink(p.ret, fmtDate(p.ret.date)));
+    tr.appendChild(cRet);
+
+    var cNights = td("Nights", "num");
+    cNights.textContent = p.nights;
+    tr.appendChild(cNights);
+
+    var cCabin = td("Cabin");
+    cCabin.textContent = CABIN_LABELS[p.cabin] || p.cabin;
+    tr.appendChild(cCabin);
+
+    var cTotal = td("Total / person", "num");
+    var eff = document.createElement("strong");
+    eff.textContent = fmtMiles(p.total);
+    cTotal.appendChild(eff);
+    if (p.anyDiscount) {
+      var sub = document.createElement("span");
+      sub.className = "miles-sub";
+      sub.appendChild(basePriceSpan(p.baseTotal));
+      sub.appendChild(discBadge());
+      cTotal.appendChild(sub);
+    }
+    tr.appendChild(cTotal);
+
+    var cDelta = td("Δ vs baseline RT", "num");
+    if (p.delta === null) cDelta.classList.add("delta-none");
+    else cDelta.appendChild(deltaSpan(p.delta));
+    tr.appendChild(cDelta);
+
+    var cDirect = td("Non-stop");
+    cDirect.textContent = p.out.direct && p.ret.direct ? "Both ways" :
+      p.out.direct ? "Out only" : p.ret.direct ? "Return only" : "No";
+    if (p.out.direct && p.ret.direct) cDirect.classList.add("direct-yes");
+    tr.appendChild(cDirect);
+
+    var cSeats = td("Seats", "num");
+    var s = pairSeats(p);
+    if (s.allKnown) {
+      cSeats.textContent = s.min;
+    } else {
+      var unkSeat = document.createElement("span");
+      unkSeat.className = "unk-badge";
+      unkSeat.textContent = s.min === null ? "unknown" : "≥? (" + s.min + " one way)";
+      unkSeat.title = "The source didn't report a seat count for " +
+        (s.min === null ? "either leg" : "one of the legs") +
+        " — verify both dates on united.com before counting on 2 seats.";
+      cSeats.appendChild(unkSeat);
+    }
+    tr.appendChild(cSeats);
+
+    var cAir = td("Airlines");
+    var airlines = {};
+    (p.out.airlines || []).forEach(function (a) { airlines[a] = true; });
+    (p.ret.airlines || []).forEach(function (a) { airlines[a] = true; });
+    cAir.textContent = Object.keys(airlines).sort().join(", ");
+    tr.appendChild(cAir);
+
+    return tr;
+  }
+
+  function renderRow(d) {
+    var tr = document.createElement("tr");
+
+    tr.appendChild(favCell(d.id, "Shortlist " + d.from + " to " + d.to + " on " + d.date));
 
     var cDate = td("Date");
-    var a = document.createElement("a");
-    a.href = unitedURL(d);
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.className = "route-link";
-    a.textContent = fmtDate(d.date);
-    a.title = "Open this award search on united.com (new tab)";
-    cDate.appendChild(a);
+    cDate.appendChild(legLink(d, fmtDate(d.date)));
     tr.appendChild(cDate);
 
     var cCabin = td("Cabin");
@@ -1244,7 +1805,15 @@
     tr.appendChild(cDirect);
 
     var cSeats = td("Seats", "num");
-    cSeats.textContent = d.seats;
+    if (seatsKnown(d)) {
+      cSeats.textContent = d.seats;
+    } else {
+      var unkSeat = document.createElement("span");
+      unkSeat.className = "unk-badge";
+      unkSeat.textContent = "unknown";
+      unkSeat.title = "The source didn't report a seat count for this date — verify on united.com before counting on 2 seats.";
+      cSeats.appendChild(unkSeat);
+    }
     tr.appendChild(cSeats);
 
     var cAir = td("Airlines");

@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 /**
- * refresh.mjs — pull United MileagePlus SAVER award availability out of SFO
- * from the seats.aero Partner API and write data/deals.json + data/meta.json.
+ * refresh.mjs — pull United MileagePlus SAVER award availability between SFO
+ * and each configured destination (BOTH directions, so the site can pair
+ * outbound + return into roundtrips) from the seats.aero Partner API and
+ * write data/deals.json + data/meta.json.
  *
  * Usage:
- *   node scripts/refresh.mjs              # daily mode: one /search per destination
+ *   node scripts/refresh.mjs              # daily mode: two /search per destination
  *   node scripts/refresh.mjs --dry-run    # hit the API but write nothing
  *   node scripts/refresh.mjs --discover   # regenerate config/destinations.json
  *                                         # from the bulk endpoint (~54+ calls,
@@ -13,7 +15,10 @@
  * Strategy (verified against the live API):
  *  - Open-destination /search silently returns no data, so the daily mode
  *    loops over the known destination list in config/destinations.json and
- *    issues one /search per destination (~54-60 quota calls of the 1000/day).
+ *    issues two /search calls per destination — SFO→X and X→SFO — (~110-120
+ *    quota calls of the 1000/day). Rows keep their true from/to, so return
+ *    legs appear as from: X, to: "SFO"; city/region enrichment is keyed off
+ *    the non-SFO end either way.
  *  - The `cabins` request param takes the WORDS economy,premium,business,first;
  *    Y/W/J/F is only the response-field convention.
  *  - Saver-only: we read the non-Raw fields (JAvailable/JMileageCost, ...).
@@ -45,6 +50,18 @@ const RATE_LIMIT_FLOOR = 50; // abort cleanly if remaining quota drops below thi
 const CABIN_CODES = ["Y", "W", "J", "F"]; // response-field convention
 const CABINS_PARAM = "economy,premium,business,first"; // request-param convention
 const EXCLUDED_REGION = "North America"; // domestic/near-international is out of scope
+// seats.aero labels Central American airports "South America" (observed live:
+// BZE and LIR). Correct that everywhere — daily enrichment AND --discover —
+// so the region can't silently revert when the config file is regenerated.
+// "Central America" is not the EXCLUDED_REGION, so these stay in scope.
+const REGION_OVERRIDES = {
+  BZE: "Central America", // Belize City
+  LIR: "Central America", // Liberia, Costa Rica
+  SJO: "Central America", // San José, Costa Rica
+  GUA: "Central America", // Guatemala City
+  SAL: "Central America", // San Salvador
+  PTY: "Central America", // Panama City
+};
 const DISCOVER_REGIONS = [
   "Europe",
   "Asia",
@@ -241,6 +258,10 @@ function normalizeRecord(raw) {
     return Number.isFinite(n) ? n : 0;
   };
 
+  // 0 from the API means "count not reported", not "no seats" — see the
+  // comment at the seats field below. null makes that explicit downstream.
+  const seatsOrNull = (n) => (n > 0 ? n : null);
+
   const toAirlines = (v) => {
     if (Array.isArray(v)) return v.map((a) => String(a).trim()).filter(Boolean);
     if (typeof v === "string") return v.split(",").map((a) => a.trim()).filter(Boolean);
@@ -252,7 +273,16 @@ function normalizeRecord(raw) {
     cabins[c] = {
       available: Boolean(pick(raw, `${c}Available`, `${c.toLowerCase()}Available`)),
       miles: toNumber(pick(raw, `${c}MileageCost`, `${c.toLowerCase()}MileageCost`)),
-      seats: toNumber(pick(raw, `${c}RemainingSeats`, `${c.toLowerCase()}RemainingSeats`)),
+      // A remaining-seat count of 0 does NOT mean "no seats". The API returns
+      // RemainingSeats: 0 on records it simultaneously reports as Available,
+      // and the same flight/date/price flips between 0 and 7 across refreshes
+      // (verified against SFO-MUC business, 2026-08-16/18/19). Zero therefore
+      // means "the source did not report a count" — roughly 18% of rows. Emit
+      // null so the distinction is explicit in the data and consumers cannot
+      // mistake it for zero availability.
+      seats: seatsOrNull(
+        toNumber(pick(raw, `${c}RemainingSeats`, `${c.toLowerCase()}RemainingSeats`))
+      ),
       airlines: toAirlines(pick(raw, `${c}Airlines`, `${c.toLowerCase()}Airlines`)),
       direct: Boolean(pick(raw, `${c}Direct`, `${c.toLowerCase()}Direct`)),
     };
@@ -282,17 +312,27 @@ function normalizeRecord(raw) {
  * destMap: Map<airportCode, {city, region}> from config/destinations.json.
  * City always comes from the config (the API has none); region prefers the
  * config and falls back to the API's Route.DestinationRegion.
+ *
+ * Rows flow in from BOTH directions (SFO→X outbound, X→SFO return). Exactly
+ * one endpoint must be SFO; enrichment (city, region, the region exclusion)
+ * is keyed off the OTHER endpoint — the place — since "the region of SFO"
+ * would wrongly exclude every return leg as North America.
  */
 function expandCabins(normalized, destMap) {
   const rows = [];
   const nowIso = new Date().toISOString();
   for (const rec of normalized) {
     if (!rec) continue;
-    if (rec.origin !== ORIGIN) continue;
-    if (!rec.date || !rec.destination || !rec.recordId) continue;
+    const isOutbound = rec.origin === ORIGIN;
+    const isReturn = rec.destination === ORIGIN;
+    if (isOutbound === isReturn) continue; // exactly one end must be SFO
+    if (!rec.date || !rec.destination || !rec.origin || !rec.recordId) continue;
 
-    const dest = destMap.get(rec.destination);
-    const region = dest?.region ?? rec.region;
+    const place = isOutbound ? rec.destination : rec.origin;
+    const dest = destMap.get(place);
+    // The API's DestinationRegion describes rec.destination, which for a
+    // return leg is SFO — only trust it on outbound rows.
+    const region = dest?.region ?? (isOutbound ? rec.region : null);
     if (!region || region === EXCLUDED_REGION) continue;
 
     for (const cabin of CABIN_CODES) {
@@ -305,6 +345,8 @@ function expandCabins(normalized, destMap) {
         date: String(rec.date).slice(0, 10),
         from: rec.origin,
         to: rec.destination,
+        // city/region describe the PLACE (the non-SFO end), for outbound and
+        // return rows alike — the front end groups both under one destination.
         city: dest?.city ?? null,
         region,
         cabin,
@@ -372,32 +414,44 @@ async function runDaily() {
   const destMap = new Map(
     destinations
       .filter((d) => d && d.code)
-      .map((d) => [d.code, { city: d.city ?? null, region: d.region ?? null }])
+      .map((d) => [
+        d.code,
+        { city: d.city ?? null, region: REGION_OVERRIDES[d.code] ?? d.region ?? null },
+      ])
   );
 
-  console.log(`Querying ${destMap.size} destinations (~1 quota call each)...`);
+  console.log(
+    `Querying ${destMap.size} destinations, both directions (~2 quota calls each)...`
+  );
 
   const rawRecords = [];
   let done = 0;
   for (const code of destMap.keys()) {
-    const { records, pages } = await apiGetAllPages("/search", {
-      origin_airport: ORIGIN,
-      destination_airport: code, // required in practice: open search returns empty
-      start_date: windowStart,
-      end_date: windowEnd,
-      cabins: CABINS_PARAM, // words, not Y/W/J/F — the API rejects codes here
-      sources: SOURCE,
-      take: PAGE_SIZE,
-      order_by: "lowest_mileage",
-    });
-    rawRecords.push(...records);
+    // Outbound (SFO→X) and return (X→SFO): the site pairs them into roundtrips.
+    let outCount = 0;
+    let retCount = 0;
+    for (const [origin, destination] of [[ORIGIN, code], [code, ORIGIN]]) {
+      const { records } = await apiGetAllPages("/search", {
+        origin_airport: origin,
+        destination_airport: destination, // required in practice: open search returns empty
+        start_date: windowStart,
+        end_date: windowEnd,
+        cabins: CABINS_PARAM, // words, not Y/W/J/F — the API rejects codes here
+        sources: SOURCE,
+        take: PAGE_SIZE,
+        order_by: "lowest_mileage",
+      });
+      rawRecords.push(...records);
+      if (origin === ORIGIN) outCount = records.length;
+      else retCount = records.length;
+      await sleep(INTER_REQUEST_DELAY_MS);
+    }
     done += 1;
     // Compact progress: one short line per destination.
     console.log(
-      `  [${String(done).padStart(2)}/${destMap.size}] ${code}: ${records.length} recs` +
-        `${pages > 1 ? ` (${pages}p)` : ""} | quota left: ${lastRateLimitRemaining ?? "?"}`
+      `  [${String(done).padStart(2)}/${destMap.size}] ${code}: ${outCount} out / ${retCount} ret` +
+        ` | quota left: ${lastRateLimitRemaining ?? "?"}`
     );
-    if (done < destMap.size) await sleep(INTER_REQUEST_DELAY_MS);
   }
 
   console.log(`Fetched ${rawRecords.length} raw records total.`);
@@ -412,9 +466,12 @@ async function runDaily() {
   const added = [...newKeys].filter((k) => !prevKeys.has(k)).length;
   const removed = [...prevKeys].filter((k) => !newKeys.has(k)).length;
 
+  const outboundRows = rows.filter((r) => r.from === ORIGIN).length;
   const meta = {
     refreshedAt: new Date().toISOString(),
     rowCount: rows.length,
+    outboundRows,
+    returnRows: rows.length - outboundRows,
     addedSinceLastRun: added,
     removedSinceLastRun: removed,
     rateLimitRemaining: lastRateLimitRemaining,
@@ -505,7 +562,7 @@ async function runDiscover() {
     .map(([code, info]) => ({
       code,
       city: existingCities.get(code) ?? null, // preserve hand-written names
-      region: info.region,
+      region: REGION_OVERRIDES[code] ?? info.region,
       distance: info.distance,
     }))
     .sort((a, b) => a.code.localeCompare(b.code));

@@ -1,7 +1,9 @@
 # points
 
 A static award-travel site tracking United MileagePlus **saver** award
-availability out of SFO. A daily script pulls availability from the
+availability between SFO and ~54 international destinations, **both
+directions**, so the UI can pair outbound + return dates into bookable
+roundtrips. A daily script pulls availability from the
 [seats.aero](https://seats.aero) Partner API, commits it as JSON, and GitHub
 Pages serves the site — no backend. Live at
 [points.axeldurham.com](https://points.axeldurham.com).
@@ -11,17 +13,25 @@ Pages serves the site — no backend. Live at
 The refresh script (`scripts/refresh.mjs`, Node 20+, zero dependencies) has two
 modes:
 
-- **Daily mode** (default): the seats.aero search endpoint requires a specific
-  destination airport, so the script loops over the ~54 international
-  destinations in `config/destinations.json`, issuing one search per
-  destination for the next 180 days across all four cabins. That costs roughly
-  **54-60 API calls of the 1000/day quota**. It writes:
-  - `data/deals.json` — one row per available saver cabin, sorted by miles
-    ascending. Each row carries a `firstSeen` date so the site can highlight
-    newly opened space. City and region come from the config file (the API
-    sends no city names).
-  - `data/meta.json` — refresh timestamp, row/added/removed counts, and
-    remaining API quota.
+- **Daily mode** (default): the seats.aero search endpoint requires specific
+  endpoint airports, so the script loops over the ~54 international
+  destinations in `config/destinations.json`, issuing two searches per
+  destination — SFO→X and X→SFO — for the next 180 days across all four
+  cabins. That costs roughly **110-120 API calls of the 1000/day quota**. It
+  writes:
+  - `data/deals.json` — one row per available saver cabin per direction,
+    sorted by miles ascending (return legs have `from: X, to: "SFO"`; city
+    and region always describe the non-SFO end). Each row carries a
+    `firstSeen` date so the site can highlight newly opened space. City and
+    region come from the config file (the API sends no city names), with
+    hard-coded overrides for Central American airports that seats.aero
+    mislabels as South America.
+  - `data/meta.json` — refresh timestamp, row/added/removed counts (split by
+    direction), and remaining API quota.
+  The front end pairs same-cabin outbound and return dates within the chosen
+  trip-length window into roundtrips, priced per person as the sum of the two
+  one-way legs (that is how United prices awards; there is no roundtrip
+  discount).
 - **Discover mode** (`--discover`): regenerates `config/destinations.json` by
   sweeping the bulk availability endpoint per world region and collecting the
   distinct airports United serves from SFO. Hand-written city names in the
@@ -78,7 +88,11 @@ The repo is public — the key lives only in the secret and the local
 
 ## Tuning baselines
 
-`config/baselines.json` holds the per-region, per-cabin mileage baselines the
-UI uses to decide what counts as a "deal" (e.g. business to Asia below 88k is
-worth flagging). Edit the numbers there to make the deal filter stricter or
-looser — no code changes needed; the front end reads it at load time.
+`config/baselines.json` holds the per-region, per-cabin **one-way** mileage
+baselines the UI uses to decide what counts as a "deal" (roundtrip deltas
+compare against 2× the baseline). They are derived from the observed data as
+the median across destinations of each destination's modal price — the median
+step keeps one route with many dates (e.g. Air India's 220k business to India)
+from dragging a whole region's baseline. Edit the numbers there to make the
+deal filter stricter or looser — no code changes needed; the front end reads
+it at load time.

@@ -11,7 +11,7 @@
   <div class="header-row">
     <div class="title-block">
       <h1><span class="title-names">Axel <span class="heart-mark" aria-hidden="true">&#9829;</span> Nhi</span> <span class="title-sub">Honeymoon Award Finder</span></h1>
-      <p class="tagline"><span aria-hidden="true">&#9992;&#65038;</span> Saver award space from SFO, for two.</p>
+      <p class="tagline"><span aria-hidden="true">&#9992;&#65038;</span> Roundtrip saver award space from SFO, for two.</p>
     </div>
     <nav>
       <a href="./guide.html">Guide</a>
@@ -40,12 +40,21 @@
     </fieldset>
 
     <div class="filter-group">
-      <label for="month">Month</label>
+      <label for="month">Departure month</label>
       <select id="month"></select>
     </div>
 
     <div class="filter-group">
-      <label for="max-miles">Max miles: <output id="max-miles-out"></output></label>
+      <label for="min-nights">Trip length (nights)</label>
+      <div class="nights-row">
+        <input type="number" id="min-nights" min="1" max="30" value="7" inputmode="numeric" aria-label="Minimum nights">
+        <span class="nights-dash" aria-hidden="true">&ndash;</span>
+        <input type="number" id="max-nights" min="1" max="30" value="14" inputmode="numeric" aria-label="Maximum nights">
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <label for="max-miles">Max miles per leg: <output id="max-miles-out"></output></label>
       <input type="range" id="max-miles">
     </div>
 
@@ -54,16 +63,19 @@
       <label class="check-label fav-label"><input type="checkbox" id="fav-only"> <span class="heart-inline" aria-hidden="true">&#9829;</span> Shortlist only</label>
       <label for="min-seats" class="seats-label">Seats for
         <input type="number" id="min-seats" min="1" max="9" value="2" inputmode="numeric">
-        <span class="seats-hint">(2 = both of us)</span>
+        <span class="seats-hint">(2 = both of us &middot; dates without a reported count are always shown, flagged &ldquo;unknown&rdquo;)</span>
       </label>
       <button type="button" id="reset" class="reset-btn">Reset filters</button>
     </div>
 
     <p class="discount-note">
       Prices include the 15% MileagePlus cardmember + Premier discount on
-      United-operated flights. Partner-operated awards show the standard rate
-      &mdash; the discount doesn&rsquo;t apply to them.
-      <a href="./guide.html">Details in the guide</a>
+      United-operated legs (marked <span class="disc-badge">&minus;15% card</span>).
+      Partner-operated awards show the standard rate &mdash; the discount
+      doesn&rsquo;t apply to them, and seats.aero&rsquo;s API only publishes
+      standard prices. Expect few badges in Business/First: nearly all of that
+      long-haul space is partner-operated (all of First and all Europe
+      Business, in this data set). <a href="./guide.html#expanded-availability">Details in the guide</a>
     </p>
   </section>
 
@@ -109,7 +121,33 @@
         <p id="dest-sub" class="dest-sub"></p>
       </div>
     </div>
-    <div class="table-wrap">
+    <div class="view-switch" id="view-switch" role="group" aria-label="Trips or one-way dates">
+      <button type="button" data-view="trips" aria-pressed="true">Trips</button>
+      <button type="button" data-view="out" aria-pressed="false">Outbound dates</button>
+      <button type="button" data-view="ret" aria-pressed="false">Return dates</button>
+    </div>
+
+    <div class="table-wrap" id="trips-wrap">
+      <table id="trips-table" hidden>
+        <thead>
+          <tr>
+            <th class="fav-col"><span class="visually-hidden">Shortlist</span></th>
+            <th><button data-tsort="depart">Depart</button></th>
+            <th><button data-tsort="return">Return</button></th>
+            <th class="num"><button data-tsort="nights">Nights</button></th>
+            <th><button data-tsort="cabin">Cabin</button></th>
+            <th class="num"><button data-tsort="total">Total / person</button></th>
+            <th class="num"><button data-tsort="delta">&Delta; vs baseline RT</button></th>
+            <th class="plain-th">Non-stop</th>
+            <th class="num"><button data-tsort="seats">Seats</button></th>
+            <th class="plain-th">Airlines</th>
+          </tr>
+        </thead>
+        <tbody id="trips-body"></tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap" id="legs-wrap" hidden>
       <table id="deals-table" hidden>
         <thead>
           <tr>
@@ -125,8 +163,8 @@
         </thead>
         <tbody id="deals-body"></tbody>
       </table>
-      <p id="truncated" class="truncated" hidden></p>
     </div>
+    <p id="truncated" class="truncated" hidden></p>
   </section>
 
   <p id="empty" class="empty" hidden></p>

@@ -1,14 +1,33 @@
 {
-  "_comment": "Typical published United award level per destination region and cabin, one-way from SFO. DERIVED FROM OBSERVED DATA, not hand-guessed: each value is the modal (most frequently occurring) price in data/deals.json for that region+cabin. A row priced below its baseline is genuinely unusual and worth surfacing.",
-  "_method": "mode of observed miles per region+cabin",
-  "_derivedFrom": "data/deals.json, 10090 rows, 2026-08-06",
-  "_caveat": "United partner award pricing is close to FIXED in premium cabins: Asia First is 220000 in 100% of observed rows, Europe Business 88000 in 80%, Asia Premium Economy 65000 in 92%. Those cabins will therefore essentially never fall below baseline. Economy is the only cabin with real price variation (Europe 56% at mode, Asia 31%). This is a property of the award chart, not a bug. For premium cabins the scarce resource is AVAILABILITY, not price.",
-  "_note": "Oceania has no Business or First availability at all in the observed window, so no baseline exists for those cabins.",
-  "_regenerate": "Recompute the modes from data/deals.json after a refresh if the award chart changes.",
+  "_comment": "Typical published United award level per destination region and cabin, ONE-WAY per leg (SFO⇄destination; the UI doubles it for roundtrip deltas). DERIVED FROM OBSERVED DATA, not hand-guessed.",
+  "_method": "median across destinations of each destination's modal (most frequent) observed price, per region+cabin. The median step keeps one route with many dates — e.g. Air India files SFO⇄India business at 220k on most days — from dragging the whole region's baseline.",
+  "_derivedFrom": "data/deals.json, 20259 rows (both directions), 2026-08-08",
+  "_caveat": "United partner award pricing is close to FIXED in premium cabins, so those cabins essentially never fall below baseline. Economy is the only cabin with real price variation. This is a property of the award chart, not a bug. For premium cabins the scarce resource is AVAILABILITY, not price.",
+  "_note": "Oceania has no Business or First availability at all in the observed window, so no baseline exists for those cabins. India routes (AI) price business far above the East Asia level; the median keeps the Asia J baseline at the typical non-India level.",
+  "_regenerate": "Recompute from data/deals.json after a refresh if the award chart changes.",
   "baselines": {
-    "Europe":        { "Y": 44000, "W": 50000, "J": 88000 },
-    "Asia":          { "Y": 55000, "W": 65000, "J": 88000, "F": 220000 },
-    "Oceania":       { "Y": 55000, "W": 70000 },
-    "South America": { "Y": 20000, "J": 60500 }
+    "Asia": {
+      "F": 220000,
+      "J": 110000,
+      "W": 65000,
+      "Y": 55000
+    },
+    "Central America": {
+      "J": 67100,
+      "Y": 20000
+    },
+    "Europe": {
+      "J": 88000,
+      "W": 50000,
+      "Y": 44000
+    },
+    "Oceania": {
+      "W": 70000,
+      "Y": 55000
+    },
+    "South America": {
+      "J": 74250,
+      "Y": 41250
+    }
   }
 }

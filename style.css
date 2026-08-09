@@ -312,6 +312,52 @@ input[type="range"] {
 }
 .reset-btn:hover { color: var(--fg); border-color: var(--fg-muted); }
 
+.discount-note {
+  flex-basis: 100%;
+  margin: 0.25rem 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--border);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+}
+
+/* Cardmember discount marker */
+
+.disc-badge {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.price-base {
+  color: var(--fg-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.price-disc-line {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.1rem;
+}
+
+.miles-sub {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+}
+
 /* Tabs */
 
 .tabs {

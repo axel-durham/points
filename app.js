@@ -10,6 +10,27 @@
   // Headline-cabin precedence: the most premium cabin that is both selected
   // in the filters and actually available for the destination.
   var CABIN_PRECEDENCE = ["F", "J", "W", "Y"];
+
+  // Chase United Club Infinite + MileagePlus Premier status gives a flat 15%
+  // cardmember discount off the base award price (this is the Premier +
+  // cardmember tier; effective price = base × 0.85). It applies ONLY to
+  // United-/United Express-operated flights: Star Alliance partner-operated
+  // award space is excluded, so a row qualifies only when every carrier is UA
+  // (airlines exactly ["UA"]). Mixed itineraries like ["LH","UA"] contain
+  // partner-operated segments and are treated as ineligible.
+  // Single edit point if the rate ever changes.
+  var CARDMEMBER_DISCOUNT = 0.15;
+
+  function isDiscounted(d) {
+    var a = d.airlines || [];
+    return a.length === 1 && a[0] === "UA";
+  }
+
+  // Effective price: what the user would actually pay. Used consistently for
+  // display, sorting, the max-miles filter, and baseline deltas.
+  function effMiles(d) {
+    return isDiscounted(d) ? Math.round(d.miles * (1 - CARDMEMBER_DISCOUNT)) : d.miles;
+  }
   var STALE_MS = 36 * 60 * 60 * 1000;
   var MILES_STEP = 5000;
   var RENDER_CAP = 500; // keep the detail table light
@@ -585,14 +606,17 @@
 
   function deltaFor(d) {
     var b = baselineFor(d);
-    return b === null ? null : d.miles - b;
+    // Compared on the EFFECTIVE price: baselines are undiscounted observed
+    // prices, so discounted UA-only rows legitimately land below baseline —
+    // that is real savings for this cardholder, not an artifact.
+    return b === null ? null : effMiles(d) - b;
   }
 
   function matchesFilters(d) {
     if (state.cabins.indexOf(d.cabin) < 0) return false;
     if (state.regions.indexOf(d.region) < 0) return false;
     if (state.month && String(d.date).slice(0, 7) !== state.month) return false;
-    if (state.maxMiles !== null && d.miles > state.maxMiles) return false;
+    if (state.maxMiles !== null && effMiles(d) > state.maxMiles) return false;
     if (state.nonstop && !d.direct) return false;
     if (state.favOnly && !isFav(d.id)) return false;
     if ((d.seats || 0) < state.minSeats) return false;
@@ -641,8 +665,8 @@
       g.rows.push(d);
       if (!g.city && d.city) g.city = d.city;
       var pc = g.perCabin[d.cabin];
-      if (!pc || d.miles < pc.miles) g.perCabin[d.cabin] = d;
-      if (d.miles < g.minMiles) g.minMiles = d.miles;
+      if (!pc || effMiles(d) < effMiles(pc)) g.perCabin[d.cabin] = d;
+      if (effMiles(d) < g.minMiles) g.minMiles = effMiles(d);
       if (d.date) g.dates[d.date] = true;
       if (d.direct) g.anyDirect = true;
       (d.airlines || []).forEach(function (a) { g.airlines[a] = true; });
@@ -694,9 +718,10 @@
         var cb = (b.city || b.to).toLowerCase();
         if (ca !== cb) return ca < cb ? -1 : 1;
       } else {
-        // "miles": cheapest first, compared on the headline cabin's price only
-        // (sections are already single-cabin, so this stays like-for-like).
-        if (a.emph.miles !== b.emph.miles) return a.emph.miles - b.emph.miles;
+        // "miles": cheapest first, compared on the headline cabin's EFFECTIVE
+        // price only (sections are already single-cabin, so like-for-like).
+        var ma = effMiles(a.emph), mb = effMiles(b.emph);
+        if (ma !== mb) return ma - mb;
       }
       return a.to < b.to ? -1 : a.to > b.to ? 1 : 0;
     });
@@ -709,13 +734,13 @@
       if (state.tab === "below") {
         return rows.slice().sort(function (a, b) { return deltaFor(a) - deltaFor(b); });
       }
-      return rows.slice().sort(function (a, b) { return a.miles - b.miles; });
+      return rows.slice().sort(function (a, b) { return effMiles(a) - effMiles(b); });
     }
     var val = function (d) {
       switch (key) {
         case "date": return d.date || "";
         case "cabin": return CABINS.indexOf(d.cabin);
-        case "miles": return d.miles;
+        case "miles": return effMiles(d);
         case "delta":
           var dl = deltaFor(d);
           return dl === null ? Infinity : dl;
@@ -758,6 +783,21 @@
       f: d.from, t: d.to, d: d.date, tt: "1", at: "1", sc: "7", px: "1", taxng: "1"
     });
     return "https://www.united.com/en/us/fsr/choose-flights?" + p.toString();
+  }
+
+  function discBadge() {
+    var b = document.createElement("span");
+    b.className = "disc-badge";
+    b.textContent = "−15% card";
+    b.title = "MileagePlus cardmember + Premier discount — United-operated flights only";
+    return b;
+  }
+
+  function basePriceSpan(miles) {
+    var s = document.createElement("span");
+    s.className = "price-base";
+    s.textContent = "normally " + fmtMiles(miles);
+    return s;
   }
 
   function deltaSpan(delta) {
@@ -921,7 +961,7 @@
     price.appendChild(cab);
     var amount = document.createElement("strong");
     amount.className = "price-miles";
-    amount.textContent = fmtMiles(g.emph.miles);
+    amount.textContent = fmtMiles(effMiles(g.emph));
     price.appendChild(amount);
     var unit = document.createElement("span");
     unit.className = "price-unit";
@@ -932,6 +972,13 @@
       var ds = deltaSpan(delta);
       ds.classList.add("price-delta");
       price.appendChild(ds);
+    }
+    if (isDiscounted(g.emph)) {
+      var discLine = document.createElement("span");
+      discLine.className = "price-disc-line";
+      discLine.appendChild(basePriceSpan(g.emph.miles));
+      discLine.appendChild(discBadge());
+      price.appendChild(discLine);
     }
     card.appendChild(price);
 
@@ -944,7 +991,15 @@
       mini.className = "cabin-mini";
       others.forEach(function (c) {
         var li = document.createElement("li");
-        li.textContent = CABIN_LABELS[c] + " " + fmtMiles(g.perCabin[c].miles);
+        var row = g.perCabin[c];
+        li.textContent = CABIN_LABELS[c] + " " + fmtMiles(effMiles(row));
+        if (isDiscounted(row)) {
+          li.appendChild(document.createTextNode(" "));
+          var was = document.createElement("span");
+          was.className = "price-base";
+          was.textContent = "(normally " + fmtMiles(row.miles) + ")";
+          li.appendChild(was);
+        }
         mini.appendChild(li);
       });
       card.appendChild(mini);
@@ -1162,7 +1217,16 @@
     tr.appendChild(cCabin);
 
     var cMiles = td("Miles", "num");
-    cMiles.textContent = fmtMiles(d.miles);
+    var eff = document.createElement("strong");
+    eff.textContent = fmtMiles(effMiles(d));
+    cMiles.appendChild(eff);
+    if (isDiscounted(d)) {
+      var sub = document.createElement("span");
+      sub.className = "miles-sub";
+      sub.appendChild(basePriceSpan(d.miles));
+      sub.appendChild(discBadge());
+      cMiles.appendChild(sub);
+    }
     tr.appendChild(cMiles);
 
     var cDelta = td("Δ vs baseline", "num");

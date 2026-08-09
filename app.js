@@ -206,7 +206,6 @@
     bindEvents();
     $("filters").hidden = false;
     $("tabs").hidden = false;
-    $("tabs-note").hidden = false;
     render();
   }
 
@@ -258,8 +257,7 @@
     }
     if (!hasReturnData) {
       banners.appendChild(banner("warn",
-        "This data set has no return-direction (→ SFO) rows yet, so roundtrips can't be paired. " +
-        "Run the refresh script to fetch both directions; until then only outbound dates are shown."));
+        "No return-direction data yet — run the refresh script to pair roundtrips."));
     }
   }
 
@@ -1109,7 +1107,7 @@
     var b = document.createElement("span");
     b.className = "disc-badge";
     b.textContent = "−15% card";
-    b.title = "MileagePlus cardmember + Premier discount — applies to the United-operated leg(s) only";
+    b.title = "Cardmember discount — United-operated legs only";
     return b;
   }
 
@@ -1151,11 +1149,10 @@
     if (!panel.hidden) renderHiddenPanel();
   }
 
-  function setTabCounts(counts, noteText) {
+  function setTabCounts(counts) {
     $("count-all").textContent = counts.all;
     $("count-below").textContent = counts.below;
     $("count-new").textContent = counts["new"];
-    $("tabs-note").textContent = noteText;
     var tabButtons = document.querySelectorAll("#tabs button[data-tab]");
     for (var i = 0; i < tabButtons.length; i++) {
       tabButtons[i].setAttribute("aria-selected",
@@ -1175,8 +1172,7 @@
       all: groups.length,
       below: groups.filter(function (g) { return groupInTab(g, "below"); }).length,
       "new": groups.filter(function (g) { return groupInTab(g, "new"); }).length
-    }, "Counts are destinations. Roundtrip prices are per person, " +
-       state.minNights + "–" + state.maxNights + " nights.");
+    });
 
     var inTab = sortGroups(groups.filter(function (g) { return groupInTab(g, state.tab); }));
     var grid = $("dest-grid");
@@ -1188,14 +1184,13 @@
       if (deals.length === 0) {
         empty.textContent = "No deals in the current data set.";
       } else if (state.favOnly && favorites.length === 0) {
-        empty.textContent = "No shortlisted trips yet — open a destination and tap the heart on a trip or date to save it.";
+        empty.textContent = "Nothing shortlisted yet — tap ♥ on a trip to save it.";
       } else if (state.tab === "below") {
         empty.textContent = belowEmptyMessage();
       } else if (hidden.length > 0 && state.tab === "all") {
-        empty.textContent = "No destinations match the current filters. (" + hidden.length +
-          " hidden — restore them from the Hidden list above.)";
+        empty.textContent = "No matches. (" + hidden.length + " hidden — see the list above.)";
       } else {
-        empty.textContent = "No destinations match the current filters. Try widening cabins, regions, trip length, or the miles cap.";
+        empty.textContent = "No matches — try widening cabins, regions, or trip length.";
       }
       return;
     }
@@ -1227,8 +1222,8 @@
       frag.appendChild(gridSection(
         "One-way space only · " + noPair.length +
           (noPair.length === 1 ? " destination" : " destinations"),
-        "No outbound + return combination lines up within " + state.minNights + "–" +
-          state.maxNights + " nights for these. Prices below are ONE-WAY — try widening the trip length.",
+        "Nothing pairs within " + state.minNights + "–" + state.maxNights +
+          " nights — prices here are one-way.",
         noPair));
     }
     grid.appendChild(frag);
@@ -1258,15 +1253,9 @@
     // Premium-cabin award prices are essentially fixed (see config/baselines.json
     // _caveat), so an empty below-baseline view for J/F/W is expected, not broken.
     if (state.cabins.length > 0 && state.cabins.indexOf("Y") < 0) {
-      var names = state.cabins.slice().sort(function (a, b) {
-        return CABINS.indexOf(a) - CABINS.indexOf(b);
-      }).map(function (c) { return CABIN_LABELS[c]; }).join(" and ");
-      return "Nothing below baseline — " + names +
-        " award prices are essentially fixed, so bargains only really appear in Economy. " +
-        "Add Economy to the cabin filter to hunt for them.";
+      return "Nothing below baseline — premium prices barely move. Bargains live in Economy.";
     }
-    return "Nothing below baseline matches the current filters. " +
-      "Economy is where prices actually vary — try widening regions or the miles cap.";
+    return "Nothing below baseline with these filters.";
   }
 
   function cabinHeading(c) {
@@ -1412,14 +1401,13 @@
       warn.className = "unk-badge";
       if (g.ret.rows.length === 0) {
         warn.textContent = "no return space";
-        warn.title = "No saver space back to SFO was found for the selected cabins. You'd need another airline or program for the way home.";
+        warn.title = "No saver space back to SFO in these cabins.";
       } else if (g.out.rows.length === 0) {
         warn.textContent = "no outbound space";
-        warn.title = "No saver space from SFO was found for the selected cabins — only the way home.";
+        warn.title = "No saver space from SFO in these cabins.";
       } else {
         warn.textContent = "dates don't pair";
-        warn.title = "Outbound and return dates never line up within " + state.minNights + "–" +
-          state.maxNights + " nights. Try widening the trip length.";
+        warn.title = "Try widening the trip length.";
       }
       meta.appendChild(warn);
     }
@@ -1547,11 +1535,7 @@
       below: rowsForTab(state.view === "out" ? outRows : retRows, "below").length,
       "new": rowsForTab(state.view === "out" ? outRows : retRows, "new").length
     };
-    setTabCounts(counts,
-      state.view === "trips" ?
-        "Counts are roundtrips for " + name + " (" + state.minNights + "–" + state.maxNights +
-          " nights, per-person prices). Filters above still apply." :
-        "Counts are one-way dates for " + name + ". Filters above still apply.");
+    setTabCounts(counts);
 
     // View switcher
     var switchBtns = document.querySelectorAll("#view-switch button[data-view]");
@@ -1599,8 +1583,8 @@
       table.hidden = true;
       empty.hidden = false;
       empty.textContent = state.tab === "below" ? belowEmptyMessage() :
-        "No " + state.minNights + "–" + state.maxNights + "-night roundtrips for " + name +
-        " match the current filters and tab. Widen the trip length, or check the one-way date views.";
+        "No " + state.minNights + "–" + state.maxNights + "-night trips match — " +
+        "widen the trip length or check the one-way dates.";
       return;
     }
 
@@ -1637,8 +1621,7 @@
       table.hidden = true;
       empty.hidden = false;
       empty.textContent = state.tab === "below" ? belowEmptyMessage() :
-        "No " + (state.view === "out" ? "outbound" : "return") + " dates for " + name +
-        " match the current filters and tab.";
+        "No matching " + (state.view === "out" ? "outbound" : "return") + " dates.";
       return;
     }
 
@@ -1747,9 +1730,8 @@
       var unkSeat = document.createElement("span");
       unkSeat.className = "unk-badge";
       unkSeat.textContent = s.min === null ? "unknown" : "≥? (" + s.min + " one way)";
-      unkSeat.title = "The source didn't report a seat count for " +
-        (s.min === null ? "either leg" : "one of the legs") +
-        " — verify both dates on united.com before counting on 2 seats.";
+      unkSeat.title = "Seat count not reported for " +
+        (s.min === null ? "either leg" : "one leg") + " — verify on united.com.";
       cSeats.appendChild(unkSeat);
     }
     tr.appendChild(cSeats);
@@ -1811,7 +1793,7 @@
       var unkSeat = document.createElement("span");
       unkSeat.className = "unk-badge";
       unkSeat.textContent = "unknown";
-      unkSeat.title = "The source didn't report a seat count for this date — verify on united.com before counting on 2 seats.";
+      unkSeat.title = "Seat count not reported — verify on united.com.";
       cSeats.appendChild(unkSeat);
     }
     tr.appendChild(cSeats);

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>United Award Fares &amp; Booking Codes</title>
+  <title>Award Cheat Sheet</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./guide.css">
 </head>
@@ -11,120 +11,59 @@
 <div class="guide">
   <header class="guide-header">
     <nav><a href="./index.html">&larr; Back to search</a></nav>
-    <h1>United award fares and booking codes</h1>
-    <p class="verified">Last verified: 2026-08-08. Airline inventory rules change without notice; treat anything older than a few months with suspicion.</p>
-    <p><strong>How this site prices a roundtrip:</strong> United prices awards per one-way leg (a one-way costs half a roundtrip, with no roundtrip discount), so every roundtrip total shown is simply outbound&nbsp;+&nbsp;return, per person. The two legs are booked as two one-way awards &mdash; which also means you can freely mix cabins or even airlines between directions if you book them separately. The cardmember discount below applies per leg: a United-operated outbound gets it even when the return is partner metal.</p>
+    <h1>The two-minute award cheat sheet</h1>
+    <p class="verified">Last checked 2026-08-08.</p>
   </header>
 
-  <section id="saver-vs-dynamic">
-    <h2>1. Saver vs. dynamic award pricing</h2>
-    <p>United no longer publishes award charts. On <strong>Nov. 15, 2019</strong> it moved awards on its own flights to dynamic pricing, and on <strong>April 28, 2020</strong> it deleted the Star Alliance partner award chart from its site &mdash; that second change came with no advance notice. Since then there is no official price list for anything; sites like AwardWallet maintain <em>unofficial</em> charts reconstructed from real bookings.</p>
-    <p>Two kinds of award still exist in practice:</p>
-    <ul>
-      <li><strong>Saver awards</strong> &mdash; capacity-controlled seats filed in dedicated award inventory buckets (the letter codes below). Prices are relatively low and comparatively stable. This is the space worth hunting.</li>
-      <li><strong>Everyday (dynamic) awards</strong> &mdash; on United-operated flights, any sellable seat can be bought with miles at a dynamically computed price, sometimes absurdly high. These exist even when saver space doesn't.</li>
-    </ul>
-    <p><strong>A concrete example of the split</strong> (observed in the seats.aero Partner API response, 2026-08-05): for SFO&rarr;NRT on 2026-08-06, a single United availability record reported <code>JAvailable:&nbsp;false</code> with <code>JMileageCost:&nbsp;"0"</code> alongside <code>JAvailableRaw:&nbsp;true</code> with <code>JMileageCostRaw:&nbsp;360000</code>. The non-Raw fields track saver space; the Raw fields include dynamically priced seats. So that day there was no saver business seat, but you could have a business seat for 360,000 miles at dynamic pricing. "A seat is available" means nothing until you say at what price &mdash; which is why this site shows saver space only and deliberately discards the Raw figures.</p>
-    <p><strong>Why partners price differently:</strong> Star Alliance partner programs can generally only see and book <em>saver-level</em> space on each other's flights. A United flight priced dynamically above saver level is bookable with United miles but invisible to Aeroplan, LifeMiles, etc. &mdash; and the reverse is true when you point United miles at a Lufthansa or ANA flight. Partner awards booked through United therefore behave close to a fixed (if unpublished) price table, while United-metal awards float.</p>
-    <p class="source">Sources: <a href="https://thepointsguy.com/news/united-pulls-partner-award-chart">TPG: United pulls partner award chart</a> &middot; <a href="https://awardwallet.com/airlines/united-mileageplus/partner-award-chart/">AwardWallet unofficial MileagePlus chart</a> &middot; <a href="https://www.thepointsanalyst.com/search-for-star-alliance-award-availability/">The Points Analyst: Star Alliance award availability</a></p>
+  <section id="saver">
+    <h2>Saver space only</h2>
+    <p>United prices awards dynamically on its own flights &mdash; the same
+    business seat can be 88,000 miles as a saver award or 360,000 without one.
+    This site lists <strong>saver space only</strong>: the capacity-controlled
+    awards at prices worth paying. A date missing here may still be bookable
+    on united.com, just at a price you don&rsquo;t want.</p>
   </section>
 
-  <section id="expanded-availability">
-    <h2>2. Cardmember and elite &ldquo;expanded availability&rdquo; &mdash; and why this site can't see it</h2>
-    <p>Holders of eligible United co-brand cards (including the Club Infinite card) get more than the standard saver space. United's own benefit copy frames it as a discount: eligible primary cardmembers book award flights <em>&ldquo;on United or United Express only&rdquo;</em> for &ldquo;at least 10% fewer miles than the base price paid by members without an eligible card,&rdquo; rising to &ldquo;at least 15% fewer miles&rdquo; for cardmembers who also hold Premier status. These are tiers of one mechanism, not independently stacking pools &mdash; the 15% figure already reflects the combined card-plus-elite tier, and United's copy gives a single Premier figure with no gradation by status level.</p>
-    <p><strong>This site now bakes the discount in.</strong> Because the reader of record holds both the Club Infinite card and Premier status, rows where <em>every</em> segment is United-operated are displayed with the 15% discount already applied; rows involving any partner metal show the standard rate. Both figures appear in the UI, so you can always see which one you're looking at.</p>
-    <p>Mechanically, it is delivered as <em>extra saver-level inventory</em> in separate booking classes &mdash; XN (economy) and IN (business / domestic first) &mdash; layered on top of the standard X/I buckets, not as a price cut on the same seat. Sources describe the tiers slightly differently: TPG's current guide assigns XN to cardholders and Premier Silver/Gold, and IN to Premier Platinum, 1K and Global Services, while other coverage describes cardholders unlocking both XN and IN. If IN access matters to you, test it logged in rather than trusting either description.</p>
-    <p>Two hard limits:</p>
-    <ul>
-      <li><strong>United and United Express flights only.</strong> Partner-operated space (ANA, Lufthansa, Swiss&hellip;) is explicitly excluded &mdash; per TPG, &ldquo;you can't unlock additional award availability when booking through a partner,&rdquo; and holding the card unlocks nothing extra on partner metal either.</li>
-      <li><strong>Visible only when logged in.</strong> XN/IN inventory and the &ldquo;Special member pricing&rdquo; it produces appear only when you search united.com signed in to an eligible MileagePlus account. Logged-out searches &mdash; and the third-party feeds this site is built on &mdash; see only standard X/I saver space.</li>
-    </ul>
-    <p><strong>How big a deal is the discount in practice? Small.</strong> Measured from this site's live dataset on 2026-08-07, only about 16% of rows (1,669 of 10,044) are United-only and therefore eligible. Of the 358 Europe business-class rows, <em>zero</em> are eligible &mdash; every one is operated by Lufthansa, Swiss, LOT or Austrian. So the discount essentially never touches the transatlantic business-class space that matters most; partner metal is where that space lives.</p>
-    <p><strong>Deliberate conservatism:</strong> itineraries mixing United and partner segments are treated as ineligible and shown at the full standard rate, because segment-level eligibility can't be verified from this site's data. United's terms scope the discount to United/United Express flights, so on a mixed booking the real logged-in price may come out slightly lower than shown here.</p>
-    <p><strong>Discount &ne; availability.</strong> Applying the 15% to displayed prices does not mean this site can see the expanded XN/IN inventory &mdash; that remains login-gated and invisible to third-party feeds. On United-operated flights you may still find saver seats logged in that this site does not list at all.</p>
-    <p>Two related items, flagged rather than asserted:</p>
-    <ul>
-      <li>The Club card family also earns a 10,000-mile award flight discount for every $20,000 of calendar-year spend (max two, at $40,000). United's terms require the award ticket to &ldquo;have at least one segment booked on United or United Express&rdquo;; whether the discount can apply to otherwise partner-operated awards beyond that is <em>unconfirmed</em> &mdash; we found no clear statement either way.</li>
-      <li>seats.aero has a &ldquo;Cardholder Pricing&rdquo; preference (Account &rarr; Preferences &rarr; United MileagePlus) that surfaces cardholder-discounted results in its own web interface. <strong>It does not affect the Partner API</strong>, which is what feeds this site. Tested directly on 2026-08-06: with the cardholder and Premier preferences enabled, 643 of 643 comparable award prices returned by the API were byte-identical to those fetched with the preferences off. So enabling it is worth doing for browsing seats.aero itself, but it will never improve the numbers here &mdash; the ceiling caveat above still applies in full.</li>
-    </ul>
-    <p class="source">Sources: <a href="https://cardmembers.united.com/Club">United: Club card benefits</a> (10%/15% and spend-discount language) &middot; <a href="https://thepointsguy.com/airline/award-availability-united-credit-cards/">TPG: expanded award availability</a> &middot; <a href="https://awardwallet.com/credit-cards/united-mileageplus/united-credit-card-award-space/">AwardWallet: United credit card award space</a></p>
+  <section id="roundtrips">
+    <h2>Roundtrips are two one-ways</h2>
+    <p>United prices awards per leg with no roundtrip discount, so every total
+    here is outbound&nbsp;+&nbsp;return, per person. The legs book separately,
+    which also means you can mix cabins &mdash; or airlines &mdash; between
+    directions.</p>
   </section>
 
-  <section id="booking-classes">
-    <h2>3. Award booking classes</h2>
-    <p>Award seats live in single-letter inventory buckets (booking classes, or RBDs), separate from the revenue fare classes sold for cash on the same aircraft. Codes ending in <strong>N</strong> are extra saver space visible only to United elites (Platinum/1K) and United co-brand cardholders.</p>
-
-    <h3>United-operated flights</h3>
-    <table>
-      <thead>
-        <tr><th>Cabin</th><th>Saver (everyone, incl. partners)</th><th>Saver (elite / cardholder only)</th><th>Everyday (dynamic)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Economy</td><td>X</td><td>XN</td><td>YN</td></tr>
-        <tr><td>Premium Plus</td><td colspan="3">ON &mdash; United files all Premium Plus awards in one code, priced dynamically; there is no separate saver bucket</td></tr>
-        <tr><td>Business (Polaris) / domestic First</td><td>I</td><td>IN</td><td>JN</td></tr>
-      </tbody>
-    </table>
-
-    <h3>Partner-operated Star Alliance flights</h3>
-    <table>
-      <thead>
-        <tr><th>Cabin</th><th>Award booking class</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Economy</td><td>X</td></tr>
-        <tr><td>Business</td><td>I</td></tr>
-        <tr><td>First</td><td>O</td></tr>
-      </tbody>
-    </table>
-    <p>These are the alliance-standard saver codes. O applies only to partners that still sell international First (ANA, Lufthansa, etc.); United retired its own international First in 2018.</p>
-    <p>For contrast, United's <em>revenue</em> fare classes on the same plane: Economy Y, B, M, E, U, H, Q, V, W, S, T, L, K, G, N (Basic Economy); Premium Plus O, A, R; Business/First J, C, D, Z, P. Note the overlap: revenue &ldquo;O&rdquo; is a paid Premium Plus fare on United but a First-class award on partners &mdash; the same letter means different things in different contexts, which is exactly why context matters.</p>
-    <p class="source">Sources: <a href="https://thepointsguy.com/airline/united-fare-classes/">TPG: United fare classes</a> (updated Feb 2025) &middot; <a href="https://thepointsguy.com/loyalty-programs/united-expert-mode/">TPG: United expert mode</a> &middot; <a href="https://www.thepointsanalyst.com/search-for-star-alliance-award-availability/">The Points Analyst</a></p>
+  <section id="discount">
+    <h2>The &minus;15% card badge</h2>
+    <ul>
+      <li>Club Infinite + Premier takes 15% off awards on
+      <strong>United-operated flights only</strong> &mdash; never partner
+      metal. That&rsquo;s why the badge is rare in Business and First: nearly
+      all of that long-haul space is on partners.</li>
+      <li>The card also unlocks extra saver inventory that is
+      <strong>only visible logged in</strong> &mdash; no third-party feed can
+      see it, so united.com may show more than this site does.</li>
+    </ul>
   </section>
 
   <section id="cabins">
-    <h2>4. Cabin codes as this site uses them</h2>
-    <p>This site follows seats.aero's convention: one letter per <em>cabin</em>, regardless of which booking class the award actually files into.</p>
+    <h2>Cabin codes</h2>
     <table>
-      <thead>
-        <tr><th>Code</th><th>Cabin</th><th>United marketing name</th></tr>
-      </thead>
       <tbody>
-        <tr><td>Y</td><td>Economy</td><td>Economy (incl. Basic Economy, Economy Plus)</td></tr>
-        <tr><td>W</td><td>Premium economy</td><td>Premium Plus</td></tr>
-        <tr><td>J</td><td>Business</td><td>Polaris (international); United First (domestic two-cabin flights often maps here or to F depending on the tool)</td></tr>
-        <tr><td>F</td><td>First</td><td>Global First &mdash; but note United stopped selling international First on June 20, 2018, so F results on United metal today are domestic First or nothing; meaningful F space is mostly partner First (ANA, Lufthansa&hellip;)</td></tr>
+        <tr><td>Y</td><td>Economy</td></tr>
+        <tr><td>W</td><td>Premium Economy (United&rsquo;s Premium Plus)</td></tr>
+        <tr><td>J</td><td>Business (Polaris)</td></tr>
+        <tr><td>F</td><td>First &mdash; partner airlines only; United quit international First in 2018</td></tr>
       </tbody>
     </table>
-    <p>Don't confuse these with booking classes: a &ldquo;J&rdquo; result in this site's cabin column may be filed in award class I, IN, or JN on the actual reservation.</p>
-    <p class="source">Sources: <a href="https://developers.seats.aero/">seats.aero developer docs</a> (cabin parameter Y/W/J/F) &middot; <a href="https://onemileatatime.com/united-phasing-out-international-first-class/">One Mile at a Time: United phasing out international First</a></p>
-  </section>
-
-  <section id="three-things">
-    <h2>5. Fare basis vs. booking class vs. cabin</h2>
-    <p>Three different things that all get called &ldquo;fare class&rdquo; in casual conversation:</p>
-    <table>
-      <thead>
-        <tr><th>Term</th><th>What it is</th><th>Example</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Cabin</td><td>The physical section of the plane</td><td>Polaris business</td></tr>
-        <tr><td>Booking class (RBD)</td><td>Single letter; the inventory bucket your seat was sold or awarded from</td><td>I</td></tr>
-        <tr><td>Fare basis</td><td>A longer alphanumeric string on the ticket encoding the fare's rules; its first letter is usually the booking class</td><td>e.g. <code>IJBP0AWD</code> (illustrative)</td></tr>
-      </tbody>
-    </table>
-    <p><strong>Worked example:</strong> you book a saver business award on a United-operated flight to Frankfurt using partner miles. The <em>cabin</em> is business (Polaris; this site's J). The <em>booking class</em> is I &mdash; the saver business award bucket. The ticket carries a <em>fare basis</em> string beginning with I that encodes the award fare's rules. Three labels, one seat.</p>
   </section>
 
   <section id="caveats">
-    <h2>6. Practical caveats</h2>
+    <h2>Before you celebrate</h2>
     <ul>
-      <li><strong>Space is volatile.</strong> Saver awards appear and vanish within hours &mdash; airlines open and pull buckets continuously, and popular space gets booked fast. Treat any search result as a snapshot, not a promise.</li>
-      <li><strong>seats.aero is a cache, not live inventory.</strong> It shows results from periodic background scrapes; the snapshot can be minutes to hours old, and a fresh check may disagree with it. seats.aero's own docs explain that flights can &ldquo;disappear&rdquo; simply because a refresh replaced stale cached data.</li>
-      <li><strong>Phantom space exists.</strong> Occasionally a partner's systems show award inventory that fails at ticketing (the booking errors out or the seat never confirms). If a too-good award won't ticket, it may never have been real.</li>
-      <li><strong>Visible &ne; bookable with United miles.</strong> Partner space surfaced by third-party tools was found through <em>some</em> program's search &mdash; not necessarily United's. Programs differ in which partners, routes, and cabins they can ticket, and married-segment and program-specific filters mean United.com may refuse space that Aeroplan happily books (and vice versa). Always confirm on united.com before counting on it.</li>
+      <li>Saver space appears and vanishes within hours; every listing is a snapshot.</li>
+      <li>seats.aero is a cache, not live inventory, and occasionally shows phantom seats that fail at booking.</li>
+      <li><strong>Always confirm on united.com</strong> &mdash; the date links do exactly that.</li>
     </ul>
-    <p class="source">Sources: <a href="https://docs.seats.aero/article/69-why-did-flights-disappear-after-i-refreshed">seats.aero: Why did flights disappear after I refreshed?</a> &middot; <a href="https://www.thepointsanalyst.com/search-for-star-alliance-award-availability/">The Points Analyst</a></p>
   </section>
 
   <footer class="guide-footer">

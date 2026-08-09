@@ -63,19 +63,14 @@
       <label class="check-label fav-label"><input type="checkbox" id="fav-only"> <span class="heart-inline" aria-hidden="true">&#9829;</span> Shortlist only</label>
       <label for="min-seats" class="seats-label">Seats for
         <input type="number" id="min-seats" min="1" max="9" value="2" inputmode="numeric">
-        <span class="seats-hint">(2 = both of us &middot; dates without a reported count are always shown, flagged &ldquo;unknown&rdquo;)</span>
       </label>
       <button type="button" id="reset" class="reset-btn">Reset filters</button>
     </div>
 
     <p class="discount-note">
-      Prices include the 15% MileagePlus cardmember + Premier discount on
-      United-operated legs (marked <span class="disc-badge">&minus;15% card</span>).
-      Partner-operated awards show the standard rate &mdash; the discount
-      doesn&rsquo;t apply to them, and seats.aero&rsquo;s API only publishes
-      standard prices. Expect few badges in Business/First: nearly all of that
-      long-haul space is partner-operated (all of First and all Europe
-      Business, in this data set). <a href="./guide.html#expanded-availability">Details in the guide</a>
+      Prices include your <span class="disc-badge">&minus;15% card</span> discount
+      on United-operated legs; partner awards show the standard rate.
+      <a href="./guide.html#discount">Why the badge is rare up front</a>
     </p>
   </section>
 
@@ -84,8 +79,6 @@
     <button role="tab" data-tab="below" aria-selected="false">Below baseline <span class="count" id="count-below">0</span></button>
     <button role="tab" data-tab="new" aria-selected="false">New <span class="count" id="count-new">0</span></button>
   </div>
-  <p class="tabs-note" id="tabs-note" hidden></p>
-
   <div id="error" class="error" hidden></div>
 
   <div id="undo-bar" class="undo-bar" hidden>

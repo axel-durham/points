@@ -1,6 +1,6 @@
 {
   "_comment": "International destinations served from SFO with United award inventory, discovered from the seats.aero bulk endpoint. The daily refresh does one /search per entry. Regenerate with: node scripts/refresh.mjs --discover",
-  "_discoveredAt": "2026-08-05",
+  "_discoveredAt": "2026-08-10",
   "origin": "SFO",
   "destinations": [
     {

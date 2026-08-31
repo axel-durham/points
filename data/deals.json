@@ -6928,15 +6928,12 @@
     "cabin": "Y",
     "miles": 26700,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "AC",
-      "AZ",
-      "LH",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-30T13:04:25.073852Z"
+    "updated": "2026-08-31T08:54:02.66319Z"
   },
   {
     "id": "34URKiTIwYDWd3210ce7JSqDPTt-Y",
@@ -17678,23 +17675,6 @@
     "updated": "2026-08-28T04:05:10.423075Z"
   },
   {
-    "id": "34GaaByoJeYABOZc2SJR4DK1Kow-Y",
-    "date": "2026-09-18",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 35600,
-    "direct": true,
-    "seats": null,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-08-29T04:09:06.856288Z"
-  },
-  {
     "id": "34OzmVO1DfJHySEAz9PfCktzEVA-Y",
     "date": "2026-09-21",
     "from": "TPE",
@@ -18574,6 +18554,23 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-08-30T09:40:04.951539Z"
+  },
+  {
+    "id": "34GaaByoJeYABOZc2SJR4DK1Kow-Y",
+    "date": "2026-09-18",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 35700,
+    "direct": true,
+    "seats": null,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-08-31T08:51:49.878043Z"
   },
   {
     "id": "34JQA5pEeGNVSqTvQn5O7Wu9rus-Y",
@@ -30910,7 +30907,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-30T08:35:35.853475Z"
+    "updated": "2026-08-31T07:55:55.792651Z"
   },
   {
     "id": "34URNsQkZUptT6NF0vNhyUapq7P-Y",
@@ -31130,7 +31127,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-28T06:42:28.72992Z"
+    "updated": "2026-08-31T07:37:59.354668Z"
   },
   {
     "id": "35jaUAcgehSI0FxqVLZxjYg0cXB-Y",
@@ -32995,18 +32992,13 @@
     "cabin": "Y",
     "miles": 40000,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "AC",
-      "EN",
       "LH",
-      "LX",
-      "OS",
-      "UA",
-      "VL"
+      "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-26T23:15:56.041905Z"
+    "updated": "2026-08-31T08:44:10.013389Z"
   },
   {
     "id": "39mxscsFf7IjDYUUAGVtxhuAmz6-Y",
@@ -46518,15 +46510,13 @@
     "seats": 9,
     "airlines": [
       "AC",
-      "B6",
       "EI",
       "LH",
-      "TK",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-30T06:32:38.736919Z"
+    "updated": "2026-08-31T08:08:13.034656Z"
   },
   {
     "id": "37wckbD3TTe3CQYkbydgjP2LjYk-Y",
@@ -63922,19 +63912,15 @@
     "cabin": "Y",
     "miles": 40000,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "4Y",
-      "AC",
-      "EN",
       "LH",
-      "LX",
-      "SQ",
-      "UA",
-      "VL"
+      "TK",
+      "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-26T07:33:50.179157Z"
+    "updated": "2026-08-31T07:48:19.563525Z"
   },
   {
     "id": "37cOpwrAd7o1GWHSnl08MBY7JjO-Y",
@@ -74753,7 +74739,7 @@
     "cabin": "Y",
     "miles": 40000,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "EI",
       "LH",
@@ -74762,7 +74748,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-30T08:40:51.554382Z"
+    "updated": "2026-08-31T07:52:27.720129Z"
   },
   {
     "id": "34YEi2n9CCvCsgxgHjVJhyNxTgD-Y",
@@ -91127,17 +91113,12 @@
     "cabin": "Y",
     "miles": 40900,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "BR",
-      "LH",
-      "LX",
-      "SQ",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-28T05:46:55.37325Z"
+    "updated": "2026-08-31T07:40:41.251397Z"
   },
   {
     "id": "36Tqvu7H2Cv05WAlpL4Me0LWwiW-Y",
@@ -92416,24 +92397,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-08-26T14:55:38.096878Z"
-  },
-  {
-    "id": "38wLaqf20MKxelMlLkvU6U7RfWi-Y",
-    "date": "2026-12-29",
-    "from": "LHR",
-    "to": "SFO",
-    "city": "London",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 42700,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "LH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-08-28T04:41:06.019462Z"
   },
   {
     "id": "35PZDJGhR54IQggYwP4F2Cd7ACA-Y",
@@ -98701,13 +98664,13 @@
     "cabin": "Y",
     "miles": 43900,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "BR",
       "UA"
     ],
     "firstSeen": "2026-08-22",
-    "updated": "2026-08-27T01:50:31.831784Z"
+    "updated": "2026-08-31T07:48:44.831758Z"
   },
   {
     "id": "3BMXaNpRrK5uEncverrjfLDUX1a-Y",
@@ -110284,15 +110247,13 @@
     "cabin": "Y",
     "miles": 44000,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "A3",
       "AZ",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-16",
-    "updated": "2026-08-28T04:06:10.763876Z"
+    "updated": "2026-08-31T07:51:33.450384Z"
   },
   {
     "id": "3ATe92ebkg9kMbIK4RsZkHKa0XM-Y",
@@ -120290,11 +120251,10 @@
     "airlines": [
       "LH",
       "LX",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-27T01:40:31.594726Z"
+    "updated": "2026-08-31T08:04:48.634274Z"
   },
   {
     "id": "35M2usGGNyziiGeSvJZpbBy2Uju-Y",
@@ -127774,23 +127734,21 @@
     "cabin": "Y",
     "miles": 44000,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "2L",
       "4Y",
-      "AZ",
       "BT",
       "EW",
       "LH",
       "LO",
       "LX",
-      "OS",
       "SN",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-23T21:14:32.528288Z"
+    "updated": "2026-08-31T08:20:23.585676Z"
   },
   {
     "id": "34od4ZI57uyPLmQpsaSosUxLMt6-Y",
@@ -151575,14 +151533,13 @@
     "cabin": "Y",
     "miles": 44000,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "B6",
       "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-26T22:48:45.152888Z"
+    "updated": "2026-08-31T07:58:12.389868Z"
   },
   {
     "id": "356R94cKn5WF8O5c9iWPq18DQau-Y",
@@ -153897,15 +153854,14 @@
     "cabin": "Y",
     "miles": 44000,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "B6",
-      "EI",
       "LH",
-      "TK"
+      "TK",
+      "UA"
     ],
     "firstSeen": "2026-08-28",
-    "updated": "2026-08-24T05:35:54.171468Z"
+    "updated": "2026-08-31T08:01:04.828474Z"
   },
   {
     "id": "3BSZmz2K1JgrWiltFxmcHbaUvZS-Y",
@@ -176595,17 +176551,16 @@
     "cabin": "Y",
     "miles": 44000,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "4Y",
-      "EI",
-      "EN",
+      "AC",
       "LH",
-      "LX",
+      "LO",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-13T19:29:44.320743Z"
+    "updated": "2026-08-31T08:06:39.850961Z"
   },
   {
     "id": "351NNexaDrYyGpRFdITu7skGMNT-Y",
@@ -253832,6 +253787,23 @@
     "updated": "2026-08-30T13:02:08.178538Z"
   },
   {
+    "id": "38wLaqf20MKxelMlLkvU6U7RfWi-Y",
+    "date": "2026-12-29",
+    "from": "LHR",
+    "to": "SFO",
+    "city": "London",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 49700,
+    "direct": true,
+    "seats": null,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-08-31T08:22:44.063275Z"
+  },
+  {
     "id": "38xNxAXfxsVI7UInUqxN031amZj-Y",
     "date": "2026-12-30",
     "from": "LHR",
@@ -265174,14 +265146,14 @@
     "cabin": "Y",
     "miles": 55000,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "AC",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-28",
-    "updated": "2026-08-30T08:17:35.515853Z"
+    "updated": "2026-08-31T08:11:09.294451Z"
   },
   {
     "id": "3BX98K2rEkV1aomiUQxq5lsWqYv-Y",
@@ -270732,7 +270704,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-27",
-    "updated": "2026-08-30T13:41:58.502244Z"
+    "updated": "2026-08-31T08:28:36.282934Z"
   },
   {
     "id": "38HADHHVE4syHlEsvkAc96FXQrh-Y",
@@ -276860,15 +276832,12 @@
     "cabin": "Y",
     "miles": 55000,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "AC",
-      "EH",
-      "NH",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-26T23:35:32.201285Z"
+    "updated": "2026-08-31T08:40:57.81892Z"
   },
   {
     "id": "34fgFkqhcQ7hRysXvTHPjTdiKR6-Y",
@@ -277168,14 +277137,12 @@
     "cabin": "Y",
     "miles": 55000,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "EH",
-      "NH",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-28T06:17:33.551339Z"
+    "updated": "2026-08-31T08:28:01.539126Z"
   },
   {
     "id": "367eWlG3UAXDF6evtaCTTOkY915-Y",
@@ -283675,13 +283642,11 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "BR",
       "NH",
-      "OZ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-24T05:16:15.542677Z"
+    "updated": "2026-08-31T08:26:02.23448Z"
   },
   {
     "id": "37Z7xcoEF7idnVQYnhN6ieqm9Zn-Y",
@@ -286962,7 +286927,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-29T17:07:22.828208Z"
+    "updated": "2026-08-31T07:36:22.377588Z"
   },
   {
     "id": "33laZkj3hBRB1SO9fuQ40d3tnFf-Y",
@@ -308691,12 +308656,13 @@
     "direct": true,
     "seats": 9,
     "airlines": [
+      "NH",
       "NQ",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-27T21:08:54.593545Z"
+    "updated": "2026-08-31T08:34:22.109721Z"
   },
   {
     "id": "33rHR9ARbBXz4lAQawLNK9RfZ2L-Y",
@@ -311150,7 +311116,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-30T10:46:15.381109Z"
+    "updated": "2026-08-31T08:19:40.847438Z"
   },
   {
     "id": "37qdOkuZJwhDJb3XtSUEcuwP0RR-Y",
@@ -314212,13 +314178,12 @@
     "cabin": "Y",
     "miles": 55000,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
-      "UA",
-      "VA"
+      "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-30T13:05:53.257031Z"
+    "updated": "2026-08-31T08:44:46.344069Z"
   },
   {
     "id": "39owMl02d5JZDrZAWvrAJ87KSgs-Y",
@@ -317709,6 +317674,24 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-06-30T00:54:00.71556Z"
+  },
+  {
+    "id": "34JQ9tr6MWy3Vpvqkt62LixSvoh-Y",
+    "date": "2026-09-19",
+    "from": "ICN",
+    "to": "SFO",
+    "city": "Seoul",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 58600,
+    "direct": true,
+    "seats": null,
+    "airlines": [
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-08-31T08:52:10.571202Z"
   },
   {
     "id": "37tbt3TbGegKk8SUR0cyAfFp3u5-Y",
@@ -331642,13 +331625,13 @@
     "cabin": "Y",
     "miles": 60500,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "NH",
       "UA"
     ],
     "firstSeen": "2026-08-23",
-    "updated": "2026-08-26T11:15:14.795561Z"
+    "updated": "2026-08-31T08:43:38.84464Z"
   },
   {
     "id": "3Dk0Xd6dDRRc2ycyDsM722fPAxP-Y",
@@ -343018,7 +343001,7 @@
     "cabin": "Y",
     "miles": 60500,
     "direct": false,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "BR",
       "LH",
@@ -343027,7 +343010,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-08-27T06:36:34.678072Z"
+    "updated": "2026-08-31T07:39:47.106614Z"
   },
   {
     "id": "34RbIhG0CurAAff7RE59W9Ylsoa-Y",
@@ -349045,24 +349028,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-08-28T20:36:43.964578Z"
-  },
-  {
-    "id": "34JQ9tr6MWy3Vpvqkt62LixSvoh-Y",
-    "date": "2026-09-19",
-    "from": "ICN",
-    "to": "SFO",
-    "city": "Seoul",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 60500,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "OZ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-08-30T08:50:07.930781Z"
   },
   {
     "id": "34LxtMzZbIkj6PKBmx8CLDujDuS-Y",
@@ -362984,6 +362949,4563 @@
     "updated": "2026-08-30T11:48:39.328793Z"
   },
   {
+    "id": "3IQ1aWHmAZwBvAkuVV0QoI93yLv-Y",
+    "date": "2027-02-13",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:20:41.83268Z"
+  },
+  {
+    "id": "3IQ1c9mjut9fGnjX6uzCHerV05l-Y",
+    "date": "2027-02-27",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:20:54.937525Z"
+  },
+  {
+    "id": "3IQ1cF9k7FBweTgJusP2fj7oBFr-Y",
+    "date": "2026-11-27",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:20:55.830313Z"
+  },
+  {
+    "id": "3IQ1cFlLtBphhxxUWrh5Uvj4XvD-Y",
+    "date": "2027-02-18",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:20:55.069855Z"
+  },
+  {
+    "id": "3IQ1fwcekB2orvcNH9kS8Ee0IHq-Y",
+    "date": "2027-02-17",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:21:24.654341Z"
+  },
+  {
+    "id": "3IQ1iR5LLjuSawUJlzfe9mXjEzg-Y",
+    "date": "2026-11-07",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:21:44.963343Z"
+  },
+  {
+    "id": "3IQ1iVfftE8hMsdMHhan9B3oVFh-Y",
+    "date": "2027-02-01",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:21:45.978242Z"
+  },
+  {
+    "id": "3IQ1iXDMbDhmjR9pGBtiRijmjkC-Y",
+    "date": "2026-11-15",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:21:45.46331Z"
+  },
+  {
+    "id": "3IQ1jj7k1Cx7D0K6d9aEqg6meLG-Y",
+    "date": "2027-02-02",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:21:54.54138Z"
+  },
+  {
+    "id": "3IQ1jNSPeK20QVDvEH6WH7NYcoY-Y",
+    "date": "2026-12-09",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:21:52.951349Z"
+  },
+  {
+    "id": "3IQ1kWIhR00or6ITFT6qr3mWz2L-Y",
+    "date": "2027-01-22",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:01.453209Z"
+  },
+  {
+    "id": "3IQ1ltRoVc1uWJKJK5aYkoh0jwg-Y",
+    "date": "2027-02-10",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:12.676011Z"
+  },
+  {
+    "id": "3IQ1og64gi3pQX5mwJmH7KHLAqZ-Y",
+    "date": "2026-11-05",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:34.137391Z"
+  },
+  {
+    "id": "3IQ1pcQhl7sByHMApEwOPUBObbo-Y",
+    "date": "2027-01-31",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:41.453429Z"
+  },
+  {
+    "id": "3IQ1qdbPgBHiQqGj3bs5XBFqj2m-Y",
+    "date": "2027-01-30",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:49.555123Z"
+  },
+  {
+    "id": "3IQ1qtX6z46aNeafPNRcgjrFo0s-Y",
+    "date": "2026-11-04",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:52.872314Z"
+  },
+  {
+    "id": "3IQ1rlSLgvNAGQ0r8TBa3ZuY4qr-Y",
+    "date": "2027-02-25",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:58.385654Z"
+  },
+  {
+    "id": "3IQ1roFZojkPalbpuWbwtQR0ZSq-Y",
+    "date": "2027-02-05",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:22:59.373902Z"
+  },
+  {
+    "id": "3IQ1sBzUL6ZMprQdS4TCECjjBEk-Y",
+    "date": "2026-11-13",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:23:02.635409Z"
+  },
+  {
+    "id": "3IQ1scj5B1PN3jGxzNWYmS60jm9-Y",
+    "date": "2026-12-02",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:23:05.132707Z"
+  },
+  {
+    "id": "3IQ1ToTZZCQSw43HXt50BwpnpTn-Y",
+    "date": "2026-12-08",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:19:48.41251Z"
+  },
+  {
+    "id": "3IQ1vt03AsUUC7PVAB1TvBFVkqD-Y",
+    "date": "2027-01-28",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:23:31.810358Z"
+  },
+  {
+    "id": "3IQ1Wxro7OByXkADnWgaAJQrbSR-Y",
+    "date": "2027-01-14",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:20:13.524026Z"
+  },
+  {
+    "id": "3IQ1xUg7wzQcFQyuaHt4clTzrT5-Y",
+    "date": "2026-11-12",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:23:44.588247Z"
+  },
+  {
+    "id": "3IQ1XwOHjSpSCRH1z5WAw0BGzlt-Y",
+    "date": "2027-02-26",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:20:21.364236Z"
+  },
+  {
+    "id": "3IQ1yUFVu8Ep8iNfk8lJ3fpGChf-Y",
+    "date": "2026-11-26",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:23:52.065404Z"
+  },
+  {
+    "id": "3IQ1yXPlEkx64qaE6vW59sgoqVR-Y",
+    "date": "2026-12-04",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:23:52.348004Z"
+  },
+  {
+    "id": "3IQ20zP6Ex3c82OPJUz2RaFL6Tk-Y",
+    "date": "2026-12-05",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:24:12.401833Z"
+  },
+  {
+    "id": "3IQ22xvBFLIPbl2dmv8HwJgpvNS-Y",
+    "date": "2027-01-09",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:24:28.298223Z"
+  },
+  {
+    "id": "3IQ24oAx8uZTY3yUFgLpH3YirHi-Y",
+    "date": "2026-11-24",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:24:42.491011Z"
+  },
+  {
+    "id": "3IQ25NgnZ4XUpqsuM3dz5I5i3bM-Y",
+    "date": "2026-12-06",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 7,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:24:47.451233Z"
+  },
+  {
+    "id": "3IQ26icBgZlp34shJorLjyRmyai-Y",
+    "date": "2026-11-30",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:24:57.133979Z"
+  },
+  {
+    "id": "3IQ28ebp5DdSFAD6FY5AtaIBSUl-Y",
+    "date": "2026-12-07",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:25:13.439028Z"
+  },
+  {
+    "id": "3IQ29LQxDcDA2TNyp1UBaTP3Mrj-Y",
+    "date": "2027-01-29",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:25:18.940448Z"
+  },
+  {
+    "id": "3IQ2aLcyVTLXgdY3j65pJG2Kh1Q-Y",
+    "date": "2026-10-25",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:28:53.320008Z"
+  },
+  {
+    "id": "3IQ2bbCoyAiqjZdyoiYzefsZtnx-Y",
+    "date": "2027-02-19",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:29:03.193714Z"
+  },
+  {
+    "id": "3IQ2bCjK5nksql2Nw3FGdWjV9SE-Y",
+    "date": "2027-01-05",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:29:00.799654Z"
+  },
+  {
+    "id": "3IQ2cOL7vYYW0wZzaov0vJc3Qut-Y",
+    "date": "2027-01-12",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:29:09.989106Z"
+  },
+  {
+    "id": "3IQ2CwWqH5C6L6jKZImx8OODCkC-Y",
+    "date": "2026-11-23",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:25:47.416783Z"
+  },
+  {
+    "id": "3IQ2DE6p7FVTZaESaLF5MCDVpg5-Y",
+    "date": "2027-01-07",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:25:49.555711Z"
+  },
+  {
+    "id": "3IQ2e0QcLRIpnysNpi4G99njal2-Y",
+    "date": "2026-11-25",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:29:22.51648Z"
+  },
+  {
+    "id": "3IQ2eejuMAghIwcwcFeN9lF3H1w-Y",
+    "date": "2027-01-19",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:29:27.358675Z"
+  },
+  {
+    "id": "3IQ2FUnRkNaSr7luVfCkdwh4Adn-Y",
+    "date": "2027-01-11",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:07.594978Z"
+  },
+  {
+    "id": "3IQ2Fzgflj0mY5BYHh6E8BmngBZ-Y",
+    "date": "2026-11-03",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:11.992606Z"
+  },
+  {
+    "id": "3IQ2Gms3KR1YiQYN3p12NNMB1Cp-Y",
+    "date": "2026-12-03",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:18.079913Z"
+  },
+  {
+    "id": "3IQ2GPsnD5QiLShMprkQOPmlIL1-Y",
+    "date": "2026-10-29",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:15.087859Z"
+  },
+  {
+    "id": "3IQ2gvVXfBfnfhUDTVCqDz3V4HV-Y",
+    "date": "2026-11-06",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:29:46.814863Z"
+  },
+  {
+    "id": "3IQ2HbMY99vKq71Q0UMi6Y3fzE6-Y",
+    "date": "2027-02-24",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:24.324643Z"
+  },
+  {
+    "id": "3IQ2JAm05RG0QSU5FjKP2z6pVXL-Y",
+    "date": "2026-11-02",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:37.550867Z"
+  },
+  {
+    "id": "3IQ2JGIsCZdaYAQfsJMmw389nD4-Y",
+    "date": "2027-01-24",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:37.321086Z"
+  },
+  {
+    "id": "3IQ2Jk5O386jo9SCZFNElvfxfvp-Y",
+    "date": "2026-10-27",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:26:41.149447Z"
+  },
+  {
+    "id": "3IQ2jl69GSI3ufaaDiAoTF2gtHE-Y",
+    "date": "2027-01-13",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:30:08.828677Z"
+  },
+  {
+    "id": "3IQ2kBBS1vBBkHGu81iwYChsigC-Y",
+    "date": "2027-01-20",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:30:11.399342Z"
+  },
+  {
+    "id": "3IQ2kBfWxyGZoeZKMgNqXr0L2NC-Y",
+    "date": "2026-11-09",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:30:12.370858Z"
+  },
+  {
+    "id": "3IQ2l6UlK8uxUH8EHG8USDBfGq9-Y",
+    "date": "2026-11-29",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:30:19.500154Z"
+  },
+  {
+    "id": "3IQ2lU2FGKw4iTSRSyOCrdJcyG2-Y",
+    "date": "2027-01-10",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:30:22.793496Z"
+  },
+  {
+    "id": "3IQ2luhxPUxKcORsuYrhyhenFUR-Y",
+    "date": "2026-10-26",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:30:25.371888Z"
+  },
+  {
+    "id": "3IQ2NPZbaQgieDJNcqNmOw6o3Wo-Y",
+    "date": "2027-02-16",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:27:10.13049Z"
+  },
+  {
+    "id": "3IQ2phBQessoAOl6xwubrdr4L0V-Y",
+    "date": "2027-02-08",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:30:55.927337Z"
+  },
+  {
+    "id": "3IQ2pyHr0fK2p0j4iA7weRF8Xpt-Y",
+    "date": "2027-02-21",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T22:13:32.572095Z"
+  },
+  {
+    "id": "3IQ2Q3293Uww59KLedGkKE7DypY-Y",
+    "date": "2026-11-14",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "AC",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:27:31.729009Z"
+  },
+  {
+    "id": "3IQ2qcmnSNaoiUuerNkBMmy6PsU-Y",
+    "date": "2026-10-28",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "OZ",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:31:03.117032Z"
+  },
+  {
+    "id": "3IQ2qMsimgVmVwITCehKptL7kCZ-Y",
+    "date": "2026-11-16",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:31:01.270724Z"
+  },
+  {
+    "id": "3IQ2RIiUkhFq2CHmydOZZgPGHvQ-Y",
+    "date": "2027-02-22",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:27:41.58128Z"
+  },
+  {
+    "id": "3IQ2sFEb3Lwe3YCFkAzDimybZ9E-Y",
+    "date": "2027-02-14",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:31:16.078378Z"
+  },
+  {
+    "id": "3IQ2Szqt1pNCXiZg5UXBfAwhavS-Y",
+    "date": "2027-01-18",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:27:55.185536Z"
+  },
+  {
+    "id": "3IQ2T6TIMY8nkAS2TWaYqRcWsOZ-Y",
+    "date": "2027-01-21",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:27:56.811016Z"
+  },
+  {
+    "id": "3IQ2Tm9npZu1UGU25rQp8C0KtDT-Y",
+    "date": "2026-12-28",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:28:01.0264Z"
+  },
+  {
+    "id": "3IQ2VGc5Jig8JJqvvF7614PlDrK-Y",
+    "date": "2027-02-06",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:28:13.968709Z"
+  },
+  {
+    "id": "3IQ2vZQ3tiT1DtlPexqLi0jii2s-Y",
+    "date": "2027-01-25",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:31:42.266276Z"
+  },
+  {
+    "id": "3IQ2Xh6gmoJ96LKbyOJZGnWbv4F-Y",
+    "date": "2026-11-08",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:28:32.972291Z"
+  },
+  {
+    "id": "3IQ2xLoaV73LpyQ4cHl7qkBMFsa-Y",
+    "date": "2027-02-23",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:31:56.257854Z"
+  },
+  {
+    "id": "3IQ2xsTR6kA8mv0ZAiAlmcgDPHk-Y",
+    "date": "2027-02-20",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:00.275688Z"
+  },
+  {
+    "id": "3IQ2yg0aI53gf4HeZIAnOP46tu9-Y",
+    "date": "2027-01-08",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:07.124407Z"
+  },
+  {
+    "id": "3IQ2zrzkYja8arOoMJS1pMaHoTV-Y",
+    "date": "2026-11-11",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:16.182208Z"
+  },
+  {
+    "id": "3IQ30j0XPbxyWsft4VNo5OG3WOQ-Y",
+    "date": "2026-11-10",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:23.047894Z"
+  },
+  {
+    "id": "3IQ30U3qjETCRdKa4OinXMblP4Q-Y",
+    "date": "2027-01-04",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:21.699295Z"
+  },
+  {
+    "id": "3IQ310UkgQYljusuPTmkcHYvu9R-Y",
+    "date": "2027-02-09",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:25.800637Z"
+  },
+  {
+    "id": "3IQ320SCWpGvknxGeEZAgPQ850P-Y",
+    "date": "2026-11-28",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:33.172055Z"
+  },
+  {
+    "id": "3IQ33Va9xw7ub8aRxLOaudT8ZR5-Y",
+    "date": "2027-01-17",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:45.781234Z"
+  },
+  {
+    "id": "3IQ345el99u9uZeK7hxr8WliJO4-Y",
+    "date": "2027-02-07",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:50.940674Z"
+  },
+  {
+    "id": "3IQ349M4KxX6KWWDrg7wUXqmET0-Y",
+    "date": "2026-11-17",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:32:50.856505Z"
+  },
+  {
+    "id": "3IQ4vduvocC6Xo0QlTBIhO6n0h0-Y",
+    "date": "2026-10-22",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:09.658418Z"
+  },
+  {
+    "id": "3IQ4vfNWe1SSQjQ5jmcYrfKsW5a-Y",
+    "date": "2026-09-03",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:10.472683Z"
+  },
+  {
+    "id": "3IQ4vN41DOjspl4VcmrRmh4uQAE-Y",
+    "date": "2026-09-16",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:07.636781Z"
+  },
+  {
+    "id": "3IQ4vPoXIiddoXDPRLHcJ0r4jw5-Y",
+    "date": "2026-09-10",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-28T04:46:41.544764Z"
+  },
+  {
+    "id": "3IQ4wlRK1ybhntZfow28bkg3ndQ-Y",
+    "date": "2026-09-19",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:18.11861Z"
+  },
+  {
+    "id": "3IQ4xzrdvIf4lE9Bqi70zAPCkFL-Y",
+    "date": "2026-09-14",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:28.196066Z"
+  },
+  {
+    "id": "3IQ4yyABVBnnQY6Ue9Br8wgmB6O-Y",
+    "date": "2026-09-04",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "NQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-28T07:21:57.486205Z"
+  },
+  {
+    "id": "3IQ4zqsGTQv9RnnRi1kj4uqFU22-Y",
+    "date": "2026-10-19",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:43.57115Z"
+  },
+  {
+    "id": "3IQ50KgNe2tm2c2JqkQ7qqqYIGb-Y",
+    "date": "2026-10-12",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "OZ"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:47.461196Z"
+  },
+  {
+    "id": "3IQ50p9kYWolXLyGmU0zyvSm6Mf-Y",
+    "date": "2026-10-06",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:51.862517Z"
+  },
+  {
+    "id": "3IQ51eAvpVF9b1RT81O3Pl62lVB-Y",
+    "date": "2026-10-18",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:48:57.589703Z"
+  },
+  {
+    "id": "3IQ524Kl52s4fLz7Q6lilHbtHMg-Y",
+    "date": "2026-10-21",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "OZ",
+      "RV",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:01.794494Z"
+  },
+  {
+    "id": "3IQ53leFmF6o2xv3LCAbryR8cNm-Y",
+    "date": "2026-09-06",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-26T19:41:48.459466Z"
+  },
+  {
+    "id": "3IQ54F8kE0Q1mFfr4ZK58zwYnz1-Y",
+    "date": "2026-09-08",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:18.228009Z"
+  },
+  {
+    "id": "3IQ54veLL6XH4EY8u9OquOP22gp-Y",
+    "date": "2026-09-15",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:23.220164Z"
+  },
+  {
+    "id": "3IQ56ARTMXmfJpv4gWLaPmJyvVP-Y",
+    "date": "2026-08-31",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:33.202292Z"
+  },
+  {
+    "id": "3IQ56fGe7H5aYSnYTHl4zGytSEc-Y",
+    "date": "2026-09-28",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:37.346556Z"
+  },
+  {
+    "id": "3IQ56ILpY1QYVxybDLJ71dO7QNY-Y",
+    "date": "2026-09-07",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:34.893679Z"
+  },
+  {
+    "id": "3IQ56Wv5vQVgDdES5SCZdogzqoZ-Y",
+    "date": "2026-09-02",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:36.580324Z"
+  },
+  {
+    "id": "3IQ57qpiiKSEilkYfXLCVcQQ3Nc-Y",
+    "date": "2026-09-13",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:47.66831Z"
+  },
+  {
+    "id": "3IQ585GPboZZAZuTTozXPAZCobG-Y",
+    "date": "2026-10-10",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:48.443242Z"
+  },
+  {
+    "id": "3IQ589GnwIXIWmlqld2qDZ8ykT2-Y",
+    "date": "2026-10-11",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:49:49.735997Z"
+  },
+  {
+    "id": "3IQ59dgTdgoO8yeJvJsLRuVtJ7M-Y",
+    "date": "2026-09-12",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:01.787491Z"
+  },
+  {
+    "id": "3IQ59pfYz4XbxdOhMcnkrctsJhV-Y",
+    "date": "2026-10-04",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:02.505868Z"
+  },
+  {
+    "id": "3IQ5AjpEQccjgc3CLN0XGfaP6OO-Y",
+    "date": "2026-10-17",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "EH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:10.62091Z"
+  },
+  {
+    "id": "3IQ5Bu7FS747JfQj8TryDjGSD2v-Y",
+    "date": "2026-09-11",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:19.953273Z"
+  },
+  {
+    "id": "3IQ5ByqQyXWVHLZ9TiUbl31wVnN-Y",
+    "date": "2026-09-09",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:19.586638Z"
+  },
+  {
+    "id": "3IQ5EasrdYfuiyyHUjV7we2xAQu-Y",
+    "date": "2026-10-20",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:40.655963Z"
+  },
+  {
+    "id": "3IQ5F6V4oh2o5uVOW69FaV6mDgW-Y",
+    "date": "2026-10-05",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "OZ"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:44.266159Z"
+  },
+  {
+    "id": "3IQ5FP1VqBHQe2KvZgmzKUHiFP1-Y",
+    "date": "2026-09-01",
+    "from": "SFO",
+    "to": "OKA",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:50:47.569521Z"
+  },
+  {
+    "id": "3IQ1fbL2nHuhuHK7mXmn6OG6vig-Y",
+    "date": "2026-12-08",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:45:14.361277Z"
+  },
+  {
+    "id": "3IQ1fcEaJcWMsJCanBHYwNIaRxV-Y",
+    "date": "2027-02-12",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:32.770913Z"
+  },
+  {
+    "id": "3IQ1fcfY0dTgR7200g2OCQGZC26-Y",
+    "date": "2026-10-14",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:34.281972Z"
+  },
+  {
+    "id": "3IQ1fcQgtqiSwfxp4fpVQW2Rnb5-Y",
+    "date": "2027-01-18",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:40:56.739554Z"
+  },
+  {
+    "id": "3IQ1fctISsGmVSO6tWpcZRI11h1-Y",
+    "date": "2026-12-15",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 7,
+    "airlines": [
+      "AC",
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:49.245348Z"
+  },
+  {
+    "id": "3IQ1fD3By17Vn1xmNvRAYxV20XS-Y",
+    "date": "2026-11-04",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:36:42.546467Z"
+  },
+  {
+    "id": "3IQ1fDfvoOwv6ugAW6HP8OL6GJo-Y",
+    "date": "2026-12-12",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:37:06.901262Z"
+  },
+  {
+    "id": "3IQ1fDjJ4hcOSyIUtx6MOisoMZ1-Y",
+    "date": "2026-12-24",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:21.98267Z"
+  },
+  {
+    "id": "3IQ1fDkfkH3allS9BXa7ZzdhdTu-Y",
+    "date": "2026-10-22",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:45.93801Z"
+  },
+  {
+    "id": "3IQ1fe0mrnZTTqsKYGLhsDjHzB2-Y",
+    "date": "2026-12-22",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:35:40.179051Z"
+  },
+  {
+    "id": "3IQ1fE9z5id9xhnarAeCCKN65XE-Y",
+    "date": "2027-01-29",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:58.095921Z"
+  },
+  {
+    "id": "3IQ1feFQuWUk20JKQJFQcJ10lKY-Y",
+    "date": "2026-12-05",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:33:44.936342Z"
+  },
+  {
+    "id": "3IQ1fEOvX7qLMV1cWSUpOGqlT6s-Y",
+    "date": "2026-12-02",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:45:24.571451Z"
+  },
+  {
+    "id": "3IQ1fESmR6Tfb6it9JAQub701mK-Y",
+    "date": "2027-02-05",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:45:06.940525Z"
+  },
+  {
+    "id": "3IQ1feTEb6yVoxSWS6uwWTDAzvc-Y",
+    "date": "2026-09-10",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:10.53601Z"
+  },
+  {
+    "id": "3IQ1fetMHwdef8miprIUPfuQiZg-Y",
+    "date": "2027-02-06",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:14.996788Z"
+  },
+  {
+    "id": "3IQ1ffn5xSNuM1AD38NmCkvp3bF-Y",
+    "date": "2026-11-10",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:09.498314Z"
+  },
+  {
+    "id": "3IQ1ffoMzdXXie9xkAn1zXlLZmB-Y",
+    "date": "2026-09-29",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:55.291385Z"
+  },
+  {
+    "id": "3IQ1ffSicNjNJQyR1Xg7Se4oDmo-Y",
+    "date": "2026-12-14",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:06.231624Z"
+  },
+  {
+    "id": "3IQ1fFYRx0qEtzmSi0ROfdcrCNy-Y",
+    "date": "2026-10-03",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:08.644173Z"
+  },
+  {
+    "id": "3IQ1fG6iJIoEvvjmaqxFGoD7Quh-Y",
+    "date": "2026-12-04",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:35:06.46494Z"
+  },
+  {
+    "id": "3IQ1fGdzJlLZygnRyhHz6RmIG9t-Y",
+    "date": "2027-01-27",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:48.503352Z"
+  },
+  {
+    "id": "3IQ1fGGPpVOByVuKo0zEkswDKgh-Y",
+    "date": "2027-02-04",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:36:47.835147Z"
+  },
+  {
+    "id": "3IQ1fgGXmcfN6wgGp1f1GK5rtD6-Y",
+    "date": "2027-02-15",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:37:47.406715Z"
+  },
+  {
+    "id": "3IQ1fGsYjGZWaZbNCFqJJIqsHAl-Y",
+    "date": "2026-12-07",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:16.259022Z"
+  },
+  {
+    "id": "3IQ1fidOwp1MaAxib5EFkjM2ZIK-Y",
+    "date": "2027-01-23",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:38.872474Z"
+  },
+  {
+    "id": "3IQ1fijHyDozuerWenZiENFq2rj-Y",
+    "date": "2026-09-23",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:03.156806Z"
+  },
+  {
+    "id": "3IQ1fiJRSRg1WvqHgYeY2ytlYy7-Y",
+    "date": "2027-01-25",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:37:16.36345Z"
+  },
+  {
+    "id": "3IQ1fImpbPMnSLFqzqMjU5TSsGS-Y",
+    "date": "2026-12-16",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:56.615645Z"
+  },
+  {
+    "id": "3IQ1fIqLpnBzhYNDTzdPKSpgRXr-Y",
+    "date": "2026-11-19",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:39.865575Z"
+  },
+  {
+    "id": "3IQ1fj6dohGeRuoq1AYDbMGeEc7-Y",
+    "date": "2026-10-16",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:52.768589Z"
+  },
+  {
+    "id": "3IQ1fJ77fR3QTRmEsO4zJLSkoJd-Y",
+    "date": "2026-11-05",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:25.146631Z"
+  },
+  {
+    "id": "3IQ1fJAvzbyQrcUsWjPXaKZK90b-Y",
+    "date": "2026-10-21",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:59.780334Z"
+  },
+  {
+    "id": "3IQ1fjIIRhkaQtmD5ktWlnRSFRC-Y",
+    "date": "2026-12-23",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:36:13.909383Z"
+  },
+  {
+    "id": "3IQ1fjJPlhJFG7sTvpPsA6OC3JS-Y",
+    "date": "2026-11-13",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:29.335279Z"
+  },
+  {
+    "id": "3IQ1fjkPG828bu4ESzgGibOnOVL-Y",
+    "date": "2026-11-08",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:33:37.495168Z"
+  },
+  {
+    "id": "3IQ1fjob4hgfaSMyXMDCAv0jADk-Y",
+    "date": "2026-09-30",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:53.073519Z"
+  },
+  {
+    "id": "3IQ1fk3Oxc0bH4ayWvYXR2NWaIz-Y",
+    "date": "2026-12-11",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:40:41.2754Z"
+  },
+  {
+    "id": "3IQ1fk96BalWG9k1MkItPTWzJxM-Y",
+    "date": "2027-01-20",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "AC",
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:33.955556Z"
+  },
+  {
+    "id": "3IQ1fkIfRH7yD8eMSmdWYoyT1w1-Y",
+    "date": "2027-02-19",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:35:13.925858Z"
+  },
+  {
+    "id": "3IQ1flCEbQVR5uulDQqlp2T3lws-Y",
+    "date": "2027-01-19",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:40:43.800765Z"
+  },
+  {
+    "id": "3IQ1flerPhJ52l9QrDKJESIm3HX-Y",
+    "date": "2027-02-16",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:24.183092Z"
+  },
+  {
+    "id": "3IQ1flqguoSdCmBJcnpNV5wwFS2-Y",
+    "date": "2027-01-30",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:40:04.597278Z"
+  },
+  {
+    "id": "3IQ1fLToTCzBqqdD0bd3hxhjfWb-Y",
+    "date": "2026-09-17",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:38.046918Z"
+  },
+  {
+    "id": "3IQ1fM3C3NxTS8xLZn5AeqiUHE3-Y",
+    "date": "2026-10-27",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:17.702237Z"
+  },
+  {
+    "id": "3IQ1fMtZjRShagBkdOLdwGdjU6n-Y",
+    "date": "2026-08-31",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:39.16623Z"
+  },
+  {
+    "id": "3IQ1fMYngUfQtnYiJL8wb6vX0Fi-Y",
+    "date": "2026-10-08",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:31.997416Z"
+  },
+  {
+    "id": "3IQ1fNOvD5JlHvtEsf9lStqkrna-Y",
+    "date": "2027-01-17",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:49.43597Z"
+  },
+  {
+    "id": "3IQ1fOfJBJ8ImGMY0G3YXfC9rc4-Y",
+    "date": "2026-10-13",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:29.889262Z"
+  },
+  {
+    "id": "3IQ1fOiGEBFKjPsWztYtK4rSuPI-Y",
+    "date": "2026-11-07",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:08.094032Z"
+  },
+  {
+    "id": "3IQ1foinJG8n2hf27grHWpLZtr9-Y",
+    "date": "2027-02-02",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:20.835446Z"
+  },
+  {
+    "id": "3IQ1fOjMLa1brzdGTxkQSdIXU3j-Y",
+    "date": "2026-10-29",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:45:04.60956Z"
+  },
+  {
+    "id": "3IQ1fORNHfVjr5U52zDeTuzKjIk-Y",
+    "date": "2027-02-27",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:54.547072Z"
+  },
+  {
+    "id": "3IQ1fOT42Gp1EyXvKjC4Iacc1IR-Y",
+    "date": "2026-09-06",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:47.93384Z"
+  },
+  {
+    "id": "3IQ1foV95STk71SmkOwdOTV3QFd-Y",
+    "date": "2026-09-02",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:58.907426Z"
+  },
+  {
+    "id": "3IQ1foXBvbj9RUdM7u7tY8NRXJC-Y",
+    "date": "2026-10-06",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:15.236025Z"
+  },
+  {
+    "id": "3IQ1fP17UiboTYFtDwFdgAvmw5P-Y",
+    "date": "2026-12-03",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:20.577409Z"
+  },
+  {
+    "id": "3IQ1fP54wUnxq8Aqejx47DiJUOX-Y",
+    "date": "2026-09-07",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:21.635451Z"
+  },
+  {
+    "id": "3IQ1fpAgfQWJAVgXFgAackl4sIu-Y",
+    "date": "2026-09-03",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:16.075773Z"
+  },
+  {
+    "id": "3IQ1fpHDKrE87wSkrCaT8xv1wa5-Y",
+    "date": "2027-02-11",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:33.131821Z"
+  },
+  {
+    "id": "3IQ1fQA06j0VTGMBj0VLqiaEH1V-Y",
+    "date": "2026-09-05",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:17.584473Z"
+  },
+  {
+    "id": "3IQ1fqFnnqJe2tKrM1nye2n7skC-Y",
+    "date": "2027-02-26",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:36:59.409507Z"
+  },
+  {
+    "id": "3IQ1fqj5r3pg4OZIWYYTU4GNbfQ-Y",
+    "date": "2026-09-21",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:04.639251Z"
+  },
+  {
+    "id": "3IQ1fqmNAxZA8gfHh5dfpv8vzGd-Y",
+    "date": "2026-12-10",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:36:32.666783Z"
+  },
+  {
+    "id": "3IQ1fqnoCqnbKuNw4SosK1VMnXA-Y",
+    "date": "2026-11-16",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:00.815314Z"
+  },
+  {
+    "id": "3IQ1fqxgWsCYUgS1WWl6i9eWLNq-Y",
+    "date": "2026-11-25",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:59.675995Z"
+  },
+  {
+    "id": "3IQ1fR6PsIhvP0lUfM3G039EiC7-Y",
+    "date": "2026-10-26",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:57.550278Z"
+  },
+  {
+    "id": "3IQ1fR9l8cPyO6IGyYOh8FYANx7-Y",
+    "date": "2026-12-17",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:38:22.306291Z"
+  },
+  {
+    "id": "3IQ1fReD7GGdTn4Hm0HUiGlZPIw-Y",
+    "date": "2026-11-24",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:01.058521Z"
+  },
+  {
+    "id": "3IQ1fRo1b9iruJLwhROF1lzOwkQ-Y",
+    "date": "2027-01-22",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:24.128554Z"
+  },
+  {
+    "id": "3IQ1frpvVkOP70E7mknNKFpYB3C-Y",
+    "date": "2026-09-15",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:02.123385Z"
+  },
+  {
+    "id": "3IQ1fRUM7HGRmqOHFNSaBaM7S4e-Y",
+    "date": "2027-01-26",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:48.336429Z"
+  },
+  {
+    "id": "3IQ1frW8CBTyINcfxXyZyCieGCh-Y",
+    "date": "2027-02-17",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:46:12.488626Z"
+  },
+  {
+    "id": "3IQ1frwUbX5x1BRmrFjvAkHkQNk-Y",
+    "date": "2026-10-30",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:33:17.428137Z"
+  },
+  {
+    "id": "3IQ1fRyZcNPHl714ZchYUVQpzDv-Y",
+    "date": "2026-10-28",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:49.052634Z"
+  },
+  {
+    "id": "3IQ1fSGrkk0dexa7lCFu27RRjnv-Y",
+    "date": "2026-11-11",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:45:34.226249Z"
+  },
+  {
+    "id": "3IQ1fsNFL1PJAk71Wxt0bmurUsl-Y",
+    "date": "2026-12-18",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:32.812983Z"
+  },
+  {
+    "id": "3IQ1fspLE8fbSepq6tE7UVJa1CU-Y",
+    "date": "2026-10-15",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:33.79004Z"
+  },
+  {
+    "id": "3IQ1fTCzf6E66VaGX308Bi14Uhz-Y",
+    "date": "2027-01-16",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:45:52.807011Z"
+  },
+  {
+    "id": "3IQ1ftOi6MWIT9HJQOLZpXzwUqt-Y",
+    "date": "2026-09-13",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:12.346752Z"
+  },
+  {
+    "id": "3IQ1ftr8imDiifnBdRvAgtNZec6-Y",
+    "date": "2026-09-08",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:25.480667Z"
+  },
+  {
+    "id": "3IQ1ftt1eREgZxf0JqdCF9JmIyX-Y",
+    "date": "2026-10-20",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:54.006582Z"
+  },
+  {
+    "id": "3IQ1ftwvt6Bt4gZj1j21Zthb8WM-Y",
+    "date": "2027-02-01",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:26.87329Z"
+  },
+  {
+    "id": "3IQ1fTxMaAHmbyBSyd00fsvTMYT-Y",
+    "date": "2026-09-12",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:46.141284Z"
+  },
+  {
+    "id": "3IQ1fUcWactU9TIj1chVRtUV9F0-Y",
+    "date": "2026-10-19",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:23.244165Z"
+  },
+  {
+    "id": "3IQ1fudsUu7pPyudphmXUNtAiou-Y",
+    "date": "2026-12-06",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:39:03.84772Z"
+  },
+  {
+    "id": "3IQ1fV3Zro0Ntq0tjypZCY6sp7V-Y",
+    "date": "2026-11-09",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:09.708682Z"
+  },
+  {
+    "id": "3IQ1fvttc0GbwP1cNZrRPZFnpWh-Y",
+    "date": "2027-02-09",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:30.921731Z"
+  },
+  {
+    "id": "3IQ1fwBxxFi8gzmXkScOhWelDdB-Y",
+    "date": "2026-09-01",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:32.825769Z"
+  },
+  {
+    "id": "3IQ1fWlJ3W4RxpDLTUmZYqgSXTg-Y",
+    "date": "2026-09-11",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:09.264664Z"
+  },
+  {
+    "id": "3IQ1fWmKEWmzvMRphWqr3E7pczF-Y",
+    "date": "2027-02-03",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:20.11393Z"
+  },
+  {
+    "id": "3IQ1fwrZGWGHtQQCOoAvKA1tA6t-Y",
+    "date": "2026-12-21",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:38.662009Z"
+  },
+  {
+    "id": "3IQ1fxAKGSfgbcmUc8bpz6ai6Mu-Y",
+    "date": "2027-01-14",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 5,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:38:53.11247Z"
+  },
+  {
+    "id": "3IQ1fxVXnRnrQk3CNY5ucyflxV8-Y",
+    "date": "2026-11-06",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:12.684248Z"
+  },
+  {
+    "id": "3IQ1fxwWuMwxZgWplqwPKXtuZBX-Y",
+    "date": "2026-10-05",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:28.269695Z"
+  },
+  {
+    "id": "3IQ1fY0LpXqwa7cZphK9NQ13jfr-Y",
+    "date": "2027-01-15",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:40.024461Z"
+  },
+  {
+    "id": "3IQ1fyDifwUzWFJUhUSCDQ3I7kJ-Y",
+    "date": "2026-12-20",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:38:42.073682Z"
+  },
+  {
+    "id": "3IQ1fyIhUj0T1TDCM4aH205mVJW-Y",
+    "date": "2026-09-24",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "AC",
+      "BR",
+      "EH",
+      "NH",
+      "RV",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:42.873075Z"
+  },
+  {
+    "id": "3IQ1fYQoyLeYBglsaaZi3DcvZVn-Y",
+    "date": "2026-12-13",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:49.397843Z"
+  },
+  {
+    "id": "3IQ1fZQee4yBhfEtn1kLzf3fjSh-Y",
+    "date": "2026-11-26",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:55.853631Z"
+  },
+  {
+    "id": "3IQ1g0Ip6Rbse3QMrm6l6f4mHaG-Y",
+    "date": "2026-09-09",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:16.153801Z"
+  },
+  {
+    "id": "3IQ1g0v3jkprCQkpXH2r40o7M4M-Y",
+    "date": "2027-02-25",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:40:03.529199Z"
+  },
+  {
+    "id": "3IQ1g1K9dCoFy37BpCA2YOJthzS-Y",
+    "date": "2027-02-07",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:40.602864Z"
+  },
+  {
+    "id": "3IQ1g1O3XZ824qsXtWkkynlazN1-Y",
+    "date": "2026-09-14",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:43:54.621487Z"
+  },
+  {
+    "id": "3IQ1g1Z4EeRYiblDn1wYB4FiiE1-Y",
+    "date": "2026-11-17",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:47.959996Z"
+  },
+  {
+    "id": "3IQ1g2afuMKIaG8rnAruSqEYF6O-Y",
+    "date": "2026-12-26",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:34:01.818492Z"
+  },
+  {
+    "id": "3IQ1g2Kn4ivKXOZmUj9P64ECGwy-Y",
+    "date": "2027-02-23",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "CA",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:36:48.198238Z"
+  },
+  {
+    "id": "3IQ1g2pEs1mOrOph7LxD4OuOjWg-Y",
+    "date": "2027-01-21",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "AC",
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:33:32.028148Z"
+  },
+  {
+    "id": "3IQ1g3fNnhfy8kXJ2lcLlJTXjoy-Y",
+    "date": "2026-11-21",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:44:03.313414Z"
+  },
+  {
+    "id": "3IQ1g3N15VucHt8lPMbMzxf5XDx-Y",
+    "date": "2027-01-28",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:37:58.084779Z"
+  },
+  {
+    "id": "3IQ1g3taZmhghsUXRPm16AxRa4n-Y",
+    "date": "2027-02-24",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": null,
+    "airlines": [
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:35:11.185709Z"
+  },
+  {
+    "id": "3IQ1g4sid21ECLUU6tDUw7cKWUA-Y",
+    "date": "2026-11-12",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "AC",
+      "BR",
+      "CA",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:09.551665Z"
+  },
+  {
+    "id": "3IQ1g5Z3x816CKEL2X5iMS0GNBY-Y",
+    "date": "2027-01-31",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "BR",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:38:23.236221Z"
+  },
+  {
+    "id": "3IQ1g6JXA5hME9qp1R9aV3AKQS8-Y",
+    "date": "2027-02-20",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:41:36.669139Z"
+  },
+  {
+    "id": "3IQ1g7Ox5hU00o0qkDIkXKpTorl-Y",
+    "date": "2027-02-08",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:38:03.632198Z"
+  },
+  {
+    "id": "3IQ1g9BOlRyPlJyWYSMc1GHlnsW-Y",
+    "date": "2026-11-18",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:35:56.402287Z"
+  },
+  {
+    "id": "3IQ1gA430L8Wsr5R0aiCSKkrZKq-Y",
+    "date": "2026-10-23",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-30T06:53:48.411808Z"
+  },
+  {
+    "id": "3IQ1gBtmUMbjjHa1bQsx84KOOPw-Y",
+    "date": "2026-12-09",
+    "from": "OKA",
+    "to": "SFO",
+    "city": null,
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 2,
+    "airlines": [
+      "AC",
+      "EH",
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-25T18:42:22.080629Z"
+  },
+  {
     "id": "34xT6gntsV9mZPCIgJgupk0352f-Y",
     "date": "2026-10-03",
     "from": "SFO",
@@ -364299,27 +368821,6 @@
     ],
     "firstSeen": "2026-08-27",
     "updated": "2026-08-30T01:01:34.90395Z"
-  },
-  {
-    "id": "39NnAPrO5qGWAdwJBWUm1795sLE-Y",
-    "date": "2027-01-09",
-    "from": "SFO",
-    "to": "PVG",
-    "city": "Shanghai",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 60500,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "AC",
-      "BR",
-      "CA",
-      "NH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-08-24T16:23:55.076483Z"
   },
   {
     "id": "3AHW4kBilE4lBXpS2XUIK1t4n8G-Y",
@@ -372235,6 +376736,23 @@
     "updated": "2026-08-27T16:22:14.740423Z"
   },
   {
+    "id": "37x7PN8eXJ9ysuJPzhUykxHa0q0-W",
+    "date": "2026-12-08",
+    "from": "SFO",
+    "to": "KIX",
+    "city": "Osaka",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 65000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-31T08:26:02.23448Z"
+  },
+  {
     "id": "39GXCvzICk9jGlRMOLMUfPB92bB-W",
     "date": "2027-01-05",
     "from": "SFO",
@@ -375593,12 +380111,12 @@
     "cabin": "W",
     "miles": 65000,
     "direct": true,
-    "seats": 9,
+    "seats": null,
     "airlines": [
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-28T05:46:55.37325Z"
+    "updated": "2026-08-31T07:40:41.251397Z"
   },
   {
     "id": "348MPOXMwOslgnJdcAOLCErjI22-W",
@@ -375802,7 +380320,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-08-27T21:08:54.593545Z"
+    "updated": "2026-08-31T08:34:22.109721Z"
   },
   {
     "id": "33rHR9ARbBXz4lAQawLNK9RfZ2L-W",
@@ -384549,6 +389067,23 @@
     ],
     "firstSeen": "2026-08-27",
     "updated": "2026-08-30T08:23:27.218282Z"
+  },
+  {
+    "id": "39NnAPrO5qGWAdwJBWUm1795sLE-Y",
+    "date": "2027-01-09",
+    "from": "SFO",
+    "to": "PVG",
+    "city": "Shanghai",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 71600,
+    "direct": true,
+    "seats": null,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-08-31T08:43:24.990793Z"
   },
   {
     "id": "3BMY3iklqopjWkQUA4Fco5MZkgT-Y",
@@ -397887,23 +402422,6 @@
     "updated": "2026-08-27T22:13:49.169105Z"
   },
   {
-    "id": "38wLaqf20MKxelMlLkvU6U7RfWi-W",
-    "date": "2026-12-29",
-    "from": "LHR",
-    "to": "SFO",
-    "city": "London",
-    "region": "Europe",
-    "cabin": "W",
-    "miles": 93500,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-12",
-    "updated": "2026-08-28T04:41:06.019462Z"
-  },
-  {
     "id": "33hGbt0xz8SClq9s0gy4BObnc9G-W",
     "date": "2026-09-05",
     "from": "BKK",
@@ -398329,23 +402847,6 @@
     "updated": "2026-08-27T11:36:54.691708Z"
   },
   {
-    "id": "34GaaByoJeYABOZc2SJR4DK1Kow-W",
-    "date": "2026-09-18",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 94200,
-    "direct": true,
-    "seats": null,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-08-29T04:09:06.856288Z"
-  },
-  {
     "id": "35ENIS7mbPI7I9ulzWTyoG8zZ3m-W",
     "date": "2026-10-09",
     "from": "TPE",
@@ -398769,6 +403270,23 @@
     ],
     "firstSeen": "2026-08-27",
     "updated": "2026-08-30T23:00:32.044726Z"
+  },
+  {
+    "id": "34GaaByoJeYABOZc2SJR4DK1Kow-W",
+    "date": "2026-09-18",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 94600,
+    "direct": true,
+    "seats": null,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-08-31T08:51:49.878043Z"
   },
   {
     "id": "34LxtPQvR3miKhfEblPIK1nfYXJ-W",
@@ -401736,6 +406254,23 @@
     ],
     "firstSeen": "2026-08-27",
     "updated": "2026-08-27T08:38:22.242096Z"
+  },
+  {
+    "id": "37tbt0113cCFbKMi8EgFlO9vmNY-J",
+    "date": "2026-12-06",
+    "from": "SFO",
+    "to": "CDG",
+    "city": "Paris",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 120000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "B6"
+    ],
+    "firstSeen": "2026-08-31",
+    "updated": "2026-08-31T08:08:13.034656Z"
   },
   {
     "id": "33d4zuFELTYt1pZB69i9te41M4q-J",

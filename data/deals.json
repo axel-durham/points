@@ -6887,7 +6887,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T08:15:53.771598Z"
+    "updated": "2026-09-14T07:21:32.558574Z"
   },
   {
     "id": "35JwE1t7Q4PXuc2oHr7hVHc7Ezy-Y",
@@ -6946,7 +6946,6 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "AZ",
       "EI",
       "LH",
       "LX",
@@ -6954,7 +6953,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T16:52:25.636879Z"
+    "updated": "2026-09-14T07:26:42.156273Z"
   },
   {
     "id": "35p6CAK4ePyuGN4MzintlVKqlHl-Y",
@@ -8128,7 +8127,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T06:28:36.869837Z"
+    "updated": "2026-09-14T07:20:57.460391Z"
   },
   {
     "id": "38FgjM74h7WcCooCrlqZuAONprb-Y",
@@ -8263,14 +8262,13 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "AC",
       "EI",
       "LH",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T00:19:21.499124Z"
+    "updated": "2026-09-14T07:11:08.600008Z"
   },
   {
     "id": "39KBwbpV87OxD3QYbj2QVSTKpXE-Y",
@@ -20218,6 +20216,26 @@
     "updated": "2026-09-12T07:38:32.713344Z"
   },
   {
+    "id": "36dff0LmTJDFRrtmoFLUM4keuJ5-Y",
+    "date": "2026-11-09",
+    "from": "SFO",
+    "to": "DUB",
+    "city": "Dublin",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 36200,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "B6",
+      "EI",
+      "LH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:55:17.527314Z"
+  },
+  {
     "id": "36g5x8UaixUa6f1wk15h5gXNa7f-Y",
     "date": "2026-11-10",
     "from": "SFO",
@@ -20655,6 +20673,7 @@
     "direct": true,
     "seats": 9,
     "airlines": [
+      "B6",
       "BT",
       "EI",
       "LH",
@@ -20663,7 +20682,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T23:05:09.726716Z"
+    "updated": "2026-09-14T07:35:43.735327Z"
   },
   {
     "id": "34RbXqikIQwRVtocorUaR6mm6Ft-Y",
@@ -22743,7 +22762,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T03:42:54.375061Z"
+    "updated": "2026-09-14T07:22:09.303058Z"
   },
   {
     "id": "34GaaByoJeYABOZc2SJR4DK1Kow-Y",
@@ -22873,7 +22892,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:31:47.068051Z"
+    "updated": "2026-09-14T07:18:56.953821Z"
   },
   {
     "id": "34RbapOSzmuqoaa7mCFUhDwFRFK-Y",
@@ -22947,7 +22966,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T20:32:29.584011Z"
+    "updated": "2026-09-14T07:18:53.806944Z"
   },
   {
     "id": "34xSvocNoV4MW0hBYu8Vxhc64L9-Y",
@@ -22984,7 +23003,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T01:51:02.135226Z"
+    "updated": "2026-09-14T07:18:52.818836Z"
   },
   {
     "id": "351OKDCN98IjNkEaljhrJujkydU-Y",
@@ -23002,7 +23021,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T12:30:30.568409Z"
+    "updated": "2026-09-14T07:26:43.599766Z"
   },
   {
     "id": "353B8a5WvoSNEQ8LuZ74Ch3oztg-Y",
@@ -23060,7 +23079,25 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T04:57:21.2564Z"
+    "updated": "2026-09-14T07:32:34.228155Z"
+  },
+  {
+    "id": "3593rUttzMylEgPnPEx1GBfr4sH-Y",
+    "date": "2026-10-08",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 36500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:32:32.967905Z"
   },
   {
     "id": "35d3SXiUgUwb3sppn4X5xuYIiwH-Y",
@@ -23189,7 +23226,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T03:28:21.9516Z"
+    "updated": "2026-09-14T07:04:20.653176Z"
   },
   {
     "id": "35ntv96uOslENKvZZ2raEXPB8Zj-Y",
@@ -23855,7 +23892,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T14:19:53.076788Z"
+    "updated": "2026-09-14T07:23:25.128086Z"
   },
   {
     "id": "37HC8DqbhbIF96rnPWSoYvlsfs9-Y",
@@ -24162,6 +24199,24 @@
     "updated": "2026-09-14T04:39:35.102687Z"
   },
   {
+    "id": "3AlEHrwdL7hnqosJr1sSlBzM14N-Y",
+    "date": "2027-02-06",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 36500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-10",
+    "updated": "2026-09-14T07:10:49.662443Z"
+  },
+  {
     "id": "3AlEHsthvP3CnUqMLJIQ7aRjZ5F-Y",
     "date": "2027-02-07",
     "from": "TPE",
@@ -24251,7 +24306,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-14",
-    "updated": "2026-09-13T09:05:30.10741Z"
+    "updated": "2026-09-14T07:04:29.181521Z"
   },
   {
     "id": "3ASpO1EWr06ElCUmTAtWbNFWFRm-Y",
@@ -24437,6 +24492,26 @@
     "updated": "2026-09-12T13:53:06.405584Z"
   },
   {
+    "id": "3BmVAqhpEPCNCXD3J9PHYD8cCC9-Y",
+    "date": "2027-03-04",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 36500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "CA",
+      "QK",
+      "UA"
+    ],
+    "firstSeen": "2026-09-05",
+    "updated": "2026-09-14T07:47:11.02437Z"
+  },
+  {
     "id": "3BMXaOmq2P2irS0ao73QZbI8ouM-Y",
     "date": "2027-02-19",
     "from": "TPE",
@@ -24531,7 +24606,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-06",
-    "updated": "2026-09-12T15:03:58.350562Z"
+    "updated": "2026-09-14T07:47:13.003869Z"
   },
   {
     "id": "3BqJ0GbS8uW4A5ATTSUlTUlNzCD-Y",
@@ -24627,7 +24702,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-31",
-    "updated": "2026-09-12T15:38:05.43709Z"
+    "updated": "2026-09-14T07:39:45.56965Z"
   },
   {
     "id": "3C0ad584MydFTVn8tPGIuodn8Gb-Y",
@@ -24926,26 +25001,6 @@
     ],
     "firstSeen": "2026-08-21",
     "updated": "2026-09-11T09:31:08.96139Z"
-  },
-  {
-    "id": "3BmVAqhpEPCNCXD3J9PHYD8cCC9-Y",
-    "date": "2027-03-04",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 36600,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "QK",
-      "UA"
-    ],
-    "firstSeen": "2026-09-05",
-    "updated": "2026-09-11T09:04:05.195819Z"
   },
   {
     "id": "3BQAZ3NhDWO3x1uP79Cv9SJmSHZ-Y",
@@ -27460,15 +27515,12 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "CA",
-      "NH",
-      "NQ",
       "OZ",
-      "UA",
-      "ZH"
+      "SQ",
+      "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T14:10:53.600133Z"
+    "updated": "2026-09-14T07:52:59.126915Z"
   },
   {
     "id": "34JQZKZpLNzXzMqeN4qt5kahqlU-Y",
@@ -28051,7 +28103,7 @@
       "ZH"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T05:04:03.072856Z"
+    "updated": "2026-09-14T07:53:06.622906Z"
   },
   {
     "id": "35NUFJeXCyuszklivYDN9oQVNMA-Y",
@@ -30459,7 +30511,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T21:47:11.558465Z"
+    "updated": "2026-09-14T07:25:39.76175Z"
   },
   {
     "id": "39KC10xIIKyt6XqN01E6YvOlgsd-Y",
@@ -30885,11 +30937,10 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T11:17:02.234141Z"
+    "updated": "2026-09-14T07:06:05.194137Z"
   },
   {
     "id": "3Ap6Q6OwheAyz8iz7bOkCd1SNcN-Y",
@@ -30983,7 +31034,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-15",
-    "updated": "2026-09-13T03:16:33.162554Z"
+    "updated": "2026-09-14T07:25:38.641799Z"
   },
   {
     "id": "3AVKlDbDfLG1Qo03YaqJehSojQo-Y",
@@ -31298,11 +31349,10 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-26",
-    "updated": "2026-09-11T00:10:14.408446Z"
+    "updated": "2026-09-14T07:47:10.341838Z"
   },
   {
     "id": "3BRyOBOqlcHBm948puhmtcFme2V-Y",
@@ -32299,10 +32349,11 @@
     "seats": 9,
     "airlines": [
       "BR",
+      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:10:09.347575Z"
+    "updated": "2026-09-14T07:28:22.985355Z"
   },
   {
     "id": "35JwH8EFlsqRiQkrLDDWUCfzCRQ-Y",
@@ -32414,7 +32465,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-08",
-    "updated": "2026-09-13T18:18:37.294503Z"
+    "updated": "2026-09-14T07:46:53.956379Z"
   },
   {
     "id": "35tRI3GH38J8goLD9eLT2QAI3iq-Y",
@@ -32635,7 +32686,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:47:36.087273Z"
+    "updated": "2026-09-14T08:03:12.195741Z"
   },
   {
     "id": "36g5zjcF3hcZwJ3zlJ0meGpePlh-Y",
@@ -32687,11 +32738,10 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T09:59:22.623349Z"
+    "updated": "2026-09-14T07:24:19.201439Z"
   },
   {
     "id": "36JWwCufY0GDLdn3xWcEdFhsPtD-Y",
@@ -32709,7 +32759,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T01:57:37.43158Z"
+    "updated": "2026-09-14T07:27:55.176598Z"
   },
   {
     "id": "36mTxBFEQuk7pHl7NpOfgOWEsDG-Y",
@@ -33075,7 +33125,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T08:47:11.67765Z"
+    "updated": "2026-09-14T07:04:31.418351Z"
   },
   {
     "id": "37Z8Ffl5TfV3JDeuD5f9VjsUEVB-Y",
@@ -33093,7 +33143,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T16:26:05.156354Z"
+    "updated": "2026-09-14T07:04:27.533055Z"
   },
   {
     "id": "345OrkvpN9YqMip6lIYFKuclmHD-Y",
@@ -33174,6 +33224,29 @@
     "updated": "2026-09-14T03:49:20.548434Z"
   },
   {
+    "id": "34OzZkSZW5K9gXK9EKMq4BmGEBO-Y",
+    "date": "2026-09-21",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 39900,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "CA",
+      "LH",
+      "NH",
+      "NQ",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:24:40.305338Z"
+  },
+  {
     "id": "35M2u35LXayFHnBlFeGjEZURJy5-Y",
     "date": "2026-10-12",
     "from": "HKG",
@@ -33192,6 +33265,29 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-14T06:02:31.808744Z"
+  },
+  {
+    "id": "35PIRGnTLGNtqybkKkiD2MBtcdH-Y",
+    "date": "2026-10-13",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 39900,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "CA",
+      "LH",
+      "LX",
+      "OZ",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:04:19.848734Z"
   },
   {
     "id": "35RiaQWnLiFPj7LN8XxKaxpa81G-Y",
@@ -33218,6 +33314,28 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-14T06:03:13.989231Z"
+  },
+  {
+    "id": "367eoilA06cgXp4NONk0aVesxBS-Y",
+    "date": "2026-10-28",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 39900,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "AC",
+      "BR",
+      "CA",
+      "LH",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:02:59.077098Z"
   },
   {
     "id": "36yFHCvIWkvzOc6h2ZBuWHVApFL-Y",
@@ -33282,7 +33400,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T14:19:17.121092Z"
+    "updated": "2026-09-14T07:14:11.961842Z"
   },
   {
     "id": "37zzXAf8KcOxdjL1S1Qs7TOCBHK-Y",
@@ -33752,7 +33870,6 @@
     "seats": 9,
     "airlines": [
       "AZ",
-      "B6",
       "EI",
       "LH",
       "LX",
@@ -33760,7 +33877,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T14:24:15.898145Z"
+    "updated": "2026-09-14T07:17:04.361975Z"
   },
   {
     "id": "352rJVmI13esWu7y0K304GYURMg-Y",
@@ -34126,11 +34243,10 @@
       "LH",
       "LO",
       "LX",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T09:44:59.290579Z"
+    "updated": "2026-09-14T07:12:50.72006Z"
   },
   {
     "id": "35SAqi772UcPIxkXhQJba09MFRC-Y",
@@ -34341,7 +34457,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T06:37:22.167238Z"
+    "updated": "2026-09-14T08:03:15.328888Z"
   },
   {
     "id": "36dfevpyts5Vt34RAD6pXbNpcko-Y",
@@ -34388,7 +34504,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T04:48:55.114435Z"
+    "updated": "2026-09-14T08:03:14.418843Z"
   },
   {
     "id": "36g5x5lQW8xVRJVEjFUqf88gCtd-Y",
@@ -34436,7 +34552,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T22:06:14.060344Z"
+    "updated": "2026-09-14T07:09:32.690262Z"
   },
   {
     "id": "36gPq0lneezD388qrCm9BGt73S0-Y",
@@ -37288,11 +37404,12 @@
     "seats": 9,
     "airlines": [
       "AZ",
+      "B6",
       "LH",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T20:04:03.125099Z"
+    "updated": "2026-09-14T07:05:23.006162Z"
   },
   {
     "id": "34EztRLw5x4R0i5q2eTl1pUWKqn-Y",
@@ -37308,11 +37425,10 @@
     "airlines": [
       "AZ",
       "B6",
-      "LX",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T09:44:16.89667Z"
+    "updated": "2026-09-14T07:05:22.292447Z"
   },
   {
     "id": "34JQ9pNjcOXfCoYW3O9zQ5o3u8g-Y",
@@ -37489,7 +37605,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T13:18:53.380825Z"
+    "updated": "2026-09-14T07:27:23.128038Z"
   },
   {
     "id": "34URNsQkZUptT6NF0vNhyUapq7P-Y",
@@ -41982,12 +42098,13 @@
       "LH",
       "LX",
       "OS",
+      "QK",
       "TK",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T23:33:45.634882Z"
+    "updated": "2026-09-14T07:03:41.357217Z"
   },
   {
     "id": "3ATe0AV0FnCDRHbzSZCZPv5mPvT-Y",
@@ -42058,16 +42175,15 @@
       "AC",
       "AZ",
       "BT",
-      "EN",
       "EW",
       "LH",
-      "LX",
       "OS",
-      "TK",
-      "UA"
+      "SN",
+      "UA",
+      "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T02:17:28.809186Z"
+    "updated": "2026-09-14T07:36:20.765958Z"
   },
   {
     "id": "3ATe0KTeqc4Uappb3CKgCHXS14X-Y",
@@ -43388,12 +43504,13 @@
       "AC",
       "AZ",
       "LH",
+      "LX",
       "OS",
       "SN",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T09:16:40.281109Z"
+    "updated": "2026-09-14T07:35:08.897881Z"
   },
   {
     "id": "34G2LZkmsNw4rMlRmCbfiPdazZK-Y",
@@ -43481,7 +43598,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T23:50:27.977869Z"
+    "updated": "2026-09-14T07:55:39.485435Z"
   },
   {
     "id": "34od5ZnxHuABIT9Q60ZURe0h7yQ-Y",
@@ -49768,7 +49885,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T15:16:05.432318Z"
+    "updated": "2026-09-14T07:40:36.486318Z"
   },
   {
     "id": "34kcgBAVgwNakWHyd53Cw60H0Ix-Y",
@@ -50436,7 +50553,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T23:29:39.180074Z"
+    "updated": "2026-09-14T07:51:42.766043Z"
   },
   {
     "id": "367eWhdLLpsZtwZJihZ96ccWR16-Y",
@@ -51056,14 +51173,13 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "B6",
       "EI",
       "LH",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T16:11:16.311546Z"
+    "updated": "2026-09-14T07:56:21.851858Z"
   },
   {
     "id": "37PB6EZLyODpI2rvNU5GRKD4r1V-Y",
@@ -51391,23 +51507,6 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-14T05:38:06.757694Z"
-  },
-  {
-    "id": "38rYN5oFaZftp0J56QxcKFBJFrB-Y",
-    "date": "2026-12-26",
-    "from": "SFO",
-    "to": "CDG",
-    "city": "Paris",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 40000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T14:28:46.025397Z"
   },
   {
     "id": "38wLdgpLpxIJrpzuN8wufQJvPFM-Y",
@@ -52255,7 +52354,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-12",
-    "updated": "2026-09-08T07:30:00.826304Z"
+    "updated": "2026-09-14T07:37:36.892937Z"
   },
   {
     "id": "3AMxcYhNuCTCrUmXulQL1GEFbHJ-Y",
@@ -53649,16 +53748,16 @@
     "seats": 9,
     "airlines": [
       "AC",
-      "AZ",
       "BT",
       "EI",
       "LH",
       "LX",
+      "TK",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T09:45:58.107842Z"
+    "updated": "2026-09-14T07:30:46.992966Z"
   },
   {
     "id": "35PIdaEgsIgPdNLAkoeU1VaHofR-Y",
@@ -53917,7 +54016,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T11:44:11.871202Z"
+    "updated": "2026-09-14T07:36:20.08079Z"
   },
   {
     "id": "36glagqGV7k0pgE9d01V38hbPEb-Y",
@@ -53961,7 +54060,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T18:41:50.475489Z"
+    "updated": "2026-09-14T08:02:12.025071Z"
   },
   {
     "id": "36mTx5W31jsZ5ZdNDUPgOjho1Kv-Y",
@@ -54235,7 +54334,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T00:48:53.505471Z"
+    "updated": "2026-09-14T07:22:59.4798Z"
   },
   {
     "id": "376hpwefBqR3VNznksWPW1Fm4gs-Y",
@@ -54521,7 +54620,6 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "B6",
       "EI",
       "LH",
       "LX",
@@ -54530,7 +54628,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:05:16.691343Z"
+    "updated": "2026-09-14T07:51:40.218044Z"
   },
   {
     "id": "37tbt6MmUuBQREGFhUQfdhEpOno-Y",
@@ -54544,7 +54642,6 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "B6",
       "EI",
       "LH",
       "LX",
@@ -54553,7 +54650,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T06:37:46.266886Z"
+    "updated": "2026-09-14T07:10:53.819407Z"
   },
   {
     "id": "37wckgE56DlMEIc1Le7bGHkXTfS-Y",
@@ -56867,26 +56964,6 @@
     "updated": "2026-09-11T18:23:55.651516Z"
   },
   {
-    "id": "36dff0LmTJDFRrtmoFLUM4keuJ5-Y",
-    "date": "2026-11-09",
-    "from": "SFO",
-    "to": "DUB",
-    "city": "Dublin",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 40000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "B6",
-      "EI",
-      "LH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-08T02:45:40.761046Z"
-  },
-  {
     "id": "36GbHXNb6eH26qy3OkfpXREAYLa-Y",
     "date": "2026-11-01",
     "from": "SFO",
@@ -58265,11 +58342,10 @@
     "seats": 9,
     "airlines": [
       "B6",
-      "EI",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T11:06:04.961704Z"
+    "updated": "2026-09-14T07:04:07.433435Z"
   },
   {
     "id": "34ljj9fxSKPhurCutc0oNN2Vt3o-Y",
@@ -63576,24 +63652,6 @@
     "updated": "2026-09-10T09:10:34.454997Z"
   },
   {
-    "id": "34hM1riSDPy5MKrhbuyoqfjP3h6-Y",
-    "date": "2026-09-28",
-    "from": "FCO",
-    "to": "SFO",
-    "city": "Rome",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 40000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "AZ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:23:20.64429Z"
-  },
-  {
     "id": "34I0gQ1PuDOhPHaUhuaL1WkdpF2-Y",
     "date": "2026-09-19",
     "from": "FCO",
@@ -63663,10 +63721,11 @@
       "AZ",
       "LH",
       "LO",
+      "LX",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T09:48:46.110933Z"
+    "updated": "2026-09-14T07:23:03.819838Z"
   },
   {
     "id": "34OzdXySYOt5i2OTZtsWW1hPR1u-Y",
@@ -63788,7 +63847,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T21:20:28.116663Z"
+    "updated": "2026-09-14T07:55:25.604349Z"
   },
   {
     "id": "353AzjcYBDB2DYP5MHet9aWzCBn-Y",
@@ -63867,25 +63926,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-14T06:53:35.062357Z"
-  },
-  {
-    "id": "35gDwzzasBsgXnrP8drIc8Y8fne-Y",
-    "date": "2026-10-19",
-    "from": "FCO",
-    "to": "SFO",
-    "city": "Rome",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 40000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "AZ",
-      "LX",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T14:13:21.81636Z"
   },
   {
     "id": "35jaMLnhbE09hSPoD8YZP58sY3u-Y",
@@ -67593,24 +67633,6 @@
     "updated": "2026-09-07T20:25:07.948625Z"
   },
   {
-    "id": "36DbHm2eTCm5CeJqKcWBn0rrMEY-Y",
-    "date": "2026-10-30",
-    "from": "SFO",
-    "to": "FRA",
-    "city": "Frankfurt",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 40000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "LH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-07T08:40:23.011637Z"
-  },
-  {
     "id": "36dfex79B9u4Vh8Sa5ij4omiHBr-Y",
     "date": "2026-11-09",
     "from": "SFO",
@@ -67673,11 +67695,10 @@
       "4Y",
       "B6",
       "LH",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T13:48:17.069231Z"
+    "updated": "2026-09-14T08:03:09.299541Z"
   },
   {
     "id": "36ip1o80ytcJTi4mLWWiaooNKq7-Y",
@@ -68309,14 +68330,14 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "4Y",
       "AC",
       "B6",
       "LH",
+      "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T13:39:41.236058Z"
+    "updated": "2026-09-14T07:49:04.531095Z"
   },
   {
     "id": "37wciG9gZlfXC8UM5MVZGhdHB99-Y",
@@ -69617,12 +69638,11 @@
       "EN",
       "LH",
       "SQ",
-      "TK",
       "TP",
       "UA"
     ],
     "firstSeen": "2026-08-17",
-    "updated": "2026-09-11T13:35:53.614816Z"
+    "updated": "2026-09-14T07:18:09.394393Z"
   },
   {
     "id": "3B8IKLS8MNHwcHDs7SBTJOZvMJ7-Y",
@@ -70529,7 +70549,7 @@
       "WK"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T14:29:47.485087Z"
+    "updated": "2026-09-14T08:06:17.647406Z"
   },
   {
     "id": "34RbYEREw4UL3MAHU32ymDdmHY7-Y",
@@ -73544,7 +73564,7 @@
       "VL"
     ],
     "firstSeen": "2026-09-06",
-    "updated": "2026-09-12T18:29:53.899599Z"
+    "updated": "2026-09-14T07:15:16.235289Z"
   },
   {
     "id": "3BQAWtprrsXx7CRpv9Z40wcnZQo-Y",
@@ -75475,7 +75495,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T22:00:05.968569Z"
+    "updated": "2026-09-14T07:52:38.7414Z"
   },
   {
     "id": "34GaVskIzpFgksCvZtYVBLdjIU2-Y",
@@ -75493,7 +75513,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T01:42:00.439097Z"
+    "updated": "2026-09-14T07:52:37.581648Z"
   },
   {
     "id": "34JQbhr7VEkAHbewjQfEBAfltc2-Y",
@@ -75588,7 +75608,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T11:08:17.793911Z"
+    "updated": "2026-09-14T07:16:11.559429Z"
   },
   {
     "id": "38rY93mjH46jgFVaVnTP8LOjXBR-Y",
@@ -78316,7 +78336,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T14:56:28.780173Z"
+    "updated": "2026-09-14T07:46:44.721936Z"
   },
   {
     "id": "34kMvKLrcAuJMaygxUfJ1HqglpM-Y",
@@ -78406,7 +78426,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T16:34:05.093425Z"
+    "updated": "2026-09-14T07:47:58.453299Z"
   },
   {
     "id": "34ub6t30uYNrjRxb7NzXYJWStfN-Y",
@@ -78493,7 +78513,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T17:44:21.1059Z"
+    "updated": "2026-09-14T07:40:48.16423Z"
   },
   {
     "id": "356R9Tkq5lRwj0P8rAY5SSCE3Hu-Y",
@@ -78541,7 +78561,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T01:08:10.867275Z"
+    "updated": "2026-09-14T07:35:17.998889Z"
   },
   {
     "id": "358wdGKUC8DgtdmWLXGCuZogq2Z-Y",
@@ -79100,7 +79120,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-10T02:02:47.381995Z"
+    "updated": "2026-09-14T08:00:18.613449Z"
   },
   {
     "id": "36dfeskbVhLyZBI6w5qB7DslEp0-Y",
@@ -79178,10 +79198,11 @@
     "airlines": [
       "AC",
       "LH",
+      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:54:17.715754Z"
+    "updated": "2026-09-14T08:03:10.017307Z"
   },
   {
     "id": "36ip1paH32PSQYAh64lIeE9kAbh-Y",
@@ -79554,7 +79575,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T10:39:11.414005Z"
+    "updated": "2026-09-14T07:49:12.719611Z"
   },
   {
     "id": "37gnI1DFahobusdcGJHoDfY62TI-Y",
@@ -79618,11 +79639,10 @@
       "LH",
       "LX",
       "TK",
-      "UA",
-      "VL"
+      "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T15:35:37.007854Z"
+    "updated": "2026-09-14T08:01:08.337091Z"
   },
   {
     "id": "37K1cvL8etThVktVk9fzukYeUaS-Y",
@@ -81527,7 +81547,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T16:23:11.793946Z"
+    "updated": "2026-09-14T08:00:26.481751Z"
   },
   {
     "id": "34AqM3XbSmrvKL05McFSuxsONCu-Y",
@@ -81617,7 +81637,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T03:55:22.368594Z"
+    "updated": "2026-09-14T07:53:45.802751Z"
   },
   {
     "id": "34od4TnPHsb8sK4k9z100bS7Awc-Y",
@@ -81870,13 +81890,11 @@
       "EI",
       "LH",
       "LX",
-      "QK",
-      "TK",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T18:10:56.078757Z"
+    "updated": "2026-09-14T07:08:10.341717Z"
   },
   {
     "id": "35ntuui8sRZnXiiyKYjSXXCSzve-Y",
@@ -81904,7 +81922,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T03:47:59.851851Z"
+    "updated": "2026-09-14T07:23:58.913222Z"
   },
   {
     "id": "35p6EwG99UxHbGS2BuHPLOVLfLL-Y",
@@ -84597,7 +84615,6 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "B6",
       "EN",
       "LH",
       "LX",
@@ -84605,7 +84622,7 @@
       "VL"
     ],
     "firstSeen": "2026-09-13",
-    "updated": "2026-09-11T05:38:47.614205Z"
+    "updated": "2026-09-14T07:58:49.745559Z"
   },
   {
     "id": "3CDq3ojxBU7FGyyfMNDFTy0CYqm-Y",
@@ -85139,7 +85156,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T15:00:52.568523Z"
+    "updated": "2026-09-14T07:31:13.045296Z"
   },
   {
     "id": "34JQTTvt6hUGofyJZyJeGD9T039-Y",
@@ -86459,12 +86476,11 @@
     "seats": 9,
     "airlines": [
       "2L",
-      "AZ",
       "LX",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T23:20:57.141802Z"
+    "updated": "2026-09-14T07:38:52.041023Z"
   },
   {
     "id": "34AqMDFxla4ebjXsZDFLvFN1DPT-Y",
@@ -86766,7 +86782,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T10:57:41.661452Z"
+    "updated": "2026-09-14T07:08:42.853324Z"
   },
   {
     "id": "359CrWnKNUme8iKlmrm8PjVv5Fe-Y",
@@ -87200,14 +87216,12 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "2L",
       "LH",
       "LX",
-      "UA",
-      "WK"
+      "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-08T06:17:30.568489Z"
+    "updated": "2026-09-14T08:04:13.655336Z"
   },
   {
     "id": "36dfhSmvw2KUWDDHHlb0JAkoyeb-Y",
@@ -88021,7 +88035,7 @@
       "WK"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T04:22:20.83698Z"
+    "updated": "2026-09-14T07:10:05.16855Z"
   },
   {
     "id": "390YrBFfOUDFqygmHqfj5LnFUNf-Y",
@@ -89482,7 +89496,7 @@
     "region": "Europe",
     "cabin": "Y",
     "miles": 40000,
-    "direct": true,
+    "direct": false,
     "seats": 9,
     "airlines": [
       "BT",
@@ -89490,7 +89504,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:42:53.976604Z"
+    "updated": "2026-09-14T07:53:42.310809Z"
   },
   {
     "id": "34kcgD7VIYGqi6GCpjmvXxKXWoU-Y",
@@ -89593,7 +89607,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-02",
-    "updated": "2026-09-13T11:59:22.41916Z"
+    "updated": "2026-09-14T07:58:41.930371Z"
   },
   {
     "id": "34URO1oViDLtwy56yKFpyEnXr8C-Y",
@@ -89729,7 +89743,7 @@
       "WK"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T23:29:17.805994Z"
+    "updated": "2026-09-14T07:12:34.448935Z"
   },
   {
     "id": "35ntv6Aqs4cCW0BvvLkcvvuIHLl-Y",
@@ -90207,7 +90221,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T09:44:38.87571Z"
+    "updated": "2026-09-14T07:21:54.123054Z"
   },
   {
     "id": "36szCDItdjhPSqBsLRSjvDSj1nd-Y",
@@ -91036,6 +91050,29 @@
     "updated": "2026-09-12T03:36:32.107645Z"
   },
   {
+    "id": "39xga5RBJbTWFZc6MiUveo6W6AP-Y",
+    "date": "2027-01-21",
+    "from": "ZRH",
+    "to": "SFO",
+    "city": "Zurich",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 40000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "2L",
+      "AC",
+      "B6",
+      "LH",
+      "LX",
+      "TK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:14:06.228437Z"
+  },
+  {
     "id": "3A0aqUjFX78cUbq3QyyxsZZOMja-Y",
     "date": "2027-01-22",
     "from": "ZRH",
@@ -91531,7 +91568,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-17",
-    "updated": "2026-09-06T19:48:06.08218Z"
+    "updated": "2026-09-14T07:20:05.966822Z"
   },
   {
     "id": "3B8IPjLeWL83SCG9w0rCMJJ78Nm-Y",
@@ -92266,7 +92303,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T06:31:20.25119Z"
+    "updated": "2026-09-14T08:00:02.45135Z"
   },
   {
     "id": "35HR9esnJHtbOv8ieFuJeKAq7Z3-Y",
@@ -92913,10 +92950,11 @@
       "LH",
       "LX",
       "SQ",
+      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T01:27:59.689796Z"
+    "updated": "2026-09-14T07:04:19.111098Z"
   },
   {
     "id": "35Rint4dLaYELqEO4uGcruhCEsu-Y",
@@ -94924,12 +94962,12 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "NH",
       "SQ",
+      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-27",
-    "updated": "2026-09-12T21:42:30.461893Z"
+    "updated": "2026-09-14T07:15:26.698699Z"
   },
   {
     "id": "3Buzre4JC13ufOART4sjl1xzb9j-Y",
@@ -95175,14 +95213,13 @@
     "seats": 9,
     "airlines": [
       "AC",
-      "B6",
       "BR",
       "OZ",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T17:05:46.311171Z"
+    "updated": "2026-09-14T07:08:16.310597Z"
   },
   {
     "id": "34AqM2xjJ1HCFWzFJFZbgHWmow2-Y",
@@ -95221,7 +95258,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T13:08:45.112064Z"
+    "updated": "2026-09-14T07:11:09.61814Z"
   },
   {
     "id": "34JQ9tk7JePhXlu3uB3ryqJwMAf-Y",
@@ -95241,25 +95278,6 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-14T05:06:51.68991Z"
-  },
-  {
-    "id": "34kcg65L5tTr68XJWzQx0H4xEVi-Y",
-    "date": "2026-09-28",
-    "from": "SFO",
-    "to": "ICN",
-    "city": "Seoul",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 43300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "OZ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T09:34:58.807493Z"
   },
   {
     "id": "34ljGL6eUUGmRBIyfQhnchxuNsa-Y",
@@ -95359,7 +95377,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:04:10.440115Z"
+    "updated": "2026-09-14T07:17:41.384426Z"
   },
   {
     "id": "35abRSzkCTkjID1ZJuDonYq6kWP-Y",
@@ -95410,13 +95428,12 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "BR",
       "OZ",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T08:22:47.236466Z"
+    "updated": "2026-09-14T07:07:15.547682Z"
   },
   {
     "id": "35rUxgd3vDWeAUN9EhCxtv33i0J-Y",
@@ -95571,7 +95588,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T13:52:33.130598Z"
+    "updated": "2026-09-14T07:06:30.070318Z"
   },
   {
     "id": "36EehnUQAflWANmXwX4CT5TLiAS-Y",
@@ -95702,7 +95719,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T02:57:32.7641Z"
+    "updated": "2026-09-14T07:04:33.679068Z"
   },
   {
     "id": "36vYXBTtazJBe9WXrwNSSgTauKS-Y",
@@ -97014,12 +97031,11 @@
       "BR",
       "LH",
       "LX",
-      "OZ",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:47:46.425416Z"
+    "updated": "2026-09-14T07:07:51.362428Z"
   },
   {
     "id": "34LxtNcdxhcMk25xlqYVhSGQJTu-Y",
@@ -97060,7 +97076,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T10:59:24.060636Z"
+    "updated": "2026-09-14T07:10:31.60214Z"
   },
   {
     "id": "34OzmHw0LJokoHkpXEmMZ5FmTMk-Y",
@@ -97554,24 +97570,6 @@
     ],
     "firstSeen": "2026-08-27",
     "updated": "2026-09-11T16:36:41.88623Z"
-  },
-  {
-    "id": "3AlEHrwdL7hnqosJr1sSlBzM14N-Y",
-    "date": "2027-02-06",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 43900,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "UA"
-    ],
-    "firstSeen": "2026-08-10",
-    "updated": "2026-09-09T19:52:28.010097Z"
   },
   {
     "id": "376NAFkcSbwzzBT0VOTdRhNULXF-Y",
@@ -98200,20 +98198,19 @@
     "seats": 9,
     "airlines": [
       "2L",
-      "AZ",
+      "4Y",
       "BT",
       "E6",
-      "ET",
       "LH",
       "LO",
       "LX",
       "SN",
-      "TK",
+      "TP",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-10T11:37:34.187874Z"
+    "updated": "2026-09-14T07:41:02.577555Z"
   },
   {
     "id": "34JpBdRnsONhIJFViKNtQd6VTTq-Y",
@@ -102373,16 +102370,17 @@
     "seats": 9,
     "airlines": [
       "4Y",
+      "AZ",
       "B6",
       "BT",
       "LH",
-      "LO",
       "LX",
       "OS",
+      "SN",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T23:27:24.932556Z"
+    "updated": "2026-09-14T07:18:59.480321Z"
   },
   {
     "id": "34jBZikX3kbYLIQUhSEPuHQlX8o-Y",
@@ -102509,12 +102507,11 @@
       "LX",
       "OS",
       "SN",
-      "TP",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T04:27:14.041837Z"
+    "updated": "2026-09-14T07:29:28.524567Z"
   },
   {
     "id": "34OzadQdPXp1fVJNk9diSDoaG5t-Y",
@@ -108084,14 +108081,13 @@
       "A3",
       "AC",
       "AZ",
-      "EN",
       "LH",
       "TK",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T12:25:58.918616Z"
+    "updated": "2026-09-14T07:31:13.849285Z"
   },
   {
     "id": "3ATe8Rcebc3kB6PtJJS1pKmq9Hf-Y",
@@ -110971,7 +110967,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T03:34:35.695935Z"
+    "updated": "2026-09-14T07:03:41.435887Z"
   },
   {
     "id": "3ATdztpCsj219Du2eNA795a2glz-Y",
@@ -111803,7 +111799,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T01:57:09.7541Z"
+    "updated": "2026-09-14T07:03:38.162381Z"
   },
   {
     "id": "3ATe0AosdLHJ8DqqsuS0MuGtbUm-Y",
@@ -112001,11 +111997,10 @@
       "LX",
       "OS",
       "TK",
-      "TP",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T04:58:19.479976Z"
+    "updated": "2026-09-14T07:09:00.545894Z"
   },
   {
     "id": "3ATe0HKDHKtCuqFDOAdDo7d5uys-Y",
@@ -112141,11 +112136,10 @@
     "seats": 9,
     "airlines": [
       "A3",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-09-05",
-    "updated": "2026-09-13T08:36:58.620334Z"
+    "updated": "2026-09-14T07:04:32.210852Z"
   },
   {
     "id": "3ATe0Ivv6AdrsWVsZGtvBjmO9pI-Y",
@@ -112201,7 +112195,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T00:09:32.215076Z"
+    "updated": "2026-09-14T07:18:32.609656Z"
   },
   {
     "id": "3ATe0JZVvP704YR4uHEs27IAg55-Y",
@@ -112521,12 +112515,11 @@
       "LH",
       "OS",
       "OU",
-      "TK",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T12:45:24.587127Z"
+    "updated": "2026-09-14T07:06:59.51551Z"
   },
   {
     "id": "3ATe0PuoM0EtsHMElwGJYuOwqjj-Y",
@@ -113559,12 +113552,11 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "AZ",
       "LO",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T11:45:06.830718Z"
+    "updated": "2026-09-14T07:05:43.514297Z"
   },
   {
     "id": "34od5axq4nFK2PKTMravQ1sa9zP-Y",
@@ -114473,6 +114465,24 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T00:27:39.396659Z"
+  },
+  {
+    "id": "34stEZWtPVRiF3RBIIWH7lJyRN7-Y",
+    "date": "2026-10-02",
+    "from": "BCN",
+    "to": "SFO",
+    "city": "Barcelona",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 44000,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "AZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:05:57.561011Z"
   },
   {
     "id": "35abSfUcSGAqZFyWfUUNF6vfEj0-Y",
@@ -116350,7 +116360,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T01:28:48.375728Z"
+    "updated": "2026-09-14T08:05:45.041805Z"
   },
   {
     "id": "35urjs1z3FF7L1KXkOGkswSHrY4-Y",
@@ -116420,7 +116430,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T11:18:16.921005Z"
+    "updated": "2026-09-14T07:08:14.141433Z"
   },
   {
     "id": "35zzvVhN6ur6Pmq07HPJWghBgwh-Y",
@@ -118486,7 +118496,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T19:34:15.201733Z"
+    "updated": "2026-09-14T07:32:29.728565Z"
   },
   {
     "id": "34YEaqeFpBheor1srLU4LLZpBWf-Y",
@@ -125610,7 +125620,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T07:28:16.412676Z"
+    "updated": "2026-09-14T07:26:14.889369Z"
   },
   {
     "id": "35p6Ew9iOY9jQvg4QleCwYOYcBf-Y",
@@ -125732,6 +125742,25 @@
     ],
     "firstSeen": "2026-09-02",
     "updated": "2026-09-14T03:22:00.274702Z"
+  },
+  {
+    "id": "37S3ZuOWOA2mLPhZ9M825khOyM1-Y",
+    "date": "2026-11-27",
+    "from": "CDG",
+    "to": "SFO",
+    "city": "Paris",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 44000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "LH",
+      "TK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:24:05.347364Z"
   },
   {
     "id": "39HXj2YzMfcg7ioeoY1jrYdXUuc-Y",
@@ -127249,7 +127278,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T04:17:33.308992Z"
+    "updated": "2026-09-14T08:06:49.005013Z"
   },
   {
     "id": "36vYXQUKU6ua2RwcdOZui3TsL1u-Y",
@@ -131122,9 +131151,7 @@
     "airlines": [
       "2L",
       "AC",
-      "B6",
       "BT",
-      "EN",
       "EW",
       "LH",
       "LO",
@@ -131136,7 +131163,7 @@
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T22:45:19.948269Z"
+    "updated": "2026-09-14T07:31:29.550914Z"
   },
   {
     "id": "36AUZKH1RLF4ZXrpvcF5KgKsOfC-Y",
@@ -135424,7 +135451,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T15:20:18.299479Z"
+    "updated": "2026-09-14T07:25:03.742316Z"
   },
   {
     "id": "358HMN1PHlbLNshkrKhFIzqfVmt-Y",
@@ -136183,6 +136210,25 @@
     "updated": "2026-09-14T06:47:36.434011Z"
   },
   {
+    "id": "34hM1riSDPy5MKrhbuyoqfjP3h6-Y",
+    "date": "2026-09-28",
+    "from": "FCO",
+    "to": "SFO",
+    "city": "Rome",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 44000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "AZ",
+      "LX",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:27:36.252195Z"
+  },
+  {
     "id": "34xSnMv7axJmTILmgmU1DR72MEe-Y",
     "date": "2026-10-03",
     "from": "FCO",
@@ -136254,6 +136300,25 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-14T04:22:39.347154Z"
+  },
+  {
+    "id": "35gDwzzasBsgXnrP8drIc8Y8fne-Y",
+    "date": "2026-10-19",
+    "from": "FCO",
+    "to": "SFO",
+    "city": "Rome",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 44000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "AZ",
+      "TK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:04:22.839884Z"
   },
   {
     "id": "35HRC9gyEiQF6gdD2OJ9ZZQx9I5-Y",
@@ -136642,7 +136707,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T17:19:59.134967Z"
+    "updated": "2026-09-14T07:19:33.637818Z"
   },
   {
     "id": "39HXVzf6fDMhfSKZJrAraWxyruh-Y",
@@ -141296,21 +141361,19 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "2L",
       "4Y",
       "AC",
       "AZ",
       "BT",
       "EN",
       "LH",
-      "LX",
       "OS",
       "SN",
       "UA",
-      "WK"
+      "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T10:17:54.625602Z"
+    "updated": "2026-09-14T07:31:27.168194Z"
   },
   {
     "id": "34dZSeD6L8X1IfQPigJcLQ0ohk7-Y",
@@ -141344,7 +141407,6 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "2L",
       "4Y",
       "AC",
       "AZ",
@@ -141352,15 +141414,12 @@
       "EN",
       "EW",
       "LH",
-      "LX",
       "OS",
-      "QK",
-      "RV",
       "SN",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-01T16:22:37.460873Z"
+    "updated": "2026-09-14T07:31:24.798065Z"
   },
   {
     "id": "34Gat9lG05JDXosUNWm9zHdFZBB-Y",
@@ -141382,7 +141441,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T04:04:30.429989Z"
+    "updated": "2026-09-14T07:31:20.601021Z"
   },
   {
     "id": "34iwqJ53fUbKUmxRjjCxcmaoQVB-Y",
@@ -141863,13 +141922,12 @@
       "AZ",
       "BT",
       "EN",
-      "LH",
       "OS",
       "UA",
       "WK"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T08:19:50.948407Z"
+    "updated": "2026-09-14T07:45:34.917691Z"
   },
   {
     "id": "35RibyUy9jlMHqQjC7eiKN6bsQh-Y",
@@ -145379,8 +145437,8 @@
     "updated": "2026-09-12T15:52:06.623606Z"
   },
   {
-    "id": "36EefM8CEZlxNt11kLJ7qkoBGTg-Y",
-    "date": "2026-10-31",
+    "id": "36DbHm2eTCm5CeJqKcWBn0rrMEY-Y",
+    "date": "2026-10-30",
     "from": "SFO",
     "to": "FRA",
     "city": "Frankfurt",
@@ -145394,7 +145452,26 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:34:25.616289Z"
+    "updated": "2026-09-14T07:09:42.327727Z"
+  },
+  {
+    "id": "36EefM8CEZlxNt11kLJ7qkoBGTg-Y",
+    "date": "2026-10-31",
+    "from": "SFO",
+    "to": "FRA",
+    "city": "Frankfurt",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 44000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "LH",
+      "TK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:09:30.511187Z"
   },
   {
     "id": "377fAoudS8quzM0PQDxdQUKYmZN-Y",
@@ -145415,6 +145492,25 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-13T22:50:49.622258Z"
+  },
+  {
+    "id": "38AeeBEK6gp3o1RpLvBfeRvKHC0-Y",
+    "date": "2026-12-12",
+    "from": "SFO",
+    "to": "FRA",
+    "city": "Frankfurt",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 44000,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "LH",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:03:47.82521Z"
   },
   {
     "id": "38BKy9UCr6ADurnD9XmdW0MB0r6-Y",
@@ -145938,7 +146034,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T20:21:15.343056Z"
+    "updated": "2026-09-14T08:01:19.806165Z"
   },
   {
     "id": "349qkCLcKrWJ4KCakyeuqDvl9gx-Y",
@@ -145999,7 +146095,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T04:49:27.33921Z"
+    "updated": "2026-09-14T07:29:16.2919Z"
   },
   {
     "id": "34G2G4taMcOKngeB20pGMECyvP5-Y",
@@ -146071,12 +146167,14 @@
     "direct": false,
     "seats": 9,
     "airlines": [
+      "B6",
+      "EI",
       "LH",
       "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T15:45:21.700012Z"
+    "updated": "2026-09-14T07:27:15.394782Z"
   },
   {
     "id": "34LxqEEIWynJ96jhmoDIYoA0pDO-Y",
@@ -146632,7 +146730,7 @@
     "region": "Europe",
     "cabin": "Y",
     "miles": 44000,
-    "direct": true,
+    "direct": false,
     "seats": 9,
     "airlines": [
       "LH",
@@ -146640,7 +146738,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T04:59:52.332047Z"
+    "updated": "2026-09-14T07:48:49.77295Z"
   },
   {
     "id": "35urrCl5zpdw8FRKAYCuksujF0j-Y",
@@ -147568,7 +147666,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-08T00:30:26.868793Z"
+    "updated": "2026-09-14T07:48:04.069668Z"
   },
   {
     "id": "37Z8CVWpYolGTfXwQSAt9NnSVKd-Y",
@@ -149405,14 +149503,13 @@
     "seats": 9,
     "airlines": [
       "B6",
-      "EI",
       "LH",
       "LX",
       "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T00:51:24.553003Z"
+    "updated": "2026-09-14T07:48:07.271498Z"
   },
   {
     "id": "35NDAH1RoFwDiNw6xR5quwAuXaF-Y",
@@ -149649,7 +149746,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T15:11:39.799779Z"
+    "updated": "2026-09-14T07:30:30.832019Z"
   },
   {
     "id": "36CABai0TBkHMuBKCFCdRnQD0Xo-Y",
@@ -158257,13 +158354,13 @@
     "cabin": "Y",
     "miles": 44000,
     "direct": false,
-    "seats": 9,
+    "seats": 5,
     "airlines": [
       "AZ",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T03:58:47.493908Z"
+    "updated": "2026-09-14T07:51:56.468653Z"
   },
   {
     "id": "34ocuC6RijItMiPuG1BXkKj5TUb-Y",
@@ -173540,12 +173637,13 @@
       "B6",
       "LH",
       "LO",
+      "OS",
       "SN",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T11:44:16.14654Z"
+    "updated": "2026-09-14T07:35:11.849875Z"
   },
   {
     "id": "34JstSpufD3M134l9G24SoQklkH-Y",
@@ -190066,12 +190164,13 @@
     "seats": 9,
     "airlines": [
       "4Y",
+      "E6",
       "LO",
       "OS",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T12:26:08.175234Z"
+    "updated": "2026-09-14T08:00:37.571605Z"
   },
   {
     "id": "34kcuZy5GGFsGatvQeP6tNDhGtP-Y",
@@ -194229,13 +194328,21 @@
     "direct": false,
     "seats": 9,
     "airlines": [
+      "4Y",
       "AZ",
+      "BT",
+      "E6",
+      "EN",
+      "EW",
       "LH",
       "OS",
-      "UA"
+      "OU",
+      "SN",
+      "UA",
+      "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T16:12:58.616815Z"
+    "updated": "2026-09-14T08:03:10.913247Z"
   },
   {
     "id": "348MdSZ0p4tAThRiVoCdVYY4HHM-Y",
@@ -195941,20 +196048,17 @@
     "airlines": [
       "2L",
       "AC",
-      "B6",
       "EN",
       "EW",
       "LH",
-      "LO",
       "LX",
       "OS",
       "SN",
       "UA",
-      "VL",
-      "YU"
+      "VL"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T18:09:20.395473Z"
+    "updated": "2026-09-14T07:36:06.64719Z"
   },
   {
     "id": "37GKreCqPnI2yUYcVN48c9zGgmA-Y",
@@ -198653,7 +198757,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T20:26:33.392038Z"
+    "updated": "2026-09-14T07:31:09.872838Z"
   },
   {
     "id": "364omjz5sy3PwcRkPt94NntBXDV-Y",
@@ -199847,13 +199951,12 @@
       "LO",
       "LX",
       "OS",
-      "QK",
       "SN",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-10T18:04:40.948137Z"
+    "updated": "2026-09-14T07:42:32.304264Z"
   },
   {
     "id": "36q7JiMMy6o1pBpaEURh6iYHY9u-Y",
@@ -202978,14 +203081,12 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "AC",
       "LH",
       "LO",
-      "LX",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-10T09:19:44.202357Z"
+    "updated": "2026-09-14T07:06:02.574005Z"
   },
   {
     "id": "364ontelAEhpG6SzPvjUzCoyKpi-Y",
@@ -203057,7 +203158,7 @@
       "YU"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T04:25:47.403077Z"
+    "updated": "2026-09-14T07:03:53.677984Z"
   },
   {
     "id": "364onUYdWlLgHUKJbSF8XPcNhxS-Y",
@@ -203552,11 +203653,10 @@
     "airlines": [
       "LH",
       "LO",
-      "LX",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-10T16:59:39.350457Z"
+    "updated": "2026-09-14T07:38:23.951399Z"
   },
   {
     "id": "364ooMPiT3FFHfvMxMd8OKBr03l-Y",
@@ -203619,7 +203719,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T21:08:39.394406Z"
+    "updated": "2026-09-14T07:03:38.951345Z"
   },
   {
     "id": "364ooPpLVpDwyitdHpbbdDW6NnI-Y",
@@ -207325,13 +207425,14 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "BT",
+      "LH",
       "LX",
+      "TK",
       "UA",
       "WK"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-10T19:13:04.250989Z"
+    "updated": "2026-09-14T07:17:38.948359Z"
   },
   {
     "id": "36EehyaOG1ik8LOjgkdQPS6toBP-Y",
@@ -208238,7 +208339,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-06T19:45:24.085843Z"
+    "updated": "2026-09-14T07:56:33.63348Z"
   },
   {
     "id": "38JosmnlOD039KAyfaPilMfF3uH-Y",
@@ -208253,13 +208354,12 @@
     "seats": 9,
     "airlines": [
       "2L",
-      "B6",
       "LH",
       "LX",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T00:42:55.883333Z"
+    "updated": "2026-09-14T07:57:28.152488Z"
   },
   {
     "id": "38MlYFAZDbPK8HzByivT7f60GD9-Y",
@@ -208426,7 +208526,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-06T19:36:13.437155Z"
+    "updated": "2026-09-14T07:56:29.370533Z"
   },
   {
     "id": "38XUw0DCKJwGGzAORFy0ELbmvkp-Y",
@@ -208445,7 +208545,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-06T19:35:18.927472Z"
+    "updated": "2026-09-14T07:56:28.679937Z"
   },
   {
     "id": "39HXjFAkqPF59bjiA41v8TgMeNU-Y",
@@ -208482,29 +208582,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T21:13:40.845445Z"
-  },
-  {
-    "id": "39xga5RBJbTWFZc6MiUveo6W6AP-Y",
-    "date": "2027-01-21",
-    "from": "ZRH",
-    "to": "SFO",
-    "city": "Zurich",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 44000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "2L",
-      "AC",
-      "B6",
-      "LH",
-      "LX",
-      "TK",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-06T19:40:49.227418Z"
   },
   {
     "id": "3AulcHRlYontIPeJi7nh25CPg9G-Y",
@@ -208684,7 +208761,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T20:22:20.756992Z"
+    "updated": "2026-09-14T07:50:58.852806Z"
   },
   {
     "id": "34fYS6ueQZeZMqwoASnm59At8xm-Y",
@@ -208715,12 +208792,11 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "BR",
       "OZ",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T06:54:08.779641Z"
+    "updated": "2026-09-14T07:43:21.014932Z"
   },
   {
     "id": "34od4ZsafrWbGOHUfEgPoF1YVbu-Y",
@@ -208921,7 +208997,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T17:40:43.397575Z"
+    "updated": "2026-09-14T07:23:57.033694Z"
   },
   {
     "id": "36q7H83pjPnHD0ji94ZF5ksdzTs-Y",
@@ -209100,7 +209176,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T02:04:06.84435Z"
+    "updated": "2026-09-14T07:59:21.373759Z"
   },
   {
     "id": "38Aegma12ealNXVt2n5ecehnv7J-Y",
@@ -209194,7 +209270,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T00:07:35.316411Z"
+    "updated": "2026-09-14T07:20:12.66578Z"
   },
   {
     "id": "38rYNDCChCf5szdiie4PXJcmv6g-Y",
@@ -209247,7 +209323,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T02:07:20.210738Z"
+    "updated": "2026-09-14T07:49:18.157519Z"
   },
   {
     "id": "38XoIKzzTsARfh20W3jcezlsfFf-Y",
@@ -209480,7 +209556,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-07",
-    "updated": "2026-09-13T07:48:23.021469Z"
+    "updated": "2026-09-14T08:01:34.765365Z"
   },
   {
     "id": "3BuzzRsDLE6ISYOyCeA05Fa5sTq-Y",
@@ -209942,24 +210018,6 @@
     "updated": "2026-08-28T03:21:09.284338Z"
   },
   {
-    "id": "3593rUttzMylEgPnPEx1GBfr4sH-Y",
-    "date": "2026-10-08",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 44600,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-10T08:44:48.697775Z"
-  },
-  {
     "id": "382taPBDxBkOOtUPQeNsGRXR9nh-Y",
     "date": "2026-12-11",
     "from": "TPE",
@@ -210128,7 +210186,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T22:12:26.124401Z"
+    "updated": "2026-09-14T07:39:55.610407Z"
   },
   {
     "id": "38rYNdlHEexOVxQwWxKOTr14nxo-Y",
@@ -210245,6 +210303,25 @@
     "updated": "2026-09-13T20:17:43.805317Z"
   },
   {
+    "id": "38XKwO1h3pcnDvKqrj7l6eoAn2w-Y",
+    "date": "2026-12-21",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 44600,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "CA",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:55:42.973743Z"
+  },
+  {
     "id": "3AulcD352jBGeqM9mnTnfClEqKp-Y",
     "date": "2027-02-11",
     "from": "TPE",
@@ -210321,25 +210398,6 @@
     ],
     "firstSeen": "2026-09-08",
     "updated": "2026-09-10T09:13:00.195201Z"
-  },
-  {
-    "id": "38XKwO1h3pcnDvKqrj7l6eoAn2w-Y",
-    "date": "2026-12-21",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 44700,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T04:34:35.915707Z"
   },
   {
     "id": "38rYBR0YOhx3h5BdsuHmBB02Pjr-Y",
@@ -210750,7 +210808,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T18:49:37.245843Z"
+    "updated": "2026-09-14T07:46:04.371294Z"
   },
   {
     "id": "38rYNBYUYHhKQNfRk0jYSN5HbEh-Y",
@@ -210782,11 +210840,10 @@
     "seats": 9,
     "airlines": [
       "AC",
-      "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T16:53:31.58392Z"
+    "updated": "2026-09-14T07:53:28.011891Z"
   },
   {
     "id": "39hT0DLcWHfhiqZgQcxSZycOIXp-Y",
@@ -212062,7 +212119,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T11:54:46.242285Z"
+    "updated": "2026-09-14T07:08:19.64094Z"
   },
   {
     "id": "34JQ9wAktblzRhLvdVaxRHyxxoY-Y",
@@ -212164,7 +212221,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T02:57:00.168736Z"
+    "updated": "2026-09-14T07:20:46.429568Z"
   },
   {
     "id": "34rSdaPPL5kEX6Ua4NvNWs2X33f-Y",
@@ -215083,6 +215140,43 @@
     "updated": "2026-09-14T04:23:05.268133Z"
   },
   {
+    "id": "34Gartz2EVQ8VTL2ZvyqVeueg6E-Y",
+    "date": "2026-09-18",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 45500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:52:56.197442Z"
+  },
+  {
+    "id": "34JQS5Fqh5jBOaw3LQtrI2ZcOWu-Y",
+    "date": "2026-09-19",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 45500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "CA",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T08:06:31.068755Z"
+  },
+  {
     "id": "34KKCfDr920MC8ymQdffk0LIR6L-Y",
     "date": "2026-09-20",
     "from": "HKG",
@@ -215100,6 +215194,25 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-14T06:59:58.205738Z"
+  },
+  {
+    "id": "34uax8uRLm2FvTE6UH9ofE5hCgD-Y",
+    "date": "2026-10-02",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 45500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "CA",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:41:53.489022Z"
   },
   {
     "id": "35HR8OjzdwWMEJ6Nt9ResoheIYV-Y",
@@ -215157,6 +215270,45 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-14T05:55:29.896459Z"
+  },
+  {
+    "id": "36Db91AznChCeCcsLYmGs6VSZhe-Y",
+    "date": "2026-10-30",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 45500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "AC",
+      "BR",
+      "LH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:02:58.17497Z"
+  },
+  {
+    "id": "36EeWBIHdscF27zAASTS1KaDYxC-Y",
+    "date": "2026-10-31",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 45500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "LH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:10:03.400086Z"
   },
   {
     "id": "36Gb8OmKzpOvZzZNTh3ikobRBdZ-Y",
@@ -215221,6 +215373,25 @@
     "updated": "2026-09-14T06:07:09.997483Z"
   },
   {
+    "id": "37tc9ka32jsWISLQxAqQm9SplxE-Y",
+    "date": "2026-12-06",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 45500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "LH",
+      "NZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T08:06:27.287265Z"
+  },
+  {
     "id": "38AeUUupOwJ5OCpt2IyvxKlIwuw-Y",
     "date": "2026-12-12",
     "from": "HKG",
@@ -215273,12 +215444,12 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "NH",
+      "OZ",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T08:16:39.378615Z"
+    "updated": "2026-09-14T07:36:14.886811Z"
   },
   {
     "id": "34cDXXFqFcMoDfOzwqxddI2uciH-Y",
@@ -215505,7 +215676,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T14:46:08.514583Z"
+    "updated": "2026-09-14T07:09:29.238263Z"
   },
   {
     "id": "36JWnVpejYgULpyLuvqDomwKJ6b-Y",
@@ -216328,6 +216499,23 @@
     "updated": "2026-09-13T07:58:00.053444Z"
   },
   {
+    "id": "38rYN5oFaZftp0J56QxcKFBJFrB-Y",
+    "date": "2026-12-26",
+    "from": "SFO",
+    "to": "CDG",
+    "city": "Paris",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 46800,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:54:40.344675Z"
+  },
+  {
     "id": "35M30nVkJWhJBmyG4d9QVMrXeV6-Y",
     "date": "2026-10-12",
     "from": "DUB",
@@ -216592,26 +216780,6 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-13T01:21:19.890292Z"
-  },
-  {
-    "id": "34GazVVXnMABzv6PnJhvNaYpbgL-Y",
-    "date": "2026-09-18",
-    "from": "SFO",
-    "to": "BKK",
-    "city": "Bangkok",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 47700,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "SQ",
-      "UA",
-      "ZH"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T11:51:17.031505Z"
   },
   {
     "id": "34JQZFtKSEXOC6FZF6M66fiOnoz-Y",
@@ -217425,7 +217593,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T14:56:34.759057Z"
+    "updated": "2026-09-14T07:49:32.030831Z"
   },
   {
     "id": "34RbatQrdVDOU0MGfgolAO2fWFd-Y",
@@ -217479,7 +217647,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T21:13:25.95702Z"
+    "updated": "2026-09-14T07:11:23.330423Z"
   },
   {
     "id": "35467iBc12leZWI1bEk7driI3NH-Y",
@@ -218180,25 +218348,6 @@
     "updated": "2026-09-13T10:48:13.117142Z"
   },
   {
-    "id": "34Gartz2EVQ8VTL2ZvyqVeueg6E-Y",
-    "date": "2026-09-18",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T00:01:16.762582Z"
-  },
-  {
     "id": "34jfH3kbJTHmAUlpQ0uzhIqSO6D-Y",
     "date": "2026-09-29",
     "from": "HKG",
@@ -218217,49 +218366,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T16:36:07.535499Z"
-  },
-  {
-    "id": "34JQS5Fqh5jBOaw3LQtrI2ZcOWu-Y",
-    "date": "2026-09-19",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "OZ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:31:51.989975Z"
-  },
-  {
-    "id": "34OzZkSZW5K9gXK9EKMq4BmGEBO-Y",
-    "date": "2026-09-21",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "LH",
-      "NH",
-      "NQ",
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:31:44.177731Z"
   },
   {
     "id": "34RbNrCLxhPGzZjlM9CsihzgB25-Y",
@@ -218301,25 +218407,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T20:51:20.89602Z"
-  },
-  {
-    "id": "34uax8uRLm2FvTE6UH9ofE5hCgD-Y",
-    "date": "2026-10-02",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:17:17.561905Z"
   },
   {
     "id": "34URBmVmec6nbRuh9GnlF1vRelv-Y",
@@ -218574,29 +218661,6 @@
     "updated": "2026-09-14T00:11:29.172504Z"
   },
   {
-    "id": "35PIRGnTLGNtqybkKkiD2MBtcdH-Y",
-    "date": "2026-10-13",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "LH",
-      "LX",
-      "OZ",
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T21:31:17.36077Z"
-  },
-  {
     "id": "35tR6RldrltbJ1sIL6lKYBU6v7V-Y",
     "date": "2026-10-23",
     "from": "HKG",
@@ -218767,28 +218831,6 @@
     "updated": "2026-09-13T20:05:55.210914Z"
   },
   {
-    "id": "367eoilA06cgXp4NONk0aVesxBS-Y",
-    "date": "2026-10-28",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "AC",
-      "BR",
-      "CA",
-      "LH",
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T18:37:54.102845Z"
-  },
-  {
     "id": "36aKWfl4MqitQEzMBHvPz2Yrkln-Y",
     "date": "2026-11-08",
     "from": "HKG",
@@ -218832,26 +218874,6 @@
     "updated": "2026-09-13T11:30:54.348303Z"
   },
   {
-    "id": "36Db91AznChCeCcsLYmGs6VSZhe-Y",
-    "date": "2026-10-30",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "AC",
-      "BR",
-      "LH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T01:14:10.859783Z"
-  },
-  {
     "id": "36dfWLs4wT2hphhLqdImdL999vD-Y",
     "date": "2026-11-09",
     "from": "HKG",
@@ -218871,25 +218893,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-14T02:32:57.180831Z"
-  },
-  {
-    "id": "36EeWBIHdscF27zAASTS1KaDYxC-Y",
-    "date": "2026-10-31",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 48300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "LH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T06:40:32.632304Z"
   },
   {
     "id": "36g5nd05QAZW1OvGsFOEDYegRez-Y",
@@ -221351,23 +221354,6 @@
     "updated": "2026-09-13T14:39:24.093885Z"
   },
   {
-    "id": "38rYRzVawGxN42K5HvLy6AQlOds-Y",
-    "date": "2026-12-23",
-    "from": "SFO",
-    "to": "BCN",
-    "city": "Barcelona",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 48800,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T15:11:29.416978Z"
-  },
-  {
     "id": "34rSHuVmky1x9kxQyHfUp6vwaGH-Y",
     "date": "2026-10-01",
     "from": "DEL",
@@ -221811,7 +221797,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T06:50:07.635537Z"
+    "updated": "2026-09-14T07:11:42.607301Z"
   },
   {
     "id": "36dfkQwMSHYbQxNR5JJRQhiihH3-Y",
@@ -222145,6 +222131,23 @@
     ],
     "firstSeen": "2026-08-17",
     "updated": "2026-09-13T03:07:27.662471Z"
+  },
+  {
+    "id": "38rYRzVawGxN42K5HvLy6AQlOds-Y",
+    "date": "2026-12-23",
+    "from": "SFO",
+    "to": "BCN",
+    "city": "Barcelona",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 49000,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:32:57.472136Z"
   },
   {
     "id": "34fgZmqNC4clHyyLsvl8iwOOURn-Y",
@@ -223560,6 +223563,24 @@
     "updated": "2026-09-13T11:17:42.327794Z"
   },
   {
+    "id": "377fDQNfMP4NstNGc1s16bTO49I-Y",
+    "date": "2026-11-19",
+    "from": "MEL",
+    "to": "SFO",
+    "city": "Melbourne",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 49000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA",
+      "VA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T08:01:42.606677Z"
+  },
+  {
     "id": "37HC81pjALalKRliTapp20wWJgV-Y",
     "date": "2026-11-23",
     "from": "MEL",
@@ -223655,6 +223676,25 @@
     "updated": "2026-09-13T23:47:27.61432Z"
   },
   {
+    "id": "3ABbIm490xuCAvMwq5rfgXo4Cqv-Y",
+    "date": "2027-01-26",
+    "from": "MEL",
+    "to": "SFO",
+    "city": "Melbourne",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 49000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "SQ",
+      "UA",
+      "VA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T08:01:03.867582Z"
+  },
+  {
     "id": "3AEgwvHAWIKsmgrGXWCSHt7mG2x-Y",
     "date": "2027-01-27",
     "from": "MEL",
@@ -223709,7 +223749,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T06:44:34.168497Z"
+    "updated": "2026-09-14T08:01:01.053732Z"
   },
   {
     "id": "3AVKlCX1YdSbxgkURO7zhev9nOV-Y",
@@ -223882,6 +223922,24 @@
     ],
     "firstSeen": "2026-08-26",
     "updated": "2026-09-13T22:11:19.827652Z"
+  },
+  {
+    "id": "3BRyOA2uAg9MPd8CFvGMCrX0X5p-Y",
+    "date": "2027-02-23",
+    "from": "MEL",
+    "to": "SFO",
+    "city": "Melbourne",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 49000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-27",
+    "updated": "2026-09-14T08:02:54.336266Z"
   },
   {
     "id": "3BSZpiP3DObRhTxdAiCEoyMU4MI-Y",
@@ -224725,25 +224783,6 @@
     "updated": "2026-09-10T22:18:44.673993Z"
   },
   {
-    "id": "3ABbIm490xuCAvMwq5rfgXo4Cqv-Y",
-    "date": "2027-01-26",
-    "from": "MEL",
-    "to": "SFO",
-    "city": "Melbourne",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 49200,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "SQ",
-      "UA",
-      "VA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T14:44:24.391532Z"
-  },
-  {
     "id": "3AGUpvUJkS9iMKxpNU7yOINjty8-Y",
     "date": "2027-01-28",
     "from": "MEL",
@@ -224874,24 +224913,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-11T07:35:56.186375Z"
-  },
-  {
-    "id": "377fDQNfMP4NstNGc1s16bTO49I-Y",
-    "date": "2026-11-19",
-    "from": "MEL",
-    "to": "SFO",
-    "city": "Melbourne",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 49300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA",
-      "VA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T19:18:42.331544Z"
   },
   {
     "id": "37gnKKe8vJCgUP42ZAgMR5fAP84-Y",
@@ -225043,42 +225064,6 @@
     ],
     "firstSeen": "2026-08-13",
     "updated": "2026-09-12T00:18:24.333741Z"
-  },
-  {
-    "id": "3BRyO9l1yiOSV78LFa9Sj1layh1-Y",
-    "date": "2027-02-24",
-    "from": "MEL",
-    "to": "SFO",
-    "city": "Melbourne",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 49300,
-    "direct": true,
-    "seats": 4,
-    "airlines": [
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-28",
-    "updated": "2026-09-11T16:51:59.783178Z"
-  },
-  {
-    "id": "3BRyOA2uAg9MPd8CFvGMCrX0X5p-Y",
-    "date": "2027-02-23",
-    "from": "MEL",
-    "to": "SFO",
-    "city": "Melbourne",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 49300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-27",
-    "updated": "2026-09-11T05:31:03.908307Z"
   },
   {
     "id": "34ap1M1wjHQ1NZY60xwkobD9Jka-Y",
@@ -225358,7 +225343,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-10",
-    "updated": "2026-09-13T22:08:12.692026Z"
+    "updated": "2026-09-14T07:26:28.215049Z"
   },
   {
     "id": "38xO0FUgQiFUP8HsD9UDwGcFSps-Y",
@@ -225376,7 +225361,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T21:55:02.281166Z"
+    "updated": "2026-09-14T07:23:42.410568Z"
   },
   {
     "id": "390YrE1Fpu46rw5EluD0SPOQADJ-Y",
@@ -225795,11 +225780,11 @@
       "AC",
       "B6",
       "LH",
-      "QK",
-      "UA"
+      "UA",
+      "VL"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T09:34:47.95942Z"
+    "updated": "2026-09-14T07:15:08.89818Z"
   },
   {
     "id": "353BG3CPyouVcWkMtC01sjos3B5-Y",
@@ -234190,26 +234175,6 @@
     "updated": "2026-09-08T13:44:04.447409Z"
   },
   {
-    "id": "37HCFXQZeLdFjZEF1Wf2EoHuFOr-Y",
-    "date": "2026-11-23",
-    "from": "SFO",
-    "to": "BOM",
-    "city": "Mumbai",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 49500,
-    "direct": false,
-    "seats": 2,
-    "airlines": [
-      "AI",
-      "LH",
-      "TK",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T08:33:14.260889Z"
-  },
-  {
     "id": "37iyE9mY0m3rb4FOXA0SvJnKoPA-Y",
     "date": "2026-12-03",
     "from": "SFO",
@@ -235640,17 +235605,16 @@
       "AI",
       "B6",
       "BR",
-      "EN",
       "ET",
       "LH",
       "LX",
-      "QK",
       "SQ",
+      "TK",
       "UA",
       "VL"
     ],
     "firstSeen": "2026-08-21",
-    "updated": "2026-09-11T21:23:00.656233Z"
+    "updated": "2026-09-14T07:41:23.919618Z"
   },
   {
     "id": "3Bc3U2EM0HKN03BDP3pGOK7TIF5-Y",
@@ -244266,24 +244230,6 @@
     "updated": "2026-09-09T20:59:26.480996Z"
   },
   {
-    "id": "39wtqLRmG4Rd2DlWmHUsguV9YkV-Y",
-    "date": "2026-10-31",
-    "from": "CCU",
-    "to": "SFO",
-    "city": "Kolkata",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 49500,
-    "direct": false,
-    "seats": 2,
-    "airlines": [
-      "AI",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T21:01:07.628115Z"
-  },
-  {
     "id": "39wtqLY67YIN3gjMmQOz81IbS9e-Y",
     "date": "2026-11-30",
     "from": "CCU",
@@ -246377,12 +246323,12 @@
     "cabin": "Y",
     "miles": 49500,
     "direct": false,
-    "seats": 7,
+    "seats": 8,
     "airlines": [
       "LO"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T22:13:11.926956Z"
+    "updated": "2026-09-14T07:04:44.182707Z"
   },
   {
     "id": "35jWCVXPuEiq0rfUYmAFSASQcP2-Y",
@@ -247273,7 +247219,7 @@
       "BR"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T07:13:52.932822Z"
+    "updated": "2026-09-14T07:14:40.358967Z"
   },
   {
     "id": "39wtyBLErm2JcWkGhjRuMxir8iD-Y",
@@ -248862,10 +248808,11 @@
       "LH",
       "LX",
       "NH",
+      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T07:39:28.908118Z"
+    "updated": "2026-09-14T07:32:35.192163Z"
   },
   {
     "id": "382qcYll9NEz1Xvre5J93UmilyI-Y",
@@ -250105,14 +250052,14 @@
     "cabin": "Y",
     "miles": 49500,
     "direct": false,
-    "seats": 8,
+    "seats": 7,
     "airlines": [
       "AV",
       "CM",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T01:18:15.955623Z"
+    "updated": "2026-09-14T07:53:12.383953Z"
   },
   {
     "id": "34JyfvWuJU7HNkwWycappv7lmcQ-Y",
@@ -250124,14 +250071,14 @@
     "cabin": "Y",
     "miles": 49500,
     "direct": false,
-    "seats": 4,
+    "seats": 8,
     "airlines": [
       "AV",
       "CM",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-07T02:50:31.280847Z"
+    "updated": "2026-09-14T07:53:41.203787Z"
   },
   {
     "id": "34ocuD99JlHKGOvrOdxlCDELG9p-Y",
@@ -254137,7 +254084,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-07",
-    "updated": "2026-09-12T14:24:15.898145Z"
+    "updated": "2026-09-14T07:17:04.361975Z"
   },
   {
     "id": "352rJVmI13esWu7y0K304GYURMg-W",
@@ -254256,7 +254203,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-03",
-    "updated": "2026-09-13T20:04:03.125099Z"
+    "updated": "2026-09-14T07:05:23.006162Z"
   },
   {
     "id": "34ljGCi8MGnvNpXqMLoH1wyg2e6-W",
@@ -257840,7 +257787,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T13:45:58.902457Z"
+    "updated": "2026-09-14T07:27:57.853992Z"
   },
   {
     "id": "34kcg5QhECVnoiNK7EehEbrc3O4-Y",
@@ -257857,7 +257804,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T07:48:33.97312Z"
+    "updated": "2026-09-14T07:42:49.345675Z"
   },
   {
     "id": "34ljGGyoUfyx5yQ2EsYJ8PwwDMG-Y",
@@ -258004,7 +257951,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T16:18:01.345885Z"
+    "updated": "2026-09-14T07:18:11.843101Z"
   },
   {
     "id": "35M32OOWqCZoBaNuML07weOuoIb-Y",
@@ -258211,12 +258158,11 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "SQ",
       "UA",
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T11:33:36.162252Z"
+    "updated": "2026-09-14T07:33:21.893985Z"
   },
   {
     "id": "36ip4M4MTTmtc06BhMeg41yzYXI-Y",
@@ -258391,6 +258337,25 @@
     "updated": "2026-09-13T16:32:52.740563Z"
   },
   {
+    "id": "377fDO6uI2omrZgzutGFC8htYae-Y",
+    "date": "2026-11-19",
+    "from": "SYD",
+    "to": "SFO",
+    "city": "Sydney",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 50400,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "SQ",
+      "UA",
+      "VA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T08:01:45.141177Z"
+  },
+  {
     "id": "37gnKMjKHhAJ2K2sLn521CgaFuz-Y",
     "date": "2026-12-02",
     "from": "SYD",
@@ -258541,6 +258506,26 @@
     "updated": "2026-09-14T04:28:14.957525Z"
   },
   {
+    "id": "3A8vGxOn0nDVaqmzT70x6zrPhHS-Y",
+    "date": "2027-01-25",
+    "from": "SYD",
+    "to": "SFO",
+    "city": "Sydney",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 50400,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "NZ",
+      "SQ",
+      "UA",
+      "VA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:16:27.705024Z"
+  },
+  {
     "id": "3ABbIpzYPrMSEETNp9bNngzepfA-Y",
     "date": "2027-01-26",
     "from": "SYD",
@@ -258621,7 +258606,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T13:49:15.302425Z"
+    "updated": "2026-09-14T07:26:47.356903Z"
   },
   {
     "id": "3AmFVRHIpxtaCTnlFbsrbMQL8zS-Y",
@@ -258993,25 +258978,6 @@
     "updated": "2026-09-10T08:00:02.945164Z"
   },
   {
-    "id": "377fDO6uI2omrZgzutGFC8htYae-Y",
-    "date": "2026-11-19",
-    "from": "SYD",
-    "to": "SFO",
-    "city": "Sydney",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 50500,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "SQ",
-      "UA",
-      "VA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-10T18:20:58.529206Z"
-  },
-  {
     "id": "39xga23pap2pMsvOGie5szn10k9-Y",
     "date": "2027-01-21",
     "from": "SYD",
@@ -259030,26 +258996,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-12T02:23:55.175239Z"
-  },
-  {
-    "id": "3A8vGxOn0nDVaqmzT70x6zrPhHS-Y",
-    "date": "2027-01-25",
-    "from": "SYD",
-    "to": "SFO",
-    "city": "Sydney",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 50500,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "NZ",
-      "SQ",
-      "UA",
-      "VA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T22:40:43.149578Z"
   },
   {
     "id": "3AU5H8AJhX7HiLdEUXyWQ6epz75-Y",
@@ -259822,25 +259768,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T02:35:07.669494Z"
-  },
-  {
-    "id": "34stEZWtPVRiF3RBIIWH7lJyRN7-Y",
-    "date": "2026-10-02",
-    "from": "BCN",
-    "to": "SFO",
-    "city": "Barcelona",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 50700,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "AZ",
-      "LH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T06:37:41.127552Z"
   },
   {
     "id": "34LxkU6OQU9RTv29NyO75VG19rM-Y",
@@ -262388,7 +262315,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T12:20:11.76815Z"
+    "updated": "2026-09-14T08:03:38.789109Z"
   },
   {
     "id": "39jUarVB5nd1RFDuzK383Tovg7D-Y",
@@ -263099,7 +263026,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T15:41:42.891212Z"
+    "updated": "2026-09-14T07:56:17.508945Z"
   },
   {
     "id": "37cLt3yDRmdtlGRpD3i5702Iidz-Y",
@@ -263374,7 +263301,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-08",
-    "updated": "2026-09-13T13:31:45.446931Z"
+    "updated": "2026-09-14T07:29:30.717203Z"
   },
   {
     "id": "3889CUx6sw6wLEIFS4illw64FxL-Y",
@@ -263391,7 +263318,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-12",
-    "updated": "2026-09-14T00:14:52.972969Z"
+    "updated": "2026-09-14T07:29:24.369603Z"
   },
   {
     "id": "38E0pPTuEeoMJT7SCU1bqzK1g0D-Y",
@@ -264340,7 +264267,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-11",
-    "updated": "2026-09-13T12:38:22.171629Z"
+    "updated": "2026-09-14T07:58:55.448283Z"
   },
   {
     "id": "3C8vPI9tvpf0eataMPpWx12S4CO-Y",
@@ -264858,7 +264785,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T16:00:02.727016Z"
+    "updated": "2026-09-14T07:11:31.107438Z"
   },
   {
     "id": "36P40DMvrQnd1HUNJss0g7vzRIt-Y",
@@ -265085,7 +265012,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T08:42:11.727572Z"
+    "updated": "2026-09-14T07:41:42.424354Z"
   },
   {
     "id": "37gnKIdrKJiuTiOTdPymtZCG8of-Y",
@@ -266256,25 +266183,6 @@
     "updated": "2026-09-13T22:15:56.282815Z"
   },
   {
-    "id": "3BRyNtv70FWCPhNwUpcWnuV063v-Y",
-    "date": "2027-02-23",
-    "from": "AKL",
-    "to": "SFO",
-    "city": "Auckland",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "NZ",
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-27",
-    "updated": "2026-09-13T14:20:40.449839Z"
-  },
-  {
     "id": "3BRyNvYCzPveBnud8EBoip4y2F2-Y",
     "date": "2027-02-24",
     "from": "AKL",
@@ -266380,6 +266288,25 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-10T12:10:02.220966Z"
+  },
+  {
+    "id": "34GazVVXnMABzv6PnJhvNaYpbgL-Y",
+    "date": "2026-09-18",
+    "from": "SFO",
+    "to": "BKK",
+    "city": "Bangkok",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 55000,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:46:14.470765Z"
   },
   {
     "id": "34kd4qRRIpAG15vDrylGgQq0Vw5-Y",
@@ -266856,7 +266783,7 @@
       "ZH"
     ],
     "firstSeen": "2026-09-06",
-    "updated": "2026-09-09T23:30:12.438599Z"
+    "updated": "2026-09-14T07:06:04.470781Z"
   },
   {
     "id": "36mTsDqMYc9G1KJpHlkOgP0VXSN-Y",
@@ -266943,7 +266870,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:06:10.63489Z"
+    "updated": "2026-09-14T07:20:56.658082Z"
   },
   {
     "id": "36TqqXrPE8kBnnunaXX720y7mIy-Y",
@@ -268215,16 +268142,19 @@
     "direct": false,
     "seats": 9,
     "airlines": [
+      "B6",
       "BR",
       "CA",
+      "LO",
       "LX",
       "NH",
       "SQ",
       "UA",
+      "YU",
       "ZH"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T21:35:28.553513Z"
+    "updated": "2026-09-14T07:04:41.819259Z"
   },
   {
     "id": "36sz7GU2QAeLV5GwYIECzVXg3uB-Y",
@@ -269823,7 +269753,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-10T01:12:17.49431Z"
+    "updated": "2026-09-14T07:27:57.980381Z"
   },
   {
     "id": "37HCB63W9Saf2zgyWMZ9sTMC8NZ-Y",
@@ -270757,7 +270687,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-31",
-    "updated": "2026-09-12T02:34:34.641842Z"
+    "updated": "2026-09-14T07:49:52.166592Z"
   },
   {
     "id": "3C0aglKsv6iOR2sFTRlGcPojwhN-Y",
@@ -273508,13 +273438,11 @@
     "airlines": [
       "BR",
       "LH",
-      "NH",
-      "NQ",
       "OZ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T06:46:22.378621Z"
+    "updated": "2026-09-14T07:26:55.621101Z"
   },
   {
     "id": "34aovFSJQKUAVOKe22BNxAvUAO1-Y",
@@ -273612,7 +273540,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T17:34:57.335757Z"
+    "updated": "2026-09-14T07:27:23.20956Z"
   },
   {
     "id": "34GasDzWG6NUZKe5vMawiC4G1TV-Y",
@@ -273627,11 +273555,10 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "CA",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T12:59:50.91185Z"
+    "updated": "2026-09-14T07:28:49.621209Z"
   },
   {
     "id": "34jgI4qV1Qj2SdtI6rGslWg1HkW-Y",
@@ -273651,7 +273578,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T11:45:04.406625Z"
+    "updated": "2026-09-14T07:09:32.060436Z"
   },
   {
     "id": "34jgQhJLxt4m2CkTybF7nN3P5mF-Y",
@@ -273845,7 +273772,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T07:50:57.323459Z"
+    "updated": "2026-09-14T07:17:49.6297Z"
   },
   {
     "id": "34xSk0Dmdaeat1Lur9oaUyRh1nM-Y",
@@ -274207,7 +274134,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:41:45.806105Z"
+    "updated": "2026-09-14T07:08:08.391614Z"
   },
   {
     "id": "364pESBOhKzNY7MlxKVH96psBC3-Y",
@@ -274352,7 +274279,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:48:43.866513Z"
+    "updated": "2026-09-14T08:03:02.738347Z"
   },
   {
     "id": "36g5nsNUj64OPvFaqXZYd1HISQH-Y",
@@ -274639,7 +274566,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T08:26:48.534422Z"
+    "updated": "2026-09-14T07:06:35.472541Z"
   },
   {
     "id": "3706YMUFvgSGt4xtOt1sjPQzRfp-Y",
@@ -275173,11 +275100,10 @@
       "BR",
       "CA",
       "LH",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T10:27:02.022805Z"
+    "updated": "2026-09-14T08:04:14.808735Z"
   },
   {
     "id": "39hduLbFOCpByMAu0yt5tSPIKEH-Y",
@@ -275194,11 +275120,10 @@
       "BR",
       "CA",
       "LH",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T08:36:07.73375Z"
+    "updated": "2026-09-14T07:25:54.211806Z"
   },
   {
     "id": "39hduOC7lZWdWSdFccj6Kftfz7Y-Y",
@@ -276027,7 +275952,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-21",
-    "updated": "2026-09-13T06:30:54.788985Z"
+    "updated": "2026-09-14T07:21:24.799201Z"
   },
   {
     "id": "3Bc3BNRpInGhxNBF95BR702J56l-Y",
@@ -276361,7 +276286,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-08",
-    "updated": "2026-09-13T14:41:16.928069Z"
+    "updated": "2026-09-14T07:58:34.797994Z"
   },
   {
     "id": "3BX8x024dnrsBQjtYwt1MenDLlC-Y",
@@ -276597,25 +276522,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T21:34:08.49047Z"
-  },
-  {
-    "id": "37tc9ka32jsWISLQxAqQm9SplxE-Y",
-    "date": "2026-12-06",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "LH",
-      "NZ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:51:14.35025Z"
   },
   {
     "id": "37wd1CIa03CzGihaYWqaweStWPB-Y",
@@ -277157,7 +277063,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T23:23:23.237654Z"
+    "updated": "2026-09-14T07:14:43.526445Z"
   },
   {
     "id": "34OzmPMUyNoS4nkg133G8L5iZTq-Y",
@@ -277176,7 +277082,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T20:12:02.978819Z"
+    "updated": "2026-09-14T07:42:58.613709Z"
   },
   {
     "id": "34RbaqzD9PEP3UoTLIBqrWe0kbn-Y",
@@ -277187,14 +277093,14 @@
     "region": "Asia",
     "cabin": "Y",
     "miles": 55000,
-    "direct": false,
+    "direct": true,
     "seats": 9,
     "airlines": [
       "NH",
       "UA"
     ],
     "firstSeen": "2026-09-03",
-    "updated": "2026-09-13T13:24:40.958715Z"
+    "updated": "2026-09-14T07:10:49.788752Z"
   },
   {
     "id": "34URNvYGfJ7qm85mlsx6xk8bYuZ-Y",
@@ -277557,7 +277463,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-02",
-    "updated": "2026-09-13T19:35:02.732687Z"
+    "updated": "2026-09-14T07:25:25.614251Z"
   },
   {
     "id": "36ip4QKxgWam2GHmmbCTGtz2sOa-Y",
@@ -277959,7 +277865,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-12",
-    "updated": "2026-09-13T01:23:07.558264Z"
+    "updated": "2026-09-14T07:37:11.185259Z"
   },
   {
     "id": "37S3a3RhNNj7xO9X4XUJOAPtfuk-Y",
@@ -278980,7 +278886,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-03",
-    "updated": "2026-09-13T14:47:33.480913Z"
+    "updated": "2026-09-14T07:51:30.034961Z"
   },
   {
     "id": "3BjYQs0qxk9bDJejQc2YJRVwrPr-Y",
@@ -279431,7 +279337,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T22:55:44.569129Z"
+    "updated": "2026-09-14T07:49:38.363046Z"
   },
   {
     "id": "34od4bLsyOKPmPTisFWwM24SmaO-Y",
@@ -279590,24 +279496,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T10:21:05.711739Z"
-  },
-  {
-    "id": "351OK9EhxuZyMoQOR2rqDdiKOBa-Y",
-    "date": "2026-10-04",
-    "from": "HND",
-    "to": "SFO",
-    "city": "Tokyo (Haneda)",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "NH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T06:10:19.945038Z"
   },
   {
     "id": "353B8ZHnSATLLhfYWKfgjhnkJMH-Y",
@@ -280166,7 +280054,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T04:03:52.3197Z"
+    "updated": "2026-09-14T07:23:57.072632Z"
   },
   {
     "id": "36UoMCnvCtW60Ti1OiAgpgujoUZ-Y",
@@ -280177,15 +280065,14 @@
     "region": "Asia",
     "cabin": "Y",
     "miles": 55000,
-    "direct": true,
+    "direct": false,
     "seats": 9,
     "airlines": [
       "CA",
-      "NH",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T22:44:44.558402Z"
+    "updated": "2026-09-14T07:23:57.654097Z"
   },
   {
     "id": "36YB7It5FoHz1qWzxyJsZRaCuss-Y",
@@ -280202,7 +280089,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-17",
-    "updated": "2026-09-13T22:44:43.372557Z"
+    "updated": "2026-09-14T07:21:38.701971Z"
   },
   {
     "id": "36yF0tx38S1u2blaILh768LCqCo-Y",
@@ -280463,7 +280350,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:13:16.999785Z"
+    "updated": "2026-09-14T07:13:59.77056Z"
   },
   {
     "id": "3837Ca0QwOXtIWibXVD5cIm75nR-Y",
@@ -280749,7 +280636,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T06:20:52.516335Z"
+    "updated": "2026-09-14T07:13:46.929202Z"
   },
   {
     "id": "39hT0V4CM5twx1ll1kVdg9cosLi-Y",
@@ -280782,12 +280669,11 @@
     "seats": 9,
     "airlines": [
       "AC",
-      "EH",
       "NH",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T12:58:11.009084Z"
+    "updated": "2026-09-14T08:06:30.093721Z"
   },
   {
     "id": "39jUOoh0mOjN7BXxlXFT5kHaxLU-Y",
@@ -281676,24 +281562,6 @@
     "updated": "2026-09-14T06:12:14.764628Z"
   },
   {
-    "id": "34ap8xsc9dtQu5HPiWGvYBn5P2v-Y",
-    "date": "2026-09-25",
-    "from": "SFO",
-    "to": "ICN",
-    "city": "Seoul",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "OZ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-21",
-    "updated": "2026-09-12T23:09:02.995366Z"
-  },
-  {
     "id": "34eBdsrTl1UUW0o4JZb27tPh2N0-Y",
     "date": "2026-09-27",
     "from": "SFO",
@@ -281730,6 +281598,25 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-12T19:19:21.446385Z"
+  },
+  {
+    "id": "34kcg65L5tTr68XJWzQx0H4xEVi-Y",
+    "date": "2026-09-28",
+    "from": "SFO",
+    "to": "ICN",
+    "city": "Seoul",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 55000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:56:28.592399Z"
   },
   {
     "id": "34od4UxSbsFLzoevfCHR7KNSV8X-Y",
@@ -281859,25 +281746,6 @@
     "updated": "2026-09-14T03:50:38.708751Z"
   },
   {
-    "id": "36q7H7rHy3wdPqa1ghRsCYBSyyN-Y",
-    "date": "2026-11-13",
-    "from": "SFO",
-    "to": "ICN",
-    "city": "Seoul",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "AC",
-      "BR",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T12:52:24.729524Z"
-  },
-  {
     "id": "36TqvuEMINhoTTU0xAvtSlZezGH-Y",
     "date": "2026-11-05",
     "from": "SFO",
@@ -281999,7 +281867,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T23:43:19.281982Z"
+    "updated": "2026-09-14T07:27:39.414112Z"
   },
   {
     "id": "3990SadlzYTf97KRKPOSz5HO6pE-Y",
@@ -282017,7 +281885,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T08:35:21.117366Z"
+    "updated": "2026-09-14T07:57:44.83287Z"
   },
   {
     "id": "39GWnuMeSVR3yyrexYbC9OCp424-Y",
@@ -282195,24 +282063,6 @@
     "updated": "2026-09-13T03:13:40.157119Z"
   },
   {
-    "id": "34ap8xyBKxxzzcB3juG2R69HWLG-Y",
-    "date": "2026-09-25",
-    "from": "ICN",
-    "to": "SFO",
-    "city": "Seoul",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T14:56:37.457402Z"
-  },
-  {
     "id": "34G8vQKlLnP2Ox5NIrfhCm2vqxV-Y",
     "date": "2026-09-18",
     "from": "ICN",
@@ -282266,7 +282116,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T01:39:06.189544Z"
+    "updated": "2026-09-14T07:23:39.014409Z"
   },
   {
     "id": "34ub9KGy7en7B1RshwVLUuvZesA-Y",
@@ -283458,7 +283308,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T14:20:33.08313Z"
+    "updated": "2026-09-14T08:06:44.377942Z"
   },
   {
     "id": "37qw4Nk1cX15MjO5nWYuSjTkPqm-Y",
@@ -284686,7 +284536,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T01:37:46.310166Z"
+    "updated": "2026-09-14T07:49:30.998484Z"
   },
   {
     "id": "34oco1Kll5GOtoSI03BCuzzPTER-Y",
@@ -285195,7 +285045,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T23:32:12.524333Z"
+    "updated": "2026-09-14T07:35:08.907929Z"
   },
   {
     "id": "378KEdHBr5GG3uYWPHcaxcGwpwi-Y",
@@ -285453,7 +285303,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T11:06:16.791684Z"
+    "updated": "2026-09-14T07:59:12.551246Z"
   },
   {
     "id": "38Jp5fupOZjhKrP5D7aba3pLqVV-Y",
@@ -285802,7 +285652,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T00:41:10.333528Z"
+    "updated": "2026-09-14T07:14:46.602461Z"
   },
   {
     "id": "3AC3y98wCxtxJsw12ZnoccskVKV-Y",
@@ -286671,7 +286521,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T13:22:10.622094Z"
+    "updated": "2026-09-14T07:26:01.33217Z"
   },
   {
     "id": "34YEkJ15aPdmO9P2IoRKjLWSP8a-Y",
@@ -287701,7 +287551,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:20:57.47514Z"
+    "updated": "2026-09-14T07:06:50.897371Z"
   },
   {
     "id": "3AfnmwGSXzsI4QxZjaxkN2UXwyQ-Y",
@@ -287883,7 +287733,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-14",
-    "updated": "2026-09-12T23:45:44.439355Z"
+    "updated": "2026-09-14T07:30:43.678963Z"
   },
   {
     "id": "3ASpNugkYQJVu9K6S7efLOOE06h-Y",
@@ -289238,7 +289088,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T21:43:20.452412Z"
+    "updated": "2026-09-14T07:26:12.592411Z"
   },
   {
     "id": "3A37IoiI1Sj5E5VWMPy2iG2sHZV-Y",
@@ -289369,7 +289219,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T20:11:29.286844Z"
+    "updated": "2026-09-14T08:01:02.730492Z"
   },
   {
     "id": "3APjOFOe4ZMj6sQjQPK1LtWgMkQ-Y",
@@ -289388,7 +289238,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T12:00:42.177645Z"
+    "updated": "2026-09-14T08:01:00.430029Z"
   },
   {
     "id": "3AulcFiXXxnidx2NfQYh1loKs5k-Y",
@@ -289573,6 +289423,24 @@
     "updated": "2026-09-10T17:25:20.485988Z"
   },
   {
+    "id": "3BRyO9l1yiOSV78LFa9Sj1layh1-Y",
+    "date": "2027-02-24",
+    "from": "MEL",
+    "to": "SFO",
+    "city": "Melbourne",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 55000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-28",
+    "updated": "2026-09-14T08:02:55.923951Z"
+  },
+  {
     "id": "3BuzzRpZxe97YV9zOrISQ0Aj04N-Y",
     "date": "2027-03-07",
     "from": "MEL",
@@ -289602,12 +289470,11 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "NZ",
       "UA",
       "VA"
     ],
     "firstSeen": "2026-08-30",
-    "updated": "2026-09-12T21:25:25.724432Z"
+    "updated": "2026-09-14T07:27:35.927753Z"
   },
   {
     "id": "3BYKCZNFaXYbNurmX5ag4Tk96Zd-Y",
@@ -290088,7 +289955,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T02:12:00.525423Z"
+    "updated": "2026-09-14T07:55:28.7337Z"
   },
   {
     "id": "36yFLC13ZtyOlW8jnJGQKFa1JXm-Y",
@@ -290649,7 +290516,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-29",
-    "updated": "2026-09-13T10:19:05.458618Z"
+    "updated": "2026-09-14T08:03:19.014416Z"
   },
   {
     "id": "3BX90qqeK6LW78Q3Or4eXFspUNB-Y",
@@ -291195,7 +291062,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T03:30:55.333809Z"
+    "updated": "2026-09-14T07:49:11.806339Z"
   },
   {
     "id": "36DbCyCBi6jOqb4ZRcSV8c7c0ru-Y",
@@ -291753,7 +291620,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T17:12:24.656718Z"
+    "updated": "2026-09-14T07:37:18.230867Z"
   },
   {
     "id": "38E0hUIoGXyccSn7vh1n6g0rjgr-Y",
@@ -292087,12 +291954,12 @@
     "seats": 9,
     "airlines": [
       "AC",
-      "NH",
+      "BR",
       "NQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:42:15.125951Z"
+    "updated": "2026-09-14T07:43:30.359207Z"
   },
   {
     "id": "34G2Kb50t1V1eIzORPTSl6bAWbI-Y",
@@ -292150,7 +292017,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T03:21:15.093053Z"
+    "updated": "2026-09-14T07:11:14.236704Z"
   },
   {
     "id": "34LxtLQtpZPU1uscePgEaikf4sr-Y",
@@ -292186,7 +292053,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:41:02.300282Z"
+    "updated": "2026-09-14T07:10:39.858814Z"
   },
   {
     "id": "34RbamwrGdKJYUgBRZX9VkcmjMO-Y",
@@ -292204,7 +292071,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T17:34:07.566215Z"
+    "updated": "2026-09-14T07:10:52.752857Z"
   },
   {
     "id": "34URO15ejGTwapkts57U7V8LuGo-Y",
@@ -292221,7 +292088,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T03:28:50.692673Z"
+    "updated": "2026-09-14T07:08:23.414024Z"
   },
   {
     "id": "35abRe2VEJYixCDlog0TcHZsKYC-Y",
@@ -292239,7 +292106,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-12",
-    "updated": "2026-09-13T09:37:59.356111Z"
+    "updated": "2026-09-14T07:35:21.174202Z"
   },
   {
     "id": "35d3SW59Yn2CcbfL91GwXw10cFd-Y",
@@ -293041,7 +292908,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T03:43:35.977006Z"
+    "updated": "2026-09-14T07:24:55.611979Z"
   },
   {
     "id": "37Y0uxZCZO2ROeM4uuR0pEdj7x9-Y",
@@ -293059,7 +292926,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:37:05.759705Z"
+    "updated": "2026-09-14T07:21:14.494915Z"
   },
   {
     "id": "37y9j838EZGnlyG2jks5zh4nOQM-Y",
@@ -293090,10 +292957,11 @@
     "direct": true,
     "seats": 9,
     "airlines": [
+      "NH",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T23:06:57.609688Z"
+    "updated": "2026-09-14T07:22:29.033698Z"
   },
   {
     "id": "38wLdgN2AvYu9SGippq3dAIlZaY-Y",
@@ -293107,10 +292975,11 @@
     "direct": true,
     "seats": 9,
     "airlines": [
+      "NH",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T22:51:49.148301Z"
+    "updated": "2026-09-14T07:22:22.931704Z"
   },
   {
     "id": "38xO0KYzToerOhspAeDVSWadv3p-Y",
@@ -293147,7 +293016,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T18:05:39.193182Z"
+    "updated": "2026-09-14T07:09:21.197237Z"
   },
   {
     "id": "39hT0KUcS7mfYtb87OS9qaR3wPo-Y",
@@ -293365,7 +293234,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T21:33:58.933513Z"
+    "updated": "2026-09-14T07:23:00.632209Z"
   },
   {
     "id": "39VzuIBTvzb3iA46BNXbQ55IraU-Y",
@@ -293385,7 +293254,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T08:02:55.528029Z"
+    "updated": "2026-09-14T07:22:58.418923Z"
   },
   {
     "id": "39wub66poVLSIoFjTgTr9ns7Mo2-Y",
@@ -294242,24 +294111,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-10",
-    "updated": "2026-09-12T02:36:53.104529Z"
-  },
-  {
-    "id": "3CDq3xoy1eTHzJV9gxQIbMaAQhB-Y",
-    "date": "2027-03-13",
-    "from": "SFO",
-    "to": "NRT",
-    "city": "Tokyo (Narita)",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-14",
-    "updated": "2026-09-13T09:30:36.136237Z"
+    "updated": "2026-09-14T07:59:35.047599Z"
   },
   {
     "id": "345P524UmIS5nS4vMpaVBoJatKY-Y",
@@ -294435,7 +294287,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T22:55:50.48147Z"
+    "updated": "2026-09-14T07:49:35.769078Z"
   },
   {
     "id": "34LxtQynG7pIru4HP8M0565VLsl-Y",
@@ -294453,7 +294305,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-10",
-    "updated": "2026-09-14T00:35:53.956453Z"
+    "updated": "2026-09-14T07:19:52.758628Z"
   },
   {
     "id": "34od4b7l6wNhY36KPxSAAEKeUNQ-Y",
@@ -294491,7 +294343,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T00:34:17.272153Z"
+    "updated": "2026-09-14T07:19:57.270289Z"
   },
   {
     "id": "34Rbar1BjuWEbrlx57zrgOd7yHk-Y",
@@ -294567,12 +294419,11 @@
     "airlines": [
       "AC",
       "NH",
-      "QK",
       "RV",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:03:37.877931Z"
+    "updated": "2026-09-14T07:46:44.692134Z"
   },
   {
     "id": "34xSvjXBxDuK9xTuVfoGx1r8hAV-Y",
@@ -294700,12 +294551,10 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "AC",
-      "NH",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T08:12:15.103384Z"
+    "updated": "2026-09-14T07:02:00.793413Z"
   },
   {
     "id": "35ENIP96uBfni5phd3MFOu1Xtsg-Y",
@@ -294829,7 +294678,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T07:44:04.593809Z"
+    "updated": "2026-09-14T07:10:47.17944Z"
   },
   {
     "id": "35p6F2m6ORxqYxhTiD3TCC9JTdr-Y",
@@ -294864,7 +294713,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T01:04:12.125028Z"
+    "updated": "2026-09-14T07:11:12.947913Z"
   },
   {
     "id": "35RinpKs8gHn1xaRIekSlZttI42-Y",
@@ -294993,7 +294842,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T11:42:49.816468Z"
+    "updated": "2026-09-14T07:24:20.463124Z"
   },
   {
     "id": "36AUZLkpBeOmpAlAYfKKHwL229a-Y",
@@ -295255,7 +295104,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T07:32:06.619787Z"
+    "updated": "2026-09-14T07:47:11.675951Z"
   },
   {
     "id": "3706Gju2gBVUYHsWEo4tl5KuH7I-Y",
@@ -295273,7 +295122,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-10",
-    "updated": "2026-09-13T14:46:01.067802Z"
+    "updated": "2026-09-14T07:12:03.758409Z"
   },
   {
     "id": "373ch51a81NcHRnjF6YnNHtd4lk-Y",
@@ -295554,7 +295403,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T08:39:18.375254Z"
+    "updated": "2026-09-14T07:34:44.983069Z"
   },
   {
     "id": "38AegsKFb0TPbebvFITAzXZwFk3-Y",
@@ -295592,7 +295441,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T14:11:41.038622Z"
+    "updated": "2026-09-14T07:13:41.758218Z"
   },
   {
     "id": "38E0pXbAOMevN66dOPbjnnrCnbA-Y",
@@ -296043,7 +295892,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T18:25:34.18203Z"
+    "updated": "2026-09-14T07:04:27.023043Z"
   },
   {
     "id": "3AC0Qcrzw2AmH7GoXHUZx6b1eGN-Y",
@@ -296217,12 +296066,12 @@
     "cabin": "Y",
     "miles": 55000,
     "direct": true,
-    "seats": 9,
+    "seats": 1,
     "airlines": [
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T21:21:20.98353Z"
+    "updated": "2026-09-14T08:05:57.112188Z"
   },
   {
     "id": "3As0SAoffy0545K9gUuAuODk2cV-Y",
@@ -296817,7 +296666,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:54:39.980428Z"
+    "updated": "2026-09-14T07:22:01.649894Z"
   },
   {
     "id": "34cNgRIMdiY34maQuddsH3oTuK6-Y",
@@ -296851,11 +296700,10 @@
     "seats": 9,
     "airlines": [
       "OZ",
-      "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T23:39:55.547122Z"
+    "updated": "2026-09-14T07:50:40.074375Z"
   },
   {
     "id": "34fgRh6a0LuAMVdGQDoMHdfhDQb-Y",
@@ -296889,12 +296737,11 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "CA",
       "NH",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:01:33.965754Z"
+    "updated": "2026-09-14T07:50:37.21125Z"
   },
   {
     "id": "34JQMc5obpLg8xkdtwS26nPgFKz-Y",
@@ -296915,7 +296762,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T03:33:55.404205Z"
+    "updated": "2026-09-14T07:50:37.589473Z"
   },
   {
     "id": "34kcsL3vf77nrucG3hvEIHf04m7-Y",
@@ -296957,7 +296804,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:36:29.689605Z"
+    "updated": "2026-09-14T08:03:28.738967Z"
   },
   {
     "id": "34LxbhHGpz6ULhUX25oNfTA3jAh-Y",
@@ -296979,7 +296826,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T01:50:46.285769Z"
+    "updated": "2026-09-14T07:50:33.242787Z"
   },
   {
     "id": "34ocmn0Rs6gsInrBenXtDuakzje-Y",
@@ -297365,7 +297212,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:55:10.596228Z"
+    "updated": "2026-09-14T07:10:44.923261Z"
   },
   {
     "id": "36g5gR0evADyzLVFg7JMkYETfxr-Y",
@@ -297620,7 +297467,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:13:45.732759Z"
+    "updated": "2026-09-14T07:10:21.633463Z"
   },
   {
     "id": "3706RsJVSKgSb1l7tLGKkeWXvPe-Y",
@@ -298988,7 +298835,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T05:20:40.899107Z"
+    "updated": "2026-09-14T07:20:19.997367Z"
   },
   {
     "id": "34kcsEw6a9um4ecSXOmJFQkBbHb-Y",
@@ -299704,12 +299551,13 @@
     "direct": true,
     "seats": 9,
     "airlines": [
+      "AC",
       "BR",
       "CA",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T13:22:17.338842Z"
+    "updated": "2026-09-14T07:50:05.712402Z"
   },
   {
     "id": "36ON5wF8JQ9iNz18xon746Or0PH-Y",
@@ -300042,7 +299890,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T12:17:26.782236Z"
+    "updated": "2026-09-14T07:40:12.283057Z"
   },
   {
     "id": "37HCIcyYiApjnVqhqZyp5yScQDF-Y",
@@ -302041,7 +301889,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T05:21:41.912941Z"
+    "updated": "2026-09-14T07:05:20.088865Z"
   },
   {
     "id": "34UR4jAkfQFZaGrc85ag7RabyB7-Y",
@@ -302064,7 +301912,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:56:38.121807Z"
+    "updated": "2026-09-14T07:48:13.199318Z"
   },
   {
     "id": "34YEv1nrDtYD2K9Fq5Q9fJ5dVpS-Y",
@@ -302085,7 +301933,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T05:21:57.75012Z"
+    "updated": "2026-09-14T08:00:20.125087Z"
   },
   {
     "id": "35abd15XnRx7m3YL0YgyAYuR7MZ-Y",
@@ -303710,13 +303558,12 @@
       "AC",
       "BR",
       "CA",
-      "NH",
       "QK",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-09T20:45:47.622876Z"
+    "updated": "2026-09-14T07:50:42.080269Z"
   },
   {
     "id": "3AfoCc2SQ7aukWPCQgHxy8ee8XD-Y",
@@ -304276,7 +304123,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T02:27:56.804964Z"
+    "updated": "2026-09-14T07:47:43.942006Z"
   },
   {
     "id": "34ChHpZV5pxs6x7J5YZqFFOz0Pw-Y",
@@ -304700,7 +304547,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:03:53.339854Z"
+    "updated": "2026-09-14T08:06:39.297523Z"
   },
   {
     "id": "35ntVWIt2Md6CoXJ22HWFfz1bOK-Y",
@@ -305053,7 +304900,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T04:52:12.928633Z"
+    "updated": "2026-09-14T07:45:37.073375Z"
   },
   {
     "id": "36ON5zfj8WOBj58kQL8mpE5m0RV-Y",
@@ -305753,6 +305600,25 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T15:16:10.612505Z"
+  },
+  {
+    "id": "38rWvK8a0grNhR0nHs1uctCgxKG-Y",
+    "date": "2026-12-27",
+    "from": "PVG",
+    "to": "SFO",
+    "city": "Shanghai",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 55000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "CA",
+      "UA"
+    ],
+    "firstSeen": "2026-08-17",
+    "updated": "2026-09-14T07:02:23.268202Z"
   },
   {
     "id": "38rWvMdKK6hARHgo9arRyqC6gGt-Y",
@@ -306692,27 +306558,6 @@
     "updated": "2026-09-12T19:50:41.463949Z"
   },
   {
-    "id": "34fdgTtdShfTy6cQt5Yg1C1Fixl-Y",
-    "date": "2026-09-27",
-    "from": "SFO",
-    "to": "SIN",
-    "city": "Singapore",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "LH",
-      "LX",
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T15:13:26.001609Z"
-  },
-  {
     "id": "34JQ9nN25pzHjJyvofk7yca1fL4-Y",
     "date": "2026-09-19",
     "from": "SFO",
@@ -307107,28 +306952,6 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-13T13:41:48.804976Z"
-  },
-  {
-    "id": "3B8IPaQhnIJZhljrHJLLFTzHcg3-Y",
-    "date": "2027-02-14",
-    "from": "SFO",
-    "to": "SIN",
-    "city": "Singapore",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "LH",
-      "LX",
-      "NQ",
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-18",
-    "updated": "2026-09-11T09:43:17.674345Z"
   },
   {
     "id": "3Bc3MPVenC4lsfKdwiZgZImD58u-Y",
@@ -308467,11 +308290,10 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "UA",
-      "VA"
+      "UA"
     ],
     "firstSeen": "2026-08-20",
-    "updated": "2026-09-13T12:54:51.904681Z"
+    "updated": "2026-09-14T07:30:48.133644Z"
   },
   {
     "id": "34AgxvwNkDNVfHoa1xIEKcHlSuI-Y",
@@ -308613,14 +308435,13 @@
     "direct": true,
     "seats": 9,
     "airlines": [
-      "NH",
       "NQ",
       "OZ",
       "UA",
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:53:18.294294Z"
+    "updated": "2026-09-14T07:11:04.889351Z"
   },
   {
     "id": "34OzmM6DaGKDMCemOyNUuMuRFo9-Y",
@@ -308747,7 +308568,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T13:30:02.92106Z"
+    "updated": "2026-09-14T07:30:51.812824Z"
   },
   {
     "id": "35jaUCOOVVp9ysZEI8ow4IOqLkk-Y",
@@ -308965,7 +308786,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T14:02:51.281331Z"
+    "updated": "2026-09-14T07:52:03.977266Z"
   },
   {
     "id": "36D2LJZlI6mcwaIHgXxOpFzAgR1-Y",
@@ -309300,24 +309121,6 @@
     "updated": "2026-09-14T03:30:40.574419Z"
   },
   {
-    "id": "377fDLNCozZulUHBfEHIFuAZ8ou-Y",
-    "date": "2026-11-19",
-    "from": "SFO",
-    "to": "SYD",
-    "city": "Sydney",
-    "region": "Oceania",
-    "cabin": "Y",
-    "miles": 55000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA",
-      "VA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T14:04:28.525348Z"
-  },
-  {
     "id": "37BuYD7YssBoGgi28fuQ2qeGuVT-Y",
     "date": "2026-11-21",
     "from": "SFO",
@@ -309390,7 +309193,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:46:18.880498Z"
+    "updated": "2026-09-14T07:03:32.963379Z"
   },
   {
     "id": "37gnKIQn7MmCYnAt0phc4g3uFJC-Y",
@@ -309408,7 +309211,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T12:55:09.851519Z"
+    "updated": "2026-09-14T08:03:55.305324Z"
   },
   {
     "id": "37HC7wADMR7kpnNeibYZBaaACkC-Y",
@@ -309519,7 +309322,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T08:02:52.808684Z"
+    "updated": "2026-09-14T07:33:22.114646Z"
   },
   {
     "id": "37qdOkuZJwhDJb3XtSUEcuwP0RR-Y",
@@ -309647,7 +309450,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-07",
-    "updated": "2026-09-13T07:13:27.676759Z"
+    "updated": "2026-09-14T07:02:52.296085Z"
   },
   {
     "id": "38xO09K4LYuQQRtxdmbKtZaNwkg-Y",
@@ -309684,7 +309487,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-11",
-    "updated": "2026-09-11T09:30:22.346297Z"
+    "updated": "2026-09-14T07:18:58.79137Z"
   },
   {
     "id": "39hT00w4RyoX60C4kzfUQJGna18-Y",
@@ -309720,7 +309523,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:18:01.392903Z"
+    "updated": "2026-09-14T07:08:45.949281Z"
   },
   {
     "id": "39wuaxEa3O6635fZmaRhlLrY3gy-Y",
@@ -309756,7 +309559,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T03:19:27.699944Z"
+    "updated": "2026-09-14T07:08:38.967645Z"
   },
   {
     "id": "3A0aqOqsqRa9uOIjSgRXmiu8qFy-Y",
@@ -309774,7 +309577,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-12T11:55:13.122979Z"
+    "updated": "2026-09-14T07:08:37.541628Z"
   },
   {
     "id": "3A37Id0U9ft68ENuQQmqjy9v5Dv-Y",
@@ -311468,7 +311271,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:10:15.867581Z"
+    "updated": "2026-09-14T08:04:18.263635Z"
   },
   {
     "id": "3AfnmvSZB0iHY8bZyBV7hwwDaaG-Y",
@@ -311783,7 +311586,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-30",
-    "updated": "2026-09-08T06:31:21.838203Z"
+    "updated": "2026-09-14T08:06:19.978448Z"
   },
   {
     "id": "3BXGWNGkXkbMWec8Z1V16YgFIIJ-Y",
@@ -311979,7 +311782,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T03:31:21.091161Z"
+    "updated": "2026-09-14T07:26:32.190692Z"
   },
   {
     "id": "37cl9U6wRQ50XfigqOqY3jiv3po-Y",
@@ -312776,8 +312579,8 @@
     "updated": "2026-09-14T03:41:27.687046Z"
   },
   {
-    "id": "353B8OY2aGs9KBSnyg0nXQLGWoJ-Y",
-    "date": "2026-10-05",
+    "id": "34fdgTtdShfTy6cQt5Yg1C1Fixl-Y",
+    "date": "2026-09-27",
     "from": "SFO",
     "to": "SIN",
     "city": "Singapore",
@@ -312788,11 +312591,13 @@
     "seats": 9,
     "airlines": [
       "BR",
-      "TK",
+      "LH",
+      "LX",
+      "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T14:45:51.512595Z"
+    "updated": "2026-09-14T07:47:45.351768Z"
   },
   {
     "id": "358GzAHzNaTg0to3XiXupmXRVUX-Y",
@@ -312851,26 +312656,6 @@
     "updated": "2026-09-12T21:22:30.139792Z"
   },
   {
-    "id": "35RinhL9RGlGrlNRUAkcJLvCX3Q-Y",
-    "date": "2026-10-14",
-    "from": "SFO",
-    "to": "SIN",
-    "city": "Singapore",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 56300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "LH",
-      "SQ",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T12:59:57.172293Z"
-  },
-  {
     "id": "36dfhMSIIZ3xH57S3wJaYjvB0eU-Y",
     "date": "2026-11-09",
     "from": "SFO",
@@ -312890,27 +312675,6 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-13T09:07:39.213458Z"
-  },
-  {
-    "id": "36GbJsPol2g6oV5H6cb3SipOTlH-Y",
-    "date": "2026-11-01",
-    "from": "SFO",
-    "to": "SIN",
-    "city": "Singapore",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 56300,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "LH",
-      "SQ",
-      "TK",
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T07:10:00.719072Z"
   },
   {
     "id": "36OMuB0YQVinKqe2KbBGqqDF0pc-Y",
@@ -313388,6 +313152,28 @@
     "updated": "2026-09-13T19:36:38.712142Z"
   },
   {
+    "id": "3B8IPaQhnIJZhljrHJLLFTzHcg3-Y",
+    "date": "2027-02-14",
+    "from": "SFO",
+    "to": "SIN",
+    "city": "Singapore",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 56900,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "LH",
+      "LX",
+      "NQ",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-18",
+    "updated": "2026-09-14T07:28:08.241648Z"
+  },
+  {
     "id": "3AmFVPhYJLoVvU8cixXKeT8rEvK-Y",
     "date": "2027-02-08",
     "from": "SFO",
@@ -313518,24 +313304,6 @@
     "updated": "2026-09-13T12:35:45.288735Z"
   },
   {
-    "id": "3Aulc5wr9X40xhcpzKB3Wsq5o6c-Y",
-    "date": "2027-02-11",
-    "from": "SFO",
-    "to": "ICN",
-    "city": "Seoul",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 57600,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "UA"
-    ],
-    "firstSeen": "2026-08-15",
-    "updated": "2026-09-13T12:57:47.29462Z"
-  },
-  {
     "id": "38rYND24fKkamZevE5EnDxvKFer-Y",
     "date": "2026-12-28",
     "from": "ICN",
@@ -313585,23 +313353,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-08T17:05:18.51833Z"
-  },
-  {
-    "id": "390YoCLC1VVJFBOrJHEEvlArGBG-Y",
-    "date": "2026-12-31",
-    "from": "LHR",
-    "to": "SFO",
-    "city": "London",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 57800,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T19:02:04.846004Z"
   },
   {
     "id": "38rWWPWREcWe5S8zDjFNDtincQq-Y",
@@ -313730,6 +313481,24 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-10T03:30:17.422531Z"
+  },
+  {
+    "id": "353B8OY2aGs9KBSnyg0nXQLGWoJ-Y",
+    "date": "2026-10-05",
+    "from": "SFO",
+    "to": "SIN",
+    "city": "Singapore",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 58300,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:03:56.305588Z"
   },
   {
     "id": "36P40JTFSspEkJGNWI9AmXu2JW7-Y",
@@ -314511,6 +314280,23 @@
     "updated": "2026-09-14T01:11:09.598119Z"
   },
   {
+    "id": "390YoCLC1VVJFBOrJHEEvlArGBG-Y",
+    "date": "2026-12-31",
+    "from": "LHR",
+    "to": "SFO",
+    "city": "London",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 58400,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:06:25.907482Z"
+  },
+  {
     "id": "3990KzGlLUxtEZ9By7xfCrcNcM8-Y",
     "date": "2027-01-03",
     "from": "SFO",
@@ -314607,24 +314393,6 @@
     "updated": "2026-09-13T23:55:44.667432Z"
   },
   {
-    "id": "37S3ZuOWOA2mLPhZ9M825khOyM1-Y",
-    "date": "2026-11-27",
-    "from": "CDG",
-    "to": "SFO",
-    "city": "Paris",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 58600,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "LH",
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T14:43:10.777685Z"
-  },
-  {
     "id": "34fgc0WhWV5QTy2QObaxGNM0n50-Y",
     "date": "2026-09-27",
     "from": "FCO",
@@ -314674,6 +314442,25 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-11T10:59:17.537299Z"
+  },
+  {
+    "id": "36q7BwdokaY7EYtN0yku5ea9pox-Y",
+    "date": "2026-11-13",
+    "from": "SFO",
+    "to": "BKK",
+    "city": "Bangkok",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 58900,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:21:00.070609Z"
   },
   {
     "id": "38rYS3UmjcG3sk0dmSHDnUkptwT-Y",
@@ -314766,23 +314553,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-09T07:02:33.192146Z"
-  },
-  {
-    "id": "38AeeBEK6gp3o1RpLvBfeRvKHC0-Y",
-    "date": "2026-12-12",
-    "from": "SFO",
-    "to": "FRA",
-    "city": "Frankfurt",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 59000,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "LH"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T12:19:13.723304Z"
   },
   {
     "id": "3990Q2q5OOGeR0a049UxuGTQSpP-Y",
@@ -315072,23 +314842,23 @@
     "updated": "2026-09-10T22:42:54.963075Z"
   },
   {
-    "id": "36q7BwdokaY7EYtN0yku5ea9pox-Y",
+    "id": "36q7H7rHy3wdPqa1ghRsCYBSyyN-Y",
     "date": "2026-11-13",
     "from": "SFO",
-    "to": "BKK",
-    "city": "Bangkok",
+    "to": "ICN",
+    "city": "Seoul",
     "region": "Asia",
     "cabin": "Y",
     "miles": 59400,
-    "direct": false,
+    "direct": true,
     "seats": 9,
     "airlines": [
+      "AC",
       "BR",
-      "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T19:11:25.637586Z"
+    "updated": "2026-09-14T08:01:42.411622Z"
   },
   {
     "id": "37BuYEGTTza2rIUoT0Hak16qx57-Y",
@@ -323102,7 +322872,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-12",
-    "updated": "2026-09-12T04:41:26.160726Z"
+    "updated": "2026-09-14T07:34:34.627319Z"
   },
   {
     "id": "37ObVagMEYr5bFla1sql3jZeu6d-Y",
@@ -323272,6 +323042,25 @@
     "updated": "2026-09-14T04:48:28.669165Z"
   },
   {
+    "id": "3BRyNtv70FWCPhNwUpcWnuV063v-Y",
+    "date": "2027-02-23",
+    "from": "AKL",
+    "to": "SFO",
+    "city": "Auckland",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "NZ",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-27",
+    "updated": "2026-09-14T07:34:54.67189Z"
+  },
+  {
     "id": "3BsACmW7KXKSBk3f5CbJWse0A9X-Y",
     "date": "2027-03-06",
     "from": "AKL",
@@ -323323,7 +323112,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-09",
-    "updated": "2026-09-13T13:06:42.777743Z"
+    "updated": "2026-09-14T07:10:52.022296Z"
   },
   {
     "id": "3BYKCTaU4Ml3hMSVYwN830FXYzg-Y",
@@ -323627,7 +323416,7 @@
       "ZH"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T02:41:33.644595Z"
+    "updated": "2026-09-14T07:57:51.258953Z"
   },
   {
     "id": "39jUnEEX2kEtNWYqlj2lzh4YNES-Y",
@@ -325189,6 +324978,24 @@
     ],
     "firstSeen": "2026-08-20",
     "updated": "2026-09-03T21:44:30.539462Z"
+  },
+  {
+    "id": "35x2rXBS2rbkykB609AidKWDWO2-Y",
+    "date": "2026-10-25",
+    "from": "SFO",
+    "to": "CHC",
+    "city": "Christchurch",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "NZ",
+      "UA"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:09:54.18704Z"
   },
   {
     "id": "35zzXLfUcdk0tnzrbVI1wcy6swg-Y",
@@ -328855,7 +328662,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-01",
-    "updated": "2026-09-09T08:43:33.964076Z"
+    "updated": "2026-09-14T07:55:53.392641Z"
   },
   {
     "id": "3Dk0XPXTlp31mcvhwSxbG4a5djL-Y",
@@ -338884,7 +338691,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T20:05:29.711683Z"
+    "updated": "2026-09-14T07:24:52.233676Z"
   },
   {
     "id": "36aKQwfnNqXxJRPj9YLtwF0aJzQ-Y",
@@ -343083,14 +342890,11 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "BR",
-      "SQ",
-      "TK",
       "UA",
       "VA"
     ],
     "firstSeen": "2026-08-18",
-    "updated": "2026-09-05T02:18:48.638543Z"
+    "updated": "2026-09-14T07:58:31.795373Z"
   },
   {
     "id": "3B8fYUue54FMC0KDbgYDZR7N4mA-Y",
@@ -343104,15 +342908,12 @@
     "direct": false,
     "seats": 9,
     "airlines": [
-      "BR",
-      "NQ",
-      "SQ",
       "TK",
       "UA",
       "VA"
     ],
     "firstSeen": "2026-08-19",
-    "updated": "2026-09-05T02:14:46.867484Z"
+    "updated": "2026-09-14T07:58:21.926581Z"
   },
   {
     "id": "3BBoyqFhxXPjETH7WE37lmzUNiw-Y",
@@ -343782,7 +343583,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T12:47:20.974946Z"
+    "updated": "2026-09-14T07:12:05.770923Z"
   },
   {
     "id": "39W7gFhTL2lrffC5FtInk3SWBVP-Y",
@@ -343907,13 +343708,13 @@
     "cabin": "Y",
     "miles": 60500,
     "direct": false,
-    "seats": 7,
+    "seats": 1,
     "airlines": [
       "NH",
       "UA"
     ],
     "firstSeen": "2026-08-21",
-    "updated": "2026-09-13T10:57:34.545388Z"
+    "updated": "2026-09-14T07:11:09.152007Z"
   },
   {
     "id": "3BpJP1E7TAGdzNPHsMy15Bl2uGq-Y",
@@ -343968,7 +343769,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-11",
-    "updated": "2026-09-13T04:34:33.153048Z"
+    "updated": "2026-09-14T08:01:43.503003Z"
   },
   {
     "id": "3C68cY1WDY26KDDt8wg8BVCnYlY-Y",
@@ -343998,13 +343799,31 @@
     "cabin": "Y",
     "miles": 60500,
     "direct": false,
-    "seats": 4,
+    "seats": 3,
     "airlines": [
       "NH",
       "UA"
     ],
     "firstSeen": "2026-09-13",
-    "updated": "2026-09-13T18:02:34.206746Z"
+    "updated": "2026-09-14T07:47:17.380334Z"
+  },
+  {
+    "id": "351OK9EhxuZyMoQOR2rqDdiKOBa-Y",
+    "date": "2026-10-04",
+    "from": "HND",
+    "to": "SFO",
+    "city": "Tokyo (Haneda)",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "NH",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:38:00.770178Z"
   },
   {
     "id": "36vYXR005i7ndOYKmhVB9uBa4nh-Y",
@@ -344204,6 +344023,24 @@
     ],
     "firstSeen": "2026-09-13",
     "updated": "2026-09-13T23:19:00.354834Z"
+  },
+  {
+    "id": "34ap8xsc9dtQu5HPiWGvYBn5P2v-Y",
+    "date": "2026-09-25",
+    "from": "SFO",
+    "to": "ICN",
+    "city": "Seoul",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "OZ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-21",
+    "updated": "2026-09-14T07:28:52.792133Z"
   },
   {
     "id": "34dZAxSuFE5zWaDm52LIheR937X-Y",
@@ -344427,7 +344264,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T19:53:02.5149Z"
+    "updated": "2026-09-14T07:08:43.89761Z"
   },
   {
     "id": "35RinvbVRTOeE7c6IBSfAbXn1B7-Y",
@@ -344522,6 +344359,24 @@
     "updated": "2026-09-14T03:45:26.686146Z"
   },
   {
+    "id": "3Aulc5wr9X40xhcpzKB3Wsq5o6c-Y",
+    "date": "2027-02-11",
+    "from": "SFO",
+    "to": "ICN",
+    "city": "Seoul",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-15",
+    "updated": "2026-09-14T07:49:25.541249Z"
+  },
+  {
     "id": "3C68cKuTR0vY7kVa4kfP8ekqI9E-Y",
     "date": "2027-03-11",
     "from": "SFO",
@@ -344556,6 +344411,24 @@
     ],
     "firstSeen": "2026-09-13",
     "updated": "2026-09-14T04:23:52.114772Z"
+  },
+  {
+    "id": "34ap8xyBKxxzzcB3juG2R69HWLG-Y",
+    "date": "2026-09-25",
+    "from": "ICN",
+    "to": "SFO",
+    "city": "Seoul",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:50:59.287188Z"
   },
   {
     "id": "34AqM6x9Qu6zXsUpae5BhA2j3bs-Y",
@@ -344921,7 +344794,7 @@
       "AC"
     ],
     "firstSeen": "2026-09-02",
-    "updated": "2026-09-13T08:20:19.132343Z"
+    "updated": "2026-09-14T07:13:07.206881Z"
   },
   {
     "id": "39hdcNbn7Ja6Yy32HERI127BTAs-Y",
@@ -345691,7 +345564,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-08T10:27:41.395127Z"
+    "updated": "2026-09-14T07:47:27.805482Z"
   },
   {
     "id": "3A6pOEGyk75m7e1PNvgauUv51Xc-Y",
@@ -345806,7 +345679,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T09:06:00.976686Z"
+    "updated": "2026-09-14T07:13:21.388837Z"
   },
   {
     "id": "3AulqfxJRN2lJ5rcrv6veFWff5b-Y",
@@ -348734,19 +348607,18 @@
     "direct": false,
     "seats": 9,
     "airlines": [
+      "AC",
       "BR",
       "CA",
       "EN",
       "LH",
       "LX",
-      "SQ",
-      "TK",
       "UA",
       "VL",
       "ZH"
     ],
     "firstSeen": "2026-08-10",
-    "updated": "2026-09-08T09:59:20.285404Z"
+    "updated": "2026-09-14T07:05:23.737337Z"
   },
   {
     "id": "3AmFYFe1OrSGidC1FV6n5cKDfQg-Y",
@@ -349651,14 +349523,11 @@
     "airlines": [
       "AC",
       "BR",
-      "NH",
-      "NQ",
-      "OZ",
       "SQ",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T05:51:03.736624Z"
+    "updated": "2026-09-14T07:54:53.012166Z"
   },
   {
     "id": "34dZDIPwJKcLW1QMkc1xUsrqXqW-Y",
@@ -350300,7 +350169,7 @@
       "ZH"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-08T21:10:28.49531Z"
+    "updated": "2026-09-14T07:29:05.314742Z"
   },
   {
     "id": "35M34JcnC1uGmAw8hd94fwqWXfK-Y",
@@ -350739,13 +350608,14 @@
       "BR",
       "ET",
       "HO",
-      "LH",
+      "NH",
+      "NQ",
       "SQ",
       "UA",
       "ZH"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T23:14:19.867203Z"
+    "updated": "2026-09-14T07:09:34.677319Z"
   },
   {
     "id": "36g61xtOULOt6zdIVFjQNDCku9m-Y",
@@ -351420,10 +351290,11 @@
     "seats": 8,
     "airlines": [
       "SQ",
+      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T20:04:45.492094Z"
+    "updated": "2026-09-14T07:47:10.891391Z"
   },
   {
     "id": "37tbvZ8F16qrzNdHQnvioo5OA3w-Y",
@@ -356801,7 +356672,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-08",
-    "updated": "2026-09-12T10:56:41.980666Z"
+    "updated": "2026-09-14T07:57:29.034883Z"
   },
   {
     "id": "38rYNCF07bRA7Jtd8KnKPXd9W03-Y",
@@ -358806,7 +358677,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-16",
-    "updated": "2026-09-11T09:25:00.609538Z"
+    "updated": "2026-09-14T07:27:45.771909Z"
   },
   {
     "id": "3B8fpJapj3kfPiZAo52yadQcDuc-Y",
@@ -361186,7 +361057,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-11",
-    "updated": "2026-09-12T06:17:31.851873Z"
+    "updated": "2026-09-14T07:59:29.001422Z"
   },
   {
     "id": "3IQ2zrzkYja8arOoMJS1pMaHoTV-Y",
@@ -364719,7 +364590,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:52:56.57283Z"
+    "updated": "2026-09-14T07:06:43.09647Z"
   },
   {
     "id": "373ctztVDgiCNBeb2RslFqWiyNv-Y",
@@ -365107,7 +364978,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-20",
-    "updated": "2026-09-09T09:19:02.190919Z"
+    "updated": "2026-09-14T07:40:44.130121Z"
   },
   {
     "id": "3BmVLQTQX4NhwR4Kt1dxjXXjVGN-Y",
@@ -365286,7 +365157,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-30",
-    "updated": "2026-09-10T15:18:45.241338Z"
+    "updated": "2026-09-14T07:08:54.065715Z"
   },
   {
     "id": "3BYJuHMd4euMiHCBYPUh8TsHShk-Y",
@@ -365505,13 +365376,13 @@
     "cabin": "Y",
     "miles": 60500,
     "direct": false,
-    "seats": 3,
+    "seats": 1,
     "airlines": [
       "CA",
       "UA"
     ],
     "firstSeen": "2026-09-13",
-    "updated": "2026-09-13T05:20:29.848691Z"
+    "updated": "2026-09-14T07:50:55.986628Z"
   },
   {
     "id": "35d3fhTidUOsdcC8UI16zjsWd2b-Y",
@@ -365678,10 +365549,11 @@
     "seats": 9,
     "airlines": [
       "CA",
+      "NH",
       "UA"
     ],
     "firstSeen": "2026-09-02",
-    "updated": "2026-09-12T23:55:38.95208Z"
+    "updated": "2026-09-14T07:25:21.787298Z"
   },
   {
     "id": "39hdYGhzyWiFhPVXll7gDVa1o9J-Y",
@@ -365800,7 +365672,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T13:38:08.464574Z"
+    "updated": "2026-09-14T07:48:56.022478Z"
   },
   {
     "id": "3AYXH78yDXPglTTkL8SiQRNNlOW-Y",
@@ -366698,7 +366570,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T06:05:40.61075Z"
+    "updated": "2026-09-14T07:22:29.634248Z"
   },
   {
     "id": "36EePRJJsvjpZBAUi0eZzHyeVJ6-Y",
@@ -366717,7 +366589,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-12",
-    "updated": "2026-09-13T06:04:19.62399Z"
+    "updated": "2026-09-14T07:22:29.475249Z"
   },
   {
     "id": "36F1Jrm5X8sW1MNugvNyRYe6dyz-Y",
@@ -366797,25 +366669,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T17:18:44.964543Z"
-  },
-  {
-    "id": "38rWvK8a0grNhR0nHs1uctCgxKG-Y",
-    "date": "2026-12-27",
-    "from": "PVG",
-    "to": "SFO",
-    "city": "Shanghai",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 60500,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "BR",
-      "CA",
-      "UA"
-    ],
-    "firstSeen": "2026-08-17",
-    "updated": "2026-09-13T07:35:23.404297Z"
   },
   {
     "id": "39hdYJ0JFGfCtrenVNeAQn6aZXy-Y",
@@ -367291,7 +367144,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T19:29:27.030524Z"
+    "updated": "2026-09-14T07:05:45.660471Z"
   },
   {
     "id": "34ub9REWo5PY0FbPLyFdH8yDPzw-Y",
@@ -367391,6 +367244,26 @@
     "updated": "2026-09-13T23:11:33.192144Z"
   },
   {
+    "id": "35RinhL9RGlGrlNRUAkcJLvCX3Q-Y",
+    "date": "2026-10-14",
+    "from": "SFO",
+    "to": "SIN",
+    "city": "Singapore",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "LH",
+      "SQ",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:23:57.079331Z"
+  },
+  {
     "id": "35TVMvuJKOvvTvNbcLWevbX7Abg-Y",
     "date": "2026-10-15",
     "from": "SFO",
@@ -367470,6 +367343,27 @@
     "updated": "2026-09-14T01:47:31.121946Z"
   },
   {
+    "id": "36GbJsPol2g6oV5H6cb3SipOTlH-Y",
+    "date": "2026-11-01",
+    "from": "SFO",
+    "to": "SIN",
+    "city": "Singapore",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "BR",
+      "LH",
+      "SQ",
+      "TK",
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:06:38.491232Z"
+  },
+  {
     "id": "36hkHNC4JJ3HbUNtpxBaiRovYeM-Y",
     "date": "2026-11-11",
     "from": "SFO",
@@ -367531,7 +367425,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:31:36.890795Z"
+    "updated": "2026-09-14T07:35:16.776284Z"
   },
   {
     "id": "36szCBhyTUvwD89f5kZ1aAAFfJM-Y",
@@ -367678,7 +367572,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-11T11:45:03.652498Z"
+    "updated": "2026-09-14T07:03:25.984926Z"
   },
   {
     "id": "37gnKLkRA8ExaUIwpYMhuJGIkos-Y",
@@ -367834,7 +367728,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-12",
-    "updated": "2026-09-12T11:50:18.399382Z"
+    "updated": "2026-09-14T07:27:39.9375Z"
   },
   {
     "id": "37xzvivIWjryKYCJHqjtUmqi6kf-Y",
@@ -368313,11 +368207,10 @@
     "airlines": [
       "LH",
       "SQ",
-      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T06:47:03.911471Z"
+    "updated": "2026-09-14T07:04:03.481454Z"
   },
   {
     "id": "3AlEHaUi0fhBBCDbwD3EK8kzEuQ-Y",
@@ -369002,10 +368895,11 @@
       "LH",
       "LX",
       "SQ",
+      "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T01:52:08.38175Z"
+    "updated": "2026-09-14T07:59:11.917439Z"
   },
   {
     "id": "35HRL9GcdLasitX9dOsaH4eJzBZ-Y",
@@ -369610,6 +369504,24 @@
     "updated": "2026-09-14T02:04:49.999274Z"
   },
   {
+    "id": "377fDLNCozZulUHBfEHIFuAZ8ou-Y",
+    "date": "2026-11-19",
+    "from": "SFO",
+    "to": "SYD",
+    "city": "Sydney",
+    "region": "Oceania",
+    "cabin": "Y",
+    "miles": 60500,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "UA",
+      "VA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:26:19.97953Z"
+  },
+  {
     "id": "37x7DZ8v1LyNyZAMrclcBQHIXF0-Y",
     "date": "2026-12-08",
     "from": "SFO",
@@ -369715,7 +369627,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T15:05:25.640212Z"
+    "updated": "2026-09-14T07:29:59.830725Z"
   },
   {
     "id": "396kkScDS6tKDxZcFSWLeadclZi-Y",
@@ -369938,7 +369850,7 @@
       "VA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T11:50:15.983141Z"
+    "updated": "2026-09-14T07:39:37.831546Z"
   },
   {
     "id": "3BRyNsRNImmQ0wurnWo4IEo1uAU-Y",
@@ -370701,7 +370613,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T06:29:28.793021Z"
+    "updated": "2026-09-14T07:13:41.326333Z"
   },
   {
     "id": "39HXfS3Ilf6IE6ovMf8lI1sz83p-Y",
@@ -371610,23 +371522,6 @@
     "updated": "2026-09-13T03:42:53.541914Z"
   },
   {
-    "id": "36vYXFadRXt4OVNlQdSlxTJzhE4-Y",
-    "date": "2026-11-15",
-    "from": "ICN",
-    "to": "SFO",
-    "city": "Seoul",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 63900,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T11:20:03.377765Z"
-  },
-  {
     "id": "36YB7EXRK9L2qKrOO8CWTJwwhvx-Y",
     "date": "2026-11-07",
     "from": "ICN",
@@ -371711,6 +371606,23 @@
     ],
     "firstSeen": "2026-09-05",
     "updated": "2026-09-04T22:11:32.53294Z"
+  },
+  {
+    "id": "36vYXFadRXt4OVNlQdSlxTJzhE4-Y",
+    "date": "2026-11-15",
+    "from": "ICN",
+    "to": "SFO",
+    "city": "Seoul",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 64000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:54:28.566174Z"
   },
   {
     "id": "37tcDkWu7aMm4k1F9Y5Tih2u6Jx-Y",
@@ -371833,7 +371745,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T04:32:13.004771Z"
+    "updated": "2026-09-14T07:32:46.455962Z"
   },
   {
     "id": "3ATdzp2IscbnEQCIZmRpXERW32p-Y",
@@ -372264,23 +372176,6 @@
     "updated": "2026-09-14T02:36:22.634985Z"
   },
   {
-    "id": "348MD5QW4K8BS8TvQpuin7S9C7o-W",
-    "date": "2026-09-15",
-    "from": "SFO",
-    "to": "HKG",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 65000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-07",
-    "updated": "2026-09-12T06:46:22.378621Z"
-  },
-  {
     "id": "34aovFSJQKUAVOKe22BNxAvUAO1-W",
     "date": "2026-09-25",
     "from": "SFO",
@@ -372363,7 +372258,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-09",
-    "updated": "2026-09-13T17:34:57.335757Z"
+    "updated": "2026-09-14T07:27:23.20956Z"
   },
   {
     "id": "34GasDzWG6NUZKe5vMawiC4G1TV-W",
@@ -372380,7 +372275,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-10",
-    "updated": "2026-09-12T12:59:50.91185Z"
+    "updated": "2026-09-14T07:28:49.621209Z"
   },
   {
     "id": "34jgI4qV1Qj2SdtI6rGslWg1HkW-W",
@@ -372397,7 +372292,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-05",
-    "updated": "2026-09-13T11:45:04.406625Z"
+    "updated": "2026-09-14T07:09:32.060436Z"
   },
   {
     "id": "34jgQhJLxt4m2CkTybF7nN3P5mF-W",
@@ -372465,7 +372360,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-12",
-    "updated": "2026-09-12T07:50:57.323459Z"
+    "updated": "2026-09-14T07:17:49.6297Z"
   },
   {
     "id": "34YEa1jBMmCe1QwcQsdUZHAJJ99-W",
@@ -372536,6 +372431,23 @@
     "updated": "2026-09-14T03:49:20.548434Z"
   },
   {
+    "id": "34uax8uRLm2FvTE6UH9ofE5hCgD-W",
+    "date": "2026-10-02",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 65000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:41:53.489022Z"
+  },
+  {
     "id": "34jfH3kbJTHmAUlpQ0uzhIqSO6D-W",
     "date": "2026-09-29",
     "from": "HKG",
@@ -372568,23 +372480,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T20:51:20.89602Z"
-  },
-  {
-    "id": "34uax8uRLm2FvTE6UH9ofE5hCgD-W",
-    "date": "2026-10-02",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 65000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T15:17:17.561905Z"
   },
   {
     "id": "34xSjmEI28kGJjVWuE30aP7TMPt-W",
@@ -372754,24 +372649,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-04",
-    "updated": "2026-09-13T23:23:23.237654Z"
-  },
-  {
-    "id": "34OzmPMUyNoS4nkg133G8L5iZTq-W",
-    "date": "2026-09-21",
-    "from": "SFO",
-    "to": "HND",
-    "city": "Tokyo (Haneda)",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 65000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-13",
-    "updated": "2026-09-13T20:12:02.978819Z"
+    "updated": "2026-09-14T07:14:43.526445Z"
   },
   {
     "id": "348MPW2PKDIH85nd15fTt7uHg4w-W",
@@ -372941,7 +372819,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-18",
-    "updated": "2026-09-11T17:05:46.311171Z"
+    "updated": "2026-09-14T07:08:16.310597Z"
   },
   {
     "id": "34ElCwggl0KR2H7jIl14KuWGImX-W",
@@ -372958,7 +372836,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T13:08:45.112064Z"
+    "updated": "2026-09-14T07:11:09.61814Z"
   },
   {
     "id": "34LxtM3rd826JmrUlgc1ews3cf4-W",
@@ -373026,7 +372904,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T02:04:10.440115Z"
+    "updated": "2026-09-14T07:17:41.384426Z"
   },
   {
     "id": "36OMuLLbz5rwGP7rhCev8OVmtnI-W",
@@ -373179,7 +373057,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T16:53:31.58392Z"
+    "updated": "2026-09-14T07:53:28.011891Z"
   },
   {
     "id": "39hT0DLcWHfhiqZgQcxSZycOIXp-W",
@@ -373621,7 +373499,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-23",
-    "updated": "2026-09-12T08:35:21.117366Z"
+    "updated": "2026-09-14T07:57:44.83287Z"
   },
   {
     "id": "39GWnuMeSVR3yyrexYbC9OCp424-W",
@@ -373706,7 +373584,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-12",
-    "updated": "2026-09-13T20:22:20.756992Z"
+    "updated": "2026-09-14T07:50:58.852806Z"
   },
   {
     "id": "34fYS6ueQZeZMqwoASnm59At8xm-W",
@@ -373774,7 +373652,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-13",
-    "updated": "2026-09-13T02:07:20.210738Z"
+    "updated": "2026-09-14T07:49:18.157519Z"
   },
   {
     "id": "3APjOD0iE4ENM26Wl4nZ9p3HInN-W",
@@ -373996,6 +373874,23 @@
     ],
     "firstSeen": "2026-09-14",
     "updated": "2026-09-14T06:50:18.299218Z"
+  },
+  {
+    "id": "34ljGLwIIsdTwUhJNdjvhkp6NP6-W",
+    "date": "2026-09-29",
+    "from": "ICN",
+    "to": "SFO",
+    "city": "Seoul",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 65000,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:49:32.030831Z"
   },
   {
     "id": "34RbatQrdVDOU0MGfgolAO2fWFd-W",
@@ -374862,7 +374757,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-31",
-    "updated": "2026-09-14T01:37:46.310166Z"
+    "updated": "2026-09-14T07:49:30.998484Z"
   },
   {
     "id": "34RbJIou33L95JJb3mkDCY74Ez2-W",
@@ -374947,7 +374842,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-10",
-    "updated": "2026-09-12T11:06:16.791684Z"
+    "updated": "2026-09-14T07:59:12.551246Z"
   },
   {
     "id": "38rX1NE13SnOgYWDq49FVl9usFx-W",
@@ -375049,7 +374944,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-13",
-    "updated": "2026-09-12T08:16:39.378615Z"
+    "updated": "2026-09-14T07:36:14.886811Z"
   },
   {
     "id": "34CnRIqu3RvtlHZgDoAQSnKCXDw-W",
@@ -375151,7 +375046,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-04",
-    "updated": "2026-09-13T06:42:15.125951Z"
+    "updated": "2026-09-14T07:43:30.359207Z"
   },
   {
     "id": "34G2Kb50t1V1eIzORPTSl6bAWbI-W",
@@ -375440,7 +375335,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-07",
-    "updated": "2026-09-14T00:34:17.272153Z"
+    "updated": "2026-09-14T07:19:57.270289Z"
   },
   {
     "id": "34Rbar1BjuWEbrlx57zrgOd7yHk-W",
@@ -375474,7 +375369,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-24",
-    "updated": "2026-09-13T10:03:37.877931Z"
+    "updated": "2026-09-14T07:46:44.692134Z"
   },
   {
     "id": "34YEkQC9SxslBgn89NJTFoQf9de-W",
@@ -375543,23 +375438,6 @@
     ],
     "firstSeen": "2026-08-24",
     "updated": "2026-09-12T00:52:32.812364Z"
-  },
-  {
-    "id": "3ABbIqREKm1LGruqTPDhhF8bVRf-W",
-    "date": "2027-01-26",
-    "from": "NRT",
-    "to": "SFO",
-    "city": "Tokyo (Narita)",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 65000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-12",
-    "updated": "2026-09-11T18:25:34.18203Z"
   },
   {
     "id": "3Afnn1utrgUY1Jl4vEkQvcxPlSh-W",
@@ -375661,7 +375539,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-14T00:36:29.689605Z"
+    "updated": "2026-09-14T08:03:28.738967Z"
   },
   {
     "id": "34ocmn0Rs6gsInrBenXtDuakzje-W",
@@ -377514,7 +377392,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T01:27:59.689796Z"
+    "updated": "2026-09-14T07:04:19.111098Z"
   },
   {
     "id": "35Rint4dLaYELqEO4uGcruhCEsu-W",
@@ -378313,7 +378191,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T03:42:54.375061Z"
+    "updated": "2026-09-14T07:22:09.303058Z"
   },
   {
     "id": "34kTBOhwEOZRoo1n3H7ZInYKWrs-W",
@@ -378381,7 +378259,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T10:31:47.068051Z"
+    "updated": "2026-09-14T07:18:56.953821Z"
   },
   {
     "id": "34RbapOSzmuqoaa7mCFUhDwFRFK-W",
@@ -378416,23 +378294,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T21:44:04.743766Z"
-  },
-  {
-    "id": "351OKDCN98IjNkEaljhrJujkydU-W",
-    "date": "2026-10-04",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 65000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T12:30:30.568409Z"
   },
   {
     "id": "353B8a5WvoSNEQ8LuZ74Ch3oztg-W",
@@ -378483,7 +378344,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T04:57:21.2564Z"
+    "updated": "2026-09-14T07:32:34.228155Z"
   },
   {
     "id": "35gDYUu4cmwlks0Brof264PO8bE-W",
@@ -378534,7 +378395,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-14T03:28:21.9516Z"
+    "updated": "2026-09-14T07:04:20.653176Z"
   },
   {
     "id": "35PIdiVZmZ88hJdQD9DLzQRZvPM-W",
@@ -378605,23 +378466,6 @@
     "updated": "2026-09-12T04:13:54.013627Z"
   },
   {
-    "id": "3593rUttzMylEgPnPEx1GBfr4sH-W",
-    "date": "2026-10-08",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 65000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-10T08:44:48.697775Z"
-  },
-  {
     "id": "38XKwO1h3pcnDvKqrj7l6eoAn2w-W",
     "date": "2026-12-21",
     "from": "TPE",
@@ -378636,7 +378480,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-12T04:34:35.915707Z"
+    "updated": "2026-09-14T07:55:42.973743Z"
   },
   {
     "id": "37S3vMDCG83rzn4G5XIS55pltnQ-Y",
@@ -379214,13 +379058,13 @@
     "cabin": "Y",
     "miles": 66500,
     "direct": false,
-    "seats": 8,
+    "seats": 4,
     "airlines": [
       "AZ",
       "LH"
     ],
     "firstSeen": "2026-09-12",
-    "updated": "2026-09-12T04:49:28.543784Z"
+    "updated": "2026-09-14T07:59:24.398694Z"
   },
   {
     "id": "3ATe8XPUIqgDoIKcE9vlEEkH6Dg-Y",
@@ -379277,6 +379121,23 @@
     ],
     "firstSeen": "2026-08-26",
     "updated": "2026-09-09T23:16:13.970579Z"
+  },
+  {
+    "id": "348MMOOFSNU9Pkj9SUSluZsifjh-Y",
+    "date": "2026-09-15",
+    "from": "IST",
+    "to": "SFO",
+    "city": "Istanbul",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 66500,
+    "direct": false,
+    "seats": 4,
+    "airlines": [
+      "LH"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:07:15.674658Z"
   },
   {
     "id": "38HA6oztCdr2TqRjxiInfvIN1Jc-Y",
@@ -379724,7 +379585,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T19:50:16.822753Z"
+    "updated": "2026-09-14T07:43:21.350604Z"
   },
   {
     "id": "38V5tPI115U2MuPJzD75VTy5syi-Y",
@@ -380395,23 +380256,6 @@
     "updated": "2026-09-14T02:32:17.219185Z"
   },
   {
-    "id": "356RKw7FokiV9eteJ0rMsmnlZVk-Y",
-    "date": "2026-10-06",
-    "from": "SFO",
-    "to": "DEL",
-    "city": "Delhi",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 69100,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-06",
-    "updated": "2026-09-13T17:01:44.314341Z"
-  },
-  {
     "id": "395jZSK3uGiYmWB4iuzC68xA5sG-J",
     "date": "2027-01-02",
     "from": "SFO",
@@ -380618,23 +380462,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-12T03:15:08.05965Z"
-  },
-  {
-    "id": "38rYBMBNtxiAhxeOaxzbjoN5oEj-Y",
-    "date": "2026-12-23",
-    "from": "SFO",
-    "to": "MUC",
-    "city": "Munich",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 69400,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-13",
-    "updated": "2026-09-13T07:20:05.471268Z"
   },
   {
     "id": "35HPrKyzsDW7YhpF7RMJkizi5nf-Y",
@@ -380991,7 +380818,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-09T12:20:11.76815Z"
+    "updated": "2026-09-14T08:03:38.789109Z"
   },
   {
     "id": "39jUarVB5nd1RFDuzK383Tovg7D-W",
@@ -381416,7 +381243,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-06",
-    "updated": "2026-09-12T16:00:02.727016Z"
+    "updated": "2026-09-14T07:11:31.107438Z"
   },
   {
     "id": "3889CYI50REhI9SgKP3u0uC3OI4-W",
@@ -381895,7 +381722,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-06",
-    "updated": "2026-09-10T01:12:17.49431Z"
+    "updated": "2026-09-14T07:27:57.980381Z"
   },
   {
     "id": "37HCB63W9Saf2zgyWMZ9sTMC8NZ-W",
@@ -383664,13 +383491,13 @@
     "cabin": "Y",
     "miles": 70000,
     "direct": false,
-    "seats": 9,
+    "seats": 8,
     "airlines": [
       "TK",
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T12:13:43.276776Z"
+    "updated": "2026-09-14T07:19:25.762919Z"
   },
   {
     "id": "38rY910rJho2hlC3xpShGKmEdqJ-Y",
@@ -385472,6 +385299,23 @@
     "updated": "2026-09-07T15:36:17.784393Z"
   },
   {
+    "id": "356RKw7FokiV9eteJ0rMsmnlZVk-Y",
+    "date": "2026-10-06",
+    "from": "SFO",
+    "to": "DEL",
+    "city": "Delhi",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 70200,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-06",
+    "updated": "2026-09-14T07:06:37.116868Z"
+  },
+  {
     "id": "3990Q7jYz34lWpvYPZdspbwumMs-Y",
     "date": "2027-01-03",
     "from": "SFO",
@@ -386013,23 +385857,6 @@
     "updated": "2026-09-13T20:29:50.677455Z"
   },
   {
-    "id": "35d3TuVV6fXnYOBQXQuhtFnoA5L-Y",
-    "date": "2026-10-18",
-    "from": "BCN",
-    "to": "SFO",
-    "city": "Barcelona",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 71400,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-13",
-    "updated": "2026-09-13T06:05:14.604694Z"
-  },
-  {
     "id": "348MV5Ra0u3mNwBVzPtJ1r9pGHY-J",
     "date": "2026-09-15",
     "from": "SFO",
@@ -386267,7 +386094,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-07",
-    "updated": "2026-09-13T07:38:03.519363Z"
+    "updated": "2026-09-14T07:57:18.172404Z"
   },
   {
     "id": "34kf1Q4m1oNCJJXOQgtogxv5JIl-Y",
@@ -386369,7 +386196,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-22",
-    "updated": "2026-09-14T04:15:12.911311Z"
+    "updated": "2026-09-14T07:37:12.771735Z"
   },
   {
     "id": "3706GksR1zJnGhQDlzjDhddmZ9h-Y",
@@ -386437,7 +386264,7 @@
       "UA"
     ],
     "firstSeen": "2026-09-14",
-    "updated": "2026-09-13T09:07:54.782461Z"
+    "updated": "2026-09-14T08:00:05.653747Z"
   },
   {
     "id": "35d3hAqJXwkBJlbbTNybqv02Aah-Y",
@@ -386692,7 +386519,24 @@
       "UA"
     ],
     "firstSeen": "2026-09-11",
-    "updated": "2026-09-13T22:08:08.605353Z"
+    "updated": "2026-09-14T07:22:24.542417Z"
+  },
+  {
+    "id": "3CDq3xoy1eTHzJV9gxQIbMaAQhB-Y",
+    "date": "2027-03-13",
+    "from": "SFO",
+    "to": "NRT",
+    "city": "Tokyo (Narita)",
+    "region": "Asia",
+    "cabin": "Y",
+    "miles": 71700,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T08:00:09.987475Z"
   },
   {
     "id": "390Yr5ySW5yntB7yqlJXFR8Yhb1-Y",
@@ -386761,23 +386605,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T14:51:39.618536Z"
-  },
-  {
-    "id": "38xNxaZc7MPdOqOnaRBaYrxuSBg-Y",
-    "date": "2026-12-30",
-    "from": "FRA",
-    "to": "SFO",
-    "city": "Frankfurt",
-    "region": "Europe",
-    "cabin": "Y",
-    "miles": 72000,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-14",
-    "updated": "2026-09-13T10:20:39.801461Z"
   },
   {
     "id": "390YolbhMQrOLMPzQli6zBDrgZO-Y",
@@ -387347,6 +387174,23 @@
     "updated": "2026-09-13T15:02:32.46119Z"
   },
   {
+    "id": "38rYBMBNtxiAhxeOaxzbjoN5oEj-Y",
+    "date": "2026-12-23",
+    "from": "SFO",
+    "to": "MUC",
+    "city": "Munich",
+    "region": "Europe",
+    "cabin": "Y",
+    "miles": 73100,
+    "direct": false,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-09-13",
+    "updated": "2026-09-14T07:56:30.018696Z"
+  },
+  {
     "id": "37Z846HlPDX4Y95P5ygbUR1PFYT-Y",
     "date": "2026-11-29",
     "from": "ARN",
@@ -387798,23 +387642,6 @@
     "updated": "2026-09-13T07:46:02.149147Z"
   },
   {
-    "id": "3706GlslMBdPpPrDgWRmEngALcg-Y",
-    "date": "2026-11-17",
-    "from": "HND",
-    "to": "SFO",
-    "city": "Tokyo (Haneda)",
-    "region": "Asia",
-    "cabin": "Y",
-    "miles": 74000,
-    "direct": false,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-13",
-    "updated": "2026-09-13T13:52:26.417524Z"
-  },
-  {
     "id": "36AUOllAohkNr6z6x7LJeMjolLr-Y",
     "date": "2026-10-29",
     "from": "SFO",
@@ -387898,7 +387725,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-22",
-    "updated": "2026-09-13T13:31:01.829253Z"
+    "updated": "2026-09-14T07:10:47.146333Z"
   },
   {
     "id": "38rj8HNlPJmLY5D3xDEYOefDpiu-Y",
@@ -390678,6 +390505,23 @@
     "updated": "2026-09-14T06:02:31.808744Z"
   },
   {
+    "id": "35PIRGnTLGNtqybkKkiD2MBtcdH-W",
+    "date": "2026-10-13",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 86100,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:04:19.848734Z"
+  },
+  {
     "id": "35RiaQWnLiFPj7LN8XxKaxpa81G-W",
     "date": "2026-10-14",
     "from": "HKG",
@@ -390726,7 +390570,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T00:19:21.499124Z"
+    "updated": "2026-09-14T07:11:08.600008Z"
   },
   {
     "id": "39KBwbpV87OxD3QYbj2QVSTKpXE-W",
@@ -391220,6 +391064,24 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-04T22:17:24.328456Z"
+  },
+  {
+    "id": "352r9LPFiWuIPRlna6vTtLMpPqL-J",
+    "date": "2026-10-05",
+    "from": "SFO",
+    "to": "AMS",
+    "city": "Amsterdam",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 88000,
+    "direct": false,
+    "seats": 3,
+    "airlines": [
+      "LH",
+      "LX"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:17:04.361975Z"
   },
   {
     "id": "36dfevpyts5Vt34RAD6pXbNpcko-J",
@@ -392732,6 +392594,23 @@
     ],
     "firstSeen": "2026-09-10",
     "updated": "2026-09-07T14:34:37.541548Z"
+  },
+  {
+    "id": "38V64sGagwtZBi9xtdffdEAAti5-J",
+    "date": "2026-12-20",
+    "from": "SFO",
+    "to": "BOM",
+    "city": "Mumbai",
+    "region": "Asia",
+    "cabin": "J",
+    "miles": 88000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "AI"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:41:09.416335Z"
   },
   {
     "id": "34URWICklsghhMOvnCVJwO4pb5w-J",
@@ -394500,6 +394379,25 @@
     "updated": "2026-09-13T18:14:51.577879Z"
   },
   {
+    "id": "353B5pyJ0R3qVtsRMLyM73E5SBT-J",
+    "date": "2026-10-05",
+    "from": "SFO",
+    "to": "MUC",
+    "city": "Munich",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 88000,
+    "direct": true,
+    "seats": 3,
+    "airlines": [
+      "2L",
+      "LH",
+      "LX"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:40:48.16423Z"
+  },
+  {
     "id": "35PIayD6SvPvl7LoVhY3LrzSmZ2-J",
     "date": "2026-10-13",
     "from": "SFO",
@@ -395786,6 +395684,24 @@
     "updated": "2026-09-12T16:01:01.050863Z"
   },
   {
+    "id": "345OoZD9suzKcoyLIo1P3tdfAUy-J",
+    "date": "2026-09-14",
+    "from": "VIE",
+    "to": "SFO",
+    "city": "Vienna",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 88000,
+    "direct": false,
+    "seats": 6,
+    "airlines": [
+      "LH",
+      "SN"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T08:03:10.913247Z"
+  },
+  {
     "id": "37K1s99CfJlb9DCGTTLwmlEmz7E-J",
     "date": "2026-11-24",
     "from": "VIE",
@@ -396454,6 +396370,23 @@
     "updated": "2026-09-14T03:56:04.664504Z"
   },
   {
+    "id": "37tc9ka32jsWISLQxAqQm9SplxE-W",
+    "date": "2026-12-06",
+    "from": "HKG",
+    "to": "SFO",
+    "city": "Hong Kong",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 91700,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T08:06:27.287265Z"
+  },
+  {
     "id": "34RbRUFozofQ2FishdiXhwWLCEU-J",
     "date": "2026-09-22",
     "from": "SFO",
@@ -396621,7 +396554,24 @@
       "UA"
     ],
     "firstSeen": "2026-09-02",
-    "updated": "2026-09-13T08:15:53.771598Z"
+    "updated": "2026-09-14T07:21:32.558574Z"
+  },
+  {
+    "id": "35M6igjb21mIgQnKEsRoWqMGwws-W",
+    "date": "2026-10-13",
+    "from": "LHR",
+    "to": "SFO",
+    "city": "London",
+    "region": "Europe",
+    "cabin": "W",
+    "miles": 92700,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:26:42.156273Z"
   },
   {
     "id": "35RikUBZA5wfn925T8HG9Zaj8Qb-W",
@@ -396672,7 +396622,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-17",
-    "updated": "2026-09-13T06:28:36.869837Z"
+    "updated": "2026-09-14T07:20:57.460391Z"
   },
   {
     "id": "38FgjM74h7WcCooCrlqZuAONprb-W",
@@ -396724,23 +396674,6 @@
     ],
     "firstSeen": "2026-08-06",
     "updated": "2026-09-12T04:13:14.262441Z"
-  },
-  {
-    "id": "35M6igjb21mIgQnKEsRoWqMGwws-W",
-    "date": "2026-10-13",
-    "from": "LHR",
-    "to": "SFO",
-    "city": "London",
-    "region": "Europe",
-    "cabin": "W",
-    "miles": 92900,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-11T16:52:25.636879Z"
   },
   {
     "id": "34LxqnXcI7SWAtVLZTBiiTMqeWO-J",
@@ -397593,7 +397526,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T20:32:29.584011Z"
+    "updated": "2026-09-14T07:18:53.806944Z"
   },
   {
     "id": "34YEkQRDHpcFYQJTiqiokSsPZIr-W",
@@ -397610,7 +397543,24 @@
       "UA"
     ],
     "firstSeen": "2026-09-06",
-    "updated": "2026-09-14T01:51:02.135226Z"
+    "updated": "2026-09-14T07:18:52.818836Z"
+  },
+  {
+    "id": "3593rUttzMylEgPnPEx1GBfr4sH-W",
+    "date": "2026-10-08",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 93800,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:32:32.967905Z"
   },
   {
     "id": "35p6F1scVLCtlSEerqQKL5LbcXd-W",
@@ -397933,7 +397883,7 @@
       "UA"
     ],
     "firstSeen": "2026-08-27",
-    "updated": "2026-09-12T22:12:26.124401Z"
+    "updated": "2026-09-14T07:39:55.610407Z"
   },
   {
     "id": "3AYX3f8BWotJpxsiKYs9cJT9LWn-W",
@@ -398072,40 +398022,6 @@
     "updated": "2026-09-13T10:48:13.117142Z"
   },
   {
-    "id": "34Gartz2EVQ8VTL2ZvyqVeueg6E-W",
-    "date": "2026-09-18",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 94500,
-    "direct": true,
-    "seats": 3,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-13",
-    "updated": "2026-09-14T00:01:16.762582Z"
-  },
-  {
-    "id": "34OzZkSZW5K9gXK9EKMq4BmGEBO-W",
-    "date": "2026-09-21",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 94500,
-    "direct": true,
-    "seats": 6,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-09-14",
-    "updated": "2026-09-13T10:31:44.177731Z"
-  },
-  {
     "id": "35d3n24cPFnO7PnJfu1WzbvfllE-W",
     "date": "2026-10-18",
     "from": "HKG",
@@ -398172,23 +398088,6 @@
     ],
     "firstSeen": "2026-08-09",
     "updated": "2026-09-13T22:53:13.138251Z"
-  },
-  {
-    "id": "35PIRGnTLGNtqybkKkiD2MBtcdH-W",
-    "date": "2026-10-13",
-    "from": "HKG",
-    "to": "SFO",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "W",
-    "miles": 94500,
-    "direct": true,
-    "seats": 9,
-    "airlines": [
-      "UA"
-    ],
-    "firstSeen": "2026-08-09",
-    "updated": "2026-09-13T21:31:17.36077Z"
   },
   {
     "id": "35UwSoF3DwxmpH3wL6twGDOj0Tp-W",
@@ -398512,6 +398411,23 @@
     ],
     "firstSeen": "2026-09-11",
     "updated": "2026-09-14T01:08:01.299567Z"
+  },
+  {
+    "id": "351OKDCN98IjNkEaljhrJujkydU-W",
+    "date": "2026-10-04",
+    "from": "TPE",
+    "to": "SFO",
+    "city": "Taipei",
+    "region": "Asia",
+    "cabin": "W",
+    "miles": 95600,
+    "direct": true,
+    "seats": 9,
+    "airlines": [
+      "UA"
+    ],
+    "firstSeen": "2026-08-09",
+    "updated": "2026-09-14T07:26:43.599766Z"
   },
   {
     "id": "37cOxu5aPCbcU1eZ7AWEj7Zrfzp-J",
@@ -400919,23 +400835,6 @@
     "updated": "2026-09-12T13:46:25.711033Z"
   },
   {
-    "id": "3Bv0GHBynH7lgVjHQRuHmYJtefm-J",
-    "date": "2027-03-07",
-    "from": "SFO",
-    "to": "HKG",
-    "city": "Hong Kong",
-    "region": "Asia",
-    "cabin": "J",
-    "miles": 110000,
-    "direct": false,
-    "seats": 1,
-    "airlines": [
-      "BR"
-    ],
-    "firstSeen": "2026-09-14",
-    "updated": "2026-09-13T14:41:16.928069Z"
-  },
-  {
     "id": "345OrkvpN9YqMip6lIYFKuclmHD-J",
     "date": "2026-09-14",
     "from": "HKG",
@@ -401271,12 +401170,12 @@
     "cabin": "J",
     "miles": 110000,
     "direct": false,
-    "seats": 6,
+    "seats": 3,
     "airlines": [
       "BR"
     ],
     "firstSeen": "2026-09-14",
-    "updated": "2026-09-14T02:27:56.804964Z"
+    "updated": "2026-09-14T07:47:43.942006Z"
   },
   {
     "id": "3Bh64LYaSbmz41mHTPSTjx3CTTd-J",
@@ -401411,12 +401310,12 @@
     "cabin": "J",
     "miles": 110000,
     "direct": true,
-    "seats": 5,
+    "seats": 3,
     "airlines": [
       "BR"
     ],
     "firstSeen": "2026-09-14",
-    "updated": "2026-09-14T03:42:54.375061Z"
+    "updated": "2026-09-14T07:22:09.303058Z"
   },
   {
     "id": "3BpJP11S0PAG6x8KkorUCbBIvtl-J",
@@ -401434,24 +401333,7 @@
       "QK"
     ],
     "firstSeen": "2026-09-07",
-    "updated": "2026-09-12T15:03:58.350562Z"
-  },
-  {
-    "id": "3BmVAqhpEPCNCXD3J9PHYD8cCC9-J",
-    "date": "2027-03-04",
-    "from": "TPE",
-    "to": "SFO",
-    "city": "Taipei",
-    "region": "Asia",
-    "cabin": "J",
-    "miles": 110000,
-    "direct": true,
-    "seats": 1,
-    "airlines": [
-      "BR"
-    ],
-    "firstSeen": "2026-09-07",
-    "updated": "2026-09-11T09:04:05.195819Z"
+    "updated": "2026-09-14T07:47:13.003869Z"
   },
   {
     "id": "38rWWQW1E5Dl0S1KmK6oiFNeJ5e-J",
@@ -401557,7 +401439,7 @@
       "B6"
     ],
     "firstSeen": "2026-09-12",
-    "updated": "2026-09-13T13:18:53.380825Z"
+    "updated": "2026-09-14T07:27:23.128038Z"
   },
   {
     "id": "35SGi6UA47ereOcyXu5HFMcxH9F-J",
@@ -401738,7 +401620,24 @@
       "B6"
     ],
     "firstSeen": "2026-09-14",
-    "updated": "2026-09-13T09:16:40.281109Z"
+    "updated": "2026-09-14T07:35:08.897881Z"
+  },
+  {
+    "id": "34ljHdM0K8mvNdL95x2sIfI5zaW-J",
+    "date": "2026-09-29",
+    "from": "BCN",
+    "to": "SFO",
+    "city": "Barcelona",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 120000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "B6"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:55:39.485435Z"
   },
   {
     "id": "37ixulB6EbRvMc08yFE0LbDWvyo-J",
@@ -402003,6 +401902,23 @@
     "updated": "2026-09-13T06:57:36.531961Z"
   },
   {
+    "id": "373cgsp7PUDxkoqX99yYs9pYMs9-J",
+    "date": "2026-11-18",
+    "from": "CDG",
+    "to": "SFO",
+    "city": "Paris",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 120000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "B6"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:22:59.4798Z"
+  },
+  {
     "id": "37GL89s3yv1iocOcW2VfxE79rLp-J",
     "date": "2026-11-22",
     "from": "CDG",
@@ -402052,6 +401968,23 @@
     ],
     "firstSeen": "2026-09-07",
     "updated": "2026-09-07T07:26:29.374856Z"
+  },
+  {
+    "id": "37S3ZuOWOA2mLPhZ9M825khOyM1-J",
+    "date": "2026-11-27",
+    "from": "CDG",
+    "to": "SFO",
+    "city": "Paris",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 120000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "B6"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:24:05.347364Z"
   },
   {
     "id": "373ch2LUE4y3Mrb6zdKBGln1e7E-J",
@@ -402523,6 +402456,40 @@
     "updated": "2026-09-13T07:18:52.970005Z"
   },
   {
+    "id": "390YoCLC1VVJFBOrJHEEvlArGBG-J",
+    "date": "2026-12-31",
+    "from": "LHR",
+    "to": "SFO",
+    "city": "London",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 120000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "B6"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:06:25.907482Z"
+  },
+  {
+    "id": "39GWi2K3CLQrX64nynlbgUaCsW4-J",
+    "date": "2027-01-05",
+    "from": "LHR",
+    "to": "SFO",
+    "city": "London",
+    "region": "Europe",
+    "cabin": "J",
+    "miles": 120000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "B6"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T08:01:42.166851Z"
+  },
+  {
     "id": "34aox1joelfR88JEf6H9dhEHlVI-J",
     "date": "2026-09-25",
     "from": "SFO",
@@ -402809,24 +402776,6 @@
     "updated": "2026-09-05T23:05:48.393344Z"
   },
   {
-    "id": "34JQTeEYwWlqe9YpD77QxDGa0sm-J",
-    "date": "2026-09-19",
-    "from": "OSL",
-    "to": "SFO",
-    "city": "Oslo",
-    "region": "Europe",
-    "cabin": "J",
-    "miles": 120000,
-    "direct": false,
-    "seats": 1,
-    "airlines": [
-      "B6",
-      "LH"
-    ],
-    "firstSeen": "2026-09-13",
-    "updated": "2026-09-12T11:44:16.14654Z"
-  },
-  {
     "id": "35zzqWzX8E6v5lbBz3L5ChWbdhV-J",
     "date": "2026-10-26",
     "from": "SFO",
@@ -403042,6 +402991,25 @@
     ],
     "firstSeen": "2026-09-12",
     "updated": "2026-09-11T15:36:07.479822Z"
+  },
+  {
+    "id": "36q7BmMqDw0WbDd9UTcAcJY96Wl-J",
+    "date": "2026-11-13",
+    "from": "BKK",
+    "to": "SFO",
+    "city": "Bangkok",
+    "region": "Asia",
+    "cabin": "J",
+    "miles": 140000,
+    "direct": false,
+    "seats": 1,
+    "airlines": [
+      "B6",
+      "LO",
+      "YU"
+    ],
+    "firstSeen": "2026-09-14",
+    "updated": "2026-09-14T07:04:41.819259Z"
   },
   {
     "id": "34RbAcDMJCnb1kl7RxenGCb9Xac-J",

@@ -1,6 +1,6 @@
 {
   "_comment": "International destinations served from SFO with United award inventory, discovered from the seats.aero bulk endpoint. The daily refresh does one /search per entry. Regenerate with: node scripts/refresh.mjs --discover",
-  "_discoveredAt": "2026-10-05",
+  "_discoveredAt": "2026-10-12",
   "origin": "SFO",
   "destinations": [
     {
@@ -158,6 +158,12 @@
       "city": "Rio de Janeiro",
       "region": "South America",
       "distance": 6617
+    },
+    {
+      "code": "HAN",
+      "city": null,
+      "region": "Asia",
+      "distance": 7314
     },
     {
       "code": "HKG",

@@ -1,6 +1,6 @@
 {
   "_comment": "International destinations served from SFO with United award inventory, discovered from the seats.aero bulk endpoint. The daily refresh does one /search per entry. Regenerate with: node scripts/refresh.mjs --discover",
-  "_discoveredAt": "2026-10-19",
+  "_discoveredAt": "2026-10-26",
   "origin": "SFO",
   "destinations": [
     {
@@ -248,6 +248,12 @@
       "city": "Munich",
       "region": "Europe",
       "distance": 5870
+    },
+    {
+      "code": "MXP",
+      "city": null,
+      "region": "Europe",
+      "distance": 5939
     },
     {
       "code": "NAP",

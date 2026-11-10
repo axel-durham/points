@@ -1,13 +1,13 @@
 {
-  "refreshedAt": "2026-11-09T10:20:48.053Z",
-  "rowCount": 18739,
-  "outboundRows": 9338,
-  "returnRows": 9401,
-  "addedSinceLastRun": 27,
-  "removedSinceLastRun": 19,
-  "rateLimitRemaining": 714,
+  "refreshedAt": "2026-11-10T08:49:26.952Z",
+  "rowCount": 19339,
+  "outboundRows": 9684,
+  "returnRows": 9655,
+  "addedSinceLastRun": 927,
+  "removedSinceLastRun": 327,
+  "rateLimitRemaining": 884,
   "origin": "SFO",
   "source": "united",
-  "windowStart": "2026-11-09",
-  "windowEnd": "2027-05-08"
+  "windowStart": "2026-11-10",
+  "windowEnd": "2027-05-09"
 }
